@@ -6,14 +6,13 @@ const requireDir = require("require-dir"),
     paths = {
         views: {
             src: [
-                "./src/views/**/*.html",
-                "./src/views/pages/*.html",
-                "./src/views/includes/*.html"
+                "./src/templates/",
+                "./src/blocks"
             ],
             dist: "./dist/",
             watch: [
                 "./src/blocks/**/*.html",
-                "./src/views/**/*.html"
+                "./src/templates/**/*.html"
             ]
         },
         styles: {
@@ -75,7 +74,7 @@ requireDir("./gulp-tasks/");
 
 export { paths };
 
-export const development = gulp.series("clean", "smart-grid",
+export const development = gulp.series("clean",
     gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]),
     gulp.parallel("serve"));
 
