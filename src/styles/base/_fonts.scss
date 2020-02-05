@@ -1,0 +1,43 @@
+h1 {
+    font-size: rem(56);
+    font-weight: 700;
+    line-height: 1.14;
+}
+
+h2 {
+    font-size: rem(40);
+    font-weight: 700;
+    line-height: 1.2;
+}
+h3 {
+    font-size: rem(32);
+    font-weight: 700;
+    line-height: 1.25;
+}
+h4 {
+    font-size: rem(28);
+    font-weight: 700;
+    line-height: 1.29;
+}
+h5 {
+    font-size: rem(24);
+    font-weight: 700;
+    line-height: 1.33;
+}
+h6 {
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.small-text {
+    font-size: rem(14);
+    line-height: 1.43;
+    letter-spacing: normal;
+
+    &--caption {
+        line-height: 1.14;
+        letter-spacing: normal;
+        color: $text-silver;
+    }
+}

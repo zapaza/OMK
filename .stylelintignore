@@ -1,2 +1,5 @@
 ./src/styles/vendor/import/*.scss
-./src/styles/base/*.scss
+./src/styles/base/_fonts.scss
+./src/styles/base/_general.scss
+./src/styles/helpers/_functions.scss
+./src/styles/helpers/_variables.scss

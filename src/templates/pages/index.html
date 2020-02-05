@@ -1,5 +1,36 @@
 {% extends './layout.html' %}
 {% block content %}
-    <h1>New Page</h1>
-<a href="#none" data-modal>открыть модалку</a>
+<div class="container">
+    <div class="row ">
+        <div class="col-4">
+            <h1>Заголовок</h1>
+            <h2>Заголовок</h2>
+            <h3>Заголовок</h3>
+            <h4>Заголовок</h4>
+            <h5>Заголовок</h5>
+            <h6>Заголовок</h6>
+            <p>Текст</p>
+            <p class="small-text">Мелкий текст</p>
+            <p class="small-text small-text--caption">описание в карточках</p>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-dark">normal</button>
+            <button class="btn btn-dark btn-lg">Large</button>
+            <button class="btn btn-dark btn-sx">Small</button>
+            <button class="btn btn-dark"><i class="btn_icon btn__icon--left btn__icon--plus"></i>Icon left</button>
+            <button class="btn btn-dark">icon right<i class="btn__icon btn__icon--right btn__icon--plus"></i></button>
+            <button class="btn btn-dark">normal</button>
+            <button class="btn btn-primary"></i>Primary Button</button>
+            <button class="btn btn-primary"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Primary Button</button>
+            <button class="btn btn-primary" disabled><i class="btn__icon btn__icon--left btn__icon--plus"></i>Primary disabled Button</button>
+            <button class="btn btn-secondary" >Secondary Button</button>
+            <button class="btn btn-secondary" >Secondary Button<i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></button>
+            <button class="btn btn-secondary" disabled>Secondary disabled Button<i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></button>
+            <button class="btn btn-danger"><i class="btn__icon btn__icon--left btn__icon--close"></i>Red Button</btb>
+            <button class="btn btn-danger">Red Button</btb>
+        </div>
+       
+    </div>
+</div>
+
 {% endblock %}
