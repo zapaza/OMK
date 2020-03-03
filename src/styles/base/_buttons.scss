@@ -1,42 +1,23 @@
 .btn {
+    @include transition();
     min-width: 104px;
     text-align: center;
-   
-    font: {
-        weight: 700;
-        size: rem(16);
-    }
-    line-height: 1.25;
+    line-height: 1.5;
     border: none;
     padding: rem(12) rem(16) rem(16);
     border-radius: 5px;
-    &:not(:disabled):not(.disabled):active:focus {
-        box-shadow: none;
-    }
     &:active {
         transform: scale(.96);
     }
     &:disabled {
         cursor: default;
     }
-    &-lg {
-        padding: rem(19) rem(16) rem(25);
-        @media(max-width: 768px) {
-            padding: rem(16) rem(16) rem(20);
-        }
-    }
-    &-sx {
-        padding: rem(8) rem(16) rem(12);
-        @media(max-width: 768px) {
-            padding: rem(5) rem(16) rem(7);
-        }
-    }
     //иконки кнопок
     &__icon {
         display: inline-block;
         width: 24px;
         height: 24px;
-        vertical-align: top;
+        vertical-align: middle;
         background-position: center;
         background-repeat: no-repeat;
         &--left {
@@ -57,8 +38,20 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M.23 0h24v24h-24z'/%3E%3Cpath stroke='%2300000A' stroke-width='1.8' d='M9.23 6l6 6-6 6'/%3E%3C/g%3E%3C/svg%3E");
         }
     }
+    &--lg {
+        padding: rem(19) rem(16) rem(25);
+        @media(max-width: 768px) {
+            padding: rem(16) rem(16) rem(20);
+        }
+    }
+    &--sx {
+        padding: rem(8) rem(16) rem(12);
+        @media(max-width: 768px) {
+            padding: rem(5) rem(16) rem(7);
+        }
+    }
     //цвета кнопок
-    &-dark {
+    &--dark {
         color: $white;
         background-color: $ctrl-black;
         &:hover, &:focus {
@@ -66,48 +59,57 @@
             box-shadow: none;
         }
     }
-    &-primary {
+    &--primary {
         color: $white;
         background-color: $green;
+        &:disabled {
+            background-color: $silver-dark;
+            color: fade-out($white, .5);
+            i {
+                opacity: .5;
+            }
+        }
         &:hover, &:focus, &:not(:disabled):not(.disabled):active {
             background-color: $green-dark;
             box-shadow: none;
         }
-        &:disabled {
-            background-color: $silver-dark;
-            color: fade-out($white, .5);
-            i{
-                opacity: .5;
-            }
-        }
     }
-    &-secondary {
+    &--secondary {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
         border: solid 1px $border-10;
         background-color: $white;
         font-weight: 400;
         color: #00000a;
+        &:disabled {
+            background-color: $silver-dark;
+            border: solid 1px $silver-dark;
+            color: fade-out(#00000a, .2);
+            i {
+                opacity: .2;
+            }
+        }
         &:hover, &:focus, &:not(:disabled):not(.disabled):active {
             border: solid 1px $border-40;
             background-color: $white;
             color: #00000a;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
         }
-        &:disabled {
-            background-color: $silver-dark;
-            border: solid 1px $silver-dark;
-            color: fade-out(#00000a, .2);
-            i{
-                opacity: .2;
-            }
-        }
     }
-    &-danger {
+    &--danger {
         color: $white;
         background-color: $coral;
         &:hover, &:focus, &:not(:disabled):not(.disabled):active {
             background-color: $coral-dark;
             box-shadow: none;
         }
+    }
+    font: {
+        weight: 700;
+        size: rem(16);
+    }
+
+    &:not(:disabled):not(.disabled):active:focus, &:focus, &:active, &:visited {
+        box-shadow: none;
+        outline: none;
     }
 }

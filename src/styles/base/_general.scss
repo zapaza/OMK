@@ -9,4 +9,6 @@ body {
     font-style: normal;
     color: $text-black;
     background-color: $white;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
 }

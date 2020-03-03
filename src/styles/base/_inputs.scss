@@ -1,0 +1,49 @@
+.fields {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__placeholder {
+        @include transition();
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 16px;
+        left: 16px;
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.25;
+        color: $text-silver;
+        pointer-events: none;
+    }
+    &__input {
+        @include transition();
+        box-sizing: border-box;
+        border: solid 1px $silver-light;
+        padding: rem(20) rem(16) rem(24);
+        border-radius: 5px;
+        background-color: $silver-light;
+        outline: none;
+        font-size: rem(16);
+        line-height: 1.25;
+        color: $text-black;
+        &:hover{
+            border-color: $border-20;
+        }
+    }
+    &__error {
+        @include transition();
+        margin: 4px 0;
+        text-align: right;
+        color: $coral;
+        font-size: rem(13);
+        line-height: 1.23;
+    }
+    &--error {
+        .fields__input {
+            border-color: $coral;
+        }
+        .fields__placeholder {
+            color: $coral;
+        }
+    }
+}

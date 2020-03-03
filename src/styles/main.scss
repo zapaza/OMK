@@ -1,7 +1,9 @@
-@import "vendor/libs";
-@import "helpers/variables";
 @import "helpers/functions";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "vendor/libs";
 @import "base/fonts";
 @import "base/buttons";
+@import "base/inputs";
 @import "base/general";
 @import "../blocks/modules";

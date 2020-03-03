@@ -1,18 +1,51 @@
 //colors
-$text-black:    #1a1a1a;
-$ctrl-black:    #3d3d4d;
-$text-silver:   #909099;
-$silver-dark:   #d0d0d9;
-$silver:        #e6e6eb;
-$silver-light:  #f2f2f4;
-$coral-dark:    #e04a3f;
-$coral:         #f65145;
-$green-dark:    #1db85b;
-$green:         #22d66a;
-
+$text-black: #1a1a1a;
+$ctrl-black: #3d3d4d;
+$text-silver: #909099;
+$silver-dark: #d0d0d9;
+$silver: #e6e6eb;
+$silver-light: #f2f2f4;
+$coral-dark: #e04a3f;
+$coral: #f65145;
+$green-dark: #1db85b;
+$green: #22d66a;
+$white: #ffffff;
 //border color
-$border-40:     #999999;
-$border-20:     #cccccc;
-$border-10:     #e6e6e6;
+$border-40: #999999;
+$border-20: #cccccc;
+$border-10: #e6e6e6;
+$colors: ();
+$colors:map_merge((
+    "text-black": $text-black,
+    "ctrl-black": $ctrl-black,
+    "text-silver": $text-silver,
+    "silver-dark": $silver-dark,
+    "silver": $silver,
+    "silver-light": $silver-light,
+    "coral-dark": $coral-dark,
+    "coral": $coral,
+    "green-dark": $green-dark,
+    "green": $green,
+    "border-40": $border-40,
+    "border-20": $border-20,
+    "border-10": $border-10,
+    "white": $white
+), $colors);
 
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px
+);
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 936px,
+    xl: 1120px
+);
 
+$grid-columns: 12;
+$grid-gutter-width: 32px;
+$grid-row-columns: 6;
