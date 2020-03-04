@@ -9,7 +9,8 @@ module.exports = {
             "jquery": "jquery", 
             "window.jquery": "jquery", 
             "$": "jquery", 
-            "window.$": "jquery" 
+            "window.$": "jquery" ,
+            Popper: ['popper.js', 'default']
         }) 
     ],
     

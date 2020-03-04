@@ -1,0 +1,32 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: flex-start;
+    padding: rem(24) 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-radius: 0;
+    list-style: none;
+
+
+    &-item {
+        margin-right: rem(42);
+        position: relative;
+        color: $text-silver;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -33px;
+            width: 24px;
+            height: 24px;
+            background-image: url(../img/icons/icon-breadcrumbs.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        a {
+            color: $text-silver;
+        }
+    }
+}

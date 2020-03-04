@@ -1,0 +1,93 @@
+@import "node_modules/bootstrap/scss/nav";
+.header {
+    width: 100%;
+    padding: rem(16) 0 rem(15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $white;
+    @media(max-width: 1120px) {
+        padding: rem(16) rem(24);
+    }
+    &__row {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    &__logo {
+        display: block;
+        width: 108px;
+        height: 32px;
+        margin-right: 9.4%;
+    }
+    &__middle {
+        display: flex;
+        align-items: center;
+    }
+    &__menu {
+
+        &-list {
+            align-items: center;
+            @extend .nav;
+        }
+        &-item {
+            margin-right: 24px;
+
+            .btn {
+                min-width: auto;
+                padding: rem(3) rem(8);
+                box-shadow: none;
+
+                &__icon {
+                    margin-right: rem(8);
+                    margin-left: 0;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+        &-link {
+            color: $black;
+            position: relative;
+            &:after {
+                @include transition();
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: -21px;
+                left: 0;
+                height: 2px;
+                background-color: $coral;
+                opacity: 0;
+            }
+            &:hover {
+                color: $black;
+                text-decoration: none;
+                &:after {
+                    opacity: 1;
+                }
+            }
+            &--active {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__search {
+        &-btn {
+            width: 24px;
+            height: 24px;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+
+    &__avatar {
+        margin-left: auto;
+        margin-right: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #8dd1c2;
+    }
+}

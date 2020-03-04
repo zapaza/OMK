@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="32" viewBox="0 0 108 32">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#A1A1A5">
+            <path d="M20 11.636L50 0 50 20.364 20 32z"/>
+            <path d="M0 11.636L30 0 30 20.364 0 32z"/>
+        </g>
+        <g transform="translate(14 5)">
+            <circle cx="11" cy="11" r="11" fill="#FFF"/>
+            <circle cx="11" cy="11" r="6" fill="#D52B1E"/>
+        </g>
+        <text fill="#A1A1A5" font-family="Circe-ExtraBold, Circe" font-size="18" font-weight="600" letter-spacing="1.7">
+            <tspan x="58" y="23">ОМК</tspan>
+        </text>
+    </g>
+</svg>
