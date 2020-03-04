@@ -20,7 +20,7 @@
             <button class="btn btn--dark"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Icon left</button>
             <button class="btn btn--dark">icon right<i class="btn__icon btn__icon--right btn__icon--plus"></i></button>
             <button class="btn btn--dark">normal</button>
-            <button class="btn btn--primary"></i>Primary Button</button>
+            <button class="btn btn--primary">Primary Button</button>
             <button class="btn btn--primary"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Primary Button</button>
             <button class="btn btn--primary" disabled><i class="btn__icon btn__icon--left btn__icon--plus"></i>Primary disabled Button</button>
             <button class="btn btn--secondary" >Secondary Button</button>
@@ -32,24 +32,33 @@
         
         <div class="col-4">
             <label for="" class="fields">
-                <input type="text" class="fields__input">
+                <input type="text" class="fields__input" placeholder="Тип">
                 <span class="fields__placeholder">Тип</span>
             </label>
 
             <label for="" class="fields fields--error">
-                <input type="text" class="fields__input">
+                <input type="text" class="fields__input" placeholder="Тип">
                 <span class="fields__placeholder">Тип</span>
                 <span class="fields__error">Ошибка поля!</span>
             </label>
 
-            <label for="" class="fields fields--error fields--required">
-                <input type="text" class="fields__input" required>
+            <label for="" class="fields fields--required">
+                <input type="text" class="fields__input" required placeholder="Тип">
                 <span class="fields__placeholder">Тип</span>
-                <span class="fields__error">Ошибка поля!</span>
+            </label>
+
+            <label for="" class="fields fields--locked">
+                <input type="text" class="fields__input" placeholder="Тип">
+                <span class="fields__placeholder">Тип</span>
+            </label>
+
+            <label for="" class="fields fields--locked">
+                <input type="text" class="fields__input" placeholder="Тип" value="заполненое поле locked">
+                <span class="fields__placeholder">Тип</span>
             </label>
 
             <label for="" class="fields">
-                <textarea class="fields__input" name="" id="" cols="30" rows="6"></textarea>
+                <textarea class="fields__input" placeholder="Тип" name="" id="" cols="30" rows="6"></textarea>
                 <span class="fields__placeholder">Тип</span>
             </label>
         </div>

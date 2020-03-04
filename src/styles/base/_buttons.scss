@@ -11,6 +11,7 @@
     }
     &:disabled {
         cursor: default;
+        pointer-events: none;
     }
     //иконки кнопок
     &__icon {
