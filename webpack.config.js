@@ -16,6 +16,7 @@ module.exports = {
     
     entry: {
         main: "./src/js/index.js",
+        news: "./src/js/news.js"
     },
 
     output: {

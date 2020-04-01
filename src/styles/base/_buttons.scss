@@ -13,6 +13,9 @@
         cursor: default;
         pointer-events: none;
     }
+    &:hover {
+        text-decoration: none;
+    }
     //иконки кнопок
     &__icon {
         display: inline-block;
@@ -58,6 +61,8 @@
         &:hover, &:focus {
             background-color: $text-black;
             box-shadow: none;
+            color: $white;
+            text-decoration: none;
         }
     }
     &--primary {
@@ -94,6 +99,9 @@
             background-color: $white;
             color: #00000a;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+        }
+        &:active {
+            transform: scale(.96);
         }
     }
     &--danger {

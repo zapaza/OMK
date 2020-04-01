@@ -25,3 +25,83 @@ body {
         line-height: rem(72);
     }
 }
+.header-block {
+    margin-bottom: 32px;
+    font-size: 32px;
+    font-weight: $font-weight-bold;
+    line-height: 1.25;
+    color: $black;
+    position: relative;
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .btn {
+            display: block;
+            padding: 8px 0;
+            font-weight: $font-weight-normal;
+            color: $black;
+        }
+    }
+}
+
+
+.swiper-button {
+    @include transition();
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    outline: none;
+    opacity: 1;
+
+    &-prev {
+        left: -8px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0H24V24H0z'/%3E%3Cpath stroke='%231A1A1A' stroke-width='1.8' d='M9 6L3 12 9 18'/%3E%3Cpath stroke='%231A1A1A' stroke-width='2' d='M4 12L21 12'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    &-next {
+        right: -8px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0H24V24H0z'/%3E%3Cpath stroke='%231A1A1A' stroke-width='1.8' d='M14 6L20 12 14 18'/%3E%3Cpath stroke='%231A1A1A' stroke-width='2' d='M2 12L19 12'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    &-disabled {
+        opacity: 0;
+    }
+}
+
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    margin: auto;
+
+    &-bullet {
+        @include transition();
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+        border-radius: 50%;
+        background-color: fade_out($white, .7);
+        cursor: pointer;
+
+        &.swiper-pagination-bullet-active {
+            background-color: $white;
+        }
+    }
+}

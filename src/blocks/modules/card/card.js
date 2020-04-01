@@ -4,7 +4,7 @@ provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-                
+
             }
         }
     }
