@@ -1,4 +1,4 @@
-@import "node_modules/bootstrap/scss/nav";
+@import 'node_modules/bootstrap/scss/nav';
 .header {
     width: 100%;
     padding: rem(16) 0 rem(15);
@@ -48,7 +48,7 @@
             position: relative;
             &:after {
                 @include transition();
-                content: "";
+                content: '';
                 position: absolute;
                 right: 0;
                 bottom: -21px;

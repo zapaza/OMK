@@ -27,7 +27,7 @@
         &:before {
             @include transition();
             pointer-events: none;
-            content: "";
+            content: '';
             position: absolute;
             z-index: 2;
             top: 50%;
@@ -41,7 +41,7 @@
 
         &:after {
             pointer-events: none;
-            content: "";
+            content: '';
             position: absolute;
             z-index: 1;
             top: 0;

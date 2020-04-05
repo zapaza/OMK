@@ -71,6 +71,7 @@
         "bootstrap": "^4.4.1",
         "jquery": "^3.4.1",
         "npm": "^6.13.7",
+        "object-fit-images": "^3.2.4",
         "popper.js": "^1.16.1",
         "swiper": "^5.3.6"
     }

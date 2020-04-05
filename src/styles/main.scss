@@ -1,11 +1,14 @@
-@import "helpers/functions";
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "vendor/libs";
-@import "base/fonts";
-@import "base/buttons";
-@import "base/inputs";
-@import "base/general";
-@import "base/icons";
-@import "../blocks/modules";
-@import "pages/news";
+@import 'helpers/functions';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'vendor/libs';
+@import 'base/fonts';
+@import 'base/buttons';
+@import 'base/inputs';
+@import 'base/table';
+@import 'base/general';
+@import 'base/icons';
+@import '../blocks/modules';
+
+@import 'pages/news';
+@import 'pages/text-page';

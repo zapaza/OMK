@@ -1,0 +1,139 @@
+//
+// Basic Bootstrap table
+//
+
+.table {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    font-size: rem(16);
+    line-height: 1.25;
+    color: $black;
+    border-collapse: separate;
+    border-color: transparent;
+    border-spacing: 0;
+	
+    tr {
+        &:last-child {
+            td {
+                border: none;
+            }
+        }
+    }
+
+
+    th, td {
+        border-bottom: 1px solid $border-10;
+        padding: 16px 8px;
+        vertical-align: top;
+        span {
+            display: block;
+            width: 100%;
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Border versions
+//
+// Add or remove borders all around the table and between all the columns.
+
+.table-bordered {
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid $border-10;
+    border-collapse: separate;
+}
+
+.table-striped {
+    tbody tr:nth-of-type(odd) {
+        background-color: $silver-light;
+    }
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid  $silver-dark;
+    border-collapse: separate;
+
+    th, td {
+        border-color: $silver-dark;
+    }
+}
+
+// Dark styles
+//
+// Same table markup, but inverted color scheme: dark background and light text.
+
+// stylelint-disable-next-line no-duplicate-selectors
+.table {
+    .thead-dark {
+        background-color: $ctrl-black;
+        border-spacing: 0;
+        th {
+            color: $white;
+            border-color: $ctrl-black;
+        }
+    }
+}
+
+.table-dark {
+    color: $table-dark-color;
+    background-color: $ctrl-black;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(144, 144, 153, 0.3);
+    border-collapse: separate;
+
+    &.table-striped {
+
+    }
+
+    th, td, thead th {
+        border-color: rgba(144, 144, 153, 0.3);
+    }
+
+
+    &.table-striped {
+        tbody tr:nth-of-type(odd) {
+            background-color: rgba(144, 144, 153, 0.1);
+        }
+    }
+
+    &.table-hover {
+        tbody tr {
+            @include hover() {
+                color: $table-dark-hover-color;
+                background-color: $table-dark-hover-bg;
+            }
+        }
+    }
+}
+
+
+// Responsive tables
+//
+// Generate series of `.table-responsive-*` classes for configuring the screen
+// size of where your table will overflow.
+
+.table-responsive {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        &#{$infix} {
+            @include media-breakpoint-down($breakpoint) {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+
+                // Prevent double border on horizontal scroll due to use of `display: block;`
+                > .table-bordered {
+                    border: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.gallery {
+    align-items: stretch;
+    margin-bottom: 48px;
+
+    & > .row {
+        width: auto;
+        padding: 0;
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        margin: 0 4px 8px;
+        border-radius: 5px;
+        background-color: $silver-light;
+
+        &-inner {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-img {
+            @include object-fit(cover, center);
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &--grid {
+
+        .gallery__item {
+            width: calc(33.3333% - 8px);
+            height: 303px;
+        }
+    }
+
+    &--mosaic {
+
+        .gallery__item {
+            width: calc(66.6666% - 8px);
+            height: 307px;
+
+            &:nth-child(4n+2) {
+                width: calc(33.3333% - 8px);
+            }
+            &:nth-child(4n+3) {
+                width: calc(33.3333% - 8px);
+            }
+        }
+    }
+}

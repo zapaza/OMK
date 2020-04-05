@@ -1,7 +1,7 @@
 body {
     font: {
         size: rem(16);
-        weight: 400;
+        weight: 300;
     };
     line-height: 1.5;
     letter-spacing: normal;
@@ -11,6 +11,31 @@ body {
     background-color: $white;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
+}
+
+
+.col, [class*='col-'] {
+    @media (max-width: 1280px) {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    @media (max-width: 576px) {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.row {
+    @media (max-width: 1280px) {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    @media (max-width: 576px) {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
 }
 
 .wrapper {

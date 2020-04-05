@@ -8,17 +8,18 @@ function timeVideo() {
                 return (videoTime - (videoTime %= 60)) / 60 + (9 < videoTime ? ':' : ':0') + videoTime
             };
         $this.eq(i).find('.video__time').text(formattedTime);
-        console.log(videoTime);
     }
 }
 
 $(document).ready(function () {
-    var videosLength = $('video').length;
-    var lastVideo = $('video').eq(videosLength - 1)[0];
-    console.log(lastVideo)
-    lastVideo.addEventListener('loadedmetadata', function(){
-        timeVideo();
-    })
+    if ($('video').length > 0) {
+        var videosLength = $('video').length;
+        var lastVideo = $('video').eq(videosLength - 1)[0];
+        lastVideo.addEventListener('loadedmetadata', function(){
+            timeVideo();
+        })
+    }
+
 });
 
 function stopAllVideos() {
