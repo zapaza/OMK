@@ -107,10 +107,6 @@
                 object-position: center;
             }
         }
-
-        &-text {
-            display: none;
-        }
     }
 
     &__nav {
@@ -189,5 +185,37 @@
         background-color: transparent;
         background-image: url('../img/icons/icon__zoom.svg');
         opacity: 0;
+    }
+
+    &__description {
+        width: 100%;
+        padding-top: 8px;
+
+        .title {
+            width: 70%;
+            margin-bottom: 8px;
+            font-size: rem(16);
+            font-weight: $font-weight-bold;
+            line-height: 1.5;
+        }
+
+        .text {
+            width: 70%;
+            font-size: rem(14);
+            line-height: 1.43;
+        }
+    }
+
+    &--border {
+
+        .thumbs-slider__main-img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .thumbs-slider__description {
+            border: solid 1px $border-10;
+            padding: 12px 0 12px 20px;
+            border-radius: 0 0 5px 5px;
+        }
     }
 }

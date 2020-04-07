@@ -11,6 +11,21 @@ global.$ = $;
 objectFitImages('img', {
     watchMQ: true
 });
+//прогрессбар на текстовой странице
+function articleScroll() {
+    if ($('.article').length >0 ){
+
+        let $article = $('.article'),
+            progressBar = $article.children('.progress'),
+            count = (($(window).scrollTop() / ($(document).height() - $(window).height())) * 100);
+
+        if ($(window).scrollTop() > 0) {
+            progressBar.children().css('width', count + '%')
+
+        }
+    }
+
+}
 
 $(document).ready(()=>{
 
@@ -148,4 +163,6 @@ $(document).ready(()=>{
 
 });
 
-//скрипт постановки лайка/дизлайка
+$(window).scroll(function () {
+    articleScroll()
+})
