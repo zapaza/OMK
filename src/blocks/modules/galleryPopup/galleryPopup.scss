@@ -1,0 +1,80 @@
+@import 'node_modules/bootstrap/scss/modal';
+
+.modal-backdrop {
+    background-color: #262626;
+
+    &.show {
+        opacity: .8;
+    }
+}
+
+.modal-gallery {
+
+    .modal-dialog {
+        max-width: 1024px;
+    }
+
+    .modal-content {
+        background: none;
+        border-radius: 0;
+        border: none;
+
+        .thumbs-slider {
+
+            .swiper-button {
+                pointer-events: all;
+
+                &-prev {
+                    left: -72px;
+                }
+                &-next {
+                    right: -72px;
+                }
+            }
+            &__main {
+                .swiper-slide {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+
+            &__nav {
+                position: static;
+                background-color: #262626;
+                padding: 8px;
+
+                .swiper-slide {
+                    &-thumb-active {
+                        &::before {
+                            opacity: 1;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__inner {
+            width: 100%;
+            max-width: 776px;
+            margin: auto;
+            background-color: $white;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 76px;
+
+        .btn {
+            margin-right: 16px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

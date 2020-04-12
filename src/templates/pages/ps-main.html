@@ -1,0 +1,374 @@
+{% extends './layout.html' %}
+{% block content %}
+<div class="wrapper">
+    <div class="row">
+        {% include 'breadcrumbs/breadcrumbs.html' %}
+    </div>
+    <div class="row main-header">
+        <h1>Производственная система</h1>
+        <div class="row">
+            <p class="col-md-10">У нас крутая производственная система с еженедельными обходами и лучшими практиками. Смотрите сами!</p>
+        </div>
+    </div>
+
+    <section class="detours">
+        <div class="row header-block">
+            <h2>Обходы</h2>
+            <div class="header-block__btn">
+                <a href="obhod.html" class="btn">Все обходы <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="row detours__row">
+            <div class="col-12 detours-slider js-detours-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#0" class="detours-card">
+                                <div class="detours-card__header">
+                                    <div class="card-date">10 фев</div>
+                                    <div class="card-like"><i class="icon icon--like-gray-chek"></i>123</div>
+                                    <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                                </div>
+                                <div class="detours-card__body">
+                                    <div class="detours-card__mark detours-card__mark--success">
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="detours-card__title">Обход управляющего директора БАЗ цеха №1</h5>
+                                </div>
+                                <span class="detours-card__footer">
+                                     <div class="card-tags"><span class="badge">ВМЗ</span> <span
+                                             class="badge">ВМЗ</span> <span class="badge">ВМЗ</span> <span
+                                             class="badge">ВМЗ</span> <span class="badge">ВМЗ</span></div>
+
+                                </span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#0" class="detours-card">
+                                <div class="detours-card__header">
+                                    <div class="card-date">10 фев</div>
+                                    <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
+                                    <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                                </div>
+                                <div class="detours-card__body">
+                                    <div class="detours-card__mark detours-card__mark--danger">
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="detours-card__title">Обход управляющего директора ВМЗ всех цехов</h5>
+                                </div>
+                                <span class="detours-card__footer">
+                                     <div class="card-tags"><span class="badge">ВМЗ</span></div>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#0" class="detours-card">
+                                <div class="detours-card__header">
+                                    <div class="card-date">10 фев</div>
+                                    <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
+                                    <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                                </div>
+                                <div class="detours-card__body">
+                                    <div class="detours-card__mark">
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="detours-card__title">Внеплановый обход управляющего директора БАЗ цеха
+                                        №2</h5>
+                                </div>
+                                <span class="detours-card__footer">
+                                     <div class="card-tags"><span class="badge">ВМЗ</span></div>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#0" class="detours-card">
+                                <div class="detours-card__header">
+                                    <div class="card-date">10 фев</div>
+                                    <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
+                                    <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                                </div>
+                                <div class="detours-card__body">
+                                    <div class="detours-card__mark">
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="detours-card__title">Обход управляющего директора БАЗ цеха №1</h5>
+                                </div>
+                                <span class="detours-card__footer">
+                                     <div class="card-tags"><span class="badge">ВМЗ</span></div>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#0" class="detours-card">
+                                <div class="detours-card__header">
+                                    <div class="card-date">10 фев</div>
+                                    <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
+                                    <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                                </div>
+                                <div class="detours-card__body">
+                                    <div class="detours-card__mark">
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-check"></i></div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                        <div class="detours-card__mark-item"><i class="icon icon--star-uncheck"></i>
+                                        </div>
+                                    </div>
+                                    <h5 class="detours-card__title">Внеплановый обход управляющего директора БАЗ цеха
+                                        №2</h5>
+                                </div>
+                                <span class="detours-card__footer">
+                                     <div class="card-tags"><span class="badge">ВМЗ</span></div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button swiper-button-prev"></div>
+                <div class="swiper-button swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="practices">
+        <div class="row header-block">
+            <h2>Лучшие практики</h2>
+            <div class="header-block__btn">
+                <a href=#0" class="btn">Смотреть все <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="row row__news">
+            <div class="practices__slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="practices__item">
+                                <div class="practices__video-body">
+                                    <picture class="practices__preview">
+                                        <!--[if IE 9]>
+                                        <video style="display: none;"><![endif]-->
+                                        <source srcset="img/AA5J7433.webp" type="image/webp">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img src="img/AA5J7433.jpg" type="image/jpg" title="" alt="">
+                                    </picture>
+                                    <video class="practices__player" controls="" preload="auto">
+                                        <source src="https://timflach.com/wp-content/uploads/2014/02/SELECT_04_cut.mp4" type="video/mp4">
+                                        <!--                                        для лучшей поддержки набо еще подгружать второй сорс в видео в формате webm-->
+                                        <source src="https://timflach.com/wp-content/uploads/2014/02/SELECT_04_cut.webmhd.webm" type="video/webm">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="practices__time">0:06</div>
+                                </div>
+                                <div class="practices__footer">
+                                    <h5 class="practices__title">Выксунский металлургический завод</h5>
+                                    <div class="practices__autor">
+                                        <div class="avatar"><img src="" alt="" title></div>
+                                        <div class="name">Лариса Сковородникова</div>
+                                    </div>
+                                    <div class="card-date">10 фев</div>
+                                    <div class="card-view"><i class="icon icon--view-gray"></i>104</div>
+                                    <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
+                                    <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="practices__item">
+                                <div class="practices__photo-body">
+                                    <picture class="practices__preview">
+                                        <!--[if IE 9]>
+                                        <video style="display: none;"><![endif]-->
+                                        <source srcset="img/AA5J7433.webp" type="image/webp">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img src="img/AA5J7433.jpg" type="image/jpg" title="" alt="">
+                                    </picture>
+                                </div>
+                                <div class="practices__footer">
+                                    <h5 class="practices__title">Выксунский металлургический завод</h5>
+                                    <div class="practices__autor">
+                                        <div class="avatar"><img src="" alt="" title></div>
+                                        <div class="name">Лариса Сковородникова</div>
+                                    </div>
+                                    <div class="card-date">10 фев</div>
+                                    <div class="card-view"><i class="icon icon--view-gray"></i>104</div>
+                                    <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
+                                    <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 practices__widget">
+                <div class="practices__widget-header">
+                    <h3>Для формирования базы практик добавьте фото ваших подразделений</h3>
+                    <h4>Самые образцовые получат памятные призы</h4>
+                </div>
+                <button class="btn btn--danger"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить фото</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="row header-block">
+            <h2>Новости</h2>
+        </div>
+        <div class="row news__row">
+            <!--        первая большая новость-->
+            <div class="col-12">
+                <a href="/" class="card card--main">
+                    <picture class="card-img">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="img/1360x695_Toyota_2020.jpg" type="image/jpg" title="Лучшие в металлургии"
+                             alt="Лучшие в металлургии">
+                    </picture>
+                    <div class="card-body">
+                        <div class="card-tags"><span class="badge">ВМЗ</span></div>
+                        <h5 class="card-title">Лучшие в металлургии</h5>
+                        <p class="card-text">Производственная система сразу трех заводов ОМК удостоена медалей
+                            Toyota</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-date">10 фев 2019</div>
+                        <div class="card-like"><i class="icon icon--like-white"></i>0</div>
+                        <div class="card-comment"><i class="icon icon--comment-white"></i>23</div>
+                    </div>
+                </a>
+            </div>
+            <!--        первая большая новость конец-->
+        </div>
+        <div class="row news__row">
+            <div class="col-md-4">
+                <a href="/" class="card">
+                    <picture class="card-img">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/ot.webp" type="image/webp">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="img/ot.jpg" type="image/jpg"
+                             title="Альметьевский трубный завод пополнил товарную линейку оцинкованными трубами"
+                             alt="Альметьевский трубный завод пополнил товарную линейку оцинкованными трубами">
+                    </picture>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="badge">ВМЗ</span>
+                            <span class="badge badge--gallery">Галерея</span>
+                        </div>
+                        <h5 class="card-title">Альметьевский трубный завод пополнил товарную линейку оцинкованными
+                            трубами</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-date">10 фев</div>
+                        <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
+                        <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/" class="card">
+                    <picture class="card-img">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/AA5J6740.webp" type="image/webp">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="img/AA5J6740.jpg" type="image/jpg"
+                             title="ОМК начала поставки рессор для обновленных автомобилей Ford Transit"
+                             alt="ОМК начала поставки рессор для обновленных автомобилей Ford Transit">
+                    </picture>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="badge">ВМЗ</span>
+                            <span class="badge badge--gallery">Галерея <span class="badge__count">7 фото</span></span>
+                            <span class="badge">ВМЗ</span>
+                            <span class="badge">Белэнергомаш</span>
+                            <span class="badge">ЧМЗ</span>
+                            <span class="badge">АТЗ</span>
+                            <span class="badge badge--video">Видео</span>
+                        </div>
+                        <h5 class="card-title">ОМК начала поставки рессор для обновленных автомобилей Ford Transit</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-date">10 фев</div>
+                        <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
+                        <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/" class="card card--image">
+                    <picture class="card-img">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/IMG_9962_4k.webp" type="image/webp">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="img/IMG_9962_4k.jpg" type="image/jpg"
+                             title="Производственный травматизм в 2019 году на предприятиях ОМК снизился на 43%"
+                             alt="Производственный травматизм в 2019 году на предприятиях ОМК снизился на 43%">
+                    </picture>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="badge">ВМЗ</span>
+                            <span class="badge badge--video">Видео</span>
+                            <span class="badge">ВМЗ</span>
+                            <span class="badge">Белэнергомаш</span>
+                            <span class="badge">ЧМЗ</span>
+                            <span class="badge">АТЗ</span>
+                            <span class="badge badge--video">Видео</span>
+                        </div>
+                        <h5 class="card-title">Производственный травматизм в 2019 году на предприятиях ОМК снизился на
+                            43%</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-date">10 фев</div>
+                        <div class="card-like"><i class="icon icon--like-white"></i>0</div>
+                        <div class="card-comment"><i class="icon icon--comment-white"></i>23</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row news__row">
+            <a href="#0" class="btn btn--dark">Показать еще</a>
+        </div>
+    </section>
+
+
+
+</div>
+{% endblock %}

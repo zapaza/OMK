@@ -49,6 +49,13 @@ body {
         margin-bottom: 0;
         line-height: rem(72);
     }
+    p {
+        padding-top: 18px;
+        font-size: rem(28);
+        line-height: 1.29;
+        letter-spacing: normal;
+        color: $black;
+    }
 }
 .header-block {
     margin-bottom: 32px;
@@ -60,7 +67,7 @@ body {
 
     &__btn {
         position: absolute;
-        top: 0;
+        top: 8px;
         right: 0;
 
         .btn {
@@ -70,6 +77,7 @@ body {
             color: $black;
         }
     }
+
 }
 
 
