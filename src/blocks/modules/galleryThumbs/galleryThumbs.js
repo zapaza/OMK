@@ -2,15 +2,12 @@ import Swiper from 'swiper/js/swiper';
 import 'bootstrap/js/dist/modal';
 
 function setSlidersButtonsPositionTop() {
-    var sliders = $('.js-thumbs-slider__main');
+    let sliders = $('.js-thumbs-slider__main');
 
     sliders.each(function(){
         let thisSlideHeight = $(this).find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
             thisBtnHeight = $(this).parent().find('.swiper-button').eq(0).outerHeight(),
             thisButtonsPositionTop = thisSlideHeight/2 - thisBtnHeight/2 + 'px';
-        console.log(thisSlideHeight);
-        console.log(thisBtnHeight);
-        console.log(thisButtonsPositionTop);
 
         $(this).parent().find('.swiper-button').css({
             'top': thisButtonsPositionTop
@@ -18,12 +15,32 @@ function setSlidersButtonsPositionTop() {
     }); 
 }
 
-$(document).ready(function () {
-    setSlidersButtonsPositionTop();
+function setNavSlidersPositionTop(bigSliderItem) {
+
+    let thisSliderItem = $(bigSliderItem),
+        thisSlideHeight = thisSliderItem.find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
+        thisNavSliderHeight = thisSliderItem.find('.js-thumbs-slider__nav').eq(0).outerHeight(),
+        thisNavSliderPositionTop = thisSlideHeight - thisNavSliderHeight - 8 + 'px';
+
+    console.log(thisSliderItem);
+    console.log(thisSlideHeight);
+    console.log(thisNavSliderHeight);
+    console.log(thisNavSliderPositionTop);
+
+    thisSliderItem.find('.js-thumbs-slider__nav').css({
+        'top': thisNavSliderPositionTop
+    });
+
+}
+
+$('.js-thumbs-slider__main').hover(function() {
+    let bigSlider = $(this).closest('.thumbs-slider');
+    setNavSlidersPositionTop(bigSlider);
 })
 
 function initThumbsSlider() {
     let $slider = $('.thumbs-slider .thumbs-slider__main');
+    console.log($slider.length);
 
     $slider.each(function () {
         let paginationSlider = $(this).parent().find('.swiper-pagination')[0],
@@ -31,7 +48,7 @@ function initThumbsSlider() {
             prevButton = $(this).parent().find('.swiper-button-prev'),
             paginationSliderThumbs = $(this).find('.thumbs-slider__nav')[0];
 
-            //console.log(buttonHeight);
+            console.log(paginationSliderThumbs);
 
 
         let galleryThumbs = new Swiper(this, {
@@ -48,20 +65,13 @@ function initThumbsSlider() {
                 swiper: {
                     el: paginationSliderThumbs,
                     slidesPerView: 7,
-                    spaceBetween: 8,
+                    spaceBetween: 8
                 }
             },
             autoHeight: true,
             on: {
                 init: function () {
-                    // var slideHeight = $($(this)[0].$el).parent().find('img:eq(0)').outerHeight(),
-                    //     buttonHeight = $($(this)[0].$el).parent().find('.swiper-button:eq(0)').outerHeight(),
-                    //     sliderButtonPositionY = parseInt(slideHeight/2 - buttonHeight/2);
-
-                    // console.log(slideHeight);
-                    // console.log(buttonHeight);
-                    // nextButton.css('top', sliderButtonPositionY);
-                    // prevButton.css('top', sliderButtonPositionY);
+                    
                 },
             },
         });
@@ -70,9 +80,15 @@ function initThumbsSlider() {
 
 $(document).ready(function () {
     if ($('.thumbs-slider').length > 0) {
-        initThumbsSlider()
+        initThumbsSlider();
+        setSlidersButtonsPositionTop();
     }
 });
+
+$(window).resize(function(){
+    setNavSlidersPositionTop();
+})
+
 $('body').on('click', '.thumbs-slider__zoom', function (e) {
     e.preventDefault();
     $('#gallery_popup').modal('show');
