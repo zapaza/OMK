@@ -2,7 +2,21 @@ import Swiper from 'swiper/js/swiper';
 import 'bootstrap/js/dist/modal';
 
 function setSlidersButtonsPositionTop() {
-    let sliders = $('.js-thumbs-slider__main');
+    let sliders = $('.js-thumbs-slider__main:not(.js-thumbs-slider__main--modal)');
+
+    sliders.each(function(){
+        let thisSlideHeight = $(this).find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
+            thisBtnHeight = $(this).parent().find('.swiper-button').eq(0).outerHeight(),
+            thisButtonsPositionTop = thisSlideHeight/2 - thisBtnHeight/2 + 'px';
+
+        $(this).parent().find('.swiper-button').css({
+            'top': thisButtonsPositionTop
+        })
+    }); 
+}
+
+function setSlidersModalButtonsPositionTop() {
+    let sliders = $('.js-thumbs-slider__main.js-thumbs-slider__main--modal');
 
     sliders.each(function(){
         let thisSlideHeight = $(this).find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
@@ -94,7 +108,8 @@ $('body').on('click', '.thumbs-slider__zoom', function (e) {
     $('#gallery_popup').modal('show');
 });
 $('#gallery_popup').on('shown.bs.modal', function () {
-    initThumbsSlider()
+    initThumbsSlider();
+    setSlidersModalButtonsPositionTop();
 });
 
 
