@@ -1,5 +1,18 @@
 @import 'node_modules/bootstrap/scss/modal';
 
+.modal {
+    .comments {
+        padding: 0 32px 48px;
+        &__header {
+            margin-bottom: 24px;
+            h2 {
+                font-size: rem(20);
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
 .modal-backdrop {
     background-color: #262626;
 
@@ -36,6 +49,9 @@
                     &::before {
                         display: none;
                     }
+                }
+                &-img {
+                    background-color: #1a1a1a;
                 }
             }
 
@@ -75,6 +91,7 @@
             max-width: 776px;
             margin: auto;
             background-color: $white;
+            border-radius: 8px
         }
     }
 
@@ -85,7 +102,29 @@
         margin-bottom: 76px;
 
         .btn {
+            @include transition();
             margin-right: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: inline-block;
+            width: 32px;
+            min-width: 32px;
+            height: 32px;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &--close-modal {
+                background-image: url(../img/icons/close-modal.svg);
+            }
+            &--download-modal {
+                background-image: url(../img/icons/download-modal.svg);
+            }
 
             &:last-child {
                 margin-right: 0;
