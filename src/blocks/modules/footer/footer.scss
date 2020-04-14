@@ -1,0 +1,51 @@
+.footer {
+  flex: 0 0 auto;
+  border-top: 1px solid $border-10;
+  padding: 20px 0 32px;
+  background-color: $white;
+
+
+  .row {
+    justify-content: space-between;
+  }
+
+  &__left, &__right  {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__left {
+   .footer__link {
+
+     &:last-child {
+       a{
+         color: $text-silver;
+       }
+     }
+   }
+  }
+
+  &__right {
+    .footer__link {
+      a {
+        color: $text-silver;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-right: 32px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: $black;
+    }
+  }
+}

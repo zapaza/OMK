@@ -85,12 +85,14 @@
 
 </head>
 <body>
-{% include 'header/header.html' %}
+<div class="page">
+    <div class="page__content">
+        {% include 'header/header.html' %}
 
-{% block content %}{% endblock %}
-
-{% include 'footer/footer.html' %}
-
+        {% block content %}{% endblock %}
+    </div>
+    {% include 'footer/footer.html' %}
+</div>
 <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 {% block scripts %}{% endblock %}
