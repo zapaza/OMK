@@ -36,10 +36,10 @@ function setNavSlidersPositionTop(bigSliderItem) {
         thisNavSliderHeight = thisSliderItem.find('.js-thumbs-slider__nav').eq(0).outerHeight(),
         thisNavSliderPositionTop = thisSlideHeight - thisNavSliderHeight - 8 + 'px';
 
-    console.log(thisSliderItem);
-    console.log(thisSlideHeight);
-    console.log(thisNavSliderHeight);
-    console.log(thisNavSliderPositionTop);
+    //console.log(thisSliderItem);
+    //console.log(thisSlideHeight);
+    //console.log(thisNavSliderHeight);
+    //console.log(thisNavSliderPositionTop);
 
     thisSliderItem.find('.js-thumbs-slider__nav').css({
         'top': thisNavSliderPositionTop
@@ -49,12 +49,14 @@ function setNavSlidersPositionTop(bigSliderItem) {
 
 $('.js-thumbs-slider__main').hover(function() {
     let bigSlider = $(this).closest('.thumbs-slider');
-    setNavSlidersPositionTop(bigSlider);
+    setTimeout(function() {
+        setNavSlidersPositionTop(bigSlider);
+    }, 600);
 })
 
 function initThumbsSlider() {
     let $slider = $('.thumbs-slider .thumbs-slider__main');
-    console.log($slider.length);
+    //console.log($slider.length);
 
     $slider.each(function () {
         let paginationSlider = $(this).parent().find('.swiper-pagination')[0],
@@ -62,7 +64,7 @@ function initThumbsSlider() {
             prevButton = $(this).parent().find('.swiper-button-prev'),
             paginationSliderThumbs = $(this).find('.thumbs-slider__nav')[0];
 
-            console.log(paginationSliderThumbs);
+            //console.log(paginationSliderThumbs);
 
 
         let galleryThumbs = new Swiper(this, {

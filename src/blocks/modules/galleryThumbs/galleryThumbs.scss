@@ -194,6 +194,7 @@
     &__description {
         width: 100%;
         padding-top: 8px;
+        box-sizing: border-box;
 
         .title {
             width: 70%;
