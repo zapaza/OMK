@@ -1,43 +1,43 @@
 .practices__widget {
-	padding:12px 20px 28px;
-	border-radius: 5px;
-	background-color: #3d3d4d;
-	margin-bottom: 24px;
-	position: relative;
+    position: relative;
+    padding: 12px 20px 28px;
+    border-radius: 5px;
+    background-color: #3d3d4d;
+    margin-bottom: 24px;
 
-	&:after {
-		content: '';
-		position: absolute;
-		width: 120px;
-		height: 120px;
-		top: 28px;
-		right: 28px;
-		background-image: url(../img/practices__widget-bg.svg);
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
+    &:after {
+        content: '';
+        position: absolute;
+        top: 28px;
+        right: 28px;
+        width: 120px;
+        height: 120px;
+        background-image: url(../img/practices__widget-bg.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 
-	&-header{
-		width: percentage(10/12);
+    &-header {
+        width: percentage(10/12);
 
 
-		h3 {
-			font-size: rem(24);
-			font-weight: $font-weight-bold;
-			line-height: 1.33;
-			color:$white;
-			margin-bottom: 4px;
-		}
-		h4 {
-			font-size: rem(24);
-			font-weight: $font-weight-bold;
-			line-height: 1.33;
-			color: $text-silver;
-		}
-	}
-	.btn {
-		margin-top: 20px;
-		padding-top: 12px;
-		padding-bottom: 12px;
-	}
+        h3 {
+            font-size: rem(24);
+            font-weight: $font-weight-bold;
+            line-height: 1.33;
+            color: $white;
+            margin-bottom: 4px;
+        }
+        h4 {
+            font-size: rem(24);
+            font-weight: $font-weight-bold;
+            line-height: 1.33;
+            color: $text-silver;
+        }
+    }
+    .btn {
+        margin-top: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
 }

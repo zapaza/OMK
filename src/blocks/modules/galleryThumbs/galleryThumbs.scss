@@ -113,10 +113,10 @@
         @include transition();
         position: absolute;
         z-index: 3;
+        top: 100%;
         right: 8px;
         bottom: auto;
         left: 8px;
-        top: 100%;
         opacity: 0;
 
         .swiper-wrapper {
@@ -125,8 +125,8 @@
 
         .swiper-slide {
             @include transition();
-            padding-bottom: 0;
             height: auto;
+            padding-bottom: 0;
             cursor: pointer;
             &::before {
                 content: none;
@@ -186,9 +186,9 @@
     }
 
     &__description {
+        box-sizing: border-box;
         width: 100%;
         padding-top: 8px;
-        box-sizing: border-box;
 
         .title {
             width: 70%;
