@@ -39,6 +39,7 @@ $(document).ready(() => {
                 nextEl: '.js-main-page__slider .swiper-button-next',
                 prevEl: '.js-main-page__slider .swiper-button-prev',
             },
+            noSwipingClass: 'no-swiping',
             on: {
                 init: () => {
                     //Показ кнопок только если слайдов больше, чем видно
@@ -61,7 +62,7 @@ $(document).ready(() => {
     //слайдеры на странице новостей
     if ($('.js-slider-big').length > 0) {
         var newsSlider = new Swiper('.js-slider-big .swiper-container', {
-            speed: 1500,
+            speed: 500,
             spaceBetween: 32,
             slidesPerView: 1,
             navigation: {
@@ -95,7 +96,7 @@ $(document).ready(() => {
     if ($('.js-detours-slider').length > 0) {
         let detoursSlider = new Swiper('.js-detours-slider .swiper-container', {
             slidesPerView: 4,
-            speed: 1500,
+            speed: 500,
             noSwipingClass: 'no-swiping',
             spaceBetween: 32,
             navigation: {
@@ -115,32 +116,13 @@ $(document).ready(() => {
                     }
                 },
             },
-            breakpoints: {
-                // 425: {
-                //     slidesPerView: 2,
-                //     spaceBetween: 10
-                // },
-                // 780: {
-                //     slidesPerView: 3,
-                //     spaceBetween: 10
-                // },
-                // 1180: {
-                //     slidesPerView: 4,
-                //     spaceBetween: 20
-                // },
-                // 1340: {
-                //     slidesPerView: 4,
-                //     spaceBetween: 50
-                // }
-            }
-
         });
     }
 
     if ($('.js-video-gallery').length > 0) {
         let videoSlider = new Swiper('.js-video-gallery .swiper-container', {
             slidesPerView: 2,
-            speed: 1500,
+            speed: 500,
             noSwipingClass: 'no-swiping',
             spaceBetween: 32,
             navigation: {
@@ -167,7 +149,7 @@ $(document).ready(() => {
     if ($('.js-articles-slider').length > 0) {
         let videoSlider = new Swiper('.js-articles-slider .swiper-container', {
             slidesPerView: 3,
-            speed: 1500,
+            speed: 500,
             noSwipingClass: 'no-swiping',
             spaceBetween: 32,
             navigation: {

@@ -1,6 +1,14 @@
 .video {
     width: 100%;
 
+    &.no-video {
+        .video__preview {
+            &:after, &:before {
+                display: none;
+            }
+        }
+    }
+
     &__body {
         position: relative;
         width: 100%;
@@ -84,8 +92,66 @@
         outline: none;
     }
 
+    &__title {
+        display: block;
+        margin-bottom: 8px;
+        font-size: rem(16);
+        font-weight: $font-weight-bold;
+        line-height: 1.25;
+        color: #1a1a1a;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__author {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .avatar {
+            flex: 0 0 auto;
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+            background-color: $silver;
+            border-radius: 50%;
+            margin-right: 8px;
+
+
+            &__img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-position: center;
+                object-fit: cover;
+            }
+        }
+
+        .name {
+            flex: 1 1 auto;
+            font-size: rem(14);
+            line-height: 1.43;
+            font-weight: $font-weight-light;
+        }
+    }
+
     &__footer {
         font-size: rem(20);
         line-height: 1.2;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .card-date {
+            margin-right: 16px;
+        }
+        .card-view, .card-like, .card-comment {
+            margin-right: 12px;
+            margin-left: 0;
+        }
     }
 }
