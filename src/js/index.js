@@ -11,9 +11,10 @@ global.$ = $;
 objectFitImages('img', {
     watchMQ: true
 });
+
 //прогрессбар на текстовой странице
 function articleScroll() {
-    if ($('.article').length >0 ){
+    if ($('.article').length > 0) {
 
         let $article = $('.article'),
             progressBar = $article.children('.progress'),
@@ -27,10 +28,38 @@ function articleScroll() {
 
 }
 
-$(document).ready(()=>{
+$(document).ready(() => {
+    //слайдер на главной стрнице, в низу страници
+    if ($('.js-main-page__slider').length > 0) {
+        var mainPageSlider = new Swiper('.js-main-page__slider .swiper-container', {
+            speed: 500,
+            spaceBetween: 24,
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: '.js-main-page__slider .swiper-button-next',
+                prevEl: '.js-main-page__slider .swiper-button-prev',
+            },
+            on: {
+                init: () => {
+                    //Показ кнопок только если слайдов больше, чем видно
+                    let swiperInner = $('.js-main-page__slider');
+                    let slidesLength = swiperInner.find('.swiper-slide').length;
+                    if (slidesLength > 1) {
+                        swiperInner.find('.swiper-button').addClass('show');
+                        swiperInner.find('.swiper-pagination').addClass('show');
+                        $(this).find('.swiper-wrapper').removeClass('no-swiping');
+                    } else {
+                        $(this).find('.swiper-wrapper').addClass('no-swiping');
+                    }
+                },
+
+            },
+        });
+    }
+
 
     //слайдеры на странице новостей
-    if ($('.js-slider-big').length > 0){
+    if ($('.js-slider-big').length > 0) {
         var newsSlider = new Swiper('.js-slider-big .swiper-container', {
             speed: 1500,
             spaceBetween: 32,
@@ -44,7 +73,7 @@ $(document).ready(()=>{
                 type: 'bullets',
                 clickable: true,
             },
-            loop : true,
+            loop: true,
             noSwipingClass: 'no-swiping',
             on: {
                 init: () => {
