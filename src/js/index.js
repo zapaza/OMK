@@ -11,9 +11,10 @@ global.$ = $;
 objectFitImages('img', {
     watchMQ: true
 });
+
 //прогрессбар на текстовой странице
 function articleScroll() {
-    if ($('.article').length >0 ){
+    if ($('.article').length > 0) {
 
         let $article = $('.article'),
             progressBar = $article.children('.progress'),
@@ -27,12 +28,41 @@ function articleScroll() {
 
 }
 
-$(document).ready(()=>{
+$(document).ready(() => {
+    //слайдер на главной стрнице, в низу страници
+    if ($('.js-main-page__slider').length > 0) {
+        var mainPageSlider = new Swiper('.js-main-page__slider .swiper-container', {
+            speed: 500,
+            spaceBetween: 24,
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: '.js-main-page__slider .swiper-button-next',
+                prevEl: '.js-main-page__slider .swiper-button-prev',
+            },
+            noSwipingClass: 'no-swiping',
+            on: {
+                init: () => {
+                    //Показ кнопок только если слайдов больше, чем видно
+                    let swiperInner = $('.js-main-page__slider');
+                    let slidesLength = swiperInner.find('.swiper-slide').length;
+                    if (slidesLength > 1) {
+                        swiperInner.find('.swiper-button').addClass('show');
+                        swiperInner.find('.swiper-pagination').addClass('show');
+                        $(this).find('.swiper-wrapper').removeClass('no-swiping');
+                    } else {
+                        $(this).find('.swiper-wrapper').addClass('no-swiping');
+                    }
+                },
+
+            },
+        });
+    }
+
 
     //слайдеры на странице новостей
-    if ($('.js-slider-big').length > 0){
+    if ($('.js-slider-big').length > 0) {
         var newsSlider = new Swiper('.js-slider-big .swiper-container', {
-            speed: 1500,
+            speed: 500,
             spaceBetween: 32,
             slidesPerView: 1,
             navigation: {
@@ -44,7 +74,7 @@ $(document).ready(()=>{
                 type: 'bullets',
                 clickable: true,
             },
-            loop : true,
+            loop: true,
             noSwipingClass: 'no-swiping',
             on: {
                 init: () => {
@@ -66,7 +96,7 @@ $(document).ready(()=>{
     if ($('.js-detours-slider').length > 0) {
         let detoursSlider = new Swiper('.js-detours-slider .swiper-container', {
             slidesPerView: 4,
-            speed: 1500,
+            speed: 500,
             noSwipingClass: 'no-swiping',
             spaceBetween: 24,
             navigation: {
@@ -86,6 +116,7 @@ $(document).ready(()=>{
                     }
                 },
             },
+<<<<<<< HEAD
             breakpoints: {
                 1024: {
                     slidesPerView: 4,
@@ -97,6 +128,8 @@ $(document).ready(()=>{
                 }
             }
 
+=======
+>>>>>>> 5321ebdc80bd5d1a2aa8a1e053904e0b04b2b4aa
         });
     }
 
@@ -105,7 +138,7 @@ $(document).ready(()=>{
 
         let videoSlider = new Swiper('.js-video-gallery .swiper-container', {
             slidesPerView: 2,
-            speed: 1500,
+            speed: 500,
             noSwipingClass: 'no-swiping',
             spaceBetween: 32,
             navigation: {
@@ -156,7 +189,7 @@ $(document).ready(()=>{
     if ($('.js-articles-slider').length > 0) {
         let videoSlider = new Swiper('.js-articles-slider .swiper-container', {
             slidesPerView: 3,
-            speed: 1500,
+            speed: 500,
             noSwipingClass: 'no-swiping',
             spaceBetween: 32,
             navigation: {

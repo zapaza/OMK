@@ -1,5 +1,5 @@
 function timeVideo() {
-    let $this = $('.video'),
+    let $this = $('.video:not(.no-video)'),
         videoLength = $this.length;
 
     for (i = 0; i < videoLength; i++) {
@@ -36,7 +36,7 @@ function stopAllVideos() {
     }
 }
 
-$(document).on('click', '.video__preview', function () {
+$(document).on('click', '.video:not(.no-video) .video__preview', function () {
     let $this = $(this),
         $thisVideo = $this.closest('.video').find('.video__player');
     stopAllVideos();

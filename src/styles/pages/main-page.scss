@@ -58,4 +58,31 @@
             font-weight: $font-weight-light;
         }
     }
+
+
+    &__slider {
+        margin-bottom: 48px;
+        width: 100%;
+
+        .swiper-slide {
+            max-width: 296px;
+        }
+        .swiper-button {
+            margin-top: -24px;
+        }
+    }
+
+    &__slider-item {
+        display: block;
+        width: 296px;
+        height: 168px;
+        overflow: hidden;
+        border-radius: 5px;
+        background-color: $silver-light;
+    }
+
+    &__slider-img {
+        display: block;
+        width: 100%;
+    }
 }
