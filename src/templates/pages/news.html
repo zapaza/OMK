@@ -2,11 +2,15 @@
 {% block content %}
 <div class="wrapper">
     <div class="row">
-        {% include 'breadcrumbs/breadcrumbs.html' %}
+        <div class="col-12">
+            {% include 'breadcrumbs/breadcrumbs.html' %}
+        </div>
     </div>
     <main class="news">
-        <div class="row main-header">
-            <h1>Новости</h1>
+        <div class="row">
+            <div class="col-12 main-header">
+                <h1>Новости</h1>
+            </div>
         </div>
         <div class="row news__row">
             <!--        первая большая новость-->
@@ -36,7 +40,7 @@
             <!--        первая большая новость конец-->
         </div>
         <div class="row news__row">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <a href="/" class="card">
                     <picture class="card-img">
                         <!--[if IE 9]>
@@ -62,7 +66,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <a href="/" class="card">
                     <picture class="card-img">
                         <!--[if IE 9]>
@@ -92,7 +96,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <a href="/" class="card card--image">
                     <picture class="card-img">
                         <!--[if IE 9]>
@@ -125,7 +129,7 @@
             </div>
         </div>
         <div class="row news__row">
-            <div class="col-md-6">
+            <div class="col-lg-6 col-md-12">
                 <a href="/" class="card card--image card--big">
                     <picture class="card-img">
                         <!--[if IE 9]>
@@ -165,7 +169,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6 col-md-12">
                 <a href="/" class="card card--big">
                     <picture class="card-img">
                         <!--[if IE 9]>
@@ -200,7 +204,7 @@
             </div>
         </div>
         <div class="row news__row">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <a href="/" class="card">
                     <picture class="card-img">
                         <!--[if IE 9]>
@@ -223,7 +227,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <a href="/" class="card">
                     <picture class="card-img">
                         <!--[if IE 9]>
@@ -245,7 +249,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <a href="/" class="card">
                     <picture class="card-img">
                         <!--[if IE 9]>
@@ -379,15 +383,19 @@
             </div>
         </div>
         <div class="row news__row">
-            <a href="#0" class="btn btn--dark">Показать еще</a>
+            <div class="col-12">
+                <a href="#0" class="btn btn--dark">Показать еще</a>
+            </div>
         </div>
     </main>
 
     <section class="detours">
-        <div class="row header-block">
-            <h2>Обходы</h2>
-            <div class="header-block__btn">
-                <a href="obhod.html" class="btn">Все обходы <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+        <div class="row">
+            <div class="col-12 header-block">
+                <h2>Обходы</h2>
+                <div class="header-block__btn">
+                    <a href="obhod.html" class="btn">Все обходы <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <div class="row detours__row">
@@ -533,10 +541,12 @@
     </section>
 
     <section class="video-gallery">
-        <div class="row header-block">
-            <h2>Видео</h2>
-            <div class="header-block__btn">
-                <a href=#0" class="btn">Все видео <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+        <div class="row">
+            <div class="col-12 header-block">
+                <h2>Видео</h2>
+                <div class="header-block__btn">
+                    <a href=#0" class="btn">Все видео <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <div class="row video-gallery__row">
@@ -648,10 +658,12 @@
     </section>
 
     <section class="articles">
-        <div class="row header-block">
-            <h2>Статьи из прессы</h2>
-            <div class="header-block__btn">
-                <a href=#0" class="btn">Все cтатьи <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+        <div class="row">
+            <div class="col-12 header-block">
+                <h2>Статьи из прессы</h2>
+                <div class="header-block__btn">
+                    <a href=#0" class="btn">Все cтатьи <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <div class="row articles__row">

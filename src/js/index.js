@@ -68,7 +68,7 @@ $(document).ready(()=>{
             slidesPerView: 4,
             speed: 1500,
             noSwipingClass: 'no-swiping',
-            spaceBetween: 32,
+            spaceBetween: 24,
             navigation: {
                 nextEl: '.js-detours-slider .swiper-button-next',
                 prevEl: '.js-detours-slider .swiper-button-prev',
@@ -87,28 +87,22 @@ $(document).ready(()=>{
                 },
             },
             breakpoints: {
-                // 425: {
-                //     slidesPerView: 2,
-                //     spaceBetween: 10
-                // },
-                // 780: {
-                //     slidesPerView: 3,
-                //     spaceBetween: 10
-                // },
-                // 1180: {
-                //     slidesPerView: 4,
-                //     spaceBetween: 20
-                // },
-                // 1340: {
-                //     slidesPerView: 4,
-                //     spaceBetween: 50
-                // }
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 32
+                },
+                100: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 16
+                }
             }
 
         });
     }
 
     if ($('.js-video-gallery').length > 0) {
+
+
         let videoSlider = new Swiper('.js-video-gallery .swiper-container', {
             slidesPerView: 2,
             speed: 1500,
@@ -129,8 +123,32 @@ $(document).ready(()=>{
                     } else {
                         $(this).find('.swiper-wrapper').addClass('no-swiping');
                     }
+
+                    let videoHeight = $('.js-video-gallery .video__preview').eq(0).outerHeight();
+                    let videoBtnPositionTop = videoHeight/2 + 'px';
+                    $('.js-video-gallery .swiper-button').css({
+                        'top': videoBtnPositionTop
+                    });
+
                 },
+                resize: () => {
+                    let videoHeight = $('.js-video-gallery .video__preview').eq(0).outerHeight();
+                    let videoBtnPositionTop = videoHeight/2 + 'px';
+                    $('.js-video-gallery .swiper-button').css({
+                        'top': videoBtnPositionTop
+                    });
+                }
             },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 32
+                },
+                100: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 16
+                }
+            }
         });
     }
 
@@ -158,6 +176,16 @@ $(document).ready(()=>{
                     }
                 },
             },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 32
+                },
+                100: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 16
+                }
+            }
         });
     }
 

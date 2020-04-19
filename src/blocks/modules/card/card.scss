@@ -18,6 +18,9 @@
     &--main {
         position: relative;
         height: 440px;
+        @media (max-width: 1023px) {
+            height: 414px;
+        }
 
         &:hover {
             transform: none;
@@ -62,6 +65,11 @@
         .card-body {
             position: relative;
             z-index: 2;
+            @media (max-width: 1023px) {
+                display: flex;
+                flex-direction: column; 
+                justify-content: space-between;
+            }
         }
 
         .card-tags {
@@ -118,6 +126,11 @@
             font-weight: $font-weight-bold;
             line-height: 1.2;
             color: $white;
+            @media (max-width: 1023px) {
+                width: 100%;
+                font-size: rem(20);
+                line-height: 1.2;
+            }
         }
 
         .card-text {
@@ -125,6 +138,9 @@
             font-size: rem(28);
             line-height: 1.29;
             color: $white;
+            @media (max-width: 1023px) {
+                display: none;
+            }
         }
 
         .card-footer {
@@ -145,13 +161,23 @@
 
     &--image {
         position: relative;
+        @media(max-width: 1023px) {
+            height: 414px;
+        }
 
         &.card--big {
             height: 544px;
+             @media(max-width: 1023px) {
+                height: 414px;
+            }
 
             .card-title {
                 font-size: rem(32);
                 line-height: 1.25;
+                 @media(max-width: 1023px) {
+                    font-size: rem(20);
+                    line-height: 1.2;
+                }
             }
         }
 
@@ -268,11 +294,18 @@
 
     &-img {
         display: block;
-        height: 100%;
+        flex-basis: 100%;
         max-height: 200px;
         overflow: hidden;
         background-color: $silver;
         border-radius: 0;
+        @media(max-width: 1279px) {
+            max-height: 168px
+        }
+        @media(max-width: 1023px) {
+            max-height: 200px;
+            flex-basis: auto;
+        }
 
         img {
             display: block;
@@ -365,6 +398,9 @@
         border: none;
         padding: 16px 20px 20px;
         background-color: transparent;
+        @media(max-width: 1279px) {
+            padding-bottom: 16px;
+        }
     }
 
     &-date {
@@ -409,6 +445,9 @@
     padding: 17px 18px 20px;
     border-radius: 5px;
     background-color: $white;
+    @media(max-width: 1023px) {
+        width: 180px;
+    }
 
     &:hover {
         transform: translateY(-8px);
@@ -430,7 +469,7 @@
         align-self: center;
         justify-content: flex-start;
         width: 96px;
-        height: 42px;
+        height: 16px;
         padding: 8px 8px 17px;
         margin-bottom: 6px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='48' viewBox='0 0 96 48'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23909099' stroke='%23909099' stroke-width='2' d='M7.893 39.015L17.053 31H80c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15H16C7.716 1 1 7.716 1 16c0 5.901 3.439 11.178 8.7 13.617l.776.36-2.583 9.038z'/%3E%3C/g%3E%3C/svg%3E%0A");
@@ -476,6 +515,9 @@
     padding: 16px 20px 20px;
     border-radius: 5px;
     background-color: $white;
+    @media(max-width: 1023px) {
+        width: 216px;
+    }
 
     &:hover {
         text-decoration: none;

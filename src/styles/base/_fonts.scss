@@ -2,12 +2,24 @@ h1 {
     font-size: rem(56);
     font-weight: 700;
     line-height: 1.14;
+    @media(max-width: 1023px) {
+        font-size: rem(40);
+        line-height: 1.2;
+    }
 }
 
 h2 {
     font-size: rem(40);
     font-weight: 700;
     line-height: 1.2;
+    @media (max-width: 1279px) {
+        font-size: rem(32);
+        line-height: 1.25;
+    }
+    @media (max-width: 1023px) {
+        font-size: rem(28);
+        line-height: 1.29;
+    }
 }
 h3 {
     font-size: rem(32);
@@ -23,6 +35,10 @@ h5 {
     font-size: rem(24);
     font-weight: 700;
     line-height: 1.33;
+    @media(max-width: 1023px) {
+        font-size: rem(20);
+        line-height: 1.2;
+    }
 }
 h6 {
     font-size: rem(20);
