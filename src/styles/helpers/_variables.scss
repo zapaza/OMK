@@ -35,14 +35,14 @@ $colors: map_merge((
 
 $grid-breakpoints: (
     xs: 0,
-    sm: 414px,
+    sm: 576px,
     md: 768px,
     lg: 1024px,
     xl: 1280px
 );
 $container-max-widths: (
-    sm: 320px,
-    md: 414px,
+    sm: 576px,
+    md: 720px,
     lg: 968px,
     xl: 1120px
 );

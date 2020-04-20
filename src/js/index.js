@@ -116,7 +116,6 @@ $(document).ready(() => {
                     }
                 },
             },
-<<<<<<< HEAD
             breakpoints: {
                 1024: {
                     slidesPerView: 4,
@@ -127,9 +126,6 @@ $(document).ready(() => {
                     spaceBetween: 16
                 }
             }
-
-=======
->>>>>>> 5321ebdc80bd5d1a2aa8a1e053904e0b04b2b4aa
         });
     }
 
