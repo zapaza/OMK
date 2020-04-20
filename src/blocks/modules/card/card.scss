@@ -157,7 +157,7 @@
         .card-img {
             max-height: 350px;
             @media(max-width: 1023px) {
-                max-height: none;
+                max-height: 200px;
             }
         }
     }
@@ -172,6 +172,10 @@
             height: 544px;
              @media(max-width: 1023px) {
                 height: 414px;
+
+                 .card-img {
+                     max-height: none;
+                 }
             }
 
             .card-title {
@@ -182,6 +186,7 @@
                     line-height: 1.2;
                 }
             }
+
         }
 
         .card-img {
@@ -306,7 +311,7 @@
             max-height: 168px
         }
         @media(max-width: 1023px) {
-            max-height: none;
+            max-height: 200px;
             flex-basis: auto;
         }
 
