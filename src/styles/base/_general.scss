@@ -24,7 +24,7 @@ body {
 
 
 .col, [class*='col-'] {
-    @media (max-width: 10240px) {
+    @media (max-width: 1279px) {
         padding-left: 12px;
         padding-right: 12px;
     }
@@ -36,7 +36,7 @@ body {
 }
 
 .row {
-    @media (max-width: 1024px) {
+    @media (max-width: 1279px) {
         margin-left: -12px;
         margin-right: -12px;
     }
@@ -49,6 +49,10 @@ body {
 
 .wrapper {
     @extend .container;
+    @media (min-width: 1024px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .main-header {
