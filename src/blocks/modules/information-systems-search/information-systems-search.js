@@ -1,3 +1,5 @@
+import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
+
 $('body').on('click', function(e) {
 	var div = $(".js-search"); // тут указываем ID элемента
 	if (!div.is(e.target) // если клик был не по нашему блоку
