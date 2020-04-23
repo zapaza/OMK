@@ -4,4 +4,4 @@ import "%modules%/video/video";
 import "%modules%/galleryThumbs/galleryThumbs";
 import "%modules%/comments/comments";
 import "%modules%/likeItem/likeItem";
-
+import "%modules%/information-systems-search/information-systems-search";

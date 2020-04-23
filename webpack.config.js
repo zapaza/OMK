@@ -52,7 +52,11 @@ module.exports = {
                     }
                 }
             }
-        ]
+        ],
+        // loaders: [
+        //     { test: /jquery-mousewheel/, loader: "imports?define=>false&this=>window" },
+        //     { test: /malihu-custom-scrollbar-plugin/, loader: "imports?define=>false&this=>window" }
+        // ]
     },
 
     resolve: {
@@ -61,3 +65,7 @@ module.exports = {
         }
     }
 };
+
+// var $ = require('jquery');
+// require("jquery-mousewheel")($);
+// require('malihu-custom-scrollbar-plugin')($);
