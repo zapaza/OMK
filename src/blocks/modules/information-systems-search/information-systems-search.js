@@ -1,4 +1,5 @@
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
+import 'jquery-mousewheel/jquery.mousewheel';
 
 $('body').on('click', function(e) {
 	var div = $(".js-search"); // тут указываем ID элемента
@@ -6,11 +7,17 @@ $('body').on('click', function(e) {
 	    && div.has(e.target).length === 0) { // и не по его дочерним элементам
 		$('.js-search-dropdown').slideUp(400); // скрываем его
 	}
+});
+
+$('.js-search-dropdown').mCustomScrollbar({
+	axis: "y",
+	scrollInertia: 400, 
+	scrollBarPosition: "insight"
 })
 
 $('body').on('focus', '.js-search__input', function() {
 	$('.js-search-dropdown').slideDown(400);
-})
+});
 
 $('body').on('input', '.js-search__input', function() {
 	if($(this).val().length >= 2) {

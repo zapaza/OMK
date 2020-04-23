@@ -43,7 +43,6 @@
 		max-height: 370px;
 		background: $white;
 		border: 1px solid $silver-light;
-		overflow-y: auto;
 		display: none;
 		&__list {
 			list-style: none;
@@ -86,5 +85,43 @@
 			padding: 20px 24px 8px;
 			margin: 0;
 		}
+	}
+
+
+	//Стилизация скролла
+	.mCSB_scrollTools{
+	  width: 7px;
+	  opacity: 1;
+	  margin-right: 10px;
+	  .mCSB_draggerRail{
+	    width: 100%;
+	    background-color: transparent;
+	    border-radius: 0;
+	  }
+	  .mCSB_draggerContainer {
+	  	top: 4px;
+	  	bottom: 4px;
+	  }
+	  .mCSB_dragger{
+	    width: 100%;
+	    border-radius: 0;
+
+	    .mCSB_dragger_bar{
+	      background-color: rgba(0, 0, 0, 0.4);
+	      width: 100%;
+	      border-radius: 3px;
+	    }
+
+	    &.mCSB_dragger_onDrag, &:hover {
+	      .mCSB_dragger_bar {
+	        background-color: rgba(0, 0, 0, 0.4);
+	      }
+	    }
+
+	  }
+	}
+
+	.mCSB_inside>.mCSB_container{
+	  margin-right: 17px;
 	}
 }
