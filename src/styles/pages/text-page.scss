@@ -48,6 +48,7 @@
                 color: $text-silver;
 
                 .icon {
+                    display: inline-block;
                     width: 24px;
                     height: 24px;
                     vertical-align: middle;
@@ -187,5 +188,17 @@
         line-height: 1.6;
         letter-spacing: normal;
         color: $black;
+    }
+
+    &__author {
+        a {
+            font-size: rem(20);
+            line-height: 1.6;
+            border-bottom: 1px solid $coral;
+            color: $text-black;
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 }
