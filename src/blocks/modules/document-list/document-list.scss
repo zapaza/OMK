@@ -1,0 +1,85 @@
+.document-list {
+    margin-bottom: 24px;
+
+    h5 {
+        margin-bottom: 24px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+        padding: 16px 48px 15px 0;
+        border-bottom: 1px solid $border-10;
+        background-color: $white;
+        &:last-of-type {
+            border-bottom: 0;
+            padding-bottom: 16px;
+        }
+
+        &:after {
+          display: none;
+            content: '';
+            position: absolute;
+          z-index: 4;
+            top: 24px;
+            right: 24px;
+            width: 32px;
+            height: 32px;
+            background-image: url(../img/icons/download-modal.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &:hover {
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+            border-bottom: none;
+            z-index: 2;
+            margin: -1px -16px 0;
+            padding: 17px 64px 16px 16px;
+
+          &:after {
+            display: block;
+          }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        vertical-align: top;
+        margin-right: 16px;
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__content {
+        flex-direction: column;
+
+        .name {
+            display: block;
+            font-size: rem(16);
+            font-weight: $font-weight-normal;
+            line-height: 1.25;
+            color: $black;
+            margin-bottom: 8px;
+        }
+
+        .size {
+            display: block;
+            font-size: rem(14);
+            font-weight: $font-weight-normal;
+            line-height: 1.14;
+            color: $text-silver;
+        }
+    }
+}
