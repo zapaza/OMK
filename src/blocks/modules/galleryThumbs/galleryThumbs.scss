@@ -118,6 +118,8 @@
         bottom: auto;
         left: 8px;
         opacity: 0;
+        transition-property: opacity;
+        transition-delay: .2s;
 
         .swiper-wrapper {
             height: auto;
