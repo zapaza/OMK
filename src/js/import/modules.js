@@ -5,4 +5,5 @@ import "%modules%/galleryThumbs/galleryThumbs";
 import "%modules%/comments/comments";
 import "%modules%/likeItem/likeItem";
 import "%modules%/information-systems-search/information-systems-search";
-import "%modules%/spoiler/spoiler"
+import "%modules%/spoiler/spoiler";
+import "%modules%/select/select";
