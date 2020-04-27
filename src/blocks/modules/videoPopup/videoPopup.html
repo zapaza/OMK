@@ -1,0 +1,18 @@
+<!-- Modal -->
+<div class="modal fade modal-gallery" id="video_popup" tabindex="-1" role="dialog" aria-labelledby="gallery_popup_Label" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-gallery__controls">
+                <button type="button" class="btn btn--download-modal" title="Скачать"></button>
+                <button type="button" class="btn btn--close-modal close"  aria-label="Close" data-dismiss="modal" title="Закрыть"></button>
+            </div>
+
+            <div class="modal-content__inner">
+                <div class="modal-content__video">
+                    <div class="inner js-video-container--modal"></div>
+                </div>
+                {% include 'comments/comments.html' %}
+            </div>
+        </div>
+    </div>
+</div>

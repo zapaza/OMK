@@ -55,7 +55,7 @@ $('.js-thumbs-slider__main').hover(function() {
 })
 
 function initThumbsSlider() {
-    let $slider = $('.thumbs-slider .thumbs-slider__main');
+    let $slider = $('.thumbs-slider .thumbs-slider__main:not(.js-thumbs-slider__main--modal)');
     //console.log($slider.length);
 
     $slider.each(function () {
@@ -94,6 +94,27 @@ function initThumbsSlider() {
     });
 }
 
+function initModalThumbsSlider(activeTab) {
+    //let $modalSlider = $('.thumbs-slider .thumbs-slider__main');
+    //console.log($slider.length);
+    console.log('init');
+
+    let modalSlider = new Swiper('.js-thumbs-slider__main--modal', {
+        slidesPerView: 1,
+        initialSlide: activeTab,
+        pagination: {
+            el: '.js-modal-thumbs-slider .swiper-pagination',
+            type: 'fraction'
+        },
+        on: {
+            init: function () {
+                console.log('Modal slider init');
+            }
+        }
+    })
+
+}
+
 $(document).ready(function () {
     if ($('.thumbs-slider').length > 0) {
         initThumbsSlider();
@@ -105,13 +126,16 @@ $(window).resize(function(){
     setNavSlidersPositionTop();
 })
 
+var modalOpenTargetBtn;
+
 $('body').on('click', '.thumbs-slider__zoom', function (e) {
     e.preventDefault();
+    modalOpenTargetBtn = $(this);
     $('#gallery_popup').modal('show');
 });
-$('#gallery_popup').on('shown.bs.modal', function () {
-    initThumbsSlider();
+
+$('#gallery_popup').on('shown.bs.modal', function (e) {
+    let activeTab = modalOpenTargetBtn.closest('.swiper-container')[0].swiper.realIndex;
+    initModalThumbsSlider(activeTab);
     setSlidersModalButtonsPositionTop();
 });
-
-
