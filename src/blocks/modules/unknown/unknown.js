@@ -30,7 +30,6 @@ $('#unknown_popup').on('shown.bs.modal', function () {
     unknownModalSlider = new Swiper('.js-unknown-modal-slider', {
         slidesPerView: 'auto',
         spaceBetween: 32,
-        freeMode: true,
         initialSlide: unknownActiveSlide,
         navigation: {
             prevEl: '.js-unknown-modal-prev',
