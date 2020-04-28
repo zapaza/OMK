@@ -28,12 +28,18 @@ $('body').on('click', '.js-unknown-slide', function () {
 $('#unknown_popup').on('shown.bs.modal', function () {
     console.log('shown');
     unknownModalSlider = new Swiper('.js-unknown-modal-slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 32,
+        slidesPerView: 1,
         initialSlide: unknownActiveSlide,
         navigation: {
             prevEl: '.js-unknown-modal-prev',
             nextEl: '.js-unknown-modal-next'
-        }
+        },
+        thumbs: {
+            swiper: {
+                el: '.js-unknown-modal-slider-nav',
+                slidesPerView: 7,
+                spaceBetween: 8
+            }
+        },
     })
 });

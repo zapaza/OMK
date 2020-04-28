@@ -4,32 +4,34 @@ import 'bootstrap/js/dist/modal';
 function setSlidersButtonsPositionTop() {
     let sliders = $('.js-thumbs-slider__main:not(.js-thumbs-slider__main--modal)');
 
-    sliders.each(function(){
+    sliders.each(function () {
         let thisSlideHeight = $(this).find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
             thisBtnHeight = $(this).parent().find('.swiper-button').eq(0).outerHeight(),
-            thisButtonsPositionTop = thisSlideHeight/2 - thisBtnHeight/2 + 'px';
+            thisButtonsPositionTop = thisSlideHeight / 2 - thisBtnHeight / 2 + 'px';
 
         $(this).parent().find('.swiper-button').css({
             'top': thisButtonsPositionTop
         })
-    }); 
+    });
 }
 
 function setSlidersModalButtonsPositionTop() {
     let sliders = $('.js-thumbs-slider__main.js-thumbs-slider__main--modal');
 
-    sliders.each(function(){
+    sliders.each(function () {
         let thisSlideHeight = $(this).find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
             thisBtnHeight = $(this).parent().find('.swiper-button').eq(0).outerHeight(),
-            thisButtonsPositionTop = thisSlideHeight/2 - thisBtnHeight/2 + 'px';
+            thisButtonsPositionTop = thisSlideHeight / 2 - thisBtnHeight / 2 + 'px';
 
         $(this).parent().find('.swiper-button').css({
             'top': thisButtonsPositionTop
         })
-    }); 
+    });
 }
 
 function setNavSlidersPositionTop(bigSliderItem) {
+
+    console.log('setNavSlidersPositionTop');
 
     let thisSliderItem = $(bigSliderItem),
         thisSlideHeight = thisSliderItem.find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
@@ -47,9 +49,9 @@ function setNavSlidersPositionTop(bigSliderItem) {
 
 }
 
-$('.js-thumbs-slider__main').hover(function() {
+$('.js-thumbs-slider__main').hover(function () {
     let bigSlider = $(this).closest('.thumbs-slider');
-    setTimeout(function() {
+    setTimeout(function () {
         setNavSlidersPositionTop(bigSlider);
     }, 600);
 })
@@ -64,7 +66,7 @@ function initThumbsSlider() {
             prevButton = $(this).parent().find('.swiper-button-prev'),
             paginationSliderThumbs = $(this).find('.thumbs-slider__nav')[0];
 
-            //console.log(paginationSliderThumbs);
+        //console.log(paginationSliderThumbs);
 
 
         let galleryThumbs = new Swiper(this, {
@@ -87,7 +89,7 @@ function initThumbsSlider() {
             autoHeight: true,
             on: {
                 init: function () {
-                    
+
                 },
             },
         });
@@ -110,6 +112,13 @@ function initModalThumbsSlider(activeTab) {
             prevEl: '.js-modal-thumbs-slider .swiper-button-prev',
             nextEl: '.js-modal-thumbs-slider .swiper-button-next'
         },
+        thumbs: {
+            swiper: {
+                el: '.js-thumbs-slider__nav--modal',
+                slidesPerView: 7,
+                spaceBetween: 8
+            }
+        },
         on: {
             init: function () {
                 console.log('Modal slider init');
@@ -126,7 +135,7 @@ $(document).ready(function () {
     }
 });
 
-$(window).resize(function(){
+$(window).resize(function () {
     setNavSlidersPositionTop();
 })
 
