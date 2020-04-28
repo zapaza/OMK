@@ -15,16 +15,8 @@
         <div class="row">
             <div class="col-12">
                 <form action="" class="sorting-form">
-                    <select name="" id="" class="sorting-form__select select-js">
-                        <option value="">Все площадки</option>
-                        <option value="">Альметьевск</option>
-                        <option value="">Москва</option>
-                        <option value="">Челябинск</option>
-                        <option value="">Уфа</option>
-                        <option value="">Благовещенск</option>
-                        <option value="">Чусовой</option>
-                        <option value="">Выкса</option>
-                    </select>
+                    {% include 'select/select.html' %}
+                    {% include 'dataselect/dataselect.html' %}
                 </form>
             </div>
         </div>
