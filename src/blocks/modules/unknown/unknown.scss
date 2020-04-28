@@ -1,0 +1,39 @@
+.unknown {
+    position: relative;
+    width: 100%;
+    margin: 64px 0;
+
+    &-slider {
+        width: 100%;
+    }
+
+    &-modal {
+        .thumbs-slider {
+            .swiper-button {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .swiper {
+            &-slide {
+                width: auto;
+            }
+        }
+    }
+
+    .swiper {
+        &-slide {
+            width: auto;
+        }
+
+        &-button {
+            &-prev {
+                left: -24px;
+            }
+
+            &-next {
+                right: -24px;
+            }
+        }
+    }
+}

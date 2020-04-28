@@ -55,7 +55,7 @@ $('.js-thumbs-slider__main').hover(function() {
 })
 
 function initThumbsSlider() {
-    let $slider = $('.thumbs-slider .thumbs-slider__main:not(.js-thumbs-slider__main--modal)');
+    let $slider = $('.thumbs-slider .js-thumbs-slider__main:not(.js-thumbs-slider__main--modal)');
     //console.log($slider.length);
 
     $slider.each(function () {
@@ -105,6 +105,10 @@ function initModalThumbsSlider(activeTab) {
         pagination: {
             el: '.js-modal-thumbs-slider .swiper-pagination',
             type: 'fraction'
+        },
+        navigation: {
+            prevEl: '.js-modal-thumbs-slider .swiper-button-prev',
+            nextEl: '.js-modal-thumbs-slider .swiper-button-next'
         },
         on: {
             init: function () {

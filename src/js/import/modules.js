@@ -8,3 +8,4 @@ import "%modules%/information-systems-search/information-systems-search";
 import "%modules%/spoiler/spoiler";
 import "%modules%/select/select";
 import '%modules%/dataselect/dataselect';
+import '%modules%/unknown/unknown';
