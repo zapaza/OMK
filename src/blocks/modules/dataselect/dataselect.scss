@@ -1,45 +1,318 @@
 .data-select {
-	position: relative;
+    position: relative;
 
-	&__btn {
-		position: relative;
-		width: auto;
-		overflow: hidden;
-		border: none;
-		padding: 4px 36px 8px 16px;
-		border-radius: 16px;
-		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-		background-color: $white;
-		font-size: rem(16);
-		font-weight: $font-weight-light;
-		line-height: 1.25;
-		letter-spacing: normal;
-		color: $text-black;
+    &__btn {
+        position: relative;
+        width: auto;
+        overflow: hidden;
+        border: none;
+        padding: 4px 36px 8px 16px;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+        background-color: $white;
+        font-size: rem(16);
+        font-weight: $font-weight-light;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: $text-black;
 
-		&:after {
-			content: '';
-			position: absolute;
-			top: 4px;
-			right: 8px;
-			width: 24px;
-			height: 24px;
-			transform: rotate(90deg);
-			background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'25\' height=\'24\' viewBox=\'0 0 25 24\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M.23 0h24v24h-24z\'/%3E%3Cpath stroke=\'%2300000A\' stroke-width=\'1.8\' d=\'M9.23 6l6 6-6 6\'/%3E%3C/g%3E%3C/svg%3E');
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-	}
+        &:after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            right: 8px;
+            width: 24px;
+            height: 24px;
+            transform: rotate(90deg);
+            background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'25\' height=\'24\' viewBox=\'0 0 25 24\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M.23 0h24v24h-24z\'/%3E%3Cpath stroke=\'%2300000A\' stroke-width=\'1.8\' d=\'M9.23 6l6 6-6 6\'/%3E%3C/g%3E%3C/svg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
 
-	&__result {
-		display: none;
-	}
+    &__result {
+        display: none;
+        position: relative;
+        white-space: nowrap;
+        width: auto;
+        overflow: hidden;
+        border: none;
+        padding: 4px 36px 8px 16px;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+        background-color: rgba(246, 92, 81, 0.3);
+        font-size: rem(16);
+        font-weight: $font-weight-light;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: $text-black;
+    }
 
-	&__data-input {
-		position: absolute;
-		z-index: 0;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		pointer-events: none;
-	}
+    &__clear{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 4px;
+        right: 8px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        min-width: auto;
+        background-image: url('data:image/svg+xml,%3Csvg width=\'24px\' height=\'24px\' viewBox=\'0 0 24 24\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'%3E%3Cg id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg id=\'desktop-tech-date-dropdown\' transform=\'translate(-641.000000, -856.000000)\'%3E%3Cg id=\'Group-9\' transform=\'translate(320.000000, 852.000000)\'%3E%3Cg id=\'Components/Search/Result/Filter_Icon/Active2\' transform=\'translate(238.000000, 0.000000)\'%3E%3Cg id=\'icon/M/clear/light\' transform=\'translate(83.000000, 4.000000)\'%3E%3Cg id=\'icon\'%3E%3Cg id=\'Group\'%3E%3Crect id=\'Rectangle\' x=\'0\' y=\'0\' width=\'24\' height=\'24\'%3E%3C/rect%3E%3Cpolyline id=\'Path\' stroke=\'%231A1A1A\' stroke-width=\'1.8\' points=\'18 18 12 12 6 6\'%3E%3C/polyline%3E%3Cpolyline id=\'Path\' stroke=\'%231A1A1A\' stroke-width=\'1.8\' points=\'18 6 12 12 6 18\'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        background-size: contain;
+        background-position: center;
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 320px;
+        background-color: $white;
+        border-radius: 5px;
+        box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        &.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .datepicker {
+            box-sizing: border-box;
+            width: 100%;
+            border: none;
+            padding: 14px 18px 20px;
+
+            &--nav {
+                min-width: none;
+                padding: 0;
+                border-bottom: 0;
+
+                &-action {
+                    width: 24px;
+                    height: 24px;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    &:hover {
+                        background: none;
+                        &[data-action='prev'] {
+                            background-image: url('data:image/svg+xml,%3Csvg width=\'24px\' height=\'24px\' viewBox=\'0 0 24 24\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'%3E%3Cg id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg id=\'desktop-tech-date-dropdown\' transform=\'translate(-338.000000, -118.000000)\'%3E%3Cg id=\'Group-6\' transform=\'translate(320.000000, 104.000000)\'%3E%3Cg id=\'icon/M/ctrl/arrow-left/light\' transform=\'translate(18.000000, 14.000000)\'%3E%3Cg id=\'icon\'%3E%3Cg id=\'Group\'%3E%3Crect id=\'Rectangle\' x=\'0\' y=\'0\' width=\'24\' height=\'24\'%3E%3C/rect%3E%3Cpolyline id=\'Path\' stroke=\'%23f65145\' stroke-width=\'1.8\' points=\'9 6 3 12 9 18\'%3E%3C/polyline%3E%3Cline x1=\'4\' y1=\'12\' x2=\'21\' y2=\'12\' id=\'Path\' stroke=\'%23f65145\' stroke-width=\'2\'%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                        }
+                        &[data-action='next'] {
+                            background-image: url('data:image/svg+xml,%3Csvg width=\'24px\' height=\'24px\' viewBox=\'0 0 24 24\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'%3E%3Cg id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg id=\'desktop-tech-date-dropdown\' transform=\'translate(-598.000000, -118.000000)\'%3E%3Cg id=\'Group-6\' transform=\'translate(320.000000, 104.000000)\'%3E%3Cg id=\'icon/M/ctrl/arrow-right/light\' transform=\'translate(278.000000, 14.000000)\'%3E%3Cg id=\'icon\'%3E%3Cg id=\'Group\'%3E%3Crect id=\'Rectangle\' x=\'0\' y=\'0\' width=\'24\' height=\'24\'%3E%3C/rect%3E%3Cpolyline id=\'Path\' stroke=\'%23f65145\' stroke-width=\'1.8\' points=\'14 6 20 12 14 18\'%3E%3C/polyline%3E%3Cline x1=\'2\' y1=\'12\' x2=\'19\' y2=\'12\' id=\'Path\' stroke=\'%23f65145\' stroke-width=\'2\'%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                        }
+                    }
+                    svg {
+                        display: none;
+                    }
+                    &[data-action='prev'] {
+                        background-image: url('data:image/svg+xml,%3Csvg width=\'24px\' height=\'24px\' viewBox=\'0 0 24 24\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'%3E%3Cg id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg id=\'desktop-tech-date-dropdown\' transform=\'translate(-338.000000, -118.000000)\'%3E%3Cg id=\'Group-6\' transform=\'translate(320.000000, 104.000000)\'%3E%3Cg id=\'icon/M/ctrl/arrow-left/light\' transform=\'translate(18.000000, 14.000000)\'%3E%3Cg id=\'icon\'%3E%3Cg id=\'Group\'%3E%3Crect id=\'Rectangle\' x=\'0\' y=\'0\' width=\'24\' height=\'24\'%3E%3C/rect%3E%3Cpolyline id=\'Path\' stroke=\'%231A1A1A\' stroke-width=\'1.8\' points=\'9 6 3 12 9 18\'%3E%3C/polyline%3E%3Cline x1=\'4\' y1=\'12\' x2=\'21\' y2=\'12\' id=\'Path\' stroke=\'%231A1A1A\' stroke-width=\'2\'%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                    }
+                    &[data-action='next'] {
+                        background-image: url('data:image/svg+xml,%3Csvg width=\'24px\' height=\'24px\' viewBox=\'0 0 24 24\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'%3E%3Cg id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg id=\'desktop-tech-date-dropdown\' transform=\'translate(-598.000000, -118.000000)\'%3E%3Cg id=\'Group-6\' transform=\'translate(320.000000, 104.000000)\'%3E%3Cg id=\'icon/M/ctrl/arrow-right/light\' transform=\'translate(278.000000, 14.000000)\'%3E%3Cg id=\'icon\'%3E%3Cg id=\'Group\'%3E%3Crect id=\'Rectangle\' x=\'0\' y=\'0\' width=\'24\' height=\'24\'%3E%3C/rect%3E%3Cpolyline id=\'Path\' stroke=\'%231A1A1A\' stroke-width=\'1.8\' points=\'14 6 20 12 14 18\'%3E%3C/polyline%3E%3Cline x1=\'2\' y1=\'12\' x2=\'19\' y2=\'12\' id=\'Path\' stroke=\'%231A1A1A\' stroke-width=\'2\'%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                    }
+                }
+
+                &-title {
+                    padding: 0;
+                    font-size: rem(16);
+                    font-weight: $font-weight-light;
+                    line-height: 1.25;
+                    text-align: center;
+                    color: #1a1a1a;
+                    i {
+                        color: inherit;
+                        font-size: inherit;
+                        font-weight: inherit;
+                        line-height: inherit;
+                    }
+                    &:hover {
+                        background: none;
+                        color: $coral;
+                    }
+                }
+            }
+
+            &--content {
+                padding: 0;
+            }
+
+            &--days {
+                &-names {
+                    margin-top: 20px;
+                    margin-bottom: 8px;
+                }
+            }
+            &--years {
+                height: auto;
+            }
+            &--cells {
+                &-months {
+                    height: auto;
+                }
+
+                &-years {
+                    height: auto;
+                }
+            }
+
+
+            &--cell {
+                &.-range-from- {
+                    border: none;
+                    border-radius: 50% 0 0 50%;
+                    background-color: $silver-light;
+
+                    &:hover {
+                        background-color: $border-10;
+                    }
+                }
+                &.-in-range- {
+                    border-radius: 0 0 0 0;
+                    background-color: $silver-light;
+                    &:hover {
+                        background-color: $border-10;
+                    }
+                }
+                &.-range-to- {
+                    border: none;
+                    border-radius: 0 50% 50% 0;
+                    background-color: $silver-light;
+                    &:hover {
+                        background-color: $border-10;
+                    }
+                }
+                &.-selected- {
+                    background-color: $border-10;
+                }
+                &.-focus- {
+                    border: none;
+                }
+                &-day {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    font-size: rem(16);
+                    font-weight: $font-weight-light;
+                    line-height: 1.25;
+                    text-align: center;
+                    color: #1a1a1a;
+                    &:hover {
+                        background-color: $border-10;
+                    }
+                    &.-other-month- {
+                        color: $text-silver;
+                        &:hover {
+                            background-color: $border-10;
+                        }
+                    }
+
+                    &.-range-from- {
+                        border-radius: 50% 0 0 50%;
+
+                        &:hover {
+                            background-color: $border-10;
+                        }
+                    }
+                    &.-in-range- {
+                        border-radius: 0 0 0 0;
+                        background-color: $silver-light;
+                        &:hover {
+                            background-color: $border-10;
+                        }
+                    }
+                    &.-range-to- {
+                        border: none;
+                        border-radius: 0 50% 50% 0;
+                        background-color: $silver-light;
+                        &:hover {
+                            background-color: $border-10;
+                        }
+                    }
+                    &.-selected- {
+                        background-color: $border-10;
+                    }
+                    &.-focus- {
+                        border: none;
+                    }
+                }
+
+                &-month {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    font-size: rem(16);
+                    font-weight: $font-weight-light;
+                    line-height: 1.25;
+                    text-align: center;
+                    color: #1a1a1a;
+                    &:hover {
+                        background-color: $border-10;
+                    }
+                    &.-range-from- {
+                        border-radius: 50% 0 0 50%;
+
+                        &:hover {
+                            background-color: $border-10;
+                        }
+                    }
+                    &.-in-range- {
+                        border-radius: 0 0 0 0;
+                        background-color: $silver-light;
+                        &:hover {
+                            background-color: $border-10;
+                        }
+                    }
+                    &.-range-to- {
+                        border: none;
+                        border-radius: 0 50% 50% 0;
+                        background-color: $silver-light;
+                        &:hover {
+                            background-color: $border-10;
+                        }
+                    }
+                    &.-selected- {
+                        background-color: $border-10;
+                    }
+                    &.-focus- {
+                        border: none;
+                    }
+                }
+
+                &-year {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    font-size: rem(16);
+                    font-weight: $font-weight-light;
+                    line-height: 1.25;
+                    text-align: center;
+                    color: #1a1a1a;
+                    &:hover {
+                        background-color: $border-10;
+                    }
+
+                    &.-other-decade- {
+                        color: $text-silver;
+                        &:hover {
+                            background-color: $border-10;
+                        }
+                    }
+                }
+            }
+
+            &--day-name {
+                width: 40px;
+                height: 40px;
+                font-size: rem(16);
+                font-weight: $font-weight-light;
+                line-height: 1.25;
+                color: $border-20;
+            }
+        }
+    }
 }
