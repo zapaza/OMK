@@ -52,6 +52,9 @@
     .swiper {
         &-slide {
             width: auto;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 5px;
         }
 
         &-button {

@@ -16,14 +16,14 @@
         </label>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <label class="fields <!--fields--error-->">
                     <input type="text" class="fields__input" placeholder="Тип">
                     <span class="fields__placeholder">Тип</span>
                     <!--            <span class="fields__error">Ошибка поля!</span>-->
                 </label>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <label class="fields <!--fields--error-->">
                     <input type="text" class="fields__input" placeholder="Тип">
                     <span class="fields__placeholder">Тип</span>
@@ -35,6 +35,22 @@
             <input type="checkbox" class="fields-chekbox__input">
             <span class="fields-chekbox__placeholder">Подтверждаю свои намерения</span>
         </label>
+
+        <div class="drop-file">
+            <label class="drop-file__area">
+                <input type="file" multiple class="drop-file__input"  id="fileUploud">
+                <span class="drop-file__header">
+                    <button class="btn btn--secondary trigger-file-js"><i class="btn__icon icon--screp btn__icon--left"></i> Прикрепите закрывающие документы</button>
+                    <span>или перетащите сюда</span>
+                </span>
+            </label>
+            <div id="thumbnail_1" class="drop-file__item">
+                <i class="icon  icon--upload-file"></i>
+                <div class="name">название вайла.doc</div>
+                <button type="button" class="drop-file__item-remove remove-file-js"></button>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-12">
                 <button type="submit" class="btn btn--primary">Отправить заявку</button>

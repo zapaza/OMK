@@ -25,10 +25,33 @@ function articleScroll() {
 
         }
     }
+}
 
+function articleFooterInfoHide() {
+    //скрытие блока с подпиской при скроле статьи
+    if ($('.article__footer-info').length > 0) {
+        let $element = $('.article__footer'),
+            counter = 0;
+        $(window).scroll(function () {
+            if ($(window).innerWidth() <= 767) {
+                let scroll = $(window).scrollTop() + $(window).height(),
+                    offset = $element.offset().top + $element.height();
+
+                if (scroll > offset && counter === 0) {
+                    $('.article__footer-info').fadeOut(500);
+                    counter = 1;
+                } else if (scroll < offset && counter === 1){
+                    $('.article__footer-info').fadeIn(500);
+                    counter = 0;
+                }
+            }
+        });
+    }
 }
 
 $(document).ready(() => {
+    articleFooterInfoHide()
+
     //слайдер на главной стрнице, в низу страници
     if ($('.js-main-page__slider').length > 0) {
         var mainPageSlider = new Swiper('.js-main-page__slider .swiper-container', {
@@ -154,7 +177,7 @@ $(document).ready(() => {
                     }
 
                     let videoHeight = $('.js-video-gallery .video__preview').eq(0).outerHeight();
-                    let videoBtnPositionTop = videoHeight/2 + 'px';
+                    let videoBtnPositionTop = videoHeight / 2 + 'px';
                     $('.js-video-gallery .swiper-button').css({
                         'top': videoBtnPositionTop
                     });
@@ -162,7 +185,7 @@ $(document).ready(() => {
                 },
                 resize: () => {
                     let videoHeight = $('.js-video-gallery .video__preview').eq(0).outerHeight();
-                    let videoBtnPositionTop = videoHeight/2 + 'px';
+                    let videoBtnPositionTop = videoHeight / 2 + 'px';
                     $('.js-video-gallery .swiper-button').css({
                         'top': videoBtnPositionTop
                     });
@@ -218,8 +241,13 @@ $(document).ready(() => {
         });
     }
 
+
 });
 
 $(window).scroll(function () {
     articleScroll()
+})
+
+$(window).on('resize', function () {
+    articleFooterInfoHide();
 })

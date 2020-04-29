@@ -5,6 +5,9 @@
     width: 100%;
     border-top: 1px solid $border-10;
     margin-bottom: 60px;
+    @media (max-width: 767px) {
+        margin-bottom: 28px;
+    }
 
     &__item {
         border-bottom: 1px solid $border-10;
@@ -26,6 +29,9 @@
             color: $black;
             background: none;
             text-align: left;
+            @media (max-width: 767px) {
+                padding: 20px 40px 20px 0;
+            }
             &:hover {
                 color: $coral;
 

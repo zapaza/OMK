@@ -1,0 +1,129 @@
+.universal-form {
+    border: 1px solid $border-10;
+    border-radius: 5px;
+    padding: 48px 96px 64px;
+    margin-bottom: 32px;
+    @media (max-width: 1280px) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    @media (max-width: 767px) {
+        border: none;
+        padding: 0;
+    }
+
+    .fields {
+        margin-bottom: 16px;
+    }
+
+    .fields-chekbox {
+        margin-bottom: 24px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+    }
+
+
+    .drop-file {
+        margin-bottom: 24px;
+
+        &__area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $border-10;
+            padding: 40px 0;
+            border-radius: 5px;
+            margin-bottom: 16px;
+            @media (max-width: 767px) {
+                border: none;
+                padding: 0;
+            }
+        }
+
+        &__input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            font-size: rem(16);
+            line-height: 1.25;
+            font-weight: $font-weight-normal;
+            @media (max-width: 767px) {
+                span {
+                    display: none;
+                }
+            }
+
+            .btn {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                max-width: 348px;
+                margin-right: 16px;
+                padding-right: 16px;
+                padding-left: 12px;
+                text-align: left;
+                @media (max-width: 767px) {
+                    flex-shrink: 1;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: none;
+                    margin-right: 0;
+                    text-align: center;
+                }
+
+                .icon {
+                    display: block;
+                    margin-right: 4px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 12px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .icon {
+                margin-right: 4px;
+            }
+            .name {
+                font-size: rem(14);
+                line-height: 1.14;
+                margin-right: 4px;
+            }
+            &-remove {
+                width: 16px;
+                height: 16px;
+                background-image: url(../img/remove-file.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: none;
+                border: none;
+            }
+        }
+    }
+
+    &__header {
+        font-size: rem(24);
+        font-weight: $font-weight-bold;
+        line-height: 1.33;
+        color: $black;
+        margin-bottom: 24px;
+    }
+}

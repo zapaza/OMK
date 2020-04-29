@@ -11,6 +11,12 @@
     border-collapse: separate;
     border-color: transparent;
     border-spacing: 0;
+    display: block;
+    overflow: auto !important;
+    @media (max-width: 767px) {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
 	
     tr {
         &:last-child {

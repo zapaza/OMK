@@ -66,6 +66,21 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0H16V16H0z'/%3E%3Cpath fill='%23000' fill-opacity='.2' d='M8 11.54L3.298 14.972 5.109 9.439 0.392 6.028 6.213 6.041 8 0.5 9.787 6.041 15.608 6.028 10.891 9.439 12.702 14.972z'/%3E%3C/g%3E%3C/svg%3E%0A");
     }
 
+    &--upload-file {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url('data:image/svg+xml,%0A%3Csvg width=\'16px\' height=\'16px\' viewBox=\'0 0 16 16\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'%3E%3Cg id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg id=\'desktop-default-article1-1280\' transform=\'translate(-270.000000, -7972.000000)\'%3E%3Cg id=\'Group-19\' transform=\'translate(176.000000, 7356.000000)\'%3E%3Cg id=\'Group-4\' transform=\'translate(94.000000, 616.000000)\'%3E%3Cg id=\'Group-6\'%3E%3Cg id=\'Group-5\'%3E%3Cg id=\'icon/S/Doc\'%3E%3Cg id=\'Group-2\'%3E%3Cg id=\'Group\'%3E%3Crect id=\'Rectangle\' x=\'0\' y=\'0\' width=\'16\' height=\'16\'%3E%3C/rect%3E%3Cpath d=\'M5,1 L10.5857864,1 C10.8510029,1 11.1053568,1.10535684 11.2928932,1.29289322 L13.7071068,3.70710678 C13.8946432,3.89464316 14,4.14899707 14,4.41421356 L14,14 C14,14.5522847 13.5522847,15 13,15 L5,15 C4.44771525,15 4,14.5522847 4,14 L4,2 C4,1.44771525 4.44771525,1 5,1 Z\' id=\'Rectangle\' stroke=\'%231A1A1A\' stroke-width=\'2\'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    }
+
+    &--screp {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-image: url('data:image/svg+xml,%0A%3Csvg width=\'24px\' height=\'24px\' viewBox=\'0 0 24 24\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'%3E%3Cg id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg id=\'desktop-default-article1-1280\' transform=\'translate(-392.000000, -7880.000000)\'%3E%3Cg id=\'Group-19\' transform=\'translate(176.000000, 7356.000000)\'%3E%3Cg id=\'Group-20\' transform=\'translate(204.000000, 512.000000)\'%3E%3Cg id=\'Buttons/Light/Icon-left\'%3E%3Cg id=\'Group-2\' transform=\'translate(12.000000, 4.000000)\'%3E%3Cg id=\'Group\' transform=\'translate(0.000000, 8.000000)\'%3E%3Cg id=\'icon/M/upload/attach\'%3E%3Cg id=\'icon\'%3E%3Cg id=\'Group\'%3E%3Crect id=\'Rectangle\' x=\'0\' y=\'0\' width=\'24\' height=\'24\'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3Cpath d=\'M9.37867966,18.1568542 L9.37867966,8.96446609 C9.37867966,7.79289322 10.3284271,6.84314575 11.5,6.84314575 C12.6715729,6.84314575 13.6213203,7.79289322 13.6213203,8.96446609 L13.6213203,19.2175144 C13.6213203,21.365398 11.8801167,23.1066017 9.73223305,23.1066017 C7.58434944,23.1066017 5.84314575,21.365398 5.84314575,19.2175144 L5.84314575,7.55025253 C5.84314575,4.4260582 8.37580567,1.89339828 11.5,1.89339828 C14.6241943,1.89339828 17.1568542,4.4260582 17.1568542,7.55025253 L17.1568542,18.863961 L17.1568542,18.863961\' id=\'Path\' stroke=\'%231A1A1A\' stroke-width=\'1.7\' stroke-linecap=\'round\' stroke-linejoin=\'round\' transform=\'translate(11.500000, 12.500000) rotate(-135.000000) translate(-11.500000, -12.500000) \'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    }
+
     &--view-gray {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd' transform='rotate(180 12 12)'%3E%3Cpath d='M0 0H24V24H0z'/%3E%3Cpath stroke='%23909099' stroke-width='1.6' d='M3.357 12c1.372 3.398 4.778 5.7 8.643 5.7 3.865 0 7.272-2.303 8.643-5.7C19.271 8.602 15.865 6.3 12 6.3c-3.865 0-7.272 2.303-8.643 5.7z'/%3E%3Ccircle cx='12' cy='12' r='2.2' stroke='%23909099' stroke-width='1.6'/%3E%3C/g%3E%3C/svg%3E");
         display: block;
