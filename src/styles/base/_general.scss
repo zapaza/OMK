@@ -22,7 +22,9 @@ body {
     };
 }
 
-
+* {
+    outline: none !important;
+}
 .col, [class*='col-'] {
     @media (max-width: 1279px) {
         padding-left: 12px;

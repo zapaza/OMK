@@ -63,21 +63,31 @@ $(document).ready(() => {
                 prevEl: '.js-main-page__slider .swiper-button-prev',
             },
             noSwipingClass: 'no-swiping',
+            noSwiping: true,
             on: {
                 init: () => {
                     //Показ кнопок только если слайдов больше, чем видно
                     let swiperInner = $('.js-main-page__slider');
                     let slidesLength = swiperInner.find('.swiper-slide').length;
                     if (slidesLength > 1) {
+                        console.log($(this));
                         swiperInner.find('.swiper-button').addClass('show');
                         swiperInner.find('.swiper-pagination').addClass('show');
-                        $(this).find('.swiper-wrapper').removeClass('no-swiping');
+                        swiperInner.find('.swiper-wrapper').removeClass('no-swiping');
                     } else {
                         $(this).find('.swiper-wrapper').addClass('no-swiping');
                     }
                 },
 
             },
+            breakpoints: {
+                100: {
+                    noSwiping: false
+                },
+                768: {
+                    noSwiping: true
+                }
+            }
         });
     }
 
@@ -107,12 +117,20 @@ $(document).ready(() => {
                     if (slidesLength > 1) {
                         swiperInner.find('.swiper-button').addClass('show');
                         swiperInner.find('.swiper-pagination').addClass('show');
-                        $(this).find('.swiper-wrapper').removeClass('no-swiping');
+                        swiperInner.find('.swiper-wrapper').removeClass('no-swiping');
                     } else {
-                        $(this).find('.swiper-wrapper').addClass('no-swiping');
+                        swiperInner.find('.swiper-wrapper').addClass('no-swiping');
                     }
                 },
             },
+            breakpoints: {
+                100: {
+                    noSwiping: false
+                },
+                768: {
+                    noSwiping: true
+                }
+            }
         });
     }
 
