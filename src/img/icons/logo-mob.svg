@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="32px" viewBox="0 0 108 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>6419303E-B108-492E-A5D2-78E97452ED90</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="desktop-touch-article_18/28-320" transform="translate(-16.000000, -20.000000)">
+            <g id="header-test/touch/up">
+                <g id="Group-7">
+                    <g id="Group-12" transform="translate(16.000000, 20.000000)">
+                        <g>
+                            <g id="Group-4">
+                                <g id="Group-3">
+                                    <g id="Group-2" fill="#A1A1A5">
+                                        <polygon id="Rectangle" points="20 11.6363636 50 0 50 20.3636364 20 32"></polygon>
+                                        <polygon id="Rectangle" points="0 11.6363636 30 0 30 20.3636364 0 32"></polygon>
+                                    </g>
+                                    <g id="Group" transform="translate(14.000000, 5.000000)">
+                                        <circle id="Oval" fill="#FFFFFF" cx="11" cy="11" r="11"></circle>
+                                        <circle id="Oval" fill="#D52B1E" cx="11" cy="11" r="6"></circle>
+                                    </g>
+                                </g>
+                            </g>
+                            <text id="ОМК" font-family="Circe-ExtraBold, Circe" font-size="18" font-weight="600" line-spacing="24" letter-spacing="1.7" fill="#A1A1A5">
+                                <tspan x="58" y="23">ОМК</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

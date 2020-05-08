@@ -1,42 +1,253 @@
 <header class="header">
     <div class="wrapper">
-        <div class="header__row row ">
+        <div class="row">
             <a href="/" class="header__logo">
-                <img src="img/icons/logo.svg" class="header__logo-img" title="" alt="">
+                <img src="img/icons/logo.svg" alt="Портал ОМК" title="Портал ОМК">
             </a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item header__menu-item--all">
+                        <a href="#0" class="header__menu-link header__menu-link--all js-show-all-menu">
+                            <img src="img/icons/icon--show-all-menu.svg" alt="Открыть меню" title="Открыть меню">
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#0" class="header__menu-link">Компания</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#0" class="header__menu-link">Сотрудникам</a>
+                    </li>
+                    <li class="header__menu-item active">
+                        <a href="#0" class="header__menu-link">Новости</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#0" class="header__menu-link">Производственная система</a>
+                    </li>
+                </ul>
+            </nav>
 
-            <div class="header__middle">
-                <nav class="header__menu">
-                    <ul class="header__menu-list nav">
-                        <li class="header__menu-item">
-                            <div class="header__menu-dropdown">
-                                <button class="btn btn--secondary btn--sx" type="button">
-                                    <i class="btn__icon btn__icon--left btn__icon--burger"></i>   Меню
-                                </button>
-                            </div>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#0" class="header__menu-link">Компания</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#0" class="header__menu-link header__menu-link--active">Сотрудникам</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#0" class="header__menu-link">Новости</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#0" class="header__menu-link">Производственная система</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__search">
-                    <button class="header__search-btn"></button>
+            <button class="header__search-btn js-search-show"></button>
+
+            <div class="header__user">
+                <button class="header__user-btn js-show-user">
+                    <span class="name">Константин Ц.</span>
+                    <span class="avatar"><img src="img/avatar.jpg" alt="Константин Ц." title="Константин Ц."></span>
+                </button>
+
+                <div class="header__user-popup">
+                    <button class="user-popup__close js-close-user-popup"><i class="icon icon--close-gray"></i></button>
+                    <div class="user-popup__info">
+                        <picture class="avatar">
+                            <!--[if IE 9]>
+                            <video style="display: none;"><![endif]-->
+                            <source srcset="img/avatar.webp" type="image/webp">
+                            <!--[if IE 9]></video><![endif]-->
+                            <img src="img/avatar.jpg" title="Конкурс работников производства ВМЗ"
+                                 alt="Конкурс работников производства ВМЗ">
+                        </picture>
+                        <div class="name">Константин Циолковский</div>
+                        <div class="city">Благовещенск</div>
+                    </div>
+                    <div class="user-popup__menu">
+                        <ul class="user-popup__menu-group">
+                            <li class="user-popup__menu-item">
+                                <a href="#">Профиль</a>
+                            </li>
+                            <li class="user-popup__menu-item">
+                                <a href="#">Мои объявления <span>5</span></a>
+                            </li>
+                            <li class="user-popup__menu-item">
+                                <a href="#">Мой блог <span>5</span></a>
+                            </li>
+                        </ul>
+                        <ul class="user-popup__menu-group">
+                            <li class="user-popup__menu-item user-popup__menu-item--add">
+                                <a href="#">Добавить объявление</a>
+                            </li>
+                            <li class="user-popup__menu-item user-popup__menu-item--add">
+                                <a href="#">Написать в блог</a>
+                            </li>
+                        </ul>
+                        <ul class="user-popup__menu-group">
+                            <li class="user-popup__menu-item">
+                                <a href="#">Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <a href="#0" class="header__avatar">
-                <img src="" title="" alt="">
-            </a>
         </div>
+
+    </div>
+
+    <div class="full-menu">
+        <div class="wrapper">
+            <div class="row">
+                <div class="full-menu__top">
+                    <div class="full-menu__logo">
+                        <img src="img/icons/logo.svg" alt="Портал ОМК" title="Портал ОМК">
+                    </div>
+                    <button class="full-menu__close js-close-menu" type="button" title="Закрыть">
+                        <i class="icon icon--close-gray"></i>
+                        <span>Закрыть</span>
+                    </button>
+                </div>
+
+                <ul class="full-menu__list">
+                    <li class="full-menu__col">
+                        <div class="full-menu__item">
+                            <a href="#" class="full-menu__link full-menu__link--main">Компания</a>
+                        </div>
+                        <ul class="full-menu__group">
+
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">ОМК</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Миссия</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Годовой цикл</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Благотворительность</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Социальная ответственность</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Фирменный стиль</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Реквизиты</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Годовой отчёт</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Здоровье</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Ценности</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Вакансии</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="full-menu__col">
+                        <div class="full-menu__item">
+                            <a href="#" class="full-menu__link full-menu__link--main">Сотрудникам</a>
+                        </div>
+                        <ul class="full-menu__group">
+
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Справочник</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Мои системы</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Горячая линия</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Вопрос руководствуь</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Безопасность</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Обучение</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Баташевская премия</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Идеи</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Скидки</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Мои документы</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Объявления</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="full-menu__col">
+                        <div class="full-menu__item">
+                            <a href="#" class="full-menu__link full-menu__link--main">Новости</a>
+                        </div>
+                        <ul class="full-menu__group">
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Лента</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">ОМК ТВ</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Статьи из прессы</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Журнал</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Газета</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="full-menu__col">
+                        <div class="full-menu__item">
+                            <a href="#" class="full-menu__link full-menu__link--main">Производственная система</a>
+                        </div>
+                        <ul class="full-menu__group">
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Обходы</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Лучшие практики</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link full-menu__link--select">Предложить инициативу</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="full-menu__col">
+                        <div class="full-menu__item full-menu__item--gray-mob">
+                            <a href="#" class="full-menu__link">Еще</a>
+                        </div>
+                        <ul class="full-menu__group full-menu__group--gray">
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">FAQ</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Помощь</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Сообщить об ошибке</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Доска почёта</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Профком</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Конкурсы</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Народная дружина</a>
+                            </li>
+                            <li class="full-menu__item">
+                                <a href="#" class="full-menu__link">Другое</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </header>
