@@ -82,10 +82,10 @@ $(document).ready(() => {
             },
             breakpoints: {
                 100: {
-                    noSwiping: false
+                    spaceBetween: 16,
                 },
                 768: {
-                    noSwiping: true
+                    spaceBetween: 24,
                 }
             }
         });

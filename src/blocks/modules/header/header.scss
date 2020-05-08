@@ -47,6 +47,12 @@
 
     &__nav {
         padding-top: 5px;
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
         @media (max-width: 1023px) {
             order: 1;
             min-width: 100%;
@@ -67,11 +73,15 @@
         align-items: flex-start;
         justify-content: flex-start;
 
+
         &-item {
             position: relative;
             margin: 0 12px;
             &:first-of-type {
                 margin-left: 0;
+            }
+            @media (max-width: 1279px) {
+                margin: 0 8px;
             }
             @media (max-width: 1023px) {
                 &:last-of-type {
