@@ -5,8 +5,10 @@
     background-color: $white;
 
 
-    .row {
+    .col-12 {
+        display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         @media (max-width: 767px) {
             justify-content: center;
         }

@@ -1,4 +1,4 @@
-//@import 'node_modules/bootstrap/scss/nav';
+
 .header {
     padding-top: 20px;
     position: relative;
@@ -24,6 +24,8 @@
 
     .row {
         align-items: flex-start;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     &__logo {
@@ -397,7 +399,7 @@
             margin-right: 4px;
             background-size: contain;
             background-position: center;
-            vertical-align: middle;
+            vertical-align: bottom;
             @media (max-width: 1023px) {
                 width: 32px;
                 height: 32px;
