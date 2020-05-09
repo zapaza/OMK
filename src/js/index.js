@@ -91,7 +91,6 @@ $(document).ready(() => {
         });
     }
 
-
     //слайдеры на странице новостей
     if ($('.js-slider-big').length > 0) {
         var newsSlider = new Swiper('.js-slider-big .swiper-container', {
@@ -269,3 +268,7 @@ $(window).scroll(function () {
 $(window).on('resize', function () {
     articleFooterInfoHide();
 })
+
+$('body').on('click', '.js-media-item--video', function () {
+    $('#video_popup').modal('show');
+});

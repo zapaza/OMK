@@ -6,7 +6,7 @@
                 {% include 'information-systems-search/information-systems-search.html' %}
             </div>
         </div>
-        <div class="row">
+        <div class="row results-nav__row">
             <div class="col-12">
                 <div class="results-nav">
                     <div class="results-nav__select">
@@ -14,6 +14,7 @@
                             {% include 'select/select.html' %}
                         </form>
                     </div>
+
                     <div class="results-nav__links">
                         <a href="#0" class="results-nav__link active">
                             <span class="name">Все</span>
@@ -32,7 +33,54 @@
                             <span class="count">58</span>
                         </a>
                     </div>
+
+                    <div class="results-nav__select">
+                        <form action="#0">
+                            {% include 'dataselect/dataselect.html' %}
+                        </form>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row results-filters__row">
+            <div class="col-12">
+                <form action="#0">
+                    <div class="results-filters">
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Новость</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Мероприятие</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Конкурс</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Результаты работы</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Интервью</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Лонгрид</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">СМИ</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Важное сообщение</span>
+                        </label>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -72,13 +120,224 @@
                                 </div>
                             </a>
                             <div class="employee-info">
-                                <a href="profile.html" class="employee-info__link"></a>
+                                <a href="profile.html" class="employee-info__link">Борисов<br>Виталий Николаевич</a>
+                                <div class="employee-info__position">Наладчик сварочного и газоплазморезательного
+                                    оборудования
+                                </div>
+                                <div class="employee-info__area">Безопасность производства</div>
                             </div>
+                            <ul class="employee-contacts">
+                                <li class="employee-contacts__item employee-contacts__item--address">
+                                    <address>Выкса — ВМЗ — ТЭСЦ4 — Участок покрытия</address>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--phone">
+                                    <a href="tel:882-99-10">882-99-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--mobile">
+                                    <a href="tel:+79099121410">+7 (909) 912-14-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--email">
+                                    <a href="mailto:borisov_vn@omk.ru">borisov_vn@omk.ru</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="employee">
+                        <div class="employee-content">
+                            <a href="#0" class="employee-photo">
+                                <div class="employee-photo__inner">
+                                    <picture>
+                                        <source srcset="/img/avatar.webp" type="image/webp">
+                                        <img src="/img/avatar.jpg" alt="Имя сотрудника">
+                                    </picture>
+                                </div>
+                            </a>
+                            <div class="employee-info">
+                                <a href="profile.html" class="employee-info__link">Борисов<br>Виталий Николаевич</a>
+                                <div class="employee-info__position">Наладчик сварочного и газоплазморезательного
+                                    оборудования
+                                </div>
+                                <div class="employee-info__area">Безопасность производства</div>
+                            </div>
+                            <ul class="employee-contacts">
+                                <li class="employee-contacts__item employee-contacts__item--address">
+                                    <address>Выкса — ВМЗ — ТЭСЦ4 — Участок покрытия</address>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--phone">
+                                    <a href="tel:882-99-10">882-99-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--mobile">
+                                    <a href="tel:+79099121410">+7 (909) 912-14-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--email">
+                                    <a href="mailto:borisov_vn@omk.ru">borisov_vn@omk.ru</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="employee">
+                        <div class="employee-content">
+                            <a href="#0" class="employee-photo">
+                                <div class="employee-photo__inner">
+                                    <picture>
+                                        <source srcset="/img/avatar.webp" type="image/webp">
+                                        <img src="/img/avatar.jpg" alt="Имя сотрудника">
+                                    </picture>
+                                </div>
+                            </a>
+                            <div class="employee-info">
+                                <a href="profile.html" class="employee-info__link">Борисов<br>Виталий Николаевич</a>
+                                <div class="employee-info__position">Наладчик сварочного и газоплазморезательного
+                                    оборудования
+                                </div>
+                                <div class="employee-info__area">Безопасность производства</div>
+                            </div>
+                            <ul class="employee-contacts">
+                                <li class="employee-contacts__item employee-contacts__item--address">
+                                    <address>Выкса — ВМЗ — ТЭСЦ4 — Участок покрытия</address>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--phone">
+                                    <a href="tel:882-99-10">882-99-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--mobile">
+                                    <a href="tel:+79099121410">+7 (909) 912-14-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--email">
+                                    <a href="mailto:borisov_vn@omk.ru">borisov_vn@omk.ru</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
         </section>
+
+        <section class="results-section results-section--news">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="results-section__top">
+                        <h2 class="results-section__title">Новости</h2>
+                        <a href="#0" class="results-section__all">
+                            <span class="text">Показать все</span>
+                            <span class="count">162</span>
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0H24V24H0z"/>
+                                        <path stroke="#1A1A1A" class="arrow-path" stroke-width="1.8"
+                                              d="M9 6L15 12 9 18"/>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row--long">
+                <div class="col-12">
+                    <a class="news-item">
+                        <div class="news-item__content">
+                            <div class="news-item__title">ОМК и фонд «ОМК-Участие» выиграли две премии «Инициативы»
+                            </div>
+                            <div class="news-item__description">И это соответствует актуальной повестке, когда во всех
+                                сферах говорят о раздельном сборе, ответственном…
+                            </div>
+                            <div class="news-item__date">12 фев 2019</div>
+                        </div>
+                    </a>
+                    <a class="news-item">
+                        <div class="news-item__content">
+                            <div class="news-item__title">ОМК и фонд «ОМК-Участие» выиграли две премии «Инициативы»
+                            </div>
+                            <div class="news-item__description">И это соответствует актуальной повестке, когда во всех
+                                сферах говорят о раздельном сборе, ответственном…
+                            </div>
+                            <div class="news-item__date">12 фев 2019</div>
+                        </div>
+                    </a>
+                    <a class="news-item">
+                        <div class="news-item__content">
+                            <div class="news-item__title">ОМК и фонд «ОМК-Участие» выиграли две премии «Инициативы»
+                            </div>
+                            <div class="news-item__description">И это соответствует актуальной повестке, когда во всех
+                                сферах говорят о раздельном сборе, ответственном…
+                            </div>
+                            <div class="news-item__date">12 фев 2019</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="results-section results-section--media">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="results-section__top">
+                        <h2 class="results-section__title">Медиа</h2>
+                        <a href="#0" class="results-section__all">
+                            <span class="text">Показать все</span>
+                            <span class="count">58</span>
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0H24V24H0z"/>
+                                        <path stroke="#1A1A1A" class="arrow-path" stroke-width="1.8"
+                                              d="M9 6L15 12 9 18"/>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="media">
+                        <a href="#0" class="media-item js-media-item">
+                            <div class="media-item__preview">
+                                <div class="inner">
+                                    <picture>
+                                        <source srcset="img/media-preview.webp" type="image/webp">
+                                        <img src="img/media-preview.jpg" alt="image_alt">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="media-item__title">ОМК и фонд «ОМК-Участие» выиграли две премии «Инициативы»
+                            </div>
+                            <div class="media-item__date">20 фев</div>
+                        </a>
+                        <a href="#0" class="media-item media-item--video js-media-item--video">
+                            <div class="media-item__preview">
+                                <div class="inner">
+                                    <picture>
+                                        <source srcset="img/media-preview.webp" type="image/webp">
+                                        <img src="img/media-preview.jpg" alt="image_alt">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="media-item__title">ОМК и фонд «ОМК-Участие» выиграли две премии «Инициативы»
+                            </div>
+                            <div class="media-item__date">20 фев</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="row show-more__row">
+            <div class="col-12">
+                <a href="#0" class="btn btn--dark show-more">Показать еще</a>
+            </div>
+        </div>
     </div>
+
+    {% include 'videoPopup/videoPopup.html' %}
+    {% include 'imagePopup/imagePopup.html' %}
 {% endblock %}

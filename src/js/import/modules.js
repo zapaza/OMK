@@ -10,3 +10,4 @@ import "%modules%/select/select";
 import '%modules%/dataselect/dataselect';
 import '%modules%/unknown/unknown';
 import '%modules%/universal-form/universal-form'
+import '%modules%/imagePopup/imagePopup'
