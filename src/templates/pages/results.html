@@ -1,0 +1,84 @@
+{% extends './layout.html' %}
+{% block content %}
+    <div class="wrapper results">
+        <div class="row search__row">
+            <div class="col-12">
+                {% include 'information-systems-search/information-systems-search.html' %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="results-nav">
+                    <div class="results-nav__select">
+                        <form action="#0">
+                            {% include 'select/select.html' %}
+                        </form>
+                    </div>
+                    <div class="results-nav__links">
+                        <a href="#0" class="results-nav__link active">
+                            <span class="name">Все</span>
+                            <span class="count">325</span>
+                        </a>
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Сотрудники</span>
+                            <span class="count">105</span>
+                        </a>
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Новости</span>
+                            <span class="count">162</span>
+                        </a>
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Медиа</span>
+                            <span class="count">58</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="results-section">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="results-section__top">
+                        <h2 class="results-section__title">Сотрудники</h2>
+                        <a href="#0" class="results-section__all">
+                            <span class="text">Показать всех</span>
+                            <span class="count">105</span>
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0H24V24H0z"/>
+                                        <path stroke="#1A1A1A" class="arrow-path" stroke-width="1.8"
+                                              d="M9 6L15 12 9 18"/>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row--long">
+                <div class="col-12">
+                    <div class="employee">
+                        <div class="employee-content">
+                            <a href="#0" class="employee-photo">
+                                <div class="employee-photo__inner">
+                                    <picture>
+                                        <source srcset="/img/avatar.webp" type="image/webp">
+                                        <img src="/img/avatar.jpg" alt="Имя сотрудника">
+                                    </picture>
+                                </div>
+                            </a>
+                            <div class="employee-info">
+                                <a href="profile.html" class="employee-info__link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}

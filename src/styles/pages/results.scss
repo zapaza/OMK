@@ -1,0 +1,139 @@
+.results {
+    padding: 32px 0 48px;
+    &-nav {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 32px 0;
+        &__select {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &__links {
+            display: flex;
+            margin: 0 180px;
+        }
+        &__link {
+            @include transition();
+            display: flex;
+            align-items: baseline;
+            padding: 4px 16px 7px;
+            border-radius: 100px;
+            background: $white;
+            &:hover {
+                text-decoration: none;
+            }
+            &.active {
+                background: $ctrl-black;
+                .name {
+                    color: $white;
+                }
+            }
+            .name {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $text-black;
+            }
+            .count {
+                font-size: 0.875rem;
+                line-height: 1.43;
+                color: $text-silver;
+                margin-left: 8px;
+            }
+        }
+    }
+    &-section {
+        margin: 32px 0 40px;
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 32px 0 14px;
+        }
+        &__title {
+            font-size: 1.5rem;
+            line-height: 1.33;
+            font-weight: 700;
+            color: $text-black;
+            margin: 0;
+        }
+        &__all {
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.25;
+            margin-left: 16px;
+            &:hover {
+                text-decoration: none;
+                .text {
+                    color: $red;
+                }
+                .count {
+                    color: $red;
+                }
+                .arrow-path {
+                    stroke: $red;
+                }
+            }
+            .text {
+                @include transition();
+                color: $text-black;
+            }
+            .count {
+                @include transition();
+                color: $text-silver;
+                margin-left: 8px;
+            }
+            .arrow {
+                width: 24px;
+                height: 24px;
+                margin-left: 2px;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+                path {
+                    @include transition();
+                }
+            }
+        }
+    }
+
+    .employee {
+        display: flex;
+        padding: 25px 24px 24px;
+        background: $white;
+        &:first-child {
+            .employee-content {
+                border-top: none;
+            }
+        }
+        &-content {
+            width: 100%;
+            border-top: 1px solid $border-10;
+        }
+        &-photo {
+            display: block;
+            width: 11%;
+            &__inner {
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    max-width: 100%;
+                    max-height: 100%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
