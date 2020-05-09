@@ -5,8 +5,13 @@
     background-color: $white;
 
 
-    .row {
+    .col-12 {
+        display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: 767px) {
+            justify-content: center;
+        }
     }
 
     &__left, &__right {
@@ -18,6 +23,9 @@
     }
 
     &__left {
+        @media (max-width: 767px) {
+            margin-bottom: 24px;
+        }
         .footer__link {
 
             &:last-child {
@@ -40,6 +48,9 @@
         font-size: 16px;
         line-height: 1.25;
         margin-right: 32px;
+        @media (max-width: 767px) {
+            margin-right: 24px;
+        }
         &:last-child {
             margin-right: 0;
         }

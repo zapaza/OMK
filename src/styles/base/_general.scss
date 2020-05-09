@@ -22,7 +22,9 @@ body {
     };
 }
 
-
+* {
+    outline: none !important;
+}
 .col, [class*='col-'] {
     @media (max-width: 1279px) {
         padding-left: 12px;
@@ -54,7 +56,7 @@ body {
 
 .wrapper {
     @extend .container;
-    @media (min-width: 1024px) {
+    @media (min-width: 1023px) {
         padding-left: 0;
         padding-right: 0;
     }

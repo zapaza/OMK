@@ -237,7 +237,7 @@
 
             .badge {
                 color: $white;
-                border-color: $white;
+                border-color: rgba(255, 255, 255, 0.5);
                 &__count {
                     color: $text-silver;
                     display: inline-block;

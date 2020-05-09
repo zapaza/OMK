@@ -153,9 +153,16 @@
     &-slider {
         position: relative;
 
+
+
         .swiper-container {
             margin-top: -8px;
             padding-top: 8px;
+            @media(max-width: 758px) {
+                padding-left: 16px;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
         }
 
         .swiper-wrapper {
@@ -184,6 +191,14 @@
             line-height: 1.29;
             font-weight: 700;
             margin-bottom: 0;
+        }
+    }
+
+    .swiper-container {
+        @media(max-width: 758px) {
+            padding-left: 16px;
+            margin-left: -16px;
+            margin-right: -16px;
         }
     }
 
@@ -235,6 +250,11 @@
         .swiper-container {
             margin-top: -8px;
             padding-top: 8px;
+            @media(max-width: 758px) {
+                padding-left: 16px;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
         }
 
         .swiper-wrapper {

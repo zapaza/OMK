@@ -21,28 +21,33 @@ $(document).ready(function () {
             }
         });
 
-        $('body').on('click', '.datapicker-trigger-js', function (e) {
-            e.preventDefault();
-            $(this).addClass('show')
-            $(this).parent().find('.data-select__dropdown').addClass('show');
-
-        });
-        $('body').on('click', '.datapicker-clear-js', function (e) {
-           let datePicker =  $('.datapicker-js').datepicker().data('datepicker');
-            e.preventDefault();
-            datePicker.clear();
-            $(this).parent().parent().find('.datapicker-trigger-js').show();
-            $(this).parent().hide();
-        })
-
-        $('body').mouseup(function (e) {
-            let div = $(".data-select__dropdown");
-            if (!div.is(e.target)
-                && div.has(e.target).length === 0) {
-                div.removeClass('show');
-                div.parent().find('.datapicker-trigger-js').removeClass('show');
-            }
-        });
     }
+
 });
 
+$('body').on('click', '.datapicker-clear-js', function (e) {
+    let datePicker =  $('.datapicker-js').datepicker().data('datepicker');
+    e.preventDefault();
+    datePicker.clear();
+    $(this).parent().parent().find('.datapicker-trigger-js').show();
+    $(this).parent().hide();
+})
+
+$('body').mouseup(function (e) {
+    let div = $(".data-select");
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+        div.find('.data-select__dropdown').removeClass('show');
+        div.find('.datapicker-trigger-js').removeClass('show');
+    }
+});
+$('body').on('click', '.datapicker-trigger-js', function (e) {
+    e.preventDefault();
+    if (!$(this).hasClass('show')) {
+        $(this).addClass('show');
+        $(this).parent().find('.data-select__dropdown').addClass('show');
+    }else {
+        $(this).removeClass('show');
+        $(this).parent().find('.data-select__dropdown').removeClass('show');
+    }
+});

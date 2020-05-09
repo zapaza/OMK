@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="desktop-main-new-icons" transform="translate(-192.000000, -32.000000)">
+            <g id="Group-11" transform="translate(192.000000, 32.000000)">
+                <circle id="Oval-Copy-3" fill="#909099" cx="24" cy="24" r="24"></circle>
+                <g id="index/icon/M/safety-Copy-9" transform="translate(12.000000, 12.000000)">
+                    <g id="icon/M/Obhod/Star/Light/Silver-Copy-2">
+                        <g id="icon">
+                            <g id="Group">
+                                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M4,6 L4.83974853,5.83205029 C7.5524423,5.28951154 10.0438487,3.9561513 12,2 L12,2 L12,2 C13.9555906,3.95612581 16.4465833,5.28943332 19.1588878,5.83180517 L20,6 L20,6 L20,10 C20,14.9029272 17.2298916,19.3850486 12.8445767,21.5776972 L11.9999676,22 L11.9999676,22 L11.1554117,21.5777204 C6.77010151,19.3850564 4,14.9029298 4,10 L4,10 L4,10 L4,6 Z" id="Rectangle" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

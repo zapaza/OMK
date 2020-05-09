@@ -1,3 +1,4 @@
+import 'bootstrap/js/dist/dropdown';
 import 'bootstrap-select/dist/js/bootstrap-select.min';
 
 //стилизация селекта
