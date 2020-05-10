@@ -3,6 +3,7 @@ import Swiper from 'swiper/js/swiper';
 import "./import/modules";
 import './import/inputs-animation';
 import objectFitImages from 'object-fit-images'
+import 'brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min'
 
 
 global.jQuery = $;
@@ -256,6 +257,12 @@ $(document).ready(() => {
                 }
             }
         });
+    }
+
+    //слайдер в списке объявлений
+    if ($('.ads-slider').length > 0) {
+
+        $('.ads-slider').brazzersCarousel();
     }
 
 
