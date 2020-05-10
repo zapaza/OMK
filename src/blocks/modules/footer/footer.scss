@@ -45,17 +45,21 @@
     }
 
     &__link {
-        font-size: 16px;
-        line-height: 1.25;
+
         margin-right: 32px;
         @media (max-width: 767px) {
             margin-right: 24px;
+        }
+        @media (max-width: 414px){
+            margin-right: 16px;
         }
         &:last-child {
             margin-right: 0;
         }
 
         a {
+            font-size: rem(16);
+            line-height: 1.25;
             color: $black;
         }
     }
