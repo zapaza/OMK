@@ -46,3 +46,4 @@ $('body').mouseup(function (e) {
         div.fadeOut(300);
     }
 });
+
