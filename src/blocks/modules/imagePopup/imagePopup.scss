@@ -1,4 +1,11 @@
 .modal-image {
+    padding-right: 0 !important;
+
+    .modal-dialog {
+        width: calc(100% - 32px);
+        margin: 0.5rem auto;
+    }
+
     &__content {
         background: $white;
         border-radius: 8px;
@@ -13,10 +20,16 @@
     }
     &__description {
         padding: 24px 32px 48px;
+        @media(max-width: 767px) {
+            padding: 16px 16px 24px;
+        }
         .title {
             font-size: 1.25rem;
             line-height: 1.2;
             font-weight: 700;
+            @media(max-width: 767px) {
+                font-size: 1rem;
+            }
         }
         .date {
             font-size: 1rem;
