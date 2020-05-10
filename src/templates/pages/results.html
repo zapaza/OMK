@@ -9,10 +9,32 @@
         <div class="row results-nav__row">
             <div class="col-12">
                 <div class="results-nav">
-                    <div class="results-nav__select">
-                        <form action="#0">
-                            {% include 'select/select.html' %}
-                        </form>
+                    <div class="results-nav__selects">
+                        <div class="results-nav__select">
+                            <form action="#0">
+                                {% include 'select/select.html' %}
+                            </form>
+                        </div>
+                        <div class="results-nav__select">
+                            <form action="#0">
+                                {% include 'dataselect/dataselect.html' %}
+                            </form>
+                        </div>
+                        <div class="results-nav__select results-nav__select--tag">
+                            <form action="#0">
+                                <select name="" id="" class="selectpicker sorting-form__select select-js">
+                                    <option value="">Тег</option>
+                                    <option value="">Новость</option>
+                                    <option value="">Мероприятие</option>
+                                    <option value="">Конкурс</option>
+                                    <option value="">Результаты работы</option>
+                                    <option value="">Интервью</option>
+                                    <option value="">Лонгрид</option>
+                                    <option value="">СМИ</option>
+                                    <option value="">Важное сообщение</option>
+                                </select>
+                            </form>
+                        </div>
                     </div>
 
                     <div class="results-nav__links">
@@ -32,12 +54,6 @@
                             <span class="name">Медиа</span>
                             <span class="count">58</span>
                         </a>
-                    </div>
-
-                    <div class="results-nav__select">
-                        <form action="#0">
-                            {% include 'dataselect/dataselect.html' %}
-                        </form>
                     </div>
                 </div>
             </div>
