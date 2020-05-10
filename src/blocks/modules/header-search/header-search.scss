@@ -1,12 +1,134 @@
 .search-suggest {
     border-radius: 8px;
     overflow: hidden;
+    .search-result {
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        &__item{
+
+        }
+
+        &__employee {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            padding: 16px 64px 16px 24px;
+            &:hover {
+                background-color: $silver-light;
+                text-decoration: none;
+            }
+
+            .avatar {
+                display: block;
+                flex: 0 0 auto;
+                position: relative;
+                width: 40px;
+                height: 40px;
+                margin-right: 16px;
+
+                &-status {
+                    display: block;
+                    position: absolute;
+                    right: 1px;
+                    bottom: 1px;
+                    width: 10px;
+                    height: 10px;
+                    overflow: hidden;
+                    border: solid 2px #ffffff;
+                    border-radius: 50%;
+
+                    &--online {
+                        background-color: $green;
+                    }
+
+                    &--offline {
+                        background-color: $text-silver;
+                    }
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 50%;
+                }
+            }
+
+            .content {
+                flex: 1 1 auto;
+                .red {
+                    color: $coral;
+                }
+
+                .name {
+                    display: block;
+                    font-size: rem(16);
+                    font-weight: $font-weight-bold;
+                    line-height: 1.25;
+                    color: $text-black;
+                    margin-bottom: 4px;
+                }
+
+                .desc {
+                    display: block;
+                    font-size: rem(14);
+                    line-height: 1.43;
+                    color: $text-silver;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+
+        &__news {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            padding: 16px 64px 16px 24px;
+            &:hover {
+                background-color: $silver-light;
+                text-decoration: none;
+            }
+            .content {
+                flex: 1 1 auto;
+                .red {
+                    color: $coral;
+                }
+
+                .name {
+                    display: block;
+                    font-size: rem(16);
+                    font-weight: $font-weight-bold;
+                    line-height: 1.25;
+                    color: $text-black;
+                }
+                .desc {
+                    display: block;
+                    font-size: rem(16);
+                    line-height: 1.25;
+                    color: $text-black;
+                }
+                .date {
+                    display: block;
+                    font-size: rem(14);
+                    line-height: 1.43;
+                    color: $text-silver;
+                }
+            }
+        }
+    }
 
     &__form {
+        position: relative;
+        z-index: 2;
         width: 100%;
         overflow: hidden;
-        z-index: 2;
-        position: relative;
         box-shadow: 0 1px 0 0 #e6e6e6;
     }
 
@@ -44,15 +166,6 @@
         animation: search-preloader 1.5s 0s linear infinite;
     }
 
-    @keyframes search-preloader {
-        from {
-            transform: rotate(0);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
     &__answer {
         border-radius: 0 0 8px 8px;
         overflow: hidden;
@@ -67,8 +180,8 @@
     }
 
     &__last-result {
-        width: 100%;
         display: none;
+        width: 100%;
 
         .last-result {
             
@@ -176,8 +289,8 @@
             
         }
         &-show {
-            position: relative;
             display: block;
+            position: relative;
             padding: 16px 24px;
             font-size: rem(16);
             line-height: 1.25;
@@ -185,10 +298,10 @@
             &:after {
                 content: '';
                 position: absolute;
+                top: 16px;
                 right: 4px;
                 width: 24px;
                 height: 24px;
-                top: 16px;
                 background-image: url('../img/icons/icon-arrow-right--dark.svg');
             }
             &:hover {
@@ -209,128 +322,25 @@
             }
         }
     }
-    .search-result {
-        &__list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+
+    &__no-result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 416px;
+        border-radius: 0 0 8px 8px;
+        background-color: #ffffff;
+        font-size: rem(16);
+        line-height: 1.25;
+        color: $text-silver;
+    }
+
+    @keyframes search-preloader {
+        from {
+            transform: rotate(0);
         }
-
-        &__item{
-
-        }
-
-        &__employee {
-            display: flex;
-            width: 100%;
-            max-width: 100%;
-            padding: 16px 64px 16px 24px;
-            &:hover {
-                background-color: $silver-light;
-                text-decoration: none;
-            }
-
-            .avatar {
-                width: 40px;
-                height: 40px;
-                display: block;
-                margin-right: 16px;
-                flex:0 0 auto;
-                position: relative;
-
-                &-status {
-                    position: absolute;
-                    bottom: 1px;
-                    right: 1px;
-                    display: block;
-                    width: 10px;
-                    height: 10px;
-                    overflow: hidden;
-                    border-radius: 50%;
-                    border: solid 2px #ffffff;
-
-                    &--online {
-                        background-color: $green;
-                    }
-
-                    &--offline {
-                        background-color: $text-silver;
-                    }
-                }
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    object-fit: cover;
-                    object-position: center;
-                    border-radius: 50%;
-                    overflow: hidden;
-                }
-            }
-
-            .content {
-                flex: 1 1 auto;
-                .red {
-                    color: $coral;
-                }
-
-                .name {
-                    display: block;
-                    font-size: rem(16);
-                    font-weight: $font-weight-bold;
-                    line-height: 1.25;
-                    color: $text-black;
-                    margin-bottom: 4px;
-
-
-                }
-
-                .desc {
-                    display: block;
-                    font-size: rem(14);
-                    line-height: 1.43;
-                    color: $text-silver;
-                    margin-bottom: 4px;
-                }
-            }
-        }
-
-        &__news {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            padding: 16px 64px 16px 24px;
-            &:hover {
-                background-color: $silver-light;
-                text-decoration: none;
-            }
-            .content {
-                flex: 1 1 auto;
-                .red {
-                    color: $coral;
-                }
-
-                .name {
-                    display: block;
-                    font-size: rem(16);
-                    font-weight: $font-weight-bold;
-                    line-height: 1.25;
-                    color: $text-black;
-                }
-                .desc {
-                    display: block;
-                    font-size: rem(16);
-                    line-height: 1.25;
-                    color: $text-black;
-                }
-                .date {
-                    display: block;
-                    font-size: rem(14);
-                    line-height: 1.43;
-                    color: $text-silver;
-                }
-            }
+        to {
+            transform: rotate(360deg);
         }
     }
 }
