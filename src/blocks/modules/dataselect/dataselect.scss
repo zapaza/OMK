@@ -318,4 +318,9 @@
             }
         }
     }
+
+    &__fake-input {
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+    }
 }

@@ -1,0 +1,27 @@
+.modal-image {
+    &__content {
+        background: $white;
+        border-radius: 8px;
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        background: $text-black;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__description {
+        padding: 24px 32px 48px;
+        .title {
+            font-size: 1.25rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .date {
+            font-size: 1rem;
+            margin-top: 8px;
+            color: $text-silver;
+        }
+    }
+}
