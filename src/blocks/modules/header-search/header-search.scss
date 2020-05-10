@@ -107,12 +107,14 @@
                     font-weight: $font-weight-bold;
                     line-height: 1.25;
                     color: $text-black;
+                    margin-bottom: 4px;
                 }
                 .desc {
                     display: block;
-                    font-size: rem(16);
+                    font-size: rem(14);
                     line-height: 1.25;
                     color: $text-black;
+                    margin-bottom: 4px;
                 }
                 .date {
                     display: block;
