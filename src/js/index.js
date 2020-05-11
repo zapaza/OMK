@@ -298,24 +298,6 @@ function resetResultsFiltersForm() {
     $('.js-results-nav-form .datapicker-clear-js').parent().hide();
 }
 
-function checkResultsFiltersFormActiveFilters() {
-    var filtersLength = 0;
-
-    if($('.js-results-nav-form .datapicker-js').datepicker().data('datepicker').selectedDates) {
-        filtersLength += 1;
-    }
-
-    var selectsLength = $('.js-results-nav-form .select-js').length;
-    // if(selectsLength > 0) {
-    //     for(i=0; i<selectsLength; i++) {
-    //         $('.js-results-nav-form .select-js').eq(i);
-    //     }
-    // }
-
-}
-
 $('.js-results-nav-form').on('reset', function () {
-    checkResultsFiltersFormActiveFilters();
-
     resetResultsFiltersForm();
 });
