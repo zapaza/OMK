@@ -31,8 +31,6 @@ function setSlidersModalButtonsPositionTop() {
 
 function setNavSlidersPositionTop(bigSliderItem) {
 
-    console.log('setNavSlidersPositionTop');
-
     let thisSliderItem = $(bigSliderItem),
         thisSlideHeight = thisSliderItem.find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
         thisNavSliderHeight = thisSliderItem.find('.js-thumbs-slider__nav').eq(0).outerHeight(),

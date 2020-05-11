@@ -23,6 +23,10 @@ body {
     };
 }
 
+.off-scroll {
+    overflow: hidden;
+}
+
 * {
     outline: none !important;
 }
