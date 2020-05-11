@@ -59,6 +59,9 @@
             &:hover {
                 border-color: $border-20;
             }
+            &:focus {
+                background-color: $white;
+            }
         }
     }
     &__error {

@@ -50,21 +50,21 @@
             max-width: 100vw;
         }
         .swiper-slide {
-            .card {
-                border: none;
-            }
             @media(max-width:767px) {
                 .card {
                     border-radius: 0;
                 }
             }
             @media(max-width:767px) {
-                height: 414px;
                 width: 100%;
+                height: 414px;
             }
             @media(max-width:413px) {
+                width: 100%;
                 height: 320px;
-                width: 100% ;
+            }
+            .card {
+                border: none;
             }
             .card--image {
                 position: relative;
@@ -143,14 +143,14 @@
         &:hover {
             text-decoration: none;
 
+            .main-page__link-text {
+                color: $coral;
+            }
+
             svg {
                 circle {
                     fill: $coral;
                 }
-            }
-
-            .main-page__link-text {
-                color: $coral;
             }
         }
 

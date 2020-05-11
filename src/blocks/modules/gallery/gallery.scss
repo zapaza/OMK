@@ -2,20 +2,16 @@
     align-items: stretch;
     margin-bottom: 48px;
 
-    & > .row {
-        width: auto;
-        padding: 0;
-    }
-
     &__item {
         position: relative;
         overflow: hidden;
-        margin: 0 4px 8px;
+        margin: 0 8px 8px 0;
         border-radius: 5px;
         background-color: $silver-light;
 
         &-inner {
             display: block;
+            position: relative;
             width: 100%;
             height: 100%;
         }
@@ -34,10 +30,34 @@
 
         .gallery__item {
             width: calc(33.3333% - 8px);
-            height: 303px;
+
             @media (max-width: 767px) {
                 width: calc(50% - 8px);
-                height: 150px;
+                &:nth-child(3n) {
+                    margin-right: 8px;
+                }
+
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+
+            .gallery__item-inner {
+                padding-bottom: 100%;
+            }
+            .gallery__item-img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            &:nth-child(3n) {
+                margin-right: 0;
             }
         }
     }
@@ -46,26 +66,61 @@
 
         .gallery__item {
             width: calc(66.6666% - 8px);
-            height: 307px;
             @media (max-width: 767px) {
                 width: 100%;
-                height: 150px;
+            }
+            @media (max-width: 767px) {
+                &:nth-child(3n) {
+                    margin-right: 8px;
+                }
+
+                &:nth-child(2n) {
+                    margin-right: 8px;
+                }
+            }
+
+            &-inner {
+                padding-bottom: 49.32%;
             }
 
             &:nth-child(4n+2) {
                 width: calc(33.3333% - 8px);
                 @media (max-width: 767px) {
                     width: calc(50% - 8px);
-                    height: 150px;
+                }
+                .gallery__item-inner {
+                    padding-bottom: 100%;
                 }
             }
             &:nth-child(4n+3) {
                 width: calc(33.3333% - 8px);
                 @media (max-width: 767px) {
                     width: calc(50% - 8px);
-                    height: 150px;
+                }
+                .gallery__item-inner {
+                    padding-bottom: 100%;
                 }
             }
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            &-img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-position: center;
+                object-fit: cover;
+            }
         }
+    }
+
+    & > .row {
+
     }
 }
