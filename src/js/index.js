@@ -41,7 +41,7 @@ function articleFooterInfoHide() {
                 if (scroll > offset && counter === 0) {
                     $('.article__footer-info').fadeOut(500);
                     counter = 1;
-                } else if (scroll < offset && counter === 1){
+                } else if (scroll < offset && counter === 1) {
                     $('.article__footer-info').fadeIn(500);
                     counter = 0;
                 }
@@ -278,4 +278,26 @@ $(window).on('resize', function () {
 
 $('body').on('click', '.js-media-item--video', function () {
     $('#video_popup').modal('show');
+});
+
+$('body').on('click', '.js-results-nav__filters-btn', function () {
+    $('.js-results-nav__selects').addClass('mobile-show');
+    $('html, body').addClass('off-scroll');
+});
+
+$('body').on('click', '.js-top-close', function () {
+    $('.js-results-nav__selects').removeClass('mobile-show');
+    $('html, body').removeClass('off-scroll');
+});
+
+function resetResultsFiltersForm() {
+    $('.js-results-nav-form .select-js').selectpicker('val', '');
+    let datePicker = $('.js-results-nav-form .datapicker-js').datepicker().data('datepicker');
+    datePicker.clear();
+    $('.js-results-nav-form .datapicker-clear-js').parent().parent().find('.datapicker-trigger-js').show();
+    $('.js-results-nav-form .datapicker-clear-js').parent().hide();
+}
+
+$('.js-results-nav-form').on('reset', function () {
+    resetResultsFiltersForm();
 });

@@ -5,7 +5,9 @@ import 'bootstrap-select/dist/js/bootstrap-select.min';
 //дока по плагину https://github.com/snapappointments/bootstrap-select/
 $(document).ready(function () {
     if($('.select-js').length > 0){
-        $('.select-js').selectpicker();
+        $('.select-js').selectpicker({
+            dropupAuto: false
+        });
     }
 })
 

@@ -1,0 +1,118 @@
+<div class="modal fade edit" id="profile_edit_popup" tabindex="-1" role="dialog" aria-labelledby="gallery_popup_Label"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-gallery__controls">
+            <button type="button" class="btn btn--close-modal close" aria-label="Close" data-dismiss="modal"
+                    title="Закрыть"></button>
+        </div>
+        <div class="modal-content">
+            <h3 class="edit-title">Редактирование профиля</h3>
+            <form action="#0">
+                <div class="edit-form">
+                    <button type="button" class="edit-form__photo-btn js-edit-form__photo-btn">
+                        <span class="img">
+                            <picture>
+                                <source srcset="img/avatar.webp" type="image/webp">
+                                <img src="img/avatar.jpg" alt="image_alt">
+                            </picture>
+                        </span>
+                        <span class="text">Изменить фото</span>
+                    </button>
+                    <label class="fields">
+                        <input type="tel" class="fields__input" placeholder="Тип" value="+7 (83 177) 3-76-05">
+                        <span class="fields__placeholder">Рабочий телефон</span>
+                    </label>
+                    <label class="fields">
+                        <input type="tel" class="fields__input" placeholder="Тип" value="+7 (926) 512-12-62">
+                        <span class="fields__placeholder">Мобильный телефон</span>
+                    </label>
+                    <label class="fields">
+                        <input type="email" class="fields__input" placeholder="E-mail" value="kostyak@gmail.com">
+                        <span class="fields__placeholder">E-mail</span>
+                    </label>
+                    <label class="fields">
+                        <input type="text" class="fields__input" placeholder="Skype" value="kostya88">
+                        <span class="fields__placeholder">Skype</span>
+                    </label>
+                    <label class="fields">
+                        <input type="text" class="fields__input" placeholder="Профиль в Facebook" value="">
+                        <span class="fields__placeholder">Профиль в Facebook</span>
+                    </label>
+                    <label class="fields">
+                        <input type="text" class="fields__input" placeholder="Профиль во ВКонтакте"
+                               value="https://vk.com/iva12nova">
+                        <span class="fields__placeholder">Профиль во ВКонтакте</span>
+                    </label>
+                    <label class="fields">
+                        <input type="text" class="fields__input" placeholder="Профиль в Одноклассниках"
+                               value="">
+                        <span class="fields__placeholder">Профиль в Одноклассниках</span>
+                    </label>
+                    <label class="fields">
+                        <input type="text" class="fields__input" placeholder="Профиль в Instagram"
+                               value="">
+                        <span class="fields__placeholder">Профиль в Instagram</span>
+                    </label>
+                    <label class="fields">
+                        <textarea class="fields__input" placeholder="Биография"></textarea>
+                        <span class="fields__placeholder">Биография</span>
+                    </label>
+                    <button type="submit" class="btn btn--primary edit-form__submit">Сохранить изменения</button>
+
+                    <div class="edit-form__final">Для изменения рабочей или личной информации напишите
+                        на portal@omk.ru
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade edit" id="profile_edit_photo" tabindex="-1" role="dialog" aria-labelledby="gallery_popup_Label"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-gallery__controls">
+            <button type="button" class="btn btn--close-modal close" aria-label="Close" data-dismiss="modal"
+                    title="Закрыть"></button>
+        </div>
+        <div class="modal-content">
+            <h3 class="edit-title">Фото пользователя</h3>
+            <form action="#0">
+                <div class="edit-photo">
+                    <div class="edit-photo__preview js-edit-photo__preview">
+                        <div class="inner">
+                            <img src="img/icons/no-profile-photo.svg" class="no-photo" alt="no-photo">
+                        </div>
+                    </div>
+                    <div class="edit-photo__info">
+                        <label class="file js-photo-file">
+                            <input type="file" class="file-input">
+                            <span class="btn btn--secondary file-btn">Загрузить фото</span>
+                        </label>
+
+                        <button type="button" class="delete-file js-delete-file">
+                            <span class="icon"></span>
+                            <span class="text"></span>
+                            <span class="delete"></span>
+                        </button>
+
+                        <!-- Текст ошибки выводить в .error -->
+                        <div class="error">Картинка слишком маленькая!</div>
+
+                        <p class="text">Можно загрузить изображение в формате jpg, png или gif</p>
+                        <p class="text">Размер не меньше 500 × 500 px</p>
+                        <p class="text">Объем файла не больше 5 МБ</p>
+                    </div>
+
+                    <div class="edit-photo__buttons">
+                        <button type="reset" class="btn btn--secondary">Отменить</button>
+                        <button type="submit" class="btn btn--primary">Сохранить</button>
+                    </div>
+
+                    <div class="edit-photo__message">Пожалуйста загружайте фото, на которых вас возможно узнать</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
