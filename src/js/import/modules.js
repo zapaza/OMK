@@ -13,3 +13,4 @@ import '%modules%/universal-form/universal-form';
 import '%modules%/imagePopup/imagePopup';
 import '%modules%/header-search/header-search';
 import '%modules%/profile-edit/profile-edit';
+import '%modules%/regards-modal/regards-modal';
