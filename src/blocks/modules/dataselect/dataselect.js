@@ -11,7 +11,7 @@ $(document).ready(function () {
             altFieldDateFormat: 'd M yyyy',
             altField: datapickerResult,
             range: true,
-            multipleDatesSeparator: ' - ',
+            multipleDatesSeparator: ' — ',
             toggleSelected: false,
             onSelect: function () {
                 let datapickerResultValue = datapickerResult.val();

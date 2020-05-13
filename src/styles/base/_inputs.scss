@@ -22,6 +22,7 @@
     }
     &__input {
         @include transition();
+        will-change: box-shadow;
         box-sizing: border-box;
         border-radius: 5px;
         outline: none;

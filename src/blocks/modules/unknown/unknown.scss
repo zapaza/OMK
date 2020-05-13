@@ -1,7 +1,10 @@
 .unknown {
     position: relative;
     width: 100%;
-    margin: 64px 0;
+    margin: 64px 0 32px;
+    @media (max-width: 1023px) {
+        margin-bottom: 16px;
+    }
 
     &-slider {
         width: 100%;

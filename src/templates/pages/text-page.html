@@ -2,7 +2,9 @@
 {% block content %}
 <div class="wrapper">
     <div class="row">
-        {% include 'breadcrumbs/breadcrumbs.html' %}
+        <div class="col-12">
+            {% include 'breadcrumbs/breadcrumbs.html' %}
+        </div>
     </div>
     <section class="article">
         <div class="progress">
@@ -33,14 +35,14 @@
                 <div class="thumbs-slider">
                     <div class="swiper-container thumbs-slider__main js-thumbs-slider__main">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <a href="#" class="swiper-slide">
                                 <picture class="thumbs-slider__main-img js-thumbs-slider__main-img">
                                     <!--[if IE 9]><video style="display: none;"><![endif]-->
                                     <source srcset="img/AA5J6740.webp" type="image/webp">
                                      <!--[if IE 9]></video><![endif]-->
                                     <img src="img/AA5J6740.jpg"   title="" alt="">
                                 </picture>
-                            </div>
+                            </a>
                             <div class="swiper-slide">
                                 <picture class="thumbs-slider__main-img js-thumbs-slider__main-img">
                                     <!--[if IE 9]><video style="display: none;"><![endif]-->

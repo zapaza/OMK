@@ -1,6 +1,9 @@
 .article-logo {
     display: flex;
     margin: 0 -16px 32px;
+    @media (max-width: 767px) {
+        margin: 0 -8px 32px;
+    }
 
     &:last-of-type {
         margin-bottom: 48px;
@@ -13,6 +16,9 @@
         overflow: hidden;
         margin: 0 16px;
         border-radius: 5px;
+        @media (max-width: 767px) {
+            margin: 0 8px;
+        }
     }
 
     &__inner {

@@ -727,11 +727,11 @@
             margin: 0 220px;
             @media (max-width: 1022px) {
                 width: calc(100% + 32px);
+                overflow: -moz-scrollbars-none;
                 margin: 32px 0 0 -16px;
                 padding-left: 16px;
                 overflow-x: auto;
                 -ms-overflow-style: none;
-                overflow: -moz-scrollbars-none;
                 scrollbar-width: none;
                 &::-webkit-scrollbar {
                     display: none;

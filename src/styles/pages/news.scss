@@ -8,27 +8,30 @@
     }
 
     &__row {
-        margin-right: -32px;
-        margin-left: -32px;
-        align-items: stretch;
-        @media (max-width: 1280px) {
-            margin-right: -24px;
-            margin-left: -24px;
-        }
-        @media (max-width: 1023px) {
-            margin-left: -16px;
-            margin-right: -16px;
-            width: auto;
-            max-width: 100vw;
-        }
-        @media(max-width:767px) {
-            margin-left: -16px;
-            margin-right: -16px;
-        }
+        //margin-right: -32px;
+        //margin-left: -32px;
+        //align-items: stretch;
+        //@media (max-width: 1280px) {
+        //    margin-right: -24px;
+        //    margin-left: -24px;
+        //}
+        //@media (max-width: 1023px) {
+        //    margin-left: -16px;
+        //    margin-right: -16px;
+        //    width: auto;
+        //    max-width: 100vw;
+        //}
+        //@media(max-width:767px) {
+        //    margin-left: -16px;
+        //    margin-right: -16px;
+        //}
 
         .card {
             flex: 1 1 auto;
             margin-bottom: 32px;
+            @media (max-width: 414px){
+                margin-bottom: 16px;
+            }
 
             &--main {
                 height: 440px;
@@ -42,9 +45,10 @@
                     border-radius: 0;
                     margin-left: -16px;
                     margin-right: -16px;
+                    max-width: 100vw;
                 }
                 @media (max-width: 320px) {
-                    height: 288px;
+                    height: 320px;
                 }
             }
         }
@@ -52,8 +56,14 @@
         .btn--dark {
             width: 352px;
             margin: auto;
+            padding: .85rem 1rem .9rem 1rem;
+            @media (max-width: 1279px){
+                width: 296px;
+            }
             @media(max-width: 1023px) {
                 width: 100%;
+                padding-top:18px;
+                padding-bottom: 18px;
             }
         }
 
@@ -73,14 +83,15 @@
                 max-width: 100vw;
                 height: auto;
                 padding: 0;
-                margin-left: -24px;
-                margin-right: 0;
+                margin-bottom: 16px;
+                margin-left: -8px;
+                margin-right: -8px;
             }
 
             .swiper-container {
                 height: 100%;
                 @media(max-width: 1023px) {
-                    padding-bottom: 24px;
+                    padding-bottom: 40px;
                 }
                 @media (max-width: 414px) {
                     height: auto;
@@ -190,14 +201,14 @@
         }
     }
 
-    &__row {
-        margin-right: -32px;
-        margin-left: -32px;
-        @media (max-width: 1280px) {
-            margin-right: -24px;
-            margin-left: -24px;
-        }
-    }
+    //&__row {
+    //    margin-right: -32px;
+    //    margin-left: -32px;
+    //    @media (max-width: 1280px) {
+    //        margin-right: -24px;
+    //        margin-left: -24px;
+    //    }
+    //}
 
     &-slider {
         position: relative;
@@ -254,17 +265,19 @@
     .swiper-slide {
         @media(max-width: 1023px) {
             width: auto;
+            border-radius: 5px;
+            overflow: hidden;
         }
     }
 
-    &__row {
-        margin-right: -32px;
-        margin-left: -32px;
-        @media (max-width: 1280px) {
-            margin-right: -24px;
-            margin-left: -24px;
-        }
-    }
+    //&__row {
+    //    margin-right: -32px;
+    //    margin-left: -32px;
+    //    @media (max-width: 1280px) {
+    //        margin-right: -24px;
+    //        margin-left: -24px;
+    //    }
+    //}
 }
 
 .articles {
@@ -283,15 +296,15 @@
         }
     }
 
-    &__row {
-        margin-right: -32px;
-        margin-left: -32px;
-        align-items: stretch;
-        @media (max-width: 1280px) {
-            margin-right: -24px;
-            margin-left: -24px;
-        }
-    }
+    //&__row {
+    //    margin-right: -32px;
+    //    margin-left: -32px;
+    //    align-items: stretch;
+    //    @media (max-width: 1280px) {
+    //        margin-right: -24px;
+    //        margin-left: -24px;
+    //    }
+    //}
 
     &-slider {
         position: relative;
@@ -312,9 +325,17 @@
 
         .swiper-slide {
             height: auto;
+
+            .articles-card {
+                margin-right: 0;
+                @media(max-width: 1023px) {
+                    width: auto;
+                }
+            }
             @media(max-width: 1023px) {
                 width: auto;
             }
+
         }
     }
 }

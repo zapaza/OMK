@@ -158,9 +158,13 @@ $(document).ready(() => {
                 },
             },
             breakpoints: {
+                1279: {
+                    spaceBetween: 32
+                },
+
                 1024: {
                     slidesPerView: 4,
-                    spaceBetween: 32
+                    spaceBetween: 24
                 },
                 100: {
                     slidesPerView: 'auto',
@@ -210,9 +214,13 @@ $(document).ready(() => {
                 }
             },
             breakpoints: {
+                1279: {
+                    spaceBetween: 32
+                },
+
                 1024: {
                     slidesPerView: 2,
-                    spaceBetween: 32
+                    spaceBetween: 24
                 },
                 100: {
                     slidesPerView: 'auto',
@@ -247,9 +255,13 @@ $(document).ready(() => {
                 },
             },
             breakpoints: {
+                1279: {
+                    spaceBetween: 32
+                },
+
                 1024: {
                     slidesPerView: 3,
-                    spaceBetween: 32
+                    spaceBetween: 24
                 },
                 100: {
                     slidesPerView: 'auto',

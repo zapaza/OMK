@@ -95,8 +95,8 @@
 
     &-photo {
         display: flex;
-        align-items: flex-start;
         flex-wrap: wrap;
+        align-items: flex-start;
         justify-content: space-between;
         max-width: 456px;
         margin: 40px auto 32px;
@@ -105,8 +105,8 @@
             display: flex;
             position: relative;
             width: calc(50% - 12px);
-            border-radius: 5px;
             overflow: hidden;
+            border-radius: 5px;
 
             &.has-preview {
                 &::after {
@@ -220,20 +220,20 @@
                 }
 
                 .text {
+                    overflow: hidden;
                     font-size: 0.875rem;
                     line-height: normal;
                     color: $text-black;
                     white-space: nowrap;
-                    overflow: hidden;
                     text-overflow: ellipsis;
                 }
             }
 
             .error {
+                margin: 16px 0 20px;
                 font-size: 0.875rem;
                 line-height: 1.43;
                 color: $coral;
-                margin: 16px 0 20px;
             }
 
             .text {

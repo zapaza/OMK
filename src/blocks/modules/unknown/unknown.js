@@ -13,6 +13,19 @@ $(document).ready(function () {
                 navigation: {
                     prevEl: prevEl,
                     nextEl: nextEl
+                },
+                breakpoints: {
+                    1279: {
+                        spaceBetween: 32
+                    },
+
+                    1024: {
+                        spaceBetween: 24
+                    },
+                    100: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 16
+                    }
                 }
             })
         });

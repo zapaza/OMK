@@ -1,6 +1,13 @@
 .gallery {
     align-items: stretch;
     margin-bottom: 48px;
+    @media (max-width: 767px) {
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+       
+    }
 
     &__item {
         position: relative;
@@ -32,9 +39,11 @@
             width: calc(33.3333% - 8px);
 
             @media (max-width: 767px) {
+                margin-right: 16px;
+                margin-bottom: 16px;
                 width: calc(50% - 8px);
                 &:nth-child(3n) {
-                    margin-right: 8px;
+                    margin-right: 16px;
                 }
 
                 &:nth-child(2n) {
@@ -63,19 +72,28 @@
     }
 
     &--mosaic {
+        @media (max-width: 767px) {
+            & > .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
 
         .gallery__item {
             width: calc(66.6666% - 8px);
             @media (max-width: 767px) {
                 width: 100%;
+                margin-bottom: 16px;
+                margin-right: inherit;
             }
             @media (max-width: 767px) {
                 &:nth-child(3n) {
-                    margin-right: 8px;
+                    margin-right: inherit;
                 }
 
                 &:nth-child(2n) {
-                    margin-right: 8px;
+                    margin-right: inherit;
                 }
             }
 
@@ -118,9 +136,5 @@
                 object-fit: cover;
             }
         }
-    }
-
-    & > .row {
-
     }
 }
