@@ -269,9 +269,13 @@
         .date {
             font-size: rem(16);
             line-height: 1.25;
-            color: $white;
+            color: $text-silver;
             margin-top: auto;
             margin-bottom: 0;
+
+            &.date--white {
+                color: $white;
+            }
             @media(max-width:767px) {
                 font-size: rem(14);
                 line-height: 1.31;
