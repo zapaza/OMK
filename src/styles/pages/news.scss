@@ -29,6 +29,9 @@
         .card {
             flex: 1 1 auto;
             margin-bottom: 32px;
+            @media(max-width: 1279px) {
+                margin-bottom: 24px;
+            }
             @media (max-width: 414px) {
                 margin-bottom: 16px;
             }
@@ -333,6 +336,7 @@
                 margin-right: 0;
                 @media(max-width: 1023px) {
                     width: auto;
+                    max-width: 256px;
                 }
             }
         }
