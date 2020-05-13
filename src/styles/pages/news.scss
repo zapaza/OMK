@@ -29,7 +29,7 @@
         .card {
             flex: 1 1 auto;
             margin-bottom: 32px;
-            @media (max-width: 414px){
+            @media (max-width: 414px) {
                 margin-bottom: 16px;
             }
 
@@ -41,11 +41,11 @@
                     margin-bottom: 24px;
                 }
                 @media (max-width: 414px) {
+                    max-width: 100vw;
                     height: 414px;
                     border-radius: 0;
                     margin-left: -16px;
                     margin-right: -16px;
-                    max-width: 100vw;
                 }
                 @media (max-width: 320px) {
                     height: 320px;
@@ -57,12 +57,12 @@
             width: 352px;
             margin: auto;
             padding: .85rem 1rem .9rem 1rem;
-            @media (max-width: 1279px){
+            @media (max-width: 1279px) {
                 width: 296px;
             }
             @media(max-width: 1023px) {
                 width: 100%;
-                padding-top:18px;
+                padding-top: 18px;
                 padding-bottom: 18px;
             }
         }
@@ -325,6 +325,9 @@
 
         .swiper-slide {
             height: auto;
+            @media(max-width: 1023px) {
+                width: auto;
+            }
 
             .articles-card {
                 margin-right: 0;
@@ -332,10 +335,6 @@
                     width: auto;
                 }
             }
-            @media(max-width: 1023px) {
-                width: auto;
-            }
-
         }
     }
 }
