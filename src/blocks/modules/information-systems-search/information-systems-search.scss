@@ -1,22 +1,33 @@
 .search {
+    @include transition();
     position: relative;
     width: 100%;
 
+    &.mobile-active {
+        @media(max-width: 575px) {
+            margin-left: -17px;
+            margin-right: -17px;
+            width: calc(100% + 48px);
+        }
+    }
 
     //Стилизация скролла
     .mCSB_scrollTools {
         width: 7px;
         opacity: 1;
         margin-right: 10px;
+
         .mCSB_draggerRail {
             width: 100%;
             background-color: transparent;
             border-radius: 0;
         }
+
         .mCSB_draggerContainer {
             top: 4px;
             bottom: 4px;
         }
+
         .mCSB_dragger {
             width: 100%;
             border-radius: 0;
@@ -38,15 +49,17 @@
     .mCSB_inside > .mCSB_container {
         margin-right: 17px;
     }
+
     &__row {
         position: relative;
         z-index: 20;
     }
+
     &__input {
         @include transition();
         width: 100%;
         border: 1px solid $silver-light;
-        padding: 11px 48px 15px;
+        padding: 11px 16px 15px 48px;
         font-size: 1rem;
         line-height: 1.25;
         background-color: $silver-light;
@@ -55,15 +68,34 @@
         background-repeat: no-repeat;
         background-position: 12px center;
         border-radius: 5px;
+
         &:focus {
             background-color: $white;
             border-radius: 5px 5px 0 0;
             outline: none;
+            @media(max-width: 575px) {
+                border-radius: 0;
+                padding: 22px 56px;
+                background-size: 32px;
+                background-position: 16px center;
+            }
         }
+
         &::placeholder {
             color: $text-silver;
         }
+
+        &.active {
+            @media(max-width: 575px) {
+                border-radius: 0;
+                padding: 22px 56px;
+                background-color: $white;
+                background-size: 32px;
+                background-position: 16px center;
+            }
+        }
     }
+
     &.active {
         .search__input {
             background-color: $white;
@@ -81,20 +113,28 @@
         max-height: 370px;
         border: 1px solid $silver-light;
         background: $white;
+        @media (max-width: 575px) {
+            height: calc(100vh - 65px);
+            max-height: calc(100vh - 65px);
+        }
+
         &__list {
             margin: 0;
             padding: 0;
             list-style: none;
         }
+
         &__link {
             @include transition();
             display: flex;
             align-items: center;
             padding: 16px 24px;
+
             &:hover {
                 text-decoration: none;
                 background: $silver-light;
             }
+
             .img {
                 display: block;
                 position: relative;
@@ -106,13 +146,16 @@
                 background: $text-black;
                 margin-right: 26px;
             }
+
             .text {
                 color: $text-black;
+
                 .red {
                     color: #f24c3d;
                 }
             }
         }
+
         &__title {
             margin: 0;
             padding: 20px 24px 8px;
@@ -120,6 +163,59 @@
             line-height: 1.25;
             font-weight: 300;
             color: $text-silver;
+        }
+    }
+
+    &-close {
+        display: none;
+        @media (max-width: 575px) {
+            display: block;
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            background-color: transparent;
+            background-image: url(../img/icons/close-modal.svg);
+            background-size: contain;
+            background-position: center center;
+            border: none;
+            transform: translateY(-50%);
+            opacity: 0;
+            pointer-events: none;
+            transition-property: opacity;
+            transition-duration: .2s;
+            &.active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &-shade {
+        display: none;
+        @media (max-width: 575px) {
+            @include transition();
+            display: block;
+            position: absolute;
+            z-index: 9;
+            top: 1px;
+            right: 0;
+            width: 88px;
+            height: calc(100% - 2px);
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff 43%);
+            opacity: 0;
+            pointer-events: none;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-off-scroll {
+        @media(max-width: 575px) {
+            overflow: hidden;
         }
     }
 }

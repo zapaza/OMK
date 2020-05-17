@@ -3,6 +3,16 @@
 
     .more-services {
         margin-top: 32px;
+        width: 100%;
+        max-width: 352px;
+        @media(max-width: 1279px) {
+            width: 100%;
+        }
+        @media(max-width: 1023px) {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            max-width: 296px;
+        }
     }
 
     .mail {
@@ -10,10 +20,25 @@
         font-size: 0.875rem;
         line-height: 1.43;
         color: $text-silver;
+        @media(max-width: 575px) {
+            margin-top: 20px;
+        }
+    }
+
+    .main-header {
+        h1 {
+            @media(max-width: 575px) {
+                font-size: 2rem;
+                line-height: 1.25;
+            }
+        }
     }
 
     .header-block {
         margin: 48px 0 24px;
+        @media(max-width: 575px) {
+            margin: 32px 0 20px;
+        }
         h2 {
             font-size: 1.75rem;
             line-height: 1.29;
@@ -63,6 +88,9 @@
         line-height: 1.25;
         color: $text-black;
         margin-bottom: 16px;
+        @media(max-width: 575px) {
+            margin-bottom: 28px;
+        }
         &:hover {
             text-decoration: none;
             color: $text-black;
