@@ -1,0 +1,189 @@
+{% extends './layout.html' %}
+{% block content %}
+    <div class="wrapper results results--inner">
+        <div class="row search__row">
+            <div class="col-12">
+                {% include 'information-systems-search/information-systems-search.html' %}
+            </div>
+        </div>
+        <div class="row results-nav__row">
+            <div class="col-12">
+                <button type="button" class="results-nav__filters-btn js-results-nav__filters-btn">
+                    <span class="icon"></span>
+                    <span class="text">Фильтры</span>
+                    <span class="count">2</span>
+                </button>
+                <div class="results-nav">
+                    <form action="#0" class="js-results-nav-form">
+                        <div class="results-nav__selects js-results-nav__selects">
+                            <div class="top">
+                                <div class="top-header">
+                                    <div class="name">Фильтры</div>
+                                </div>
+                                <button type="button" class="top-close js-top-close"></button>
+                            </div>
+
+                            <div class="bottom">
+
+                                <div class="selects">
+                                    <div class="results-nav__select js-results-nav__select">
+                                        <div class="mobile-title">Площадка</div>
+                                        <select name="" id="" class="selectpicker sorting-form__select select-js">
+                                            <option value="">Все площадки</option>
+                                            <option value="">Альметьевск</option>
+                                            <option value="">Москва</option>
+                                            <option value="">Челябинск</option>
+                                            <option value="">Уфа</option>
+                                            <option value="">Благовещенск</option>
+                                            <option value="">Чусовой</option>
+                                            <option value="">Выкса</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="buttons">
+                                    <button type="submit" class="btn btn--primary">Применить</button>
+                                    <button type="reset" class="btn btn--secondary">Сбросить фильтры</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="results-nav__links">
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Все</span>
+                            <span class="count">325</span>
+                        </a>
+                        <a href="#0" class="results-nav__link active">
+                            <span class="name">Сотрудники</span>
+                            <span class="count">105</span>
+                        </a>
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Новости</span>
+                            <span class="count">162</span>
+                        </a>
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Медиа</span>
+                            <span class="count">58</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="results-section">
+
+            <div class="row row--long">
+                <div class="col-12">
+                    <div class="employee">
+                        <div class="employee-content">
+                            <a href="#0" class="employee-photo">
+                                <div class="employee-photo__inner">
+                                    <picture>
+                                        <source srcset="/img/avatar.webp" type="image/webp">
+                                        <img src="/img/avatar.jpg" alt="Имя сотрудника">
+                                    </picture>
+                                </div>
+                            </a>
+                            <div class="employee-info">
+                                <a href="profile.html" class="employee-info__link">Борисов Виталий Николаевич</a>
+                                <div class="employee-info__position">Наладчик сварочного и газоплазморезательного
+                                    оборудования
+                                </div>
+                                <div class="employee-info__area">Безопасность производства</div>
+                            </div>
+                            <ul class="employee-contacts">
+                                <li class="employee-contacts__item employee-contacts__item--address">
+                                    <address>Выкса — ВМЗ — ТЭСЦ4 — Участок покрытия</address>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--phone">
+                                    <a href="tel:882-99-10">882-99-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--mobile">
+                                    <a href="tel:+79099121410">+7 (909) 912-14-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--email">
+                                    <a href="mailto:borisov_vn@omk.ru">borisov_vn@omk.ru</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="employee">
+                        <div class="employee-content">
+                            <a href="#0" class="employee-photo">
+                                <div class="employee-photo__inner">
+                                    <picture>
+                                        <source srcset="/img/avatar.webp" type="image/webp">
+                                        <img src="/img/avatar.jpg" alt="Имя сотрудника">
+                                    </picture>
+                                </div>
+                            </a>
+                            <div class="employee-info">
+                                <a href="profile.html" class="employee-info__link">Борисов Виталий Николаевич</a>
+                                <div class="employee-info__position">Наладчик сварочного и газоплазморезательного
+                                    оборудования
+                                </div>
+                                <div class="employee-info__area">Безопасность производства</div>
+                            </div>
+                            <ul class="employee-contacts">
+                                <li class="employee-contacts__item employee-contacts__item--address">
+                                    <address>Выкса — ВМЗ — ТЭСЦ4 — Участок покрытия</address>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--phone">
+                                    <a href="tel:882-99-10">882-99-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--mobile">
+                                    <a href="tel:+79099121410">+7 (909) 912-14-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--email">
+                                    <a href="mailto:borisov_vn@omk.ru">borisov_vn@omk.ru</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="employee">
+                        <div class="employee-content">
+                            <a href="#0" class="employee-photo">
+                                <div class="employee-photo__inner">
+                                    <picture>
+                                        <source srcset="/img/avatar.webp" type="image/webp">
+                                        <img src="/img/avatar.jpg" alt="Имя сотрудника">
+                                    </picture>
+                                </div>
+                            </a>
+                            <div class="employee-info">
+                                <a href="profile.html" class="employee-info__link">Борисов Виталий Николаевич</a>
+                                <div class="employee-info__position">Наладчик сварочного и газоплазморезательного
+                                    оборудования
+                                </div>
+                                <div class="employee-info__area">Безопасность производства</div>
+                            </div>
+                            <ul class="employee-contacts">
+                                <li class="employee-contacts__item employee-contacts__item--address">
+                                    <address>Выкса — ВМЗ — ТЭСЦ4 — Участок покрытия</address>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--phone">
+                                    <a href="tel:882-99-10">882-99-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--mobile">
+                                    <a href="tel:+79099121410">+7 (909) 912-14-10</a>
+                                </li>
+                                <li class="employee-contacts__item employee-contacts__item--email">
+                                    <a href="mailto:borisov_vn@omk.ru">borisov_vn@omk.ru</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="row show-more__row">
+            <div class="col-12">
+                <a href="#0" class="btn btn--dark show-more">Показать еще</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

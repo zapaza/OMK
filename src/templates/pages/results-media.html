@@ -1,0 +1,199 @@
+{% extends './layout.html' %}
+{% block content %}
+    <div class="wrapper results results--inner">
+        <div class="row search__row">
+            <div class="col-12">
+                {% include 'information-systems-search/information-systems-search.html' %}
+            </div>
+        </div>
+        <div class="row results-nav__row">
+            <div class="col-12">
+                <button type="button" class="results-nav__filters-btn js-results-nav__filters-btn">
+                    <span class="icon"></span>
+                    <span class="text">Фильтры</span>
+                    <span class="count">2</span>
+                </button>
+                <div class="results-nav">
+                    <form action="#0" class="js-results-nav-form">
+                        <div class="results-nav__selects js-results-nav__selects">
+                            <div class="top">
+                                <div class="top-header">
+                                    <div class="name">Фильтры</div>
+                                </div>
+                                <button type="button" class="top-close js-top-close"></button>
+                            </div>
+
+                            <div class="bottom">
+
+                                <div class="selects">
+                                    <div class="results-nav__select js-results-nav__select">
+                                        <div class="mobile-title">Площадка</div>
+                                        <select name="" id="" class="selectpicker sorting-form__select select-js">
+                                            <option value="">Все площадки</option>
+                                            <option value="">Альметьевск</option>
+                                            <option value="">Москва</option>
+                                            <option value="">Челябинск</option>
+                                            <option value="">Уфа</option>
+                                            <option value="">Благовещенск</option>
+                                            <option value="">Чусовой</option>
+                                            <option value="">Выкса</option>
+                                        </select>
+                                    </div>
+                                    <div class="results-nav__select js-results-nav__select">
+                                        <div class="mobile-title">Дата</div>
+                                        <div class="data-select">
+                                            <button class="data-select__btn btn datapicker-trigger-js" type="button">
+                                                Дата
+                                            </button>
+                                            <div class="data-select__result ">
+                                                <input type="text" hidden readonly
+                                                       class="date-select__input datapicker-result-js">
+                                                <div class="data-select__fake-input datapicker-fake-js"></div>
+                                                <button type="button"
+                                                        class="data-select__clear btn datapicker-clear-js"></button>
+                                            </div>
+                                            <div class="data-select__dropdown">
+                                                <div class="data-select__item datapicker-js"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="results-nav__select results-nav__select--tag js-results-nav__select">
+                                        <div class="mobile-title">Тег</div>
+                                        <select name="" id="" class="selectpicker sorting-form__select select-js">
+                                            <option value="">Тег</option>
+                                            <option value="">Новость</option>
+                                            <option value="">Мероприятие</option>
+                                            <option value="">Конкурс</option>
+                                            <option value="">Результаты работы</option>
+                                            <option value="">Интервью</option>
+                                            <option value="">Лонгрид</option>
+                                            <option value="">СМИ</option>
+                                            <option value="">Важное сообщение</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="buttons">
+                                    <button type="submit" class="btn btn--primary">Применить</button>
+                                    <button type="reset" class="btn btn--secondary">Сбросить фильтры</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="results-nav__links">
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Все</span>
+                            <span class="count">325</span>
+                        </a>
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Сотрудники</span>
+                            <span class="count">105</span>
+                        </a>
+                        <a href="#0" class="results-nav__link">
+                            <span class="name">Новости</span>
+                            <span class="count">162</span>
+                        </a>
+                        <a href="#0" class="results-nav__link active">
+                            <span class="name">Медиа</span>
+                            <span class="count">58</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row results-filters__row">
+            <div class="col-12">
+                <form action="#0">
+                    <div class="results-filters">
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Новость</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Мероприятие</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Конкурс</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Результаты работы</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Интервью</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Лонгрид</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">СМИ</span>
+                        </label>
+                        <label class="results-filters__item">
+                            <input type="checkbox" class="results-filters__input">
+                            <span class="results-filters__text">Важное сообщение</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <section class="results-section results-section--media">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="media">
+                        <a href="#0" class="media-item js-media-item">
+                            <div class="media-item__preview">
+                                <div class="inner">
+                                    <picture>
+                                        <source srcset="img/media-preview.webp" type="image/webp">
+                                        <img src="img/media-preview.jpg" alt="image_alt">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="media-item__text">
+                                <div class="media-item__title">ОМК и фонд «ОМК-Участие» выиграли две премии «Инициативы»
+                                </div>
+                                <div class="media-item__date">20 фев</div>
+                            </div>
+                        </a>
+                        <a href="#0" class="media-item media-item--video js-media-item--video">
+                            <div class="media-item__preview">
+                                <div class="inner">
+                                    <picture>
+                                        <source srcset="img/media-preview.webp" type="image/webp">
+                                        <img src="img/media-preview.jpg" alt="image_alt">
+                                    </picture>
+                                </div>
+                                <div class="time">0:59</div>
+                            </div>
+                            <div class="media-item__text">
+                                <div class="media-item__title">ОМК и фонд «ОМК-Участие» выиграли две премии «Инициативы»
+                                </div>
+                                <div class="media-item__date">20 фев</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="row show-more__row">
+            <div class="col-12">
+                <a href="#0" class="btn btn--dark show-more">Показать еще</a>
+            </div>
+        </div>
+    </div>
+
+    {% include 'videoPopup/videoPopup.html' %}
+    {% include 'imagePopup/imagePopup.html' %}
+{% endblock %}
