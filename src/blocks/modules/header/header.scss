@@ -440,9 +440,12 @@
             column-gap: inherit;
             column-count: inherit;
             padding-bottom: 64px;
-            margin-left: -8px;
-            margin-right: -8px;
+            margin-left: -16px;
+            margin-right: -16px;
             width: auto;
+            .col-12 {
+                padding: 0;
+            }
         }
     }
 
@@ -450,14 +453,15 @@
         @media (max-width: 1023px) {
             width: 100%;
             border-bottom: 1px solid $border-10;
-            padding: 24px 24px;
+            padding: 24px 32px;
             &.full-menu__col--gray {
                 border-bottom: none;
+                padding: 24px 32px;
             }
 
             & > .full-menu__item {
                 position: relative;
-                padding-right: 32px;
+                padding-right: 24px;
 
                 .full-menu__link {
                     display: block;
@@ -466,7 +470,7 @@
                         content: '';
                         position: absolute;
                         top: 50%;
-                        right: 0;
+                        right: -12px;
                         width: 24px;
                         height: 24px;
                         transform: translateY(-50%) rotate(90deg);

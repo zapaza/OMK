@@ -18,6 +18,7 @@ $('body').on('click', triggerShow, function (e) {
     }
 });
 
+
 $('body').mouseup(function (e) {
     let div = $(".full-menu");
     if (!div.is(e.target)
@@ -47,3 +48,8 @@ $('body').mouseup(function (e) {
     }
 });
 
+$(window).on('resize', function(){
+    if ($(window).innerWidth() > 1023) {
+        $('.full-menu__group').attr('style', '');
+    }
+});
