@@ -28,5 +28,11 @@
         a {
             color: $text-silver;
         }
+
+        &:last-child {
+            &:before {
+                display: none;
+            }
+        }
     }
 }

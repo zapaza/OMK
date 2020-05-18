@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade modal-gallery" id="search-suggest" tabindex="-1" role="dialog" aria-labelledby="search-suggest_Label" aria-hidden="true">
+<div class="modal fade modal-search-suggest" id="search-suggest" tabindex="-1" role="dialog" aria-labelledby="search-suggest_Label" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-gallery__controls">
@@ -11,7 +11,9 @@
                         <label class="search-suggest__label">
                             <input type="text" class="search-suggest__input js-search-suggest__input" tabindex="1">
                             <!--Показать когда идет запрос на поисковые результаты-->
-                            <span class="search-suggest__preload"></span>
+                            <span class="search-suggest__preload-inner">
+                                <span class="search-suggest__preload"></span>
+                            </span>
                             <!--Убрать по суксесу-->
                         </label>
                     </form>
@@ -80,7 +82,7 @@
                         <div class="search-suggest__result">
                             <div class="search-suggest__result-all">
                                 <a href="" class="search-suggest__result-show">
-                                    Все результаты по запросу «<span class="search-value js-search-value"></span>»<span class="search-value__count">84</span>
+                                    Все результаты по запросу <span class="search-value-inner">«<span class="search-value js-search-value"></span>»</span><span class="search-value__count">84</span>
                                 </a>
                             </div>
                             <ul class="search-result__list">
