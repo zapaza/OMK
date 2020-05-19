@@ -119,7 +119,7 @@ $(document).ready(() => {
     if ($('.js-slider-big').length > 0) {
         var newsSlider = new Swiper('.js-slider-big .swiper-container', {
             speed: 500,
-            spaceBetween: 32,
+            spaceBetween: 0,
             slidesPerView: 1,
             navigation: {
                 nextEl: '.js-slider-big .swiper-button-next',
