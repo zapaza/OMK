@@ -55,6 +55,9 @@
         margin: 8px 0;
         &:hover {
             text-decoration: none;
+            .name {
+                color: $coral;
+            }
         }
         .avatar {
             display: block;
@@ -76,6 +79,7 @@
             }
         }
         .name {
+            @include transition();
             font-size: 1rem;
             line-height: 1.25;
             color: $text-black;
@@ -83,6 +87,7 @@
     }
 
     &__sys {
+        @include transition();
         display: inline-block;
         font-size: 1rem;
         line-height: 1.25;
@@ -93,7 +98,7 @@
         }
         &:hover {
             text-decoration: none;
-            color: $text-black;
+            color: $coral;
         }
     }
 }

@@ -342,8 +342,8 @@
                             content: attr(data-count);
                             display: block;
                             position: absolute;
-                            top: 0;
-                            right: 0;
+                            top: -4px;
+                            right: -4px;
                             width: 20px;
                             height: 20px;
                             border-radius: 50%;
@@ -370,6 +370,7 @@
                     transform: translateX(-50%);
                     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2);
                     background: $white;
+                    border-radius: 5px;
                     pointer-events: none;
                     opacity: 0;
                     transition-property: opacity;
