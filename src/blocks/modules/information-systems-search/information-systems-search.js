@@ -5,7 +5,7 @@ $('body').on('click', function (e) {
     var div = $(".js-search"); // тут указываем ID элемента
     if (!div.is(e.target) // если клик был не по нашему блоку
         && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        $('.js-search-dropdown').slideUp(400); // скрываем его
+        $('.js-search-dropdown').slideUp(200); // скрываем его
     }
 });
 
@@ -16,17 +16,17 @@ $('.js-search-dropdown').mCustomScrollbar({
 })
 
 $('body').on('focus', '.js-search__input', function () {
-    $('.js-search-dropdown').slideDown(400);
+    $('.js-search-dropdown').slideDown(200);
     if (window.innerWidth <= 575) {
         let searchPositionTop = $('.js-search').offset().top + 'px';
         $('.js-search').addClass('mobile-active');
         $('html, body').addClass('search-off-scroll');
         $('html').animate({
             scrollTop: searchPositionTop
-        }, 400);
+        }, 200);
         setTimeout(function () {
             $('.js-search-close').addClass('active');
-        }, 400);
+        }, 200);
         $('.js-search__input').addClass('active');
         $('.js-search-shade').addClass('active');
     }
@@ -38,7 +38,7 @@ $('body').on('click', '.js-search-close', function () {
         $('.js-search').removeClass('mobile-active');
         $('html, body').removeClass('search-off-scroll');
         $('.js-search__input').removeClass('active');
-        $('.js-search-dropdown').slideUp(400);
+        $('.js-search-dropdown').slideUp(200);
         $(this).removeClass('active');
         $('.js-search-shade').removeClass('active');
     }
@@ -72,7 +72,7 @@ $(document).ready(function () {
                 $('.js-search-close').removeClass('active');
                 $('.js-search-shade').removeClass('active');
                 $('.js-search__input').removeClass('active');
-                $('.js-search-dropdown').slideUp(400);
+                $('.js-search-dropdown').slideUp(200);
             }
         })
     }

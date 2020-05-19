@@ -63,3 +63,7 @@ $('body').on('click', '.js-delete-file', function () {
         $('.js-photo-file input').change();
     });
 });
+
+$('body').on('click', '.js-photo-reset', function () {
+    $('#profile_edit_photo').modal('hide');
+});
