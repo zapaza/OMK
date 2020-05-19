@@ -49,9 +49,32 @@ function articleFooterInfoHide() {
         });
     }
 }
+//скрытие кнопки добавить объяявление при скроле на мобилке
+
+function adsAddMobileHide() {
+    if ($('.js-btn-addAds').length > 0) {
+        let $element = $('.footer'),
+            counter = 0;
+        $(window).scroll(function () {
+            if ($(window).innerWidth() <= 1023) {
+                let scroll = $(window).scrollTop() + $(window).height(),
+                    offset = $element.offset().top;
+
+                if (scroll > offset && counter === 0) {
+                    $('.js-btn-addAds').stop().fadeOut(100);
+                    counter = 1;
+                } else if (scroll < offset && counter === 1) {
+                    $('.js-btn-addAds').stop().fadeIn(100);
+                    counter = 0;
+                }
+            }
+        });
+    }
+}
 
 $(document).ready(() => {
-    articleFooterInfoHide()
+    articleFooterInfoHide();
+    adsAddMobileHide();
 
     //слайдер на главной стрнице, в низу страници
     if ($('.js-main-page__slider').length > 0) {
@@ -286,6 +309,7 @@ $(window).scroll(function () {
 
 $(window).on('resize', function () {
     articleFooterInfoHide();
+    adsAddMobileHide();
 })
 
 $('body').on('click', '.js-media-item--video', function () {

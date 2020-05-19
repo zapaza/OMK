@@ -4,14 +4,6 @@
         width: 256px;
     }
 
-    &.no-video {
-        .video__preview {
-            &:after, &:before {
-                display: none;
-            }
-        }
-    }
-
     &__body {
         position: relative;
         width: 100%;
@@ -68,10 +60,10 @@
         }
 
         img {
+            @include object-fit(cover, center);
             display: block;
             width: 100%;
             height: 100%;
-            @include object-fit(cover, center);
         }
     }
 
@@ -127,10 +119,10 @@
 
 
             &__img {
+                @include object-fit(cover, center);
                 display: block;
                 width: 100%;
                 height: 100%;
-                @include object-fit(cover, center);
             }
         }
 
@@ -146,18 +138,26 @@
         font-size: rem(20);
         line-height: 1.2;
 
-        &-inner {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-
         .card-date {
             margin-right: 16px;
         }
         .card-view, .card-like, .card-comment {
             margin-right: 12px;
             margin-left: 0;
+        }
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    &.no-video {
+        .video__preview {
+            &:after, &:before {
+                display: none;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 {% extends './layout.html' %}
 {% block content %}
-    <div class="wrapper">
+    <div class="wrapper ads-list-page">
         <div class="row">
             <div class="col-12">
                 {% include 'breadcrumbs/breadcrumbs.html' %}
@@ -9,18 +9,61 @@
         <div class="row">
             <div class="col-12 main-header">
                 <h1>Объявления</h1>
+                <button type="button" class="btn btn--primary  js-btn-addAds"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить объявление</button>
             </div>
         </div>
         <div class="row ">
             <div class="col-12">
-                <form action="" class="sorting-form">
-                    {% include 'select/select.html' %}
-                    <select name="" id="" class="selectpicker sorting-form__select select-js">
-                        <option value="">Сначала новые</option>
-                        <option value="">Сначала дешевле</option>
-                        <option value="">Сначала дороже</option>
-                    </select>
-                </form>
+                <button type="button" class="results-nav__filters-btn js-results-nav__filters-btn">
+                    <span class="icon"></span>
+                    <span class="text">Фильтры</span>
+                    <span class="count">2</span>
+                </button>
+                <div class="results-nav">
+                    <form action="" class="sorting-form">
+                        <div class="results-nav__selects js-results-nav__selects">
+                            <div class="top">
+                                <div class="top-header">
+                                    <div class="name">Фильтры</div>
+                                </div>
+                                <button type="button" class="top-close js-top-close"></button>
+                            </div>
+
+                            <div class="bottom">
+
+                                <div class="selects">
+                                    <div class="results-nav__select js-results-nav__select">
+                                        <div class="mobile-title">Площадка</div>
+                                        <select name="" id="" class="selectpicker sorting-form__select select-js">
+                                            <option value="">Все площадки</option>
+                                            <option value="">Альметьевск</option>
+                                            <option value="">Москва</option>
+                                            <option value="">Челябинск</option>
+                                            <option value="">Уфа</option>
+                                            <option value="">Благовещенск</option>
+                                            <option value="">Чусовой</option>
+                                            <option value="">Выкса</option>
+                                        </select>
+                                    </div>
+                                    <div class="results-nav__select js-results-nav__select">
+                                        <div class="mobile-title">Сортировка</div>
+                                        <select name="" id="" class="selectpicker sorting-form__select select-js">
+                                            <option value="">Сначала новые</option>
+                                            <option value="">Сначала дешевле</option>
+                                            <option value="">Сначала дороже</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="buttons">
+                                    <button type="submit" class="btn btn--primary">Применить</button>
+                                    <button type="reset" class="btn btn--secondary">Сбросить фильтры</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -38,6 +81,7 @@
                     <div class="ads-list__item-content">
                         <div class="name">Подушки</div>
                         <div class="desc">Цена каждой подушки-250 руб. Подушки- наполнитель- пух-перо, размер 50*50-4 шт., 60*60 - 1 шт. двадцать четыре</div>
+                        <div class="price"><b>250</b><span class="price__icon">₽</span></div>
                         <div class="info">
                             <div class="date">7 авг</div>
                             <div class="city">Уфа</div>
@@ -61,6 +105,7 @@
                     <div class="ads-list__item-content">
                         <div class="name">Подушки</div>
                         <div class="desc">Цена каждой подушки-250 руб. Подушки- наполнитель- пух-перо, размер 50*50-4 шт., 60*60 - 1 шт. двадцать четыре</div>
+                        <div class="price"><b>250</b><span class="price__icon">₽</span></div>
                         <div class="info">
                             <div class="date">7 авг</div>
                             <div class="city">Уфа</div>
@@ -84,6 +129,7 @@
                     <div class="ads-list__item-content">
                         <div class="name">Подушки</div>
                         <div class="desc">Цена каждой подушки-250 руб. Подушки- наполнитель- пух-перо, размер 50*50-4 шт., 60*60 - 1 шт. двадцать четыре</div>
+                        <div class="price"><b>250</b><span class="price__icon">₽</span></div>
                         <div class="info">
                             <div class="date">7 авг</div>
                             <div class="city">Уфа</div>
@@ -107,6 +153,7 @@
                     <div class="ads-list__item-content">
                         <div class="name">Подушки</div>
                         <div class="desc">Цена каждой подушки-250 руб. Подушки- наполнитель- пух-перо, размер 50*50-4 шт., 60*60 - 1 шт. двадцать четыреСтульчик - качели от 0 месяцев. После одного ребёнка. Использовался крайне редко тк по пол года живём на даче. В идеальном состоянии. Из самого страшного небольшие следы от ручки- на фото есть. Торг уместен.</div>
+                        <div class="price"><b>250</b><span class="price__icon">₽</span></div>
                         <div class="info">
                             <div class="date">7 авг</div>
                             <div class="city">Уфа</div>
@@ -128,8 +175,9 @@
                         </div>
                     </div>
                     <div class="ads-list__item-content">
-                        <div class="name">Магнитофон elekta Магнитофон elekta Магнитофон elekta Магнитофон elekta Магнитофон elekta Магнитофон elekta Магнитофон elekta</div>
+                        <div class="name">Магнитофон elektaМагнитофон elektaМагнитофон elektaelekta Магнитофон elekta Магнитофон elekta Магнитофон elekta</div>
                         <div class="desc">Цена каждой подушки-250 руб. Подушки- наполнитель- пух-перо, размер 50*50-4 шт., 60*60 - 1 шт. двадцать четыре</div>
+                        <div class="price"><b>250</b><span class="price__icon">₽</span></div>
                         <div class="info">
                             <div class="date">7 авг</div>
                             <div class="city">Уфа</div>

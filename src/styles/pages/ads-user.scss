@@ -1,0 +1,79 @@
+.ads-user {
+
+	&__alert{
+		border-radius: 5px;
+		background-color: $silver-light;
+		padding: 20px 0 24px;
+		text-align: center;
+		font-size: rem(16);
+		font-weight: $font-weight-bold;
+		line-height: 1.25;
+		color: $text-black;
+		margin-bottom: 24px;
+	}
+
+
+	.main-header {
+		margin-bottom: 32px;
+
+		h1 {
+			font-size: rem(40);
+			line-height: 1.2;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: baseline;
+		font-size: rem(16);
+		line-height: 1.25;
+		color: $text-silver;
+		margin-bottom: 28px;
+
+		.date {
+			margin-right: 32px;
+		}
+		.city {
+			margin-right: 16px;
+		}
+
+		.delivery{
+			border-radius: 16px;
+			background-color: $green;
+			padding: 1px 12px 3px;
+			font-size: rem(14);
+			line-height: 1.43;
+			color: $white;
+
+		}
+	}
+
+	&__detail {
+		display: flex;
+		flex-direction: column;
+
+		.price {
+			font-size: rem(32);
+			line-height: 1.25;
+			margin-bottom: 24px;
+		}
+
+		.phone {
+			margin-bottom: 8px;
+			font-size: rem(16);
+			font-weight: $font-weight-bold;
+			line-height: 1.5;
+			color: $text-black;
+			text-decoration: none;
+		}
+
+		.email {
+			font-size: rem(16);
+			line-height: 1.5;
+			color: #1a1a1a;
+			text-decoration: none;
+			margin-bottom: 24px;
+		}
+	}
+
+}

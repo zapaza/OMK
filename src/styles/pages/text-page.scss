@@ -70,7 +70,7 @@
             justify-content: center;
             margin-bottom: 20px;
             @media (max-width: 767px) {
-                align-items: baseline;
+                align-items: center;
                 justify-content: flex-start;
                 margin-bottom: 24px;
             }
@@ -177,6 +177,7 @@
             }
 
             img {
+                @include object-fit(cover, center);
                 display: block;
                 position: absolute;
                 top: 0;
@@ -185,7 +186,6 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                @include object-fit(cover, center);
             }
         }
 
@@ -241,14 +241,14 @@
             }
 
             &__item {
-                &:first-of-type {
-                    margin-left: 0;
-                }
                 @media (max-width: 767px) {
                     margin: 0 4px 8px 0;
                     &:last-of-type {
                         margin-right: 0;
                     }
+                }
+                &:first-of-type {
+                    margin-left: 0;
                 }
             }
         }

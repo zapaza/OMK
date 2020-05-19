@@ -5,26 +5,28 @@
     }
     @media(max-width: 1023px) {
         margin-bottom: 40px;
+
+        .results-nav__filters-btn {
+            margin-bottom: 32px;
+        }
+    }
+    @media(min-width: 1024px) {
+        .results-nav {
+            margin-bottom: 32px;
+        }
+    }
+
+
+    .results-nav__select {
+        @media (min-width: 1024px) {
+            margin-right: 16px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
     }
 
     &__row {
-        //margin-right: -32px;
-        //margin-left: -32px;
-        //align-items: stretch;
-        //@media (max-width: 1280px) {
-        //    margin-right: -24px;
-        //    margin-left: -24px;
-        //}
-        //@media (max-width: 1023px) {
-        //    margin-left: -16px;
-        //    margin-right: -16px;
-        //    width: auto;
-        //    max-width: 100vw;
-        //}
-        //@media(max-width:767px) {
-        //    margin-left: -16px;
-        //    margin-right: -16px;
-        //}
 
         .card {
             flex: 1 1 auto;
@@ -169,6 +171,7 @@
                 @media (max-width: 1023px) {
                     margin-top: -12px;
                 }
+
                 &.show {
                     display: block;
                 }
@@ -176,6 +179,7 @@
 
             .swiper-pagination {
                 display: none;
+
                 &.show {
                     display: flex;
                 }
@@ -196,6 +200,7 @@
 
     .header-block {
         margin: 0 0 24px;
+
         h2 {
             font-size: 1.75rem;
             line-height: 1.29;
@@ -215,7 +220,6 @@
 
     &-slider {
         position: relative;
-
 
 
         .swiper-container {
@@ -249,6 +253,7 @@
 
     .header-block {
         margin: 0 0 24px;
+
         h2 {
             font-size: 1.75rem;
             line-height: 1.29;
@@ -291,6 +296,7 @@
 
     .header-block {
         margin: 0 0 24px;
+
         h2 {
             font-size: 1.75rem;
             line-height: 1.29;
@@ -351,6 +357,7 @@
 
     .header-block {
         margin: 0 0 24px;
+
         h2 {
             font-size: 1.75rem;
             line-height: 1.29;
@@ -384,6 +391,7 @@
             text-decoration: none;
             color: $coral;
         }
+
         &:active {
             transform: scale(.96);
         }

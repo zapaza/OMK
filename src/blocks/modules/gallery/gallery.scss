@@ -52,6 +52,7 @@
                 padding-bottom: 100%;
             }
             .gallery__item-img {
+                @include object-fit(cover, center);
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -59,7 +60,6 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                @include object-fit(cover, center);
             }
             &:nth-child(3n) {
                 margin-right: 0;
@@ -121,6 +121,7 @@
             }
 
             &-img {
+                @include object-fit(cover, center);
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -128,7 +129,6 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                @include object-fit(cover, center);
             }
         }
     }
