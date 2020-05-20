@@ -1,8 +1,18 @@
 .profile {
-    padding: 48px 0 72px;
+    padding-top: 48px;
+    padding-bottom: 72px;
+    @media(max-width: $media-lg) {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
 
     &-photo {
         width: 160px;
+        @media(max-width: $media-lg) {
+            width: 96px;
+            margin: 0 auto;
+        }
+
         &__inner {
             position: relative;
             width: 100%;
@@ -25,6 +35,11 @@
         margin: 16px 0 0;
         padding: 16px 0;
         border-bottom: 1px solid $border-10;
+        @media(max-width: $media-lg) {
+            display: none;
+            padding: 24px 0 26px;
+            border-top: 1px solid $border-10;
+        }
 
         &__item {
             display: flex;
@@ -94,12 +109,23 @@
                 margin-left: 8px;
             }
         }
+
+        &--mobile {
+            display: none;
+            @media(max-width: $media-lg) {
+                display: block;
+            }
+        }
     }
 
     &-blogs {
         padding: 16px 0;
         font-size: 1rem;
         line-height: 1.25;
+        @media(max-width: $media-lg) {
+            display: none;
+            padding: 16px 0 8px;
+        }
 
         &__title {
             font-size: 1rem;
@@ -163,17 +189,44 @@
                 }
             }
         }
+
+        &--mobile {
+            display: none;
+            @media(max-width: $media-lg) {
+                display: block;
+            }
+        }
     }
 
     &-name {
         font-size: 2rem;
         line-height: 1.25;
+        @media(max-width: $media-lg) {
+            font-size: 1.5rem;
+            line-height: 1.33;
+            text-align: center;
+            margin-top: 16px;
+        }
     }
 
     &-position {
         font-size: 1rem;
         line-height: 1.25;
         margin-top: 16px;
+        @media(max-width: $media-lg) {
+            text-align: center;
+        }
+    }
+
+    &-edit--mobile {
+        display: none;
+        @media (max-width: $media-lg) {
+            display: block;
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-top: 24px;
+        }
     }
 
     &-list {
@@ -186,6 +239,25 @@
         &__item {
             display: flex;
             margin-top: 12px;
+            @media(max-width: $media-sm) {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                margin: 0;
+                padding: 8px 0 12px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    right: 0;
+                    width: 88px;
+                    height: 100%;
+                    margin-right: -16px;
+                    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff 43%);
+                    pointer-events: none;
+                }
+            }
 
             &:first-child {
                 margin-top: 0;
@@ -196,12 +268,23 @@
                 min-width: 33%;
                 padding-right: 24px;
                 color: $text-silver;
+                @media(max-width: $media-sm) {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 4px;
+                }
             }
 
             .content {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                @media(max-width: $media-sm) {
+                    width: 100%;
+                    overflow: hidden;
+                    padding: 0;
+                    white-space: nowrap;
+                }
 
                 img {
                     width: 20px;
@@ -213,10 +296,32 @@
                 address, a {
                     margin: 0;
                     color: $text-black;
+                    @media(max-width: $media-sm) {
+                        width: 100%;
+                    }
                 }
 
                 a {
                     @include transition();
+
+                    @media(max-width: $media-sm) {
+                        padding-top: 24px;
+                        margin-top: -24px;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            z-index: 2;
+                            top: 50%;
+                            right: 0;
+                            width: 24px;
+                            height: 24px;
+                            background-image: url(../img/icons/profile-forward--black.svg);
+                            background-size: contain;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            transform: translateY(-50%);
+                        }
+                    }
 
                     &:hover {
                         color: $coral;
@@ -252,10 +357,17 @@
 
     &-biography {
         margin: 52px 0 48px;
+        @media(max-width: $media-sm) {
+            margin: 48px 0;
+        }
 
         &__title {
             font-size: 1.25rem;
             line-height: 1.2;
+            @media(max-width: $media-sm) {
+                font-size: 1.5rem;
+                line-height: 1.33;
+            }
         }
 
         &__text {
@@ -300,6 +412,11 @@
             flex-wrap: wrap;
             align-items: center;
             margin: 12px 0 0;
+            @media(max-width: $media-sm) {
+                position: relative;
+                overflow: hidden;
+                margin: 10px 0 0;
+            }
 
             &__all {
                 @include transition();
@@ -307,6 +424,18 @@
                 line-height: 1.5;
                 color: $text-silver;
                 margin-left: 16px;
+                @media(max-width: $media-sm) {
+                    font-size: 0;
+                    text-indent: -9999px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 24px;
+                    height: 24px;
+                    margin: 0;
+                    background-image: url(../img/icons/profile-forward--black.svg);
+                    transform: translateY(-50%);
+                }
 
                 &:hover {
                     text-decoration: none;
@@ -334,15 +463,25 @@
                             margin-right: 0;
                         }
                     }
+                    @media (max-width: 414px) {
+                        &:nth-child(n+5) {
+                            display: none;
+                        }
+                        &:nth-child(4) {
+                            margin-right: 0;
+                        }
+                    }
 
                     &:last-child {
                         margin-right: 0;
                     }
 
                     &:hover {
-                        .regards-list__description {
-                            pointer-events: auto;
-                            opacity: 1;
+                        @media(min-width: $media-lg--min) {
+                            .regards-list__description {
+                                pointer-events: auto;
+                                opacity: 1;
+                            }
                         }
                     }
 
@@ -419,6 +558,10 @@
         &__title {
             font-size: 1.25rem;
             line-height: 1.2;
+            @media(max-width: $media-sm) {
+                font-size: 1.5rem;
+                line-height: 1.33;
+            }
         }
 
         &__none {
@@ -432,15 +575,16 @@
 
     &-places {
         display: flex;
+        flex-wrap: wrap;
         font-size: 1rem;
         line-height: 1.25;
         color: $text-silver;
         list-style: none;
-        margin: 16px 0 0;
+        margin: 6px 0 0;
         padding: 0;
 
         &__item {
-            margin-right: 24px;
+            margin: 10px 24px 10px 0;
 
             &:last-child {
                 margin-right: 0;
@@ -458,16 +602,27 @@
         border: none;
         margin-top: 16px;
         padding: 0;
+        @media(max-width: $media-sm) {
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
 
         &::after {
             content: '';
             display: inline-block;
             width: 24px;
             height: 24px;
-            background-image: url(../img/icons/profile-active.svg);
+            background-image: url(../img/icons/profile-forward--black.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
+        }
+    }
+
+    &-edit {
+        @media(max-width: $media-lg) {
+            display: none;
         }
     }
 }
