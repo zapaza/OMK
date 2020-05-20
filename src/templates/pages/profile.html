@@ -2,7 +2,7 @@
 {% block content %}
     <div class="wrapper profile">
         <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3">
                 <div class="profile-photo">
                     <div class="profile-photo__inner">
                         <picture>
@@ -74,8 +74,9 @@
                     <a href="#0" class="profile-blogs__more profile-blogs__more--public">Все блоги</a>
                 </div>
                 <!-- endif -->
+
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
 
                 <h1 class="profile-name">Поверин Андрей Павлович</h1>
 
@@ -83,13 +84,19 @@
                     №1023)
                 </div>
 
+                <button type="button" class="btn btn--secondary profile-edit--mobile js-profile-edit">Редактировать
+                    профиль
+                </button>
+
                 <ul class="profile-list">
                     <li class="profile-list__item">
                         <div class="name">Руководитель</div>
                         <div class="content">
-                            <!-- Здесь webp лучше не использовать. Слишком мелкое изображение -->
-                            <img src="img/avatar.jpg" alt="Орлов Геннадий Александрович">
-                            Орлов Геннадий Александрович
+                            <a href="#0">
+                                <!-- Здесь webp лучше не использовать. Слишком мелкое изображение -->
+                                <img src="img/avatar.jpg" alt="Орлов Геннадий Александрович">
+                                Орлов Геннадий Александрович
+                            </a>
                         </div>
                     </li>
                     <li class="profile-list__item">
@@ -152,6 +159,70 @@
                         </div>
                     </li>
                 </ul>
+
+                <!-- if private -->
+                <ul class="profile-articles profile-articles--mobile">
+                    <li class="profile-articles__item">
+                        <a href="#0" class="plus"></a>
+                        <a href="#0" class="profile-articles__link">
+                            <div class="text">Мои объявления</div>
+                            <div class="count">5</div>
+                        </a>
+                    </li>
+                    <li class="profile-articles__item">
+                        <a href="#0" class="plus"></a>
+                        <a href="#0" class="profile-articles__link">
+                            <div class="text">Мой блог</div>
+                            <div class="count">4</div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="profile-blogs profile-blogs--mobile">
+                    <h4 class="profile-blogs__title">Отслеживаемые блоги</h4>
+                    <ul class="profile-blogs__list">
+                        <li class="profile-blogs__item">
+                            <a href="#0" class="profile-blogs__link">Блог ВМЗ</a>
+                        </li>
+                        <li class="profile-blogs__item">
+                            <a href="#0" class="profile-blogs__link">OMK Dev</a>
+                        </li>
+                        <li class="profile-blogs__item">
+                            <a href="#0" class="profile-blogs__link">Подслушано ВМЗ</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="profile-blogs__more">Все блоги</button>
+                </div>
+                <!-- elif public -->
+                <ul class="profile-articles profile-articles--mobile">
+                    <li class="profile-articles__item">
+                        <a href="#0" class="profile-articles__link">
+                            <div class="text">Мои объявления</div>
+                            <div class="count">5</div>
+                        </a>
+                    </li>
+                    <li class="profile-articles__item">
+                        <a href="#0" class="profile-articles__link">
+                            <div class="text">Мой блог</div>
+                            <div class="count">4</div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="profile-blogs profile-blogs--mobile">
+                    <h4 class="profile-blogs__title">Отслеживаемые блоги</h4>
+                    <ul class="profile-blogs__list">
+                        <li class="profile-blogs__item">
+                            <a href="#0" class="profile-blogs__link">Блог ВМЗ</a>
+                        </li>
+                        <li class="profile-blogs__item">
+                            <a href="#0" class="profile-blogs__link">OMK Dev</a>
+                        </li>
+                        <li class="profile-blogs__item">
+                            <a href="#0" class="profile-blogs__link">Подслушано ВМЗ</a>
+                        </li>
+                    </ul>
+                    <a href="#0" class="profile-blogs__more profile-blogs__more--public">Все блоги</a>
+                </div>
+                <!-- endif -->
 
                 <div class="profile-biography">
                     <h2 class="profile-biography__title">Биография</h2>
@@ -216,8 +287,9 @@
                 <button type="button" class="profile-active js-profile-active">Актив предприятия</button>
 
             </div>
-            <div class="col-3">
-                <button type="button" class="btn btn--secondary js-profile-edit">Редактировать профиль</button>
+            <div class="col-lg-3">
+                <button type="button" class="btn btn--secondary profile-edit js-profile-edit">Редактировать профиль
+                </button>
             </div>
         </div>
     </div>
