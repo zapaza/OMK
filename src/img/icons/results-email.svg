@@ -1,6 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17">
-    <g fill="none" fill-rule="evenodd">
-        <path d="M0 0H16V16H0z" transform="translate(0 1)"/>
-        <path fill="#909099" d="M15 4.5v7c0 .828-.672 1.5-1.5 1.5h-11c-.828 0-1.5-.672-1.5-1.5v-7c0-.19.035-.372.1-.54L8 9.285l6.9-5.323c.065.167.1.349.1.539zM13.5 3c.107 0 .211.011.311.032L8 7.516 2.19 3.032c.1-.02.204-.032.31-.032h11z" transform="translate(0 1)"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>search/mail</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/S/Search/Mail-Copy">
+            <g id="icon">
+                <g id="Group">
+                    <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+                    <path d="M14.9001426,3.96072922 C14.9646414,4.12808218 15,4.30991187 15,4.5 L15,11.5 C15,12.3284271 14.3284271,13 13.5,13 L2.5,13 C1.67157288,13 1,12.3284271 1,11.5 L1,4.5 C1,4.30991187 1.03535856,4.12808218 1.09985736,3.96072922 L8,9.28408144 L14.9001426,3.96072922 Z M13.5,3 C13.6067782,3 13.7109506,3.01115707 13.8114149,3.03236901 L8,7.51591856 L2.18959661,3.03215581 C2.28974857,3.01108231 2.39358008,3 2.5,3 L13.5,3 Z" id="Shape" fill="#909099"></path>
+                </g>
+            </g>
+        </g>
     </g>
 </svg>

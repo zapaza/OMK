@@ -4,7 +4,6 @@ $('body').on('click', '.js-profile-active', function () {
 
 $('body').on('click', '.js-controls-me', function () {
     let me = $('.js-me');
-    me.addClass('show')
     let meOffsetTop = me[0].offsetTop + 1;
     $('#active_modal').animate({
         scrollTop: meOffsetTop
