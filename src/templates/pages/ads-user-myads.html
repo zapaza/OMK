@@ -1,33 +1,21 @@
 {% extends './layout.html' %}
 {% block content %}
-<div class="wrapper ads-user-list">
+<div class="wrapper ads-list-page">
     <div class="row">
         <div class="col-12">
             {% include 'breadcrumbs/breadcrumbs.html' %}
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-4 col-lg-3">
-            <a href="#" class="ads-user-list__info">
-                <picture class="avatar">
-                    <!--[if IE 9]>
-                    <video style="display: none;"><![endif]-->
-                    <source srcset="img/avatar.webp" type="image/webp">
-                    <!--[if IE 9]></video><![endif]-->
-                    <img src="img/avatar.jpg" title="Лучшие в металлургии"
-                         alt="Лучшие в металлургии">
-                </picture>
-                <div class="ads-user-list__info-content">
-                    <div class="name">Поверин Андрей Павлович</div>
-                    <div class="desc">Главный инженер отделения трубопрокатного цеха</div>
-                    <div class="city">Выкса — ВМЗ — ЗУ2</div>
-                </div>
-
-            </a>
+        <div class="col-12 main-header">
+            <h1>Мои объявления</h1>
+            <button type="button" class="btn btn--primary  js-btn-addAds"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить объявление</button>
         </div>
-        <div class="col-12 col-md-8 col-lg-9">
-            <div class="row">
-                <div class="ads-user-item__inner col-12 col-md-6 col-lg-4">
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row ads-user-list">
+                <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
                     <a href="#" class="ads-user-item">
                         <picture class="ads-user-item__img">
                             <!--[if IE 9]>
@@ -47,7 +35,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="ads-user-item__inner col-12 col-md-6 col-lg-4">
+                <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
                     <a href="#" class="ads-user-item">
                         <picture class="ads-user-item__img">
                             <!--[if IE 9]>
@@ -67,7 +55,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="ads-user-item__inner col-12 col-md-6 col-lg-4">
+                <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
                     <a href="#" class="ads-user-item">
                         <picture class="ads-user-item__img">
                             <!--[if IE 9]>
@@ -87,7 +75,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="ads-user-item__inner col-12 col-md-6 col-lg-4">
+                <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
                     <a href="#" class="ads-user-item">
                         <picture class="ads-user-item__img">
                             <!--[if IE 9]>
@@ -107,7 +95,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="ads-user-item__inner col-12 col-md-6 col-lg-4">
+                <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
                     <a href="#" class="ads-user-item">
                         <picture class="ads-user-item__img">
                             <!--[if IE 9]>
