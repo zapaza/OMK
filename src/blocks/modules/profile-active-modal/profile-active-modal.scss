@@ -171,25 +171,23 @@
         .me {
             position: relative;
 
-            &.show {
-                &::before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    top: 50%;
-                    left: -32px;
-                    width: 24px;
-                    height: 24px;
-                    background-image: url(../img/icons/controls-me.svg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    transform: translateY(-50%);
-                }
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: -32px;
+                width: 24px;
+                height: 24px;
+                background-image: url(../img/icons/controls-me.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                transform: translateY(-50%);
+            }
 
-                td {
-                    font-weight: 700;
-                }
+            td {
+                font-weight: 700;
             }
         }
     }

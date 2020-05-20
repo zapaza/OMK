@@ -2,6 +2,7 @@
     padding: 48px 0 72px;
 
     &-photo {
+        width: 160px;
         &__inner {
             position: relative;
             width: 100%;
@@ -33,21 +34,6 @@
             &:first-child {
                 margin-top: 0;
             }
-        }
-
-        &__link {
-            display: flex;
-            align-items: center;
-            font-size: 1rem;
-            line-height: 1.25;
-
-            &:hover {
-                text-decoration: none;
-
-                .plus {
-                    transform: scale(1.2);
-                }
-            }
 
             .plus {
                 @include transition();
@@ -58,6 +44,10 @@
                 border-radius: 50%;
                 background: $green;
                 margin-right: 16px;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
 
                 &::before {
                     content: '';
@@ -82,6 +72,17 @@
                     background: $white;
                     transform: translate(-50%, -50%);
                 }
+            }
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            line-height: 1.25;
+
+            &:hover {
+                text-decoration: none;
             }
 
             .text {
@@ -145,7 +146,7 @@
                 display: inline-block;
                 width: 24px;
                 height: 24px;
-                background-image: url(../img/icons/profile-more--down.svg);
+                background-image: url(../img/icons/profile-more--forward.svg);
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
