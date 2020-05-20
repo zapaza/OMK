@@ -15,3 +15,4 @@ import '%modules%/header-search/header-search';
 import '%modules%/profile-edit/profile-edit';
 import '%modules%/regards-modal/regards-modal';
 import '%modules%/profile-active-modal/profile-active-modal';
+import '%modules%/ads-slider-user/ads-slider-user';
