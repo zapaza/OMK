@@ -10,7 +10,7 @@
     .modal {
         &-dialog {
             width: calc(100% - 32px);
-            max-width: 1024px;
+            max-width: $media-lg;
             margin: 16px auto;
             background-color: transparent;
 

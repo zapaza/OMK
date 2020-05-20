@@ -4,7 +4,7 @@
     width: 100%;
 
     &.mobile-active {
-        @media(max-width: 575px) {
+        @media(max-width: $media-sm) {
             margin-left: -17px;
             margin-right: -17px;
             width: calc(100% + 48px);
@@ -75,7 +75,7 @@
             border-color: $border-20;
             border-radius: 5px 5px 0 0;
             outline: none;
-            @media(max-width: 575px) {
+            @media(max-width: $media-sm) {
                 border-radius: 0;
                 padding: 22px 56px;
                 background-size: 32px;
@@ -88,7 +88,7 @@
         }
 
         &.active {
-            @media(max-width: 575px) {
+            @media(max-width: $media-sm) {
                 border-radius: 0;
                 padding: 22px 56px;
                 background-color: $white;
@@ -117,7 +117,7 @@
         background: $white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
         border-radius: 0 0 5px 5px;
-        @media (max-width: 575px) {
+        @media (max-width: $media-sm) {
             height: calc(100vh - 65px);
             max-height: calc(100vh - 65px);
             border-radius: 0;
@@ -173,7 +173,7 @@
 
     &-close {
         display: none;
-        @media (max-width: 575px) {
+        @media (max-width: $media-sm) {
             display: block;
             position: absolute;
             z-index: 10;
@@ -200,7 +200,7 @@
 
     &-shade {
         display: none;
-        @media (max-width: 575px) {
+        @media (max-width: $media-sm) {
             @include transition();
             display: block;
             position: absolute;
@@ -219,7 +219,7 @@
     }
 
     &-off-scroll {
-        @media(max-width: 575px) {
+        @media(max-width: $media-sm) {
             overflow: hidden;
         }
     }

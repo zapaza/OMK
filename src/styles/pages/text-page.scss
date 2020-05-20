@@ -2,7 +2,7 @@
     padding-top: 32px;
     padding-bottom: 64px;
     position: relative;
-    @media (max-width: 767px) {
+    @media (max-width: $media-md) {
         padding-top: 16px;
     }
 
@@ -56,7 +56,7 @@
 
         &-title {
             margin-bottom: 32px;
-            @media (max-width: 767px) {
+            @media (max-width: $media-md) {
                 font-size: rem(32);
                 line-height: 1.25;
                 margin-bottom: 24px;
@@ -69,7 +69,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            @media (max-width: 767px) {
+            @media (max-width: $media-md) {
                 align-items: center;
                 justify-content: flex-start;
                 margin-bottom: 24px;
@@ -83,7 +83,7 @@
                 line-height: 1.25;
                 font-weight: $font-weight-light;
                 color: $text-silver;
-                @media (max-width: 767px) {
+                @media (max-width: $media-md) {
                     margin: 0 16px 0 0;
                     &:last-of-type {
                         margin-right: 0;
@@ -100,7 +100,7 @@
                     height: 24px;
                     vertical-align: middle;
                     margin-right: 8px;
-                    @media (max-width: 767px) {
+                    @media (max-width: $media-md) {
                         margin-right: 4px;
                     }
                 }
@@ -118,7 +118,7 @@
                 }
 
                 &.share {
-                    @media (max-width: 767px) {
+                    @media (max-width: $media-md) {
                         display: none;
                     }
                 }
@@ -131,7 +131,7 @@
         font-size: rem(28);
         line-height: 1.29;
         color: $black;
-        @media (max-width: 767px) {
+        @media (max-width: $media-md) {
             margin-bottom: 28px;
             font-size: rem(24);
             line-height: 1.33;
@@ -146,7 +146,7 @@
             justify-content: flex-start;
             margin-bottom: 48px;
             margin-top: 24px;
-            @media (max-width: 767px) {
+            @media (max-width: $media-md) {
                 flex-wrap: wrap;
                 border: 1px solid $border-10;
                 padding: 8px;
@@ -164,7 +164,7 @@
             width: 40%;
             overflow: hidden;
             border-radius: 5px;
-            @media (max-width: 767px) {
+            @media (max-width: $media-md) {
                 width: 100%;
                 margin-bottom: 12px;
             }
@@ -197,7 +197,7 @@
             justify-content: flex-start;
             width: 60%;
             padding-left: 32px;
-            @media (max-width: 767px) {
+            @media (max-width: $media-md) {
                 width: 100%;
                 padding-left: 0;
             }
@@ -231,17 +231,17 @@
             &__row {
                 justify-content: flex-start;
                 max-width: none;
-                @media (max-width: 1279px) {
+                @media (max-width: $media-xl) {
                     margin-left: 0;
                     margin-right: 0;
                 }
-                @media (max-width: 767px) {
+                @media (max-width: $media-md) {
                     width: auto;
                 }
             }
 
             &__item {
-                @media (max-width: 767px) {
+                @media (max-width: $media-md) {
                     margin: 0 4px 8px 0;
                     &:last-of-type {
                         margin-right: 0;
@@ -257,7 +257,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            @media (max-width: 767px) {
+            @media (max-width: $media-md) {
                 justify-content: space-between;
                 position: fixed;
                 z-index: 10;
@@ -282,7 +282,7 @@
                 color: $text-silver;
                 display: flex;
                 align-items: center;
-                @media (max-width: 767px) {
+                @media (max-width: $media-md) {
                     margin-right: inherit;
                 }
 
@@ -291,7 +291,7 @@
                     height: 24px;
                     vertical-align: middle;
                     margin-right: 8px;
-                    @media (max-width: 767px) {
+                    @media (max-width: $media-md) {
                         margin-right: 4px;
                     }
                 }
@@ -317,7 +317,7 @@
             border-bottom: 1px solid $coral;
             color: $text-black;
             word-break: break-word;
-            @media (max-width: 767px) {
+            @media (max-width: $media-md) {
                 font-size: rem(18);
                 line-height: 1.56;
             }
@@ -334,7 +334,7 @@
         line-height: 1.6;
         letter-spacing: normal;
         color: $black;
-        @media (max-width: 767px) {
+        @media (max-width: $media-md) {
             font-size: rem(18);
             line-height: 1.56;
         }

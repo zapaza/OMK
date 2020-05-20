@@ -47,13 +47,13 @@
     }
     &--lg {
         padding: rem(19) rem(16) rem(25);
-        @media(max-width: 768px) {
+        @media(max-width: $media-md) {
             padding: rem(16) rem(16) rem(20);
         }
     }
     &--sx {
         padding: rem(8) rem(16) rem(12);
-        @media(max-width: 768px) {
+        @media(max-width: $media-md) {
             padding: rem(5) rem(16) rem(7);
         }
     }

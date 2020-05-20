@@ -1,6 +1,6 @@
 .ads-list-page {
 
-    @media(min-width: 1024px) {
+    @media(min-width: $media-lg--min) {
         .results-nav {
             margin-bottom: 32px;
         }
@@ -17,7 +17,7 @@
     }
 
     .results-nav__select {
-        @media (min-width: 1024px) {
+        @media (min-width: $media-lg--min) {
             margin-right: 16px;
             &:last-of-type {
                 margin-right: 0;
@@ -28,7 +28,7 @@
 
     .main-header {
         position: relative;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             font-size: rem(32);
             line-height: 1.25;
             margin-bottom: 24px;
@@ -41,10 +41,10 @@
             right: 16px;
             width: 256px;
             padding: 14px 0;
-            @media (max-width: 1279px) {
+            @media (max-width: $media-xl) {
                 width: 216px;
             }
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 position: fixed;
                 z-index: 10;
                 top: auto;
@@ -90,7 +90,7 @@
         position: relative;
         z-index: 1;
         border-bottom: 1px solid $border-10;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             padding-top: 16px;
             padding-bottom: 16px;
         }
@@ -126,12 +126,12 @@
             margin-right: 32px;
             border-radius: 5px;
             background-color: #d8d8d8;
-            @media (max-width: 1279px) {
+            @media (max-width: $media-xl) {
                 width: 136px;
                 height: 136px;
                 margin-right: 24px;
             }
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 margin-right: 16px;
             }
         }
@@ -143,16 +143,16 @@
             align-items: flex-start;
             justify-content: flex-start;
             padding-right: 128px;
-            @media (max-width: 1279px) {
+            @media (max-width: $media-xl) {
                 padding-right: 104px;
             }
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 padding-right: 0;
             }
 
             .price {
                 display: none;
-                @media (max-width: 1023px) {
+                @media (max-width: $media-lg) {
                     display: block;
                     font-size: rem(16);
                     line-height: 1.25;
@@ -176,7 +176,7 @@
                 font-weight: $font-weight-bold;
                 line-height: 1.2;
                 color: $text-black;
-                @media (max-width: 1023px) {
+                @media (max-width: $media-lg) {
                     margin-bottom: 8px;
                     font-weight: $font-weight-normal;
                     font-size: rem(16);
@@ -190,7 +190,7 @@
                 line-height: 1.4;
                 color: $text-black;
                 margin-bottom: 12px;
-                @media (max-width: 1023px) {
+                @media (max-width: $media-lg) {
                     display: none;
                 }
             }
@@ -215,10 +215,10 @@
         &-price {
             flex: 0 0 auto;
             width: 160px;
-            @media (max-width: 1279px) {
+            @media (max-width: $media-xl) {
                 width: 136px;
             }
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 display: none;
             }
 

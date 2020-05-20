@@ -1,6 +1,6 @@
 .video {
     width: 100%;
-    @media(max-width: 1023px) {
+    @media(max-width: $media-lg) {
         width: 256px;
     }
 
@@ -41,7 +41,7 @@
             background-size: contain;
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            @media(max-width: 1023px) {
+            @media(max-width: $media-lg) {
                 width: 56px;
                 height: 56px;
             }

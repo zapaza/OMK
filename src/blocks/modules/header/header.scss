@@ -4,7 +4,7 @@
     position: relative;
     border-bottom: 1px solid $border-10;
 
-    @media (max-width: 1279px) {
+    @media (max-width: $media-xl) {
         .wrapper {
             width: 100%;
             max-width: none;
@@ -16,7 +16,7 @@
             }
         }
     }
-    @media (max-width: 1023px) {
+    @media (max-width: $media-lg) {
         .wrapper {
             padding: 0 16px;
         }
@@ -32,10 +32,10 @@
         display: block;
         max-width: 188px;
         margin-right: 6.33%;
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             margin-right: 1.9%;
         }
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             margin-bottom: 16px;
         }
         picture {
@@ -52,7 +52,7 @@
         -ms-overflow-style: none;
         overflow: -moz-scrollbars-none;
         scrollbar-width: none;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             order: 1;
             min-width: 100%;
             overflow: auto;
@@ -79,10 +79,10 @@
         &-item {
             position: relative;
             margin: 0 12px;
-            @media (max-width: 1279px) {
+            @media (max-width: $media-xl) {
                 margin: 0 8px;
             }
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 &:last-of-type {
                     padding-right: 16px;
                 }
@@ -147,7 +147,7 @@
         background-position: center;
         background-size: contain;
         padding: 0;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             margin-left: auto;
             margin-right: 12px;
         }
@@ -158,7 +158,7 @@
         margin-right: 0;
         margin-left: auto;
         position: relative;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             margin-left: 0;
         }
 
@@ -175,7 +175,7 @@
                 font-weight: $font-weight-normal;
                 line-height: 1.25;
                 color: $text-silver;
-                @media (max-width: 1023px) {
+                @media (max-width: $media-lg) {
                     display: none;
                 }
             }
@@ -188,7 +188,7 @@
                 border-radius: 50%;
                 margin-left: 8px;
                 background-color: $silver;
-                @media (max-width: 1023px) {
+                @media (max-width: $media-lg) {
                     margin-left: 0;
                 }
 
@@ -211,7 +211,7 @@
             border-radius: 0 0 5px 5px;
             box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2);
             background-color: $white;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 right: -16px;
             }
 
@@ -365,7 +365,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             justify-content: space-between;
         }
     }
@@ -380,7 +380,7 @@
         font-weight: $font-weight-normal;
         line-height: 1.25;
         color: $text-silver;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             .icon {
                 width: 32px;
                 height: 32px;
@@ -399,7 +399,7 @@
             margin-right: 4px;
             background-size: contain;
             background-position: center;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 width: 32px;
                 height: 32px;
             }
@@ -409,7 +409,7 @@
     &__logo {
         max-width: 188px;
         margin-right: 48px;
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             margin-right: 20px;
         }
         img {
@@ -425,14 +425,14 @@
         margin-left: -16px;
         display: flex;
         align-items: flex-start;
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             padding-bottom: 32px;
             margin-bottom: 0;
             flex-wrap: wrap;
             margin-left: 0;
             margin-right: 0;
         }
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -450,7 +450,7 @@
     }
 
     &__col {
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             width: 100%;
             border-bottom: 1px solid $border-10;
             padding: 24px 32px;
@@ -494,16 +494,16 @@
         padding: 0;
         list-style: none;
         margin-bottom: 48px;
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             margin-bottom: 32px;
         }
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             display: none;
             margin-bottom: 0;
         }
 
         &--gray {
-            @media(max-width: 1279px) and (min-width: 1024px) {
+            @media(max-width: $media-xl) and (min-width: $media-lg--min) {
                 display: flex;
                 align-items: center;
                 margin-bottom: 0;
@@ -525,13 +525,13 @@
 
     &__item {
         margin-bottom: 16px;
-        @media (min-width: 1023px) and (max-width: 1279px) {
+        @media (min-width: $media-lg--min) and (max-width: $media-xl) {
             margin-bottom: 12px;
         }
 
         &--gray-mob {
             display: none;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 display: block;
             }
 

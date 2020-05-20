@@ -32,24 +32,24 @@ body {
 }
 
 .col, [class*='col-'] {
-    @media (max-width: 1279px) {
+    @media (max-width: $media-xl) {
         padding-left: 12px;
         padding-right: 12px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: $media-sm) {
         padding-left: 8px;
         padding-right: 8px;
     }
 }
 
 .row {
-    @media (max-width: 1279px) {
+    @media (max-width: $media-xl) {
         margin-left: -12px;
         margin-right: -12px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: $media-sm) {
         margin-left: -8px;
         margin-right: -8px;
     }
@@ -57,7 +57,7 @@ body {
     &--long {
         margin-right: -40px;
         margin-left: -40px;
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             margin-left: -36px;
             margin-right: -36px;
         }
@@ -65,7 +65,7 @@ body {
             margin-left: -12px;
             margin-right: -12px;
         }
-        @media (max-width: 576px) {
+        @media (max-width: $media-sm) {
             margin-left: -8px;
             margin-right: -8px;
         }
@@ -74,7 +74,7 @@ body {
 
 .wrapper {
     @extend .container;
-    @media (min-width: 1023px) {
+    @media (min-width: $media-lg--min) {
         padding-left: 0;
         padding-right: 0;
     }
@@ -87,7 +87,7 @@ body {
     h1 {
         margin-bottom: 0;
         line-height: rem(72);
-        @media(max-width: 1023px) {
+        @media(max-width: $media-lg) {
             line-height: 1.2;
         }
     }
@@ -108,7 +108,7 @@ body {
     line-height: 1.25;
     color: $black;
     position: relative;
-    @media(max-width: 1023px) {
+    @media(max-width: $media-lg) {
         margin-bottom: 28px;
     }
 
@@ -116,10 +116,10 @@ body {
         position: absolute;
         top: 8px;
         right: 16px;
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             right: 12px;
         }
-        @media(max-width: 1023px) {
+        @media(max-width: $media-lg) {
             display: none;
         }
 
@@ -150,14 +150,14 @@ body {
     outline: none;
     opacity: 1;
 
-    @media (max-width: 576px) {
+    @media (max-width: $media-sm) {
         display: none !important;
     }
 
     &-prev {
         left: -8px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0H24V24H0z'/%3E%3Cpath stroke='%231A1A1A' stroke-width='1.8' d='M9 6L3 12 9 18'/%3E%3Cpath stroke='%231A1A1A' stroke-width='2' d='M4 12L21 12'/%3E%3C/g%3E%3C/svg%3E%0A");
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             left: -12px;
         }
     }
@@ -165,7 +165,7 @@ body {
     &-next {
         right: -8px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0H24V24H0z'/%3E%3Cpath stroke='%231A1A1A' stroke-width='1.8' d='M14 6L20 12 14 18'/%3E%3Cpath stroke='%231A1A1A' stroke-width='2' d='M2 12L19 12'/%3E%3C/g%3E%3C/svg%3E%0A");
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             right: -12px;
         }
     }
@@ -185,7 +185,7 @@ body {
     bottom: 20px;
     left: 0;
     margin: auto;
-    @media(max-width: 1023px) {
+    @media(max-width: $media-lg) {
         bottom: 0;
     }
 
@@ -197,13 +197,13 @@ body {
         border-radius: 50%;
         background-color: fade_out($white, .7);
         cursor: pointer;
-        @media(max-width: 1023px) {
+        @media(max-width: $media-lg) {
             background-color: $silver;
         }
 
         &.swiper-pagination-bullet-active {
             background-color: $white;
-            @media(max-width: 1023px) {
+            @media(max-width: $media-lg) {
                 background-color: $ctrl-black;
             }
         }

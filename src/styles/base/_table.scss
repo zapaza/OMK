@@ -19,7 +19,7 @@
     &::-webkit-scrollbar {
         display: none;
     }
-    @media (max-width: 767px) {
+    @media (max-width: $media-md) {
         margin-left: -16px;
         padding-left: 16px;
         max-width: 100vw;
@@ -27,7 +27,7 @@
     }
 
     tr {
-        @media (max-width: 767px) {
+        @media (max-width: $media-md) {
             padding-right: 16px;
         }
 

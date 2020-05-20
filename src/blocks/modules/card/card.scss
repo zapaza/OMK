@@ -20,7 +20,7 @@
         height: 440px;
         border: none;
         border-radius: 5px;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             height: 414px;
         }
 
@@ -68,7 +68,7 @@
             position: relative;
             z-index: 2;
             border: none;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -129,7 +129,7 @@
             font-weight: $font-weight-bold;
             line-height: 1.2;
             color: $white;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 width: 100%;
                 font-size: rem(20);
                 line-height: 1.2;
@@ -141,7 +141,7 @@
             font-size: rem(28);
             line-height: 1.29;
             color: $white;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 display: none;
             }
         }
@@ -160,7 +160,7 @@
     &--big {
         .card-img {
             max-height: 350px;
-            @media(max-width: 1023px) {
+            @media(max-width: $media-lg) {
                 max-height: 200px;
             }
         }
@@ -170,7 +170,7 @@
         position: relative;
         border: none;
         border-radius: 5px;
-        @media(max-width: 1023px) {
+        @media(max-width: $media-lg) {
             height: 414px;
         }
 
@@ -288,7 +288,7 @@
 
         &.card--big {
             height: 544px;
-            @media(max-width: 1023px) {
+            @media(max-width: $media-lg) {
                 height: 414px;
 
                 .card-img {
@@ -299,7 +299,7 @@
             .card-title {
                 font-size: rem(32);
                 line-height: 1.25;
-                @media(max-width: 1023px) {
+                @media(max-width: $media-lg) {
                     font-size: rem(20);
                     line-height: 1.2;
                 }
@@ -313,10 +313,10 @@
         overflow: hidden;
         background-color: $silver;
         border-radius: 0;
-        @media(max-width: 1279px) {
+        @media(max-width: $media-xl) {
             max-height: 168px;
         }
-        @media(max-width: 1023px) {
+        @media(max-width: $media-lg) {
             flex-basis: auto;
             max-height: 200px;
         }
@@ -418,7 +418,7 @@
         border-right: 1px solid $border-10;
         border-bottom: 1px solid $border-10;
         border-radius: 0 0 5px 5px !important;
-        @media(max-width: 1279px) {
+        @media(max-width: $media-xl) {
             padding-bottom: 16px;
         }
     }
@@ -477,7 +477,7 @@
     padding: 17px 18px 20px;
     border-radius: 5px;
     background-color: $white;
-    @media(max-width: 1023px) {
+    @media(max-width: $media-lg) {
         width: 180px;
     }
 
@@ -548,7 +548,7 @@
     padding: 16px 20px 20px;
     border-radius: 5px;
     background-color: $white;
-    @media(max-width: 1023px) {
+    @media(max-width: $media-lg) {
         width: 256px;
     }
 

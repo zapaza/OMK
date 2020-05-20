@@ -1,9 +1,9 @@
 .main-page {
     padding-top: 32px;
-    @media (max-width: 1279px) {
+    @media (max-width: $media-xl) {
         padding-top: 24px;
     }
-    @media(max-width:767px) {
+    @media(max-width: $media-md) {
         padding-top: 0;
     }
 
@@ -12,17 +12,17 @@
         margin-left: -16px;
         margin-right: -16px;
 
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             margin-left: -12px;
             margin-right: -12px;
         }
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             margin-left: -16px;
             margin-right: -16px;
             width: auto;
             max-width: 100vw;
         }
-        @media(max-width:767px) {
+        @media(max-width: $media-md) {
             margin-left: -16px;
             margin-right: -16px;
             overflow: hidden;
@@ -31,10 +31,10 @@
 
     .news__row .news-slider {
         height: 400px;
-        @media (max-width: 1280px) {
+        @media (max-width: $media-xl) {
             height: 328px;
         }
-        @media(max-width:767px) {
+        @media(max-width: $media-md) {
             margin-bottom: 16px;
             height: auto;
 
@@ -43,7 +43,7 @@
             }
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: $media-sm) {
             padding-left: 0;
             padding-right: 0;
             width: 100vw;
@@ -54,12 +54,12 @@
             margin-left: 0;
         }
         .swiper-slide {
-            @media(max-width:767px) {
+            @media(max-width: $media-md) {
                 .card {
                     border-radius: 0;
                 }
             }
-            @media(max-width:767px) {
+            @media(max-width: $media-md) {
                 width: 100%;
                 height: 414px;
             }
@@ -82,11 +82,11 @@
                     background-color: rgba(0, 0, 0, 0.2);
                 }
                 .card-title {
-                    @media (max-width: 1280px) {
+                    @media (max-width: $media-xl) {
                         font-size: rem(32);
                         line-height: 1.25;
                     }
-                    @media (max-width: 1023px) {
+                    @media (max-width: $media-lg) {
                         font-size: rem(24);
                         line-height: 1.33;
                     }
@@ -96,11 +96,11 @@
                     font-size: rem(28);
                     line-height: 1.29;
                     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                    @media (max-width: 1280px) {
+                    @media (max-width: $media-xl) {
                         font-size: rem(16);
                         line-height: 1.25;
                     }
-                    @media (max-width: 1023px) {
+                    @media (max-width: $media-lg) {
                         display: block;
                     }
                 }
@@ -113,7 +113,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 48px;
-        @media(max-width:767px) {
+        @media(max-width: $media-md) {
             margin-bottom: 32px;
             padding: 0 16px;
         }
@@ -129,13 +129,13 @@
         width: 100%;
         max-width: 167px;
         text-align: center;
-        @media (max-width: 1279px) {
+        @media (max-width: $media-xl) {
             margin-top: 24px;
         }
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             max-width: 136px;
         }
-        @media(max-width:767px) {
+        @media(max-width: $media-md) {
             flex-direction: row;
             justify-content: flex-start;
             max-width: none;
@@ -162,7 +162,7 @@
             width: 48px;
             height: 48px;
             margin-bottom: 8px;
-            @media(max-width:767px) {
+            @media(max-width: $media-md) {
                 margin-right: 16px;
                 margin-bottom: 0;
             }
@@ -185,7 +185,7 @@
     &__slider {
         margin-bottom: 48px;
         width: 100%;
-        @media(max-width:767px) {
+        @media(max-width: $media-md) {
             width: auto;
             max-width: 100vw;
             margin-right: 0;
@@ -196,7 +196,7 @@
 
         .swiper-slide {
             max-width: 296px;
-            @media(max-width:767px) {
+            @media(max-width: $media-md) {
                 max-width: 272px;
             }
         }
@@ -214,7 +214,7 @@
         overflow: hidden;
         border-radius: 5px;
         background-color: $silver-light;
-        @media(max-width:767px) {
+        @media(max-width: $media-md) {
             width: 272px;
             height: 154px;
             border-radius: 4.6px;
@@ -244,7 +244,7 @@
         width: 100%;
         height: 100%;
         padding: 20px;
-        @media(max-width:767px) {
+        @media(max-width: $media-md) {
             padding: 18px;
         }
 
@@ -254,7 +254,7 @@
             line-height: 1.25;
             color: #f8d7d5;
             margin-bottom: 8px;
-            @media(max-width:767px) {
+            @media(max-width: $media-md) {
                 font-size: rem(14);
                 line-height: 1.31;
             }
@@ -264,7 +264,7 @@
             font-weight: $font-weight-bold;
             line-height: 1.2;
             color: $white;
-            @media(max-width:767px) {
+            @media(max-width: $media-md) {
                 font-size: rem(18.4);
             }
         }
@@ -275,7 +275,7 @@
             color: $text-silver;
             margin-top: auto;
             margin-bottom: 0;
-            @media(max-width:767px) {
+            @media(max-width: $media-md) {
                 font-size: rem(14);
                 line-height: 1.31;
             }

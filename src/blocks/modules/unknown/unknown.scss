@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     margin: 64px 0 32px;
-    @media (max-width: 1023px) {
+    @media (max-width: $media-lg) {
         margin-bottom: 16px;
     }
 

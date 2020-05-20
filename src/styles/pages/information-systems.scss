@@ -5,10 +5,10 @@
         margin-top: 32px;
         width: 100%;
         max-width: 352px;
-        @media(max-width: 1279px) {
+        @media(max-width: $media-xl) {
             width: 100%;
         }
-        @media(max-width: 1023px) {
+        @media(max-width: $media-lg) {
             padding-top: 16px;
             padding-bottom: 16px;
             max-width: none;
@@ -20,14 +20,14 @@
         font-size: 0.875rem;
         line-height: 1.43;
         color: $text-silver;
-        @media(max-width: 575px) {
+        @media(max-width: $media-sm) {
             margin-top: 20px;
         }
     }
 
     .main-header {
         h1 {
-            @media(max-width: 575px) {
+            @media(max-width: $media-sm) {
                 font-size: 2rem;
                 line-height: 1.25;
             }
@@ -36,7 +36,7 @@
 
     .header-block {
         margin: 48px 0 24px;
-        @media(max-width: 575px) {
+        @media(max-width: $media-sm) {
             margin: 32px 0 20px;
         }
         h2 {
@@ -48,7 +48,7 @@
     }
 
     .row__sys {
-        @media(max-width: 575px) {
+        @media(max-width: $media-sm) {
             .header-block {
                 margin-top: 48px;
                 margin-bottom: 24px;
@@ -102,7 +102,7 @@
         line-height: 1.25;
         color: $text-black;
         margin-bottom: 16px;
-        @media(max-width: 575px) {
+        @media(max-width: $media-sm) {
             margin-bottom: 28px;
         }
         &:hover {

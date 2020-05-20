@@ -43,6 +43,17 @@ $grid-breakpoints: (
     lg: 1023px,
     xl: 1280px
 );
+
+$media-sm: 575px;
+$media-md: 767px;
+$media-lg: 1022px;
+$media-xl: 1279px;
+
+$media-sm--min: 576x;
+$media-md--min: 768px;
+$media-lg--min: 1023px;
+$media-xl--min: 1280px;
+
 $container-max-widths: (
     sm: 576px,
     md: 720px,

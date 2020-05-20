@@ -20,14 +20,14 @@
     }
     &__description {
         padding: 24px 32px 48px;
-        @media(max-width: 767px) {
+        @media(max-width: $media-md) {
             padding: 16px 16px 24px;
         }
         .title {
             font-size: 1.25rem;
             line-height: 1.2;
             font-weight: 700;
-            @media(max-width: 767px) {
+            @media(max-width: $media-md) {
                 font-size: 1rem;
             }
         }

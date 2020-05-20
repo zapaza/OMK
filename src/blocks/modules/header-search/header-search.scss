@@ -1,9 +1,9 @@
 .modal {
     &.modal-search-suggest {
         .modal-dialog {
-            max-width: 1024px;
+            max-width: $media-lg;
 
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 width: 100%;
                 min-height: 100vh;
                 margin: 0;
@@ -14,13 +14,13 @@
         .modal-content {
             background-color: transparent;
             border: none;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 background-color: $white;
             }
         }
 
         .modal-gallery__controls {
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 position: absolute;
                 z-index: 99;
                 top: 16px;
@@ -37,7 +37,7 @@
     margin: auto;
     border-radius: 8px;
     background-color: $white;
-    @media (max-width: 1023px) {
+    @media (max-width: $media-lg) {
         position: relative;
         z-index: 3;
         max-width: none;
@@ -60,7 +60,7 @@
             width: 100%;
             max-width: 100%;
             padding: 16px 64px 16px 24px;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 padding: 16px;
             }
 
@@ -138,7 +138,7 @@
             width: 100%;
             max-width: 100%;
             padding: 16px 64px 16px 24px;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 padding: 16px;
             }
 
@@ -217,7 +217,7 @@
         right: 16px;
         width: 32px;
         height: 32px;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -252,7 +252,7 @@
         font-size: rem(14);
         line-height: 1.43;
         color: $text-silver;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             padding: 20px 0 8px 16px;
         }
     }
@@ -273,7 +273,7 @@
                 display: flex;
                 align-items: center;
                 padding: 16px 24px;
-                @media (max-width: 1023px) {
+                @media (max-width: $media-lg) {
                     align-items: flex-start;
                     padding: 16px;
                 }
@@ -334,7 +334,7 @@
         width: 100%;
         max-height: 576px;
         overflow: auto;
-        @media (max-width: 1023px) {
+        @media (max-width: $media-lg) {
             max-height: none;
         }
         //Стилизация скролла
@@ -375,7 +375,7 @@
         .mCSB_inside > .mCSB_container {
             margin-right: 17px;
 
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 margin: 0;
             }
         }
@@ -391,7 +391,7 @@
             font-size: rem(16);
             line-height: 1.25;
             color: $text-black;
-            @media (max-width: 1023px) {
+            @media (max-width: $media-lg) {
                 padding: 16px;
             }
 
@@ -422,7 +422,7 @@
                 }
 
                 &-inner {
-                    @media (max-width: 1023px) {
+                    @media (max-width: $media-lg) {
                         display: none;
                     }
                 }

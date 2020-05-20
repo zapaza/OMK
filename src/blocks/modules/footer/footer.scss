@@ -9,7 +9,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        @media (max-width: 767px) {
+        @media (max-width: $media-md) {
             justify-content: center;
         }
     }
@@ -23,7 +23,7 @@
     }
 
     &__left {
-        @media (max-width: 767px) {
+        @media (max-width: $media-md) {
             margin-bottom: 24px;
         }
         .footer__link {
@@ -47,7 +47,7 @@
     &__link {
 
         margin-right: 32px;
-        @media (max-width: 767px) {
+        @media (max-width: $media-md) {
             margin-right: 24px;
         }
         @media (max-width: 414px) {
