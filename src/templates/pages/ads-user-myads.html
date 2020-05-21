@@ -7,113 +7,311 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 main-header">
+        <div class="col-12 main-header main-header--ads">
             <h1>Мои объявления</h1>
             <button type="button" class="btn btn--primary  js-btn-addAds"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить объявление</button>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
+            <div class="ads-list-page__links">
+                <div class="ads-list-page__links-inner">
+                    <a href="#" class="ads-list-page__link ads-list-page__link--active">Опубликованные <span class="count">5</span></a>
+                    <a href="#" class="ads-list-page__link">Снятые с публикации <span class="count">5</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
             <div class="row ads-user-list">
                 <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
-                    <a href="#" class="ads-user-item">
-                        <picture class="ads-user-item__img">
-                            <!--[if IE 9]>
-                            <video style="display: none;"><![endif]-->
-                            <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
-                            <!--[if IE 9]></video><![endif]-->
-                            <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
-                                 alt="Лучшие в металлургии">
-                        </picture>
-                        <div class="ads-user-item__content">
-                            <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
-                            <div class="price"><b>7 000</b> ₽</div>
-                            <div class="info">
-                                <div class="date">30 дней осталось</div>
-                                <div class="city">Благовещенск</div>
+                    <div class="ads-user-item">
+                        <a href="#" class="">
+                            <picture class="ads-user-item__img">
+                                <!--[if IE 9]>
+                                <video style="display: none;"><![endif]-->
+                                <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                                     alt="Лучшие в металлургии">
+                            </picture>
+                            <div class="ads-user-item__content">
+                                <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
+                                <div class="price"><b>7 000</b> ₽</div>
+                                <div class="info">
+                                    <div class="date">30 дней осталось</div>
+                                    <div class="city">Благовещенск</div>
+                                </div>
                             </div>
+                        </a>
+                        <div class="ads-user-item__popup">
+                            <button class="ads-user-item__btn"></button>
+                            <ul class="ads-user-item__popup-content">
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Редактировать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Снять с публикации</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Удалить</button>
+                                </li>
+                            </ul>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
-                    <a href="#" class="ads-user-item">
-                        <picture class="ads-user-item__img">
-                            <!--[if IE 9]>
-                            <video style="display: none;"><![endif]-->
-                            <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
-                            <!--[if IE 9]></video><![endif]-->
-                            <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
-                                 alt="Лучшие в металлургии">
-                        </picture>
-                        <div class="ads-user-item__content">
-                            <div class="name">Стульчик - качели Tatamia</div>
-                            <div class="price">7 000 ₽</div>
-                            <div class="info">
-                                <div class="date">7 авг</div>
-                                <div class="city">Уфа</div>
+                    <div class="ads-user-item">
+                        <a href="#" class="">
+                            <picture class="ads-user-item__img">
+                                <!--[if IE 9]>
+                                <video style="display: none;"><![endif]-->
+                                <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                                     alt="Лучшие в металлургии">
+                            </picture>
+                            <div class="ads-user-item__content">
+                                <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
+                                <div class="price"><b>7 000</b> ₽</div>
+                                <div class="info">
+                                    <div class="date">30 дней осталось</div>
+                                    <div class="city">Благовещенск</div>
+                                </div>
                             </div>
+                        </a>
+                        <div class="ads-user-item__popup">
+                            <button class="ads-user-item__btn"></button>
+                            <ul class="ads-user-item__popup-content">
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Редактировать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Снять с публикации</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Удалить</button>
+                                </li>
+                            </ul>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
-                    <a href="#" class="ads-user-item">
-                        <picture class="ads-user-item__img">
-                            <!--[if IE 9]>
-                            <video style="display: none;"><![endif]-->
-                            <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
-                            <!--[if IE 9]></video><![endif]-->
-                            <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
-                                 alt="Лучшие в металлургии">
-                        </picture>
-                        <div class="ads-user-item__content">
-                            <div class="name">Стульчик - качели Tatamia</div>
-                            <div class="price">7 000 ₽</div>
-                            <div class="info">
-                                <div class="date">7 авг</div>
-                                <div class="city">Уфа</div>
+                    <div class="ads-user-item">
+                        <a href="#" class="">
+                            <picture class="ads-user-item__img">
+                                <!--[if IE 9]>
+                                <video style="display: none;"><![endif]-->
+                                <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                                     alt="Лучшие в металлургии">
+                            </picture>
+                            <div class="ads-user-item__content">
+                                <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
+                                <div class="price"><b>7 000</b> ₽</div>
+                                <div class="info">
+                                    <div class="date">30 дней осталось</div>
+                                    <div class="city">Благовещенск</div>
+                                </div>
                             </div>
+                        </a>
+                        <div class="ads-user-item__popup">
+                            <button class="ads-user-item__btn"></button>
+                            <ul class="ads-user-item__popup-content">
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Редактировать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Снять с публикации</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Удалить</button>
+                                </li>
+                            </ul>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
-                    <a href="#" class="ads-user-item">
-                        <picture class="ads-user-item__img">
-                            <!--[if IE 9]>
-                            <video style="display: none;"><![endif]-->
-                            <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
-                            <!--[if IE 9]></video><![endif]-->
-                            <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
-                                 alt="Лучшие в металлургии">
-                        </picture>
-                        <div class="ads-user-item__content">
-                            <div class="name">Стульчик - качели Tatamia</div>
-                            <div class="price">7 000 ₽</div>
-                            <div class="info">
-                                <div class="date">7 авг</div>
-                                <div class="city">Уфа</div>
+                    <div class="ads-user-item">
+                        <a href="#" class="">
+                            <picture class="ads-user-item__img">
+                                <!--[if IE 9]>
+                                <video style="display: none;"><![endif]-->
+                                <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                                     alt="Лучшие в металлургии">
+                            </picture>
+                            <div class="ads-user-item__content">
+                                <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
+                                <div class="price"><b>7 000</b> ₽</div>
+                                <div class="info">
+                                    <div class="date">30 дней осталось</div>
+                                    <div class="city">Благовещенск</div>
+                                </div>
                             </div>
+                        </a>
+                        <div class="ads-user-item__popup">
+                            <button class="ads-user-item__btn"></button>
+                            <ul class="ads-user-item__popup-content">
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Редактировать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Снять с публикации</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Удалить</button>
+                                </li>
+                            </ul>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
-                    <a href="#" class="ads-user-item">
-                        <picture class="ads-user-item__img">
-                            <!--[if IE 9]>
-                            <video style="display: none;"><![endif]-->
-                            <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
-                            <!--[if IE 9]></video><![endif]-->
-                            <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
-                                 alt="Лучшие в металлургии">
-                        </picture>
-                        <div class="ads-user-item__content">
-                            <div class="name">Стульчик - качели Tatamia</div>
-                            <div class="price">7 000 ₽</div>
-                            <div class="info">
-                                <div class="date">7 авг</div>
-                                <div class="city">Уфа</div>
+                    <div class="ads-user-item">
+                        <a href="#" class="">
+                            <picture class="ads-user-item__img">
+                                <!--[if IE 9]>
+                                <video style="display: none;"><![endif]-->
+                                <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                                     alt="Лучшие в металлургии">
+                            </picture>
+                            <div class="ads-user-item__content">
+                                <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
+                                <div class="price"><b>7 000</b> ₽</div>
+                                <div class="info">
+                                    <div class="date">30 дней осталось</div>
+                                    <div class="city">Благовещенск</div>
+                                </div>
                             </div>
+                        </a>
+                        <div class="ads-user-item__popup">
+                            <button class="ads-user-item__btn"></button>
+                            <ul class="ads-user-item__popup-content">
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Редактировать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Снять с публикации</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Удалить</button>
+                                </li>
+                            </ul>
                         </div>
-                    </a>
+                    </div>
+                </div>
+                <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
+                    <div class="ads-user-item ads-user-item--not-publish">
+                        <a href="#" class="">
+                            <picture class="ads-user-item__img">
+                                <!--[if IE 9]>
+                                <video style="display: none;"><![endif]-->
+                                <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                                     alt="Лучшие в металлургии">
+                            </picture>
+                            <div class="ads-user-item__content">
+                                <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
+                                <div class="price"><b>7 000</b> ₽</div>
+                                <div class="info">
+                                    <div class="date">30 дней осталось</div>
+                                    <div class="city">Благовещенск</div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ads-user-item__popup">
+                            <button class="ads-user-item__btn"></button>
+                            <ul class="ads-user-item__popup-content">
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Редактировать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Опубликовать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
+                    <div class="ads-user-item ads-user-item--not-publish">
+                        <a href="#" class="">
+                            <picture class="ads-user-item__img">
+                                <!--[if IE 9]>
+                                <video style="display: none;"><![endif]-->
+                                <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                                     alt="Лучшие в металлургии">
+                            </picture>
+                            <div class="ads-user-item__content">
+                                <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
+                                <div class="price"><b>7 000</b> ₽</div>
+                                <div class="info">
+                                    <div class="date">30 дней осталось</div>
+                                    <div class="city">Благовещенск</div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ads-user-item__popup">
+                            <button class="ads-user-item__btn"></button>
+                            <ul class="ads-user-item__popup-content">
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Редактировать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Опубликовать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ads-user-item__inner col-12 col-md-4 col-lg-3">
+                    <div class="ads-user-item ads-user-item--not-publish">
+                        <a href="#" class="">
+                            <picture class="ads-user-item__img">
+                                <!--[if IE 9]>
+                                <video style="display: none;"><![endif]-->
+                                <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                                     alt="Лучшие в металлургии">
+                            </picture>
+                            <div class="ads-user-item__content">
+                                <div class="name">Стульчик - качели TatamiaСтульчик - качели Tatamia</div>
+                                <div class="price"><b>7 000</b> ₽</div>
+                                <div class="info">
+                                    <div class="date">30 дней осталось</div>
+                                    <div class="city">Благовещенск</div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ads-user-item__popup">
+                            <button class="ads-user-item__btn"></button>
+                            <ul class="ads-user-item__popup-content">
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Редактировать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Опубликовать</button>
+                                </li>
+                                <li class="ads-user-item__popup-item">
+                                    <button type="button" class="ads-user-item__popup-link">Удалить</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

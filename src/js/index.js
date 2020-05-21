@@ -72,6 +72,7 @@ function adsAddMobileHide() {
     }
 }
 
+
 $(document).ready(() => {
     articleFooterInfoHide();
     adsAddMobileHide();

@@ -28,10 +28,20 @@
 
     .main-header {
         position: relative;
-        @media (max-width: $media-lg) {
-            font-size: rem(32);
-            line-height: 1.25;
-            margin-bottom: 24px;
+        h1{
+            @media (max-width: $media-lg) {
+                font-size: rem(32);
+                line-height: 1.25;
+            }
+        }
+
+
+        &--ads {
+            h1 {
+                font-size: rem(40);
+                line-height: 1.2;
+            }
+
         }
 
 
@@ -67,6 +77,58 @@
             &__icon {
                 display: none;
             }
+        }
+    }
+
+    &__links {
+        display: flex;
+        margin-top: 12px;
+        margin-bottom: 40px;
+        overflow: -moz-scrollbars-none;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        @media (max-width: $media-md) {
+            padding-left: 16px;
+            padding-right: 32px;
+            margin: 8px -16px 24px
+        }
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: auto;
+            flex: 1 0 auto;
+        }
+    }
+
+    &__link {
+        flex-shrink: 0;
+        margin-right: 16px;
+        font-size: rem(16);
+        line-height: 1.25;
+        color: $text-black;
+
+        .count {
+            font-size: 14px;
+            line-height: 1.43;
+            color: $text-silver;
+            display: inline-block;
+            margin-left: 8px;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+
+        &--active {
+            padding: 6px 16px 6px;
+            border-radius: 16px;
+            background-color: $ctrl-black;
+            color: $white;
         }
     }
 }
