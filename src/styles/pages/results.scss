@@ -1,6 +1,9 @@
 .results {
     padding-top: 32px;
     padding-bottom: 48px;
+    @media (max-width: $media-sm){
+        padding-top: 24px;
+    }
 
     .employee {
         @include transition();
@@ -221,6 +224,7 @@
             padding: 0;
         }
 
+
         @media(min-width: 821px) {
             &:hover {
                 cursor: pointer;
@@ -246,6 +250,13 @@
             @media (max-width: $media-md) {
                 padding: 17px 0 20px;
             }
+            @media(max-width: $media-sm) {
+                margin-left: -16px;
+                margin-right: -16px;
+                padding-left: 16px;
+                padding-right: 16px;
+                width: auto;
+            }
         }
 
         &__title {
@@ -259,6 +270,10 @@
             font-size: 0.875rem;
             line-height: 1.14;
             margin-top: 12px;
+            @media (max-width: $media-sm){
+                font-size: rem(16);
+                line-height: 1.25;
+            }
         }
 
         &__date {
@@ -434,12 +449,13 @@
         margin: 0 auto;
 
         &__row {
-            margin: 48px 0 24px;
+            margin: 48px -8px 24px;
 
             .btn {
                 @media(max-width: 414px) {
                     width: 100%;
                     max-width: 100%;
+                    padding: 18px;
                 }
             }
         }
