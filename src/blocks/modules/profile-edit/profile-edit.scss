@@ -1,5 +1,10 @@
 .edit {
     overflow: auto;
+    @media(max-width: $media-sm) {
+        width: 100%;
+        padding-right: 0 !important;
+    }
+
     &.show {
         .modal-dialog {
             pointer-events: auto;
@@ -12,9 +17,22 @@
             max-width: $media-lg;
             margin: 16px auto;
             background-color: transparent;
+            @media(max-width: $media-sm) {
+                width: 100%;
+                margin: 0;
+            }
 
             .modal-gallery__controls {
                 margin-bottom: 24px;
+                @media(max-width: $media-sm) {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    margin: 0;
+                    padding: 16px;
+                }
             }
         }
 
@@ -25,6 +43,12 @@
             padding: 32px;
             background: $white;
             border-radius: 8px;
+            @media(max-width: $media-sm) {
+                width: 100%;
+                min-height: 100vh;
+                border-radius: 0;
+                padding: 64px 32px 32px;
+            }
         }
     }
 
@@ -32,6 +56,10 @@
         font-size: 2rem;
         line-height: 1.25;
         text-align: center;
+        @media(max-width: $media-sm) {
+            font-size: 1.75rem;
+            line-height: 1.29;
+        }
     }
 
     &-form {
@@ -101,6 +129,11 @@
         justify-content: space-between;
         max-width: 456px;
         margin: 40px auto 32px;
+        @media(max-width: $media-sm) {
+            display: block;
+            max-width: 100%;
+            margin: 24px 0 0;
+        }
 
         &__preview {
             display: flex;
@@ -108,6 +141,10 @@
             width: calc(50% - 12px);
             overflow: hidden;
             border-radius: 5px;
+            @media(max-width: $media-sm) {
+                width: 216px;
+                margin: 0 auto;
+            }
 
             &.has-preview {
                 &::after {
@@ -147,6 +184,10 @@
 
         &__info {
             width: calc(50% - 12px);
+            @media(max-width: $media-sm) {
+                width: 100%;
+                margin-top: 24px;
+            }
 
             .file {
                 display: block;
@@ -255,19 +296,28 @@
             justify-content: space-between;
             width: 100%;
             margin-top: 32px;
+
             .btn {
                 width: calc(50% - 12px);
+                @media(max-width: $media-sm) {
+                    width: calc(50% - 8px);
+                }
             }
         }
 
         &__message {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             width: 100%;
             margin-top: 24px;
             font-size: 0.875rem;
             line-height: 1.14;
             color: $text-silver;
+            @media(max-width: $media-sm) {
+                font-size: 1rem;
+                line-height: 1.25;
+            }
+
             &::before {
                 content: '';
                 width: 32px;
