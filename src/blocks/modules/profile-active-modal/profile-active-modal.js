@@ -58,7 +58,15 @@ $(document).ready(function () {
         if ($('.js-controls-inner').length > 0) {
             getControlsVars();
             $('#active_modal').scroll(function () {
+                if(window.matchMedia('min-width: 576px')){
                 controlsScroll();
+                }
+            });
+            $(window).resize(function () {
+                if(window.matchMedia('min-width: 576px')){
+                getControlsVars();
+                controlsScroll();
+                }
             });
         }
     });

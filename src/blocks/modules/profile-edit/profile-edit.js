@@ -1,3 +1,11 @@
+function checkEditPhotoSubmit() {
+    if($('.js-edit-photo-input').val() !== '') {
+        $('.js-edit-photo-submit').prop('disabled', false);
+    } else {
+        $('.js-edit-photo-submit').prop('disabled', true);
+    }
+}
+
 $('body').on('click', '.js-profile-edit', function () {
     $('#profile_edit_popup').modal('show');
 });
@@ -8,6 +16,7 @@ $('body').on('click', '.js-edit-form__photo-btn', function () {
 
 $('#profile_edit_photo, #profile_edit_popup').on('shown.bs.modal', function () {
     $('html, body').addClass('off-scroll');
+    checkEditPhotoSubmit();
 });
 $('#profile_edit_photo, #profile_edit_popup').on('hidden.bs.modal', function () {
     $('html, body').removeClass('off-scroll');
@@ -55,6 +64,7 @@ $('body').on('change', '.js-photo-file input', function () {
         }
         $('.js-delete-file').removeClass('show');
     }
+    checkEditPhotoSubmit();
 });
 
 $('body').on('click', '.js-delete-file', function () {
