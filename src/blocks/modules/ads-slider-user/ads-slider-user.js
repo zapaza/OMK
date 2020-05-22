@@ -24,7 +24,7 @@ $(document).ready(function () {
                 100 :{
                     slidesPerView: 'auto',
                     spaceBetween: 8,
-
+                    centeredSlides: true,
 
                 },
                 1024 : {

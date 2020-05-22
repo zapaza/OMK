@@ -23,8 +23,8 @@
         .btn {
             max-width: 256px;
             margin-bottom: 16px;
-            padding-top: 17px;
-            padding-bottom: 17px;
+            padding-top: 13px;
+            padding-bottom: 13px;
             @media (max-width: $media-xl) {
                 max-width: none;
             }
@@ -123,6 +123,7 @@
             color: $white;
         }
         &--pc {
+            margin-bottom: 24px;
             @media (max-width: $media-lg) {
                 display: none;
             }
@@ -209,6 +210,12 @@
             @media (max-width: $media-lg) {
                 order: -1;
                 margin-bottom: 24px;
+            }
+            &:hover {
+                text-decoration: none;
+                .content .name{
+                    color: $coral;
+                }
             }
 
             .avatar {
