@@ -121,6 +121,7 @@
 
             &--close-modal {
                 background-image: url(../img/icons/close-modal.svg);
+                pointer-events: all;
             }
             &--download-modal {
                 background-image: url(../img/icons/download-modal.svg);

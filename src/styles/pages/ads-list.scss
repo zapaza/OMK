@@ -28,21 +28,6 @@
 
     .main-header {
         position: relative;
-        h1{
-            @media (max-width: $media-lg) {
-                font-size: rem(32);
-                line-height: 1.25;
-            }
-        }
-
-
-        &--ads {
-            h1 {
-                font-size: rem(40);
-                line-height: 1.2;
-            }
-
-        }
 
 
         .btn {
@@ -78,6 +63,20 @@
                 display: none;
             }
         }
+
+
+        &--ads {
+            h1 {
+                font-size: rem(40);
+                line-height: 1.2;
+            }
+        }
+        h1 {
+            @media (max-width: $media-lg) {
+                font-size: rem(32);
+                line-height: 1.25;
+            }
+        }
     }
 
     &__links {
@@ -88,21 +87,21 @@
         overflow: auto;
         -ms-overflow-style: none;
         scrollbar-width: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
         @media (max-width: $media-md) {
             padding-left: 16px;
             padding-right: 32px;
-            margin: 8px -16px 24px
+            margin: 8px -16px 24px;
+        }
+        &::-webkit-scrollbar {
+            display: none;
         }
 
         &-inner {
             display: flex;
+            flex: 1 0 auto;
             align-items: center;
             justify-content: flex-start;
             width: auto;
-            flex: 1 0 auto;
         }
     }
 
@@ -112,6 +111,9 @@
         font-size: rem(16);
         line-height: 1.25;
         color: $text-black;
+        &:hover {
+            text-decoration: none;
+        }
 
         .count {
             font-size: 14px;
@@ -119,9 +121,6 @@
             color: $text-silver;
             display: inline-block;
             margin-left: 8px;
-        }
-        &:hover {
-            text-decoration: none;
         }
 
         &--active {

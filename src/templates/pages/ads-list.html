@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-12 main-header">
                 <h1>Объявления</h1>
-                <button type="button" class="btn btn--primary  js-btn-addAds"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить объявление</button>
+                <button type="button" class="btn btn--primary  js-ads-add"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить объявление</button>
             </div>
         </div>
         <div class="row ">
@@ -190,7 +190,11 @@
             </div>
         </div>
     </div>
+
+{% include 'ads-modals-add/ads-modals-add.html' %}
+{% include 'ads-modals-remove/ads-modals-remove.html' %}
 {% endblock %}
+
 
 {% block scripts %}
 

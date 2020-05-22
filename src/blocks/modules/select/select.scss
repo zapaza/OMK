@@ -32,7 +32,7 @@
 
         .filter-option-inner-inner {
             font-size: rem(16);
-            font-weight: $font-weight-light;
+            font-weight: $font-weight-normal;
             line-height: 1.25;
             letter-spacing: normal;
             color: $text-black;
@@ -78,7 +78,7 @@
                 display: block;
                 padding: 6px 8px 10px 40px;
                 font-size: rem(16);
-                font-weight: $font-weight-light;
+                font-weight: $font-weight-normal;
                 line-height: 1.25;
                 color: $text-black;
                 &:hover {

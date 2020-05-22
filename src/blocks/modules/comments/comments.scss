@@ -3,7 +3,7 @@
     .btn {
         padding-top: 13px;
         padding-bottom: 13px;
-        font-weight: $font-weight-light;
+        font-weight: $font-weight-normal;
         @media (max-width: $media-md) {
             width: 100%;
             padding-top: 17px;
@@ -201,7 +201,7 @@
             font-size: rem(14);
             line-height: 1.43;
             color: $text-silver;
-            font-weight: $font-weight-light;
+            font-weight: $font-weight-normal;
         }
 
         &-more {

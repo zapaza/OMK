@@ -31,7 +31,7 @@
         color: $text-black;
         background-color: $white;
         border: solid 1px $border-10;
-        padding: rem(32) rem(16) rem(12);
+        padding: rem(31) rem(16) rem(11);
 
         &:focus {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
@@ -49,7 +49,7 @@
         }
         &:placeholder-shown {
             border: solid 1px $silver-light;
-            padding: rem(20) rem(16) rem(24);
+            padding: rem(19) rem(16) rem(23);
             background-color: $silver-light;
 
             & + .fields__placeholder {

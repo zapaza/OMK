@@ -17,9 +17,9 @@
         <div class="col-12">
             <div class="control-btn  control-btn--mob">
                 <div class="control-btn__inner">
-                    <button type="button" class="btn btn--secondary">Редактировать</button>
+                    <button type="button" class="js-ads-edit btn btn--secondary">Редактировать</button>
                     <button type="button" class="btn btn--secondary">Опубликовать</button>
-                    <button type="button" class="btn btn--secondary">Удалить</button>
+                    <button type="button" class="js-ads-remove btn btn--secondary">Удалить</button>
                 </div>
             </div>
         </div>
@@ -61,16 +61,17 @@
                 </div>
                 <div class="control-btn control-btn--pc" >
                     <a href="#" class="btn btn--secondary">2 объвления пользователя</a>
-                    <button type="button" class="btn btn--secondary">Редактировать</button>
+                    <button type="button" class="js-ads-edit btn btn--secondary">Редактировать</button>
                     <button type="button" class="btn btn--secondary">Опубликовать</button>
-                    <button type="button" class="btn btn--secondary">Удалить</button>
+                    <button type="button" class="js-ads-remove btn btn--secondary">Удалить</button>
                 </div>
             </div>
         </div>
     </div>
 
 </div>
-
+{% include 'ads-modals-add/ads-modals-add.html' %}
+{% include 'ads-modals-remove/ads-modals-remove.html' %}
 {% endblock %}
 
 {% block scripts %}

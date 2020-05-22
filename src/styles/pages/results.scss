@@ -1,7 +1,7 @@
 .results {
     padding-top: 32px;
     padding-bottom: 48px;
-    @media (max-width: $media-sm){
+    @media (max-width: $media-sm) {
         padding-top: 24px;
     }
 
@@ -270,7 +270,7 @@
             font-size: 0.875rem;
             line-height: 1.14;
             margin-top: 12px;
-            @media (max-width: $media-sm){
+            @media (max-width: $media-sm) {
                 font-size: rem(16);
                 line-height: 1.25;
             }
