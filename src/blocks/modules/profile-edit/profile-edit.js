@@ -77,3 +77,23 @@ $('body').on('click', '.js-delete-file', function () {
 $('body').on('click', '.js-photo-reset', function () {
     $('#profile_edit_photo').modal('hide');
 });
+
+$('#profile_edit_popup').scroll(function () {
+    if(window.matchMedia('max-width: 575px')) {
+        if($('#profile_edit_popup').scrollTop() > 0) {
+            $('#profile_edit_popup .js-edit-title').addClass('scroll');
+        } else {
+            $('#profile_edit_popup .js-edit-title').removeClass('scroll');
+        }
+    }
+});
+
+$('#profile_edit_photo').scroll(function () {
+    if(window.matchMedia('max-width: 575px')) {
+        if($('#profile_edit_photo').scrollTop() > 0) {
+            $('#profile_edit_photo .js-edit-title').addClass('scroll');
+        } else {
+            $('#profile_edit_photo .js-edit-title').removeClass('scroll');
+        }
+    }
+});

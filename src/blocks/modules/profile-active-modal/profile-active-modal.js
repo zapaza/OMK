@@ -31,8 +31,6 @@ $(document).ready(function () {
             controlsOffsetLeft = controls.offset().left;
             controlsLeftCss = controlsOffsetLeft + 'px';
             controlsOffsetTop = controls[0].offsetTop + controls.closest('.modal-content')[0].offsetTop + controls.closest('.modal-dialog')[0].offsetTop;
-
-            console.log(modalWidth, modalWidthCss, controlsHeight, controlsHeightCss, controlsOffsetLeft, controlsLeftCss, controlsOffsetTop);
         }
 
         function controlsScroll() {
@@ -70,4 +68,14 @@ $(document).ready(function () {
             });
         }
     });
+});
+
+$('#active_modal').scroll(function () {
+    if(window.matchMedia('max-width: 575px')) {
+        if($('#active_modal').scrollTop() > 0) {
+            $('#active_modal .js-active-modal-title').addClass('scroll');
+        } else {
+            $('#active_modal .js-active-modal-title').removeClass('scroll');
+        }
+    }
 });

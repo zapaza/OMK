@@ -119,6 +119,26 @@
             &__area {
                 color: $text-silver;
             }
+
+            &__vacation {
+                display: flex;
+                align-items: flex-start;
+                margin-top: 10px;
+                font-size: 0.875rem;
+                line-height: 1.14;
+                color: $text-silver;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 8px;
+                    background-image: url(../img/icons/plane-icon.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
         }
 
         &-contacts {
