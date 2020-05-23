@@ -32,7 +32,6 @@
                     width: auto;
                     margin: 0;
                     padding: 16px;
-                    background-color: transparent;
                 }
             }
         }
@@ -189,17 +188,24 @@
             text-align: center;
             padding: 0 16px;
             @media(max-width: $media-sm) {
-                display: block;
-                position: fixed;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                width: 100%;
-                font-size: 1rem;
-                text-align: left;
-                padding: 20px 16px 24px;
+                @include transition();
+                font-size: 1.75rem;
+                line-height: 1.29;
                 background: $white;
-                border-bottom: 1px solid rgba(0, 0, 0, .1);
+                border-bottom: 1px solid transparent;
+                &.scroll {
+                    justify-content: flex-start;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    font-size: 1rem;
+                    line-height: 1.25;
+                    text-align: left;
+                    padding: 20px 60px 24px 16px;
+                    border-color: rgba(0, 0, 0, 0.1);
+                }
             }
         }
     }
