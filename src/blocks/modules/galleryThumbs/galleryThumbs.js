@@ -46,12 +46,23 @@ function setNavSlidersPositionTop(bigSliderItem) {
     });
 
 }
+function setModalNavSlidersPositionTop() {
 
-$('.js-thumbs-slider__main').hover(function () {
+    let thisSliderItem = $('#gallery_popup'),
+        thisSlideHeight = thisSliderItem.find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
+        thisNavSliderPositionTop = thisSlideHeight  - 8 + 'px';
+
+
+    thisSliderItem.find('.js-thumbs-slider__nav').css({
+        'top': thisNavSliderPositionTop
+    });
+
+}
+$('.article .js-thumbs-slider__main').hover(function () {
     let bigSlider = $(this).closest('.thumbs-slider');
     setTimeout(function () {
         setNavSlidersPositionTop(bigSlider);
-    }, 600);
+    }, 200);
 })
 
 function initThumbsSlider() {
@@ -148,5 +159,7 @@ $('body').on('click', '.thumbs-slider__zoom', function (e) {
 $('#gallery_popup').on('shown.bs.modal', function (e) {
     let activeTab = modalOpenTargetBtn.closest('.swiper-container')[0].swiper.realIndex;
     initModalThumbsSlider(activeTab);
+    setModalNavSlidersPositionTop();
     setSlidersModalButtonsPositionTop();
+
 });

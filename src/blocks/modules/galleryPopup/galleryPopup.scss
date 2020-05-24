@@ -52,6 +52,7 @@
                 }
                 &-img {
                     background-color: #1a1a1a;
+                    margin-bottom: 82px;
                 }
             }
 
@@ -62,6 +63,7 @@
                 padding: 8px;
                 background-color: $black;
                 margin-top: 8px;
+                opacity: 1;
 
                 .swiper-slide {
                     position: relative;
@@ -81,6 +83,34 @@
                             border-color: $coral;
                             opacity: 1;
                         }
+                    }
+                }
+            }
+
+            &__description {
+                position: relative;
+                padding-top: 24px;
+                .title {
+                    font-size: rem(20);
+                    line-height: 1.2;
+                }
+
+                .like-item {
+                    position: absolute;
+                    right: 32px;
+                    top: 28px;
+                    box-shadow: none;
+                    border-radius: 0;
+                    font-size: rem(16);
+                    line-height: 1.25;
+                    letter-spacing: normal;
+                    text-align: right;
+                    padding: 0;
+                    color: $text-silver;
+                    .icon {
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 3px;
                     }
                 }
             }

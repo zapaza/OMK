@@ -226,3 +226,18 @@ body {
     align-items: flex-start;
     margin-bottom: 32px;
 }
+@media(min-width: map_get($grid-breakpoints, lg)){
+    .modal-gallery__controls {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: 32px;
+        padding-right: 32px;
+        margin-bottom: 0;
+    }
+    .modal-dialog {
+        margin-top: 124px;
+    }
+
+}

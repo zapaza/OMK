@@ -12,6 +12,7 @@
         flex-direction: column;
         max-width: 456px;
         height: 100%;
+        margin-top: 0;
         @media (max-width: $media-sm) {
             justify-content: flex-end;
             width: 100%;

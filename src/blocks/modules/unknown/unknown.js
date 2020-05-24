@@ -31,11 +31,12 @@ $(document).ready(function () {
         });
     }
 });
-var unknownModalSlider, unknownActiveSlide;
+var unknownModalSlider,
+    unknownActiveSlide;
 $('body').on('click', '.js-unknown-slide', function () {
     $('#unknown_popup').modal('show');
     unknownActiveSlide = $(this).closest('.js-unknown')[0].swiper.realIndex;
-    console.log(unknownActiveSlide);
+    console.log( unknownActiveSlide);
 })
 
 $('#unknown_popup').on('shown.bs.modal', function () {
@@ -51,7 +52,8 @@ $('#unknown_popup').on('shown.bs.modal', function () {
             swiper: {
                 el: '.js-unknown-modal-slider-nav',
                 slidesPerView: 7,
-                spaceBetween: 8
+                spaceBetween: 8,
+                initialSlide: unknownActiveSlide,
             }
         },
     })

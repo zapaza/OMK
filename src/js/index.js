@@ -52,7 +52,7 @@ function articleFooterInfoHide() {
 //скрытие кнопки добавить объяявление при скроле на мобилке
 
 function adsAddMobileHide() {
-    if ($('.js-btn-addAds').length > 0) {
+    if ($('.js-ads-add').length > 0) {
         let $element = $('.footer'),
             counter = 0;
         $(window).scroll(function () {
@@ -61,10 +61,10 @@ function adsAddMobileHide() {
                     offset = $element.offset().top;
 
                 if (scroll > offset && counter === 0) {
-                    $('.js-btn-addAds').stop().fadeOut(100);
+                    $('.js-ads-add').stop().fadeOut(100);
                     counter = 1;
                 } else if (scroll < offset && counter === 1) {
-                    $('.js-btn-addAds').stop().fadeIn(100);
+                    $('.js-ads-add').stop().fadeIn(100);
                     counter = 0;
                 }
             }
