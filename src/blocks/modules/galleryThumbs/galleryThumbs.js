@@ -64,6 +64,20 @@ $('.article .js-thumbs-slider__main').hover(function () {
         setNavSlidersPositionTop(bigSlider);
     }, 200);
 })
+function playVidioInSlider(){
+    if ($('video').length > 0){
+        console.log('initvidep');
+        $('body').on('click', '.video__preview', function () {
+            let $this = $(this),
+                $thisVideo = $this.closest('.video').find('.video__player');
+            stopAllVideos();
+            $this.parent().find('.video__preview').fadeOut();
+            $this.parent().find('.video__time').fadeOut();
+            $thisVideo.trigger('play');
+        })
+
+    }
+}
 
 function initThumbsSlider() {
     let $slider = $('.thumbs-slider .js-thumbs-slider__main:not(.js-thumbs-slider__main--modal)');
@@ -141,6 +155,7 @@ $(document).ready(function () {
     if ($('.thumbs-slider').length > 0) {
         initThumbsSlider();
         setSlidersButtonsPositionTop();
+        playVidioInSlider();
     }
 });
 
@@ -156,10 +171,28 @@ $('body').on('click', '.thumbs-slider__zoom', function (e) {
     $('#gallery_popup').modal('show');
 });
 
+function stopAllVideos() {
+    let $this = $('.video'),
+        videoLength = $this.length;
+    for (i = 0; i < videoLength; i++) {
+
+        let thisFrame = $this.eq(i).find('.video__player');
+
+        thisFrame.pause;
+        $this.eq(i).find('.video__preview').fadeIn(300);
+        $this.eq(i).find('.video__time').fadeIn(300);
+
+    }
+}
+
 $('#gallery_popup').on('shown.bs.modal', function (e) {
     let activeTab = modalOpenTargetBtn.closest('.swiper-container')[0].swiper.realIndex;
     initModalThumbsSlider(activeTab);
     setModalNavSlidersPositionTop();
     setSlidersModalButtonsPositionTop();
+    stopAllVideos();
+    playVidioInSlider();
+
+
 
 });
