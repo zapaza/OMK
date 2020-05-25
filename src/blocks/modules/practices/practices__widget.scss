@@ -3,7 +3,7 @@
     padding: 12px 20px 28px;
     border-radius: 5px;
     background-color: #3d3d4d;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
 
     &:after {
         content: '';
@@ -39,5 +39,11 @@
         margin-top: 20px;
         padding-top: 12px;
         padding-bottom: 12px;
+    }
+}
+
+.practices{
+    .card {
+        margin-bottom: 48px;
     }
 }

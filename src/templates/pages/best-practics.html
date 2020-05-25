@@ -2,82 +2,36 @@
 {% block content %}
 <div class="wrapper">
     <div class="row">
-        {% include 'breadcrumbs/breadcrumbs.html' %}
+        <div class="col-12">
+            {% include 'breadcrumbs/breadcrumbs.html' %}
+        </div>
     </div>
-    <div class="row main-header">
-        <h1>Лучшие практики</h1>
+    <div class="row ">
+        <div class="col-12">
+            <div class="main-header">
+                <h1>Лучшие практики</h1>
+            </div>
+        </div>
+
     </div>
     <section class="practices">
         <div class="row">
-            <div class="col-12 practices__widget">
-                <div class="practices__widget-header">
-                    <h3>Для формирования базы практик добавьте фото ваших подразделений</h3>
-                    <h4>Самые образцовые получат памятные призы</h4>
+            <div class="col-12 ">
+                <div class="practices__widget">
+                    <div class="practices__widget-header">
+                        <h3>Для формирования базы практик добавьте фото ваших подразделений</h3>
+                        <h4>Самые образцовые получат памятные призы</h4>
+                    </div>
+                    <button class="btn btn--danger"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить фото</button>
                 </div>
-                <button class="btn btn--danger"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить фото</button>
             </div>
         </div>
 
         <div class="row">
-            <div class="header-block">
-                <h2>Производство</h2>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <a href="/" class="card">
-                    <picture class="card-img">
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="" type="image/webp">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img src="..."   title="" alt="...">
-                    </picture>
-                    <div class="card-body">
-                        <h5 class="card-title">Лучшие в металлургии</h5>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-date">Обновлен 10 фев</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="/" class="card">
-                    <picture class="card-img">
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="" type="image/webp">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img src="..."   title="" alt="...">
-                    </picture>
-                    <div class="card-body">
-                        <h5 class="card-title">Лучшие в металлургии</h5>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-date">Обновлен 10 фев</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="/" class="card">
-                    <picture class="card-img">
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="" type="image/webp">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img src="..."   title="" alt="...">
-                    </picture>
-                    <div class="card-body">
-                        <h5 class="card-title">Лучшие в металлургии</h5>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-date">Обновлен 10 фев</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="header-block">
-                <h2>Офис</h2>
+            <div class="col-12">
+                <div class="header-block">
+                    <h2>Производство</h2>
+                </div>
             </div>
         </div>
 
@@ -85,10 +39,11 @@
             <div class="col-md-4">
                 <a href="/" class="card">
                     <picture class="card-img">
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="" type="image/webp">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/01-d.webp" type="image/webp">
                         <!--[if IE 9]></video><![endif]-->
-                        <img src="..."   title="" alt="...">
+                        <img src="img/01-d.png" title="" alt="...">
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">Лучшие в металлургии</h5>
@@ -101,10 +56,11 @@
             <div class="col-md-4">
                 <a href="/" class="card">
                     <picture class="card-img">
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="" type="image/webp">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/02-d.webp" type="image/webp">
                         <!--[if IE 9]></video><![endif]-->
-                        <img src="..."   title="" alt="...">
+                        <img src="img/02-d.png" title="" alt="...">
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">Лучшие в металлургии</h5>
@@ -117,10 +73,73 @@
             <div class="col-md-4">
                 <a href="/" class="card">
                     <picture class="card-img">
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="" type="image/webp">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/03-d.webp" type="image/webp">
                         <!--[if IE 9]></video><![endif]-->
-                        <img src="..."   title="" alt="...">
+                        <img src="img/03-d.png" title="" alt="...">
+                    </picture>
+                    <div class="card-body">
+                        <h5 class="card-title">Лучшие в металлургии</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-date">Обновлен 10 фев</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="header-block">
+                    <h2>Офис</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <a href="/" class="card">
+                    <picture class="card-img">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/04-d.webp" type="image/webp">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="img/04-d.png" title="" alt="...">
+                    </picture>
+                    <div class="card-body">
+                        <h5 class="card-title">Лучшие в металлургии</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-date">Обновлен 10 фев</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/" class="card">
+                    <picture class="card-img">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/05-d.webp" type="image/webp">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="img/05-d.png" title="" alt="...">
+                    </picture>
+                    <div class="card-body">
+                        <h5 class="card-title">Лучшие в металлургии</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-date">Обновлен 10 фев</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/" class="card">
+                    <picture class="card-img">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/06-d.webp" type="image/webp">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="img/06-d.png" title="" alt="...">
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">Лучшие в металлургии</h5>
@@ -139,10 +158,11 @@
                 </div>
                 <a href="/" class="card">
                     <picture class="card-img">
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="" type="image/webp">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/07-d.webp" type="image/webp">
                         <!--[if IE 9]></video><![endif]-->
-                        <img src="..."   title="" alt="...">
+                        <img src="img/07-d.png" title="" alt="...">
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">Лучшие в металлургии</h5>
@@ -159,10 +179,11 @@
                 </div>
                 <a href="/" class="card">
                     <picture class="card-img">
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="" type="image/webp">
+                        <!--[if IE 9]>
+                        <video style="display: none;"><![endif]-->
+                        <source srcset="img/08-d.webp" type="image/webp">
                         <!--[if IE 9]></video><![endif]-->
-                        <img src="..."   title="" alt="...">
+                        <img src="img/08-d.png" title="" alt="...">
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">Лучшие в металлургии</h5>

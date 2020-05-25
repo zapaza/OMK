@@ -2,13 +2,15 @@
 {% block content %}
 <div class="wrapper">
     <div class="row">
-        {% include 'breadcrumbs/breadcrumbs.html' %}
+        <div class="col-12">
+            {% include 'breadcrumbs/breadcrumbs.html' %}
+        </div>
     </div>
     <div class="row main-header">
-        <h1>Производственная система</h1>
-        <div class="row">
-            <p class="col-md-10">У нас крутая производственная система с еженедельными обходами и лучшими практиками. Смотрите сами!</p>
+        <div class="col-12">
+           <h1>Производственная система</h1>
         </div>
+        <p class="col-md-10">У нас крутая производственная система с еженедельными обходами и лучшими практиками. Смотрите сами!</p>
     </div>
 
     <section class="detours">
@@ -162,9 +164,11 @@
 
     <section class="practices">
         <div class="row header-block">
-            <h2>Лучшие практики</h2>
-            <div class="header-block__btn">
-                <a href=#0" class="btn">Смотреть все <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+            <div class="col-12">
+                <h2>Лучшие практики</h2>
+                <div class="header-block__btn">
+                    <a href=#0" class="btn">Смотреть все <i class="btn__icon btn__icon--right btn__icon--arrow-right"></i></a>
+                </div>
             </div>
         </div>
 
@@ -307,140 +311,62 @@
         </div>
 
         <div class="row">
-            <div class="col-12 practices__widget">
-                <div class="practices__widget-header">
-                    <h3>Для формирования базы практик добавьте фото ваших подразделений</h3>
-                    <h4>Самые образцовые получат памятные призы</h4>
+            <div class="col-12 ">
+                <div class="practices__widget">
+                    <div class="practices__widget-header">
+                        <h3>Для формирования базы практик добавьте фото ваших подразделений</h3>
+                        <h4>Самые образцовые получат памятные призы</h4>
+                    </div>
+                    <button class="btn btn--danger"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить фото</button>
                 </div>
-                <button class="btn btn--danger"><i class="btn__icon btn__icon--left btn__icon--plus"></i>Добавить фото</button>
             </div>
         </div>
     </section>
 
-    <section class="news">
-        <div class="row header-block">
-            <h2>Новости</h2>
-        </div>
-        <div class="row news__row">
-            <!--        первая большая новость-->
-            <div class="col-12">
-                <a href="/" class="card card--main">
-                    <picture class="card-img">
+    <section class="ps-links">
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="#" class="ps-links__item">
+                    <picture class="ps-links__item-img">
                         <!--[if IE 9]>
                         <video style="display: none;"><![endif]-->
                         <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
                         <!--[if IE 9]></video><![endif]-->
-                        <img src="img/1360x695_Toyota_2020.jpg"   title="Лучшие в металлургии"
+                        <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
                              alt="Лучшие в металлургии">
                     </picture>
-                    <div class="card-body">
-                        <div class="card-tags"><span class="badge">ВМЗ</span></div>
-                        <h5 class="card-title">Лучшие в металлургии</h5>
-                        <p class="card-text">Производственная система сразу трех заводов ОМК удостоена медалей
-                            Toyota</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-date">10 фев 2019</div>
-                        <div class="card-like"><i class="icon icon--like-white"></i>0</div>
-                        <div class="card-comment"><i class="icon icon--comment-white"></i>23</div>
-                    </div>
+                    <div class="ps-links__item-name">Методология</div>
                 </a>
             </div>
-            <!--        первая большая новость конец-->
-        </div>
-        <div class="row news__row">
-            <div class="col-md-4">
-                <a href="/" class="card">
-                    <picture class="card-img">
+            <div class="col-lg-4">
+                <a href="#" class="ps-links__item">
+                    <picture class="ps-links__item-img">
                         <!--[if IE 9]>
                         <video style="display: none;"><![endif]-->
-                        <source srcset="img/ot.webp" type="image/webp">
+                        <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
                         <!--[if IE 9]></video><![endif]-->
-                        <img src="img/ot.jpg"
-                             title="Альметьевский трубный завод пополнил товарную линейку оцинкованными трубами"
-                             alt="Альметьевский трубный завод пополнил товарную линейку оцинкованными трубами">
+                        <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                             alt="Лучшие в металлургии">
                     </picture>
-                    <div class="card-body">
-                        <div class="card-tags">
-                            <span class="badge">ВМЗ</span>
-                            <span class="badge badge--gallery">Галерея</span>
-                        </div>
-                        <h5 class="card-title">Альметьевский трубный завод пополнил товарную линейку оцинкованными
-                            трубами</h5>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-date">10 фев</div>
-                        <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
-                        <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
-                    </div>
+                    <div class="ps-links__item-name">Проекты</div>
                 </a>
             </div>
-            <div class="col-md-4">
-                <a href="/" class="card">
-                    <picture class="card-img">
+            <div class="col-lg-4">
+                <a href="#" class="ps-links__item">
+                    <picture class="ps-links__item-img">
                         <!--[if IE 9]>
                         <video style="display: none;"><![endif]-->
-                        <source srcset="img/AA5J6740.webp" type="image/webp">
+                        <source srcset="img/1360x695_Toyota_2020.webp" type="image/webp">
                         <!--[if IE 9]></video><![endif]-->
-                        <img src="img/AA5J6740.jpg"
-                             title="ОМК начала поставки рессор для обновленных автомобилей Ford Transit"
-                             alt="ОМК начала поставки рессор для обновленных автомобилей Ford Transit">
+                        <img src="img/1360x695_Toyota_2020.jpg" title="Лучшие в металлургии"
+                             alt="Лучшие в металлургии">
                     </picture>
-                    <div class="card-body">
-                        <div class="card-tags">
-                            <span class="badge">ВМЗ</span>
-                            <span class="badge badge--gallery">Галерея <span class="badge__count">7 фото</span></span>
-                            <span class="badge">ВМЗ</span>
-                            <span class="badge">Белэнергомаш</span>
-                            <span class="badge">ЧМЗ</span>
-                            <span class="badge">АТЗ</span>
-                            <span class="badge badge--video">Видео</span>
-                        </div>
-                        <h5 class="card-title">ОМК начала поставки рессор для обновленных автомобилей Ford Transit</h5>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-date">10 фев</div>
-                        <div class="card-like"><i class="icon icon--like-gray"></i>0</div>
-                        <div class="card-comment"><i class="icon icon--comment-gray"></i>23</div>
-                    </div>
+                    <div class="ps-links__item-name">Рейтинг развития</div>
                 </a>
             </div>
-            <div class="col-md-4">
-                <a href="/" class="card card--image">
-                    <picture class="card-img">
-                        <!--[if IE 9]>
-                        <video style="display: none;"><![endif]-->
-                        <source srcset="img/IMG_9962_4k.webp" type="image/webp">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img src="img/IMG_9962_4k.jpg"
-                             title="Производственный травматизм в 2019 году на предприятиях ОМК снизился на 43%"
-                             alt="Производственный травматизм в 2019 году на предприятиях ОМК снизился на 43%">
-                    </picture>
-                    <div class="card-body">
-                        <div class="card-tags">
-                            <span class="badge">ВМЗ</span>
-                            <span class="badge badge--video">Видео</span>
-                            <span class="badge">ВМЗ</span>
-                            <span class="badge">Белэнергомаш</span>
-                            <span class="badge">ЧМЗ</span>
-                            <span class="badge">АТЗ</span>
-                            <span class="badge badge--video">Видео</span>
-                        </div>
-                        <h5 class="card-title">Производственный травматизм в 2019 году на предприятиях ОМК снизился на
-                            43%</h5>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-date">10 фев</div>
-                        <div class="card-like"><i class="icon icon--like-white"></i>0</div>
-                        <div class="card-comment"><i class="icon icon--comment-white"></i>23</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row news__row">
-            <a href="#0" class="btn btn--dark">Показать еще</a>
         </div>
     </section>
+
 
 
 
