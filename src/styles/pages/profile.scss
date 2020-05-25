@@ -374,6 +374,12 @@
             margin-top: 16px;
             font-size: 1rem;
             line-height: 1.5;
+            &.short-text {
+                display: block;
+            }
+            &.full-text {
+                display: none;
+            }
         }
 
         &__more {

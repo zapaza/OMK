@@ -316,9 +316,18 @@
     width: 100%;
     height: 100%;
 
+    @media (max-width: $media-sm) {
+        .tmb-wrap {
+            pointer-events: none;
+        }
+    }
+
     &:hover {
         .tmb-wrap-table div {
             opacity: 1;
+            @media (max-width: $media-sm) {
+                opacity: 0;
+            }
         }
     }
 

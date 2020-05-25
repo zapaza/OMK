@@ -338,3 +338,11 @@ function resetResultsFiltersForm() {
 $('.js-results-nav-form').on('reset', function () {
     resetResultsFiltersForm();
 });
+
+
+$('body').on('click', '.profile-biography__more', function (e) {
+    e.preventDefault();
+    $(this).parent().find('.short-text').hide();
+    $(this).parent().find('.full-text').show();
+    $(this).hide();
+})
