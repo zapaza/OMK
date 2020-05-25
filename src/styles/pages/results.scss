@@ -740,10 +740,10 @@
 
                 &__clear {
                     top: 2px;
-                    @media (max-width: 520px)   {
+                    @media (max-width: 520px) {
                         top: 50%;
+                        right: 16px;
                         transform: translateY(-50%);
-                        right: 16px ;
                     }
                 }
 

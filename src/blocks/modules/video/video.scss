@@ -28,7 +28,6 @@
         }
 
         &:before {
-            @include transition();
             pointer-events: none;
             content: '';
             position: absolute;

@@ -61,7 +61,7 @@
 
     .swiper-pagination {
         position: absolute;
-        z-index: 3;
+        z-index: 99;
         top: 16px;
         left: 16px;
         width: 48px;
@@ -91,6 +91,12 @@
             border-radius: 5px;
             overflow: hidden;
 
+            .video {
+                @media (max-width: $media-lg) {
+                    width: 100%;
+                }
+            }
+
             &::before {
                 @include transition();
                 content: '';
@@ -102,6 +108,25 @@
                 height: 80px;
                 background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
                 opacity: 0;
+            }
+        }
+
+        .video {
+            &__body {
+                box-sizing: border-box;
+                display: block;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                padding-bottom: 66.3%;
+                border-bottom: 0;
+                background-color: #1a1a1a;
+            }
+            &__preview {
+                @include object-fit(cover, center);
+                position: absolute;
+                width: 100%;
+                height: 100%;
             }
         }
 
@@ -125,26 +150,6 @@
                 transform: translate(-50%, -50%);
             }
         }
-
-        .video{
-            &__body {
-                box-sizing: border-box;
-                display: block;
-                position: relative;
-                width: 100%;
-                overflow: hidden;
-                padding-bottom: 66.3%;
-                border-bottom: 0;
-                background-color: #1a1a1a;
-            }
-            &__preview {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                @include object-fit(cover, center);
-            }
-        }
-
     }
 
     &__nav {
@@ -191,29 +196,7 @@
                 }
             }
         }
-
-        &-img {
-            box-sizing: border-box;
-            display: block;
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding-bottom: 66.3%;
-            background-color: $text-silver;
-
-            img {
-                @include object-fit(cover, center);
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 100%;
-                height: 100%;
-                margin: auto;
-                transform: translate(-50%, -50%);
-            }
-        }
-        .video{
+        .video {
             &__preview {
                 box-sizing: border-box;
                 display: block;
@@ -237,6 +220,28 @@
                     margin: auto;
                     transform: translate(-50%, -50%);
                 }
+            }
+        }
+
+        &-img {
+            box-sizing: border-box;
+            display: block;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-bottom: 66.3%;
+            background-color: $text-silver;
+
+            img {
+                @include object-fit(cover, center);
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                transform: translate(-50%, -50%);
             }
         }
     }

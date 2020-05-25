@@ -6,6 +6,35 @@
         margin-bottom: 16px;
     }
 
+    .swiper {
+
+        &-wrapper {
+            align-items: stretch;
+        }
+        &-slide {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 5px;
+
+            .video__preview {
+                display: block !important;
+                position: relative;
+            }
+        }
+
+        &-button {
+            &-prev {
+                left: -24px;
+            }
+
+            &-next {
+                right: -24px;
+            }
+        }
+    }
+
     &-slider {
         width: 100%;
     }
@@ -20,13 +49,51 @@
                     transform: translateY(-50%);
                 }
 
-                &__main{
+                &__main {
+
                     & > .swiper-wrapper {
-                        .swiper-slide{
-                            margin-bottom: 96px;
+                        .swiper-slide {
+                            margin-bottom: 82px;
+                            @media (max-width: $media-sm) {
+                                margin-bottom: 0;
+                            }
+                            .video {
+                                margin-bottom: 0;
+                                &__body {
+                                    margin-bottom: 0;
+                                }
+                                &__preview {
+                                    box-sizing: border-box;
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    overflow: hidden;
+                                    padding-bottom: 66.3%;
+                                    background-color: $text-silver;
+                                    img {
+                                        @include object-fit(cover, center);
+                                        display: block;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        width: 100%;
+                                        height: 100%;
+                                        margin: auto;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            }
+
+                            img {
+                                @include object-fit(contain, center);
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
                     }
-
                 }
 
                 &__nav {
@@ -34,10 +101,22 @@
                     bottom: 0;
 
                     .swiper-slide {
+                        &:before {
+                            z-index: 22;
+                        }
+
+                        .video__preview {
+                            display: block !important;
+
+                            &:before {
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
                         img {
+                            @include object-fit(cover, center);
                             width: 100%;
                             height: 100%;
-                            @include object-fit(cover, center)
                         }
                     }
                 }
@@ -65,25 +144,12 @@
                         transform: translate(-50%, -50%);
                     }
                 }
-            }
-        }
-    }
-
-    .swiper {
-        &-slide {
-            width: auto;
-            max-width: 100%;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-
-        &-button {
-            &-prev {
-                left: -24px;
-            }
-
-            &-next {
-                right: -24px;
+                & > picture {
+                    @media (max-width: $media-sm) {
+                        margin-bottom: 0;
+                        margin-top: 64px;
+                    }
+                }
             }
         }
     }

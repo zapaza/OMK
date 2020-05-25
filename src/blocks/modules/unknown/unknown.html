@@ -13,8 +13,10 @@
                     </div>
                     <div class="swiper-slide">
                         <a href="#0" class="js-unknown-slide">
-                            <picture>
+                            <picture class="video__preview">
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
                                 <source srcset="img/unknown-1-1.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
                                 <img src="img/unknown-1-1.jpg" alt="image_alt">
                             </picture>
                         </a>
@@ -70,8 +72,10 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a href="#0" class="js-unknown-slide">
-                            <picture>
+                            <picture class="video__preview">
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
                                 <source srcset="img/unknown-2-1.webp" type="image/webp">
+                                <!--[if IE 9]></video><![endif]-->
                                 <img src="img/unknown-2-1.jpg" alt="image_alt">
                             </picture>
                         </a>
@@ -201,7 +205,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a href="#0" class="js-unknown-slide">
-                            <picture>
+                            <picture class="video__preview">
                                 <source srcset="img/img-6-col.webp" type="image/webp">
                                 <img src="img/img-6-col.png" alt="image_alt">
                             </picture>
@@ -286,10 +290,23 @@
                                 </picture>
                             </div>
                             <div class="swiper-slide">
-                                <picture>
-                                    <source srcset="img/unknown-2-1.webp" type="image/webp">
-                                    <img src="img/unknown-2-1.jpg" alt="image_alt">
-                                </picture>
+                                <div class="video">
+                                    <div class="video__body">
+                                        <picture class="video__preview">
+                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                            <source srcset="img/AA5J7433.webp" type="image/webp">
+                                            <!--[if IE 9]></video><![endif]-->
+                                            <img src="img/AA5J7433.jpg"   title="" alt="">
+                                        </picture>
+                                        <video class="video__player" controls preload="auto">
+                                            <source src="https://timflach.com/wp-content/uploads/2014/02/SELECT_04_cut.mp4" type="video/mp4">
+                                            <!--                                        для лучшей поддержки набо еще подгружать второй сорс в видео в формате webm-->
+                                            <source src="https://timflach.com/wp-content/uploads/2014/02/SELECT_04_cut.webmhd.webm" type="video/webm">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <div class="video__time"></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="swiper-slide">
                                 <picture>
@@ -331,9 +348,11 @@
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
-                                    <picture>
-                                        <source srcset="img/unknown-2-1.webp" type="image/webp">
-                                        <img src="img/unknown-2-1.jpg" alt="image_alt">
+                                    <picture class="video__preview">
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="img/unknown-1-1.webp" type="image/webp">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img src="img/unknown-1-1.jpg" alt="image_alt">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
@@ -371,6 +390,7 @@
                     </div>
                     <div class="swiper-button swiper-button-prev js-unknown-modal-prev"></div>
                     <div class="swiper-button swiper-button-next js-unknown-modal-next"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
                 {% include 'comments/comments.html' %}
             </div>

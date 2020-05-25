@@ -11,10 +11,7 @@
     }
 
     .results-nav__selects {
-        .selects {
-            justify-content: flex-start;
-        }
-        @media (max-width: 520px){
+        @media (max-width: 520px) {
             .bottom .buttons {
                 margin-top: 24px;
 
@@ -23,6 +20,9 @@
                     padding-bottom: 18px;
                 }
             }
+        }
+        .selects {
+            justify-content: flex-start;
         }
     }
 
@@ -33,7 +33,6 @@
                 margin-right: 0;
             }
         }
-
     }
 
 

@@ -1,41 +1,40 @@
-.modal-content__ads{
-	padding: 24px 32px 0;
+.modal-content__ads {
+    padding: 24px 32px 0;
 
-	&-header{
-		display: flex;
-		align-items: flex-start;
-		margin-bottom: 16px;
-		.title {
-			flex: 1 1 auto;
-			font-size: rem(20);
-			font-weight: $font-weight-bold;
-			line-height: 1.2;
-			color: $text-black;
+    &-header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        .title {
+            flex: 1 1 auto;
+            font-size: rem(20);
+            font-weight: $font-weight-bold;
+            line-height: 1.2;
+            color: $text-black;
+        }
 
-		}
+        .price {
+            flex: 0 0 auto;
+            width: 176px;
+            text-align: right;
+            font-size: rem(20);
+            line-height: 1.2;
+        }
+    }
+    .ads-user__info {
+        margin-bottom: 8px;
+    }
 
-		.price {
-			width: 176px;
-			flex: 0 0 auto;
-			text-align: right;
-			font-size: rem(20);
-			line-height: 1.2;
-		}
-	}
-	.ads-user__info{
-		margin-bottom: 8px;
-	}
-
-	.desc {
-		font-size: rem(16);
-		line-height: 1.5;
-		color: $text-black;
-	}
+    .desc {
+        font-size: rem(16);
+        line-height: 1.5;
+        color: $text-black;
+    }
 }
 .modal-gallery--ads .modal-content .thumbs-slider__nav {
-	.swiper-slide-thumb-active{
-		&:before {
-			border-color: $white;
-		}
-	}
+    .swiper-slide-thumb-active {
+        &:before {
+            border-color: $white;
+        }
+    }
 }

@@ -1,6 +1,14 @@
 .modal-content {
+
+    .video {
+        background-color: #1a1a1a;
+    }
     &__video {
-        padding:0;
+        padding: 0;
+        @media (max-width: $media-sm) {
+            margin-bottom: 0;
+            margin-top: 64px;
+        }
         .inner {
             position: relative;
             width: 100%;
@@ -8,13 +16,11 @@
             padding-bottom: 56.25%;
         }
 
-        & + .thumbs-slider__description{
+        & + .thumbs-slider__description {
             position: relative;
             padding: 24px 32px;
             margin-bottom: 24px;
             border-bottom: 1px solid $border-10;
         }
     }
-
-
 }

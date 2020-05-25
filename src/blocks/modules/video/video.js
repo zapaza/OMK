@@ -36,18 +36,11 @@ function stopAllVideos() {
     }
 }
 
-$(document).on('click', '.video:not(.no-video) .video__preview', function () {
+$(document).on('click', '.js-video-gallery .video:not(.no-video) .video__preview', function () {
     console.log('click');
     let video = $(this).closest('.js-video__body').find('.js-video__player').html();
     $('.js-video-container--modal').html(video);
     $('#video_popup').modal('show');
-
-    // let $this = $(this),
-    //     $thisVideo = $this.closest('.video').find('.video__player');
-    // stopAllVideos();
-    // $(this).parent().find('.video__preview').fadeOut();
-    // $(this).parent().find('.video__time').fadeOut();
-    // $thisVideo.trigger('play');
 });
 
 $('#video_popup').on('shown.bs.modal', function (e) {

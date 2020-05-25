@@ -33,17 +33,49 @@ $(document).ready(function () {
 });
 var unknownModalSlider,
     unknownActiveSlide;
-$('body').on('click', '.js-unknown-slide', function () {
+$('body').on('click', '.js-unknown-slide', function (e) {
+    e.preventDefault();
     $('#unknown_popup').modal('show');
-    unknownActiveSlide = $(this).closest('.js-unknown')[0].swiper.realIndex;
+    // unknownActiveSlide = $(this).closest('.js-unknown')[0].swiper.realIndex;
+    unknownActiveSlide = $(this).parents().index();
     console.log( unknownActiveSlide);
 })
+function stopAllVideos() {
+    let $this = $('.video'),
+        videoLength = $this.length;
+    for (i = 0; i < videoLength; i++) {
 
+        let thisFrame = $this.eq(i).find('.video__player');
+
+        thisFrame.pause;
+        $this.eq(i).find('.video__preview').stop().fadeIn(300);
+        $this.eq(i).find('.video__time').stop().fadeIn(300);
+
+    }
+}
+function playVidioInSlider(){
+    if ($('video').length > 0){
+        $('body').on('click', '.thumbs-slider  .video__preview', function () {
+            let $this = $(this),
+                $thisVideo = $this.closest('.video').find('.video__player');
+            stopAllVideos();
+            $this.parent().find('.video__preview').stop().fadeOut();
+            $this.parent().find('.video__time').stop().fadeOut();
+            $thisVideo.trigger('play');
+        })
+
+    }
+}
 $('#unknown_popup').on('shown.bs.modal', function () {
     console.log('shown');
+    let paginationSlider = $('.js-unknown-modal-slider').find('.swiper-pagination');
     unknownModalSlider = new Swiper('.js-unknown-modal-slider', {
         slidesPerView: 1,
         initialSlide: unknownActiveSlide,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
         navigation: {
             prevEl: '.js-unknown-modal-prev',
             nextEl: '.js-unknown-modal-next'
@@ -55,6 +87,11 @@ $('#unknown_popup').on('shown.bs.modal', function () {
                 spaceBetween: 8,
                 initialSlide: unknownActiveSlide,
             }
-        },
-    })
+        }
+    });
+    stopAllVideos();
+    playVidioInSlider();
+});
+$('#unknown_popup').on('hidden.bs.modal', function (e) {
+    stopAllVideos();
 });

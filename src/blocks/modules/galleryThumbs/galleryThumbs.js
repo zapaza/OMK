@@ -66,13 +66,12 @@ $('.article .js-thumbs-slider__main').hover(function () {
 })
 function playVidioInSlider(){
     if ($('video').length > 0){
-        console.log('initvidep');
-        $('body').on('click', '.video__preview', function () {
+        $('body').on('click', '.thumbs-slider  .video__preview', function () {
             let $this = $(this),
                 $thisVideo = $this.closest('.video').find('.video__player');
             stopAllVideos();
-            $this.parent().find('.video__preview').fadeOut();
-            $this.parent().find('.video__time').fadeOut();
+            $this.parent().find('.video__preview').stop().fadeOut();
+            $this.parent().find('.video__time').stop().fadeOut();
             $thisVideo.trigger('play');
         })
 
@@ -179,8 +178,8 @@ function stopAllVideos() {
         let thisFrame = $this.eq(i).find('.video__player');
 
         thisFrame.pause;
-        $this.eq(i).find('.video__preview').fadeIn(300);
-        $this.eq(i).find('.video__time').fadeIn(300);
+        $this.eq(i).find('.video__preview').stop().fadeIn(300);
+        $this.eq(i).find('.video__time').stop().fadeIn(300);
 
     }
 }
@@ -192,7 +191,7 @@ $('#gallery_popup').on('shown.bs.modal', function (e) {
     setSlidersModalButtonsPositionTop();
     stopAllVideos();
     playVidioInSlider();
-
-
-
+});
+$('#gallery_popup').on('hidden.bs.modal', function (e) {
+    stopAllVideos();
 });
