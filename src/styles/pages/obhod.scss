@@ -8,4 +8,558 @@
     .detours-card {
         margin-bottom: 31px;
     }
+
+    .news__row {
+        margin-bottom: 40px;
+
+        .results-nav__select {
+            margin-right: 16px;
+        }
+    }
+}
+
+.detours-detail {
+
+    .people {
+        display: flex;
+        align-items: flex-start;
+        max-width: 296px;
+        margin-bottom: 32px;
+        &:hover {
+            text-decoration: none;
+            .content .name {
+                color: $coral;
+            }
+        }
+
+        .avatar {
+            flex: 0 0 auto;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            margin-right: 16px;
+            border-radius: 100%;
+            img {
+                @include object-fit(cover, center);
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .content {
+            flex: 1 1 auto;
+            .name {
+                margin-bottom: 4px;
+                font-size: rem(16);
+                font-weight: $font-weight-bold;
+                line-height: 1.25;
+                color: $text-black;
+            }
+            .desc {
+                font-size: rem(14);
+                line-height: 1.14;
+                color: $text-silver;
+            }
+        }
+    }
+
+    .header-block {
+        align-items: flex-start;
+        margin-bottom: 32px;
+
+        .detours__mark {
+            margin-left: auto;
+            margin-right: 0;
+
+            &--disgusting {
+                .detours__mark-border {
+                    stroke: $silver-dark;
+                }
+                .detours__mark-text {
+                    fill: $silver-dark;
+                }
+                .detours__mark-star {
+                    &:first-of-type {
+                        polygon {
+                            fill: $silver-dark;
+                        }
+                    }
+                }
+            }
+            &--satisfactorily {
+                .detours__mark-border {
+                    stroke: $coral;
+                }
+                .detours__mark-text {
+                    fill: $coral;
+                }
+                .detours__mark-star {
+                    &:nth-of-type(1), &:nth-of-type(2) {
+                        polygon {
+                            fill: $coral;
+                        }
+                    }
+                }
+            }
+            &--enough {
+                .detours__mark-border {
+                    stroke: #f5a631;
+                }
+                .detours__mark-text {
+                    fill: #f5a631;
+                }
+                .detours__mark-star {
+                    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
+                        polygon {
+                            fill: #f5a631;
+                        }
+                    }
+                }
+            }
+            &--well {
+                .detours__mark-border {
+                    stroke: $green;
+                }
+                .detours__mark-text {
+                    fill: $green;
+                }
+                .detours__mark-star {
+                    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+                        polygon {
+                            fill: $green;
+                        }
+                    }
+                }
+            }
+            &--perfectly {
+                .detours__mark-border {
+                    stroke: $green;
+                    fill: $green;
+                }
+                .detours__mark-text {
+                    fill: $white;
+                }
+                .detours__mark-star {
+
+                    polygon {
+                        fill: $white;
+                    }
+                }
+            }
+
+            &-text {
+                font-size: rem(14);
+                font-family: $font-family-base;
+                font-weight: $font-weight-bold;
+                line-height: 1.43;
+            }
+        }
+
+        .detours-card__mark-item {
+            width: 24px;
+            height: 24px;
+            .icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        h1 {
+            font-size: rem(40);
+            line-height: 1.2;
+        }
+    }
+
+    .article__header-info {
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 32px;
+
+        &-item {
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .detours-title {
+        font-size: rem(24);
+        line-height: 1.33;
+        margin-bottom: 16px;
+    }
+
+    .detours-responsible {
+        margin-bottom: 48px;
+
+        .people {
+            max-width: 296px;
+
+            .avatar {
+                width: 96px;
+                height: 96px;
+            }
+            .content {
+                padding-top: 8px;
+            }
+        }
+    }
+
+    .detours-current {
+        margin-bottom: 48px;
+        .detours-title {
+            margin-bottom: 8px;
+        }
+        &__mark {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+
+            .rating {
+                flex-shrink: 0;
+                width: 32px;
+                height: 32px;
+                margin-right: 16px;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .text {
+                font-size: rem(16);
+                line-height: 1.5;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+
+    .detours-previous {
+        .detours-title {
+            margin-bottom: 8px;
+        }
+
+        &__item {
+            max-width: 256px;
+            &:last-of-type {
+                .detours-previous__link {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 11px 0 16px;
+            border-bottom: 1px solid $border-10;
+            font-size: rem(16);
+            line-height: 1.25;
+            color: $text-black;
+            &:hover {
+                text-decoration: none;
+                .text {
+                    color: $coral;
+                }
+            }
+
+            .text {
+                flex-shrink: 0;
+                max-width: 128px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .rating {
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+                justify-content: flex-end;
+
+                &__item {
+                    width: 16px;
+                    height: 16px;
+                    svg {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &--perfectly {
+                    polygon {
+                        fill: $green;
+                    }
+                }
+
+                &--well {
+                    .rating__item:not(:last-of-type) {
+                        polygon {
+                            fill: $green;
+                        }
+                    }
+                }
+                &--enough {
+                    .rating__item {
+                        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
+                            polygon {
+                                fill: #f5a631;
+                            }
+                        }
+                    }
+                }
+                &--satisfactorily {
+                    .rating__item {
+                        &:nth-of-type(1), &:nth-of-type(2) {
+                            polygon {
+                                fill: $coral;
+                            }
+                        }
+                    }
+                }
+                &--disgusting {
+                    .rating__item {
+                        &:nth-of-type(1) {
+                            polygon {
+                                fill: $silver-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+
+    .detours-analysis {
+
+        &__list {
+            margin: 0 0 64px;
+            padding: 16px 24px 24px 20px;
+            border-radius: 5px;
+
+            .detours-title {
+                font-size: rem(16);
+                line-height: 1.25;
+                margin-bottom: 16px;
+            }
+            &--success {
+                background-color: rgba(34, 214, 106, 0.1);
+
+                .detours-analysis__item {
+                    &:before {
+                        background-image: url(../img/detours-plus.svg);
+                    }
+                }
+            }
+            &--danger {
+                background-color: rgba(246, 81, 69, 0.1);
+
+                .detours-analysis__item {
+                    &:before {
+                        background-image: url(../img/detours-minus.svg);
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &__item {
+            position: relative;
+            margin-bottom: 16px;
+            padding-left: 28px;
+            font-size: rem(16);
+            line-height: 1.25;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__intro {
+        display: flex;
+        border: solid 1px $border-10;
+        border-radius: 5px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        margin-bottom: 48px;
+
+        .detours-review__item {
+            padding: 0;
+            .people {
+                align-items: center;
+                max-width: 288px;
+                margin-bottom: 24px;
+                .avatar {
+                    width: 96px;
+                    height: 96px;
+                }
+            }
+        }
+        .detours-review__text {
+            max-width: none;
+            font-size: rem(20);
+            line-height: 1.6;
+            padding-left: 0;
+            p {
+                margin-bottom: 24px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__main {
+        hr {
+            color: $border-10;
+            margin-bottom: 32px;
+        }
+    }
+
+    &--director {
+        .detours-detail__main {
+            margin-bottom: 56px;
+            hr {
+                display: none;
+            }
+        }
+    }
+
+    &--manager {
+        .article__header-info {
+            padding-bottom: 16px;
+            border-bottom: 1px solid $border-10;
+        }
+        .detours-detail__main {
+            margin-bottom: 56px;
+            hr {
+                margin-top: 48px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+
+.detours-review {
+
+    &__list {
+
+        .detours-title {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 24px 0;
+        .people {
+            margin-bottom: 8px;
+        }
+        .rating {
+            position: absolute;
+            top: 24px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__text {
+        font-size: rem(16);
+        line-height: 1.5;
+        padding-left: 56px;
+        max-width: 640px;
+        p {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.detours--slider {
+    background-color: $silver-light;
+    margin-bottom: 0;
+    padding: 40px 0 72px;
+
+    .header-block {
+        margin-bottom: 31px;
+        h2 {
+            font-size: rem(32);
+            line-height: 1.25;
+        }
+    }
+}
+.detours-month {
+    &__list {
+        margin-bottom: 48px;
+        .title {
+            margin-bottom: 16px;
+            display: block;
+            font-size: 20px;
+            font-weight: $font-weight-bold;
+            line-height: 1.2;
+            color: $text-black;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+
+    &__item {
+        margin-bottom: 16px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        font-size: rem(16);
+        line-height: 1.25;
+        color: #1a1a1a;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

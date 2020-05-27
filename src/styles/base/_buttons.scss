@@ -1,13 +1,13 @@
 .btn {
     @include transition();
+    display: inline-block;
     min-width: 104px;
-    text-align: center;
     border: none;
     padding: rem(12) rem(16) rem(16);
+    text-align: center;
     border-radius: 5px;
     font-size: rem(16);
     line-height: 1.25;
-    display: inline-block;
 
     &:active {
         transform: scale(.96);
@@ -85,14 +85,14 @@
         }
     }
     &--secondary {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
         border: solid 1px $border-10;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
         background-color: $white;
         font-weight: 400;
         color: #00000a;
         &:disabled {
-            background-color: $silver-dark;
             border: solid 1px $silver-dark;
+            background-color: $silver-dark;
             color: fade-out(#00000a, .2);
             i {
                 opacity: .2;
