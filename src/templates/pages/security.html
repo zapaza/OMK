@@ -2,10 +2,16 @@
 {% block content %}
 <div class="wrapper">
     <div class="row">
-        {% include 'breadcrumbs/breadcrumbs.html' %}
+        <div class="col-12">
+            {% include 'breadcrumbs/breadcrumbs.html' %}
+        </div>
+
     </div>
     <div class="row main-header">
-        <h1>Безопасность</h1>
+        <div class="col-12">
+            <h1>Безопасность</h1>
+        </div>
+
     </div>
     <section class="practices">
         <div class="row news__row">
@@ -325,8 +331,8 @@
             </div>
         </div>
 
-        <div class="row">
-            {% include 'pagination/pagination.html' %}
+        <div class="row news__row">
+            <a href="#0" class="btn btn--dark">Показать еще</a>
         </div>
     </section>
 </div>
