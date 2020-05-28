@@ -1,0 +1,6 @@
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Group">
+        <rect id="Rectangle" x="0" y="0" fill="none" width="16" height="16"></rect>
+        <polygon id="Star" fill="#F2F2F4" points="8 11.54 3.29771798 14.972136 5.10878819 9.43941166 0.39154787 6.02786405 6.21313283 6.04058834 8 0.5 9.78686717 6.04058834 15.6084521 6.02786405 10.8912118 9.43941166 12.702282 14.972136"></polygon>
+    </g>
+</svg>

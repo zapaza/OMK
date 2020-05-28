@@ -78,6 +78,7 @@
                 }
                 .detours__mark-text {
                     fill: $silver-dark;
+                    margin-top: 1px;
                 }
                 .detours__mark-star {
                     &:first-of-type {
@@ -487,7 +488,7 @@
         position: relative;
         padding: 24px 0;
         .people {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         .rating {
             position: absolute;
@@ -508,6 +509,9 @@
         line-height: 1.5;
         padding-left: 56px;
         max-width: 640px;
+        @media (max-width: $media-xl){
+            max-width: none;
+        }
         p {
             &:last-of-type {
                 margin-bottom: 0;

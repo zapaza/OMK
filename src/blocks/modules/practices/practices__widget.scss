@@ -4,6 +4,10 @@
     border-radius: 5px;
     background-color: #3d3d4d;
     margin-bottom: 48px;
+    @media (max-width: $media-lg){
+        padding: 20px;
+        margin-bottom: 40px;
+    }
 
     &:after {
         content: '';
@@ -15,35 +19,111 @@
         background-image: url(../img/practices__widget-bg.svg);
         background-repeat: no-repeat;
         background-position: center center;
+        @media (max-width: $media-lg){
+            display: none;
+        }
     }
 
     &-header {
         width: percentage(10/12);
-
-
+        @media (max-width: $media-lg){
+            width: 100%;
+        }
         h3 {
             font-size: rem(24);
             font-weight: $font-weight-bold;
             line-height: 1.33;
             color: $white;
             margin-bottom: 4px;
+            @media (max-width: $media-xl){
+                font-size: rem(20);
+                line-height: 1.2;
+            }
+            @media (max-width: $media-lg){
+                font-size: rem(16);
+                line-height: 1.25;
+                margin-bottom: 8px;
+            }
         }
         h4 {
             font-size: rem(24);
             font-weight: $font-weight-bold;
             line-height: 1.33;
             color: $text-silver;
+            @media (max-width: $media-xl){
+                font-size: rem(20);
+                line-height: 1.2;
+            }
+            @media (max-width: $media-lg){
+                font-size: rem(16);
+                line-height: 1.25;
+            }
         }
     }
     .btn {
         margin-top: 20px;
         padding-top: 12px;
         padding-bottom: 12px;
+        @media (max-width: $media-lg){
+            margin-bottom: 16px;
+        }
     }
 }
 
 .practices {
+
+    .main-header{
+        @media (max-width: $media-lg){
+            margin-bottom: 32px;
+            h1{
+                font-size: rem(32);
+                line-height: 1.25;
+            }
+        }
+    }
+
+    .header-block {
+        h2{
+            font-size: rem(24);
+            line-height: 1.33;
+        }
+        @media (max-width: $media-lg){
+            margin-bottom: 24px;
+        }
+
+    }
     .card {
         margin-bottom: 48px;
+        @media (max-width: $media-lg){
+            margin-bottom: 24px;
+
+            &-img {
+                width: 100%;
+                max-height: none;
+                border-radius: 0 0 5px 5px;
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    @include object-fit(contain, center);
+                }
+            }
+
+            &-body {
+                padding: 8px 0 0;
+                border: none;
+                margin-bottom: 4px;
+
+
+                .card-title{
+                    font-size: rem(16);
+                    line-height: 1.25;
+                }
+            }
+            &-footer{
+                padding: 0 0;
+                border: none;
+            }
+        }
     }
 }

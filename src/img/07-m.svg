@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="183px" height="183px" viewBox="0 0 183 183" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>0D848C1B-A9DF-4ACF-942C-1EE2AFC21F37</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="183" height="183"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="graphics-PS_Practice_Cat" transform="translate(-528.000000, -1376.000000)">
+            <g id="07m" transform="translate(528.000000, 1376.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#1A1A1A" xlink:href="#path-1"></use>
+                <rect id="Rectangle" fill="#909099" mask="url(#mask-2)" x="12" y="12" width="48" height="8" rx="4"></rect>
+                <rect id="Rectangle" fill="#909099" mask="url(#mask-2)" x="12" y="24" width="32" height="8" rx="4"></rect>
+                <circle id="Oval" fill="#FFFFFF" mask="url(#mask-2)" cx="92" cy="92" r="36"></circle>
+                <path d="M85.5547002,77.0364668 L106.751925,91.1679497 C107.211453,91.4743022 107.335627,92.0951715 107.029275,92.5547002 C106.95604,92.6645525 106.861777,92.7588154 106.751925,92.8320503 L85.5547002,106.963533 C85.0951715,107.269886 84.4743022,107.145712 84.1679497,106.686183 C84.058438,106.521916 84,106.328908 84,106.131483 L84,77.8685171 C84,77.3162323 84.4477153,76.8685171 85,76.8685171 C85.197425,76.8685171 85.3904327,76.9269551 85.5547002,77.0364668 Z" id="Rectangle" fill="#1A1A1A" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

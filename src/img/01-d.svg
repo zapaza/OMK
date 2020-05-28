@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="352px" height="168px" viewBox="0 0 352 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>EA3542D1-8B76-434A-8E44-F6D926744A85</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="352" height="168"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="graphics-PS_Practice_Cat" transform="translate(-80.000000, -80.000000)">
+            <g id="01d" transform="translate(80.000000, 80.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#3D3D4D" xlink:href="#path-1"></use>
+                <path d="M260.75,98 L261.25,102 L221.25,102 L227,148 L223,148 L216.75,98 L260.75,98 Z M135.25,98 L129,148 L125,148 L130.75,102 L90.75,102 L91.25,98 L135.25,98 Z M219.75,90 L220.25,94 L216.25,94 L215.75,90 L219.75,90 Z M136.25,90 L135.75,94 L131.75,94 L132.25,90 L136.25,90 Z M218.75,82 L219.25,86 L215.25,86 L214.75,82 L218.75,82 Z M137.25,82 L136.75,86 L132.75,86 L133.25,82 L137.25,82 Z M217.75,74 L218.25,78 L214.25,78 L213.75,74 L217.75,74 Z M138.25,74 L137.75,78 L133.75,78 L134.25,74 L138.25,74 Z M211,20 L216.75,66 L256.75,66 L257.25,70 L213.25,70 L207,20 L211,20 Z M145,20 L138.75,70 L94.75,70 L95.25,66 L135.25,66 L141,20 L145,20 Z" id="Shape" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                <path d="M196,78 L209,84 L198,90 L197.333,86 L190.828,86 L178,98.828 L178,148 L174,148 L174,97.1715729 L189.171573,82 L196.667,82 L196,78 Z" id="Combined-Shape" fill="#F65145" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M167,20 L178,26 L165,32 L165.667,28 L159.828,28 L147,40.828 L147,90 L143,90 L143,39.1715729 L158.171573,24 L166.333,24 L167,20 Z" id="Combined-Shape" fill="#F65145" fill-rule="nonzero" mask="url(#mask-2)" transform="translate(160.500000, 55.000000) scale(-1, -1) translate(-160.500000, -55.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -53,3 +53,57 @@
         }
     }
 }
+
+.psystem{
+    .results-nav {
+        margin-bottom: 32px;
+        &__select{
+            margin-right: 16px;
+        }
+    }
+
+    .main-header{
+        p{
+            margin-bottom: 8px;
+        }
+    }
+
+    .header-block {
+        margin-bottom: 32px;
+        h2 {
+            font-size: rem(32);
+            line-height: 1.25;
+        }
+    }
+
+    .detours{
+        margin-bottom: 48px;
+    }
+
+    .practices{
+        margin-bottom: 16px;
+
+        .video-gallery__slider{
+            margin-bottom: 0;
+        }
+    }
+
+
+    .video-gallery__slider{
+        .swiper-container {
+            @media(max-width: 758px) {
+                padding-left: 16px;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
+        }
+
+        .swiper-slide {
+            @media(max-width: $media-lg) {
+                width: auto;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="352px" height="168px" viewBox="0 0 352 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>972EC3AF-20C1-4A6E-86D1-2694203607DF</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="graphics-PS_Practice_Cat" transform="translate(-80.000000, -1376.000000)">
+            <g id="07d" transform="translate(80.000000, 1376.000000)">
+                <rect id="Rectangle" fill="#1A1A1A" x="0" y="0" width="352" height="168"></rect>
+                <rect id="Rectangle" x="140" y="48" width="72" height="72"></rect>
+                <circle id="Oval" fill="#FFFFFF" cx="176" cy="84" r="36"></circle>
+                <path d="M169.5547,69.0364668 L190.751925,83.1679497 C191.211453,83.4743022 191.335627,84.0951715 191.029275,84.5547002 C190.95604,84.6645525 190.861777,84.7588154 190.751925,84.8320503 L169.5547,98.9635332 C169.095172,99.2698857 168.474302,99.1457118 168.16795,98.6861831 C168.058438,98.5219156 168,98.3289079 168,98.1314829 L168,69.8685171 C168,69.3162323 168.447715,68.8685171 169,68.8685171 C169.197425,68.8685171 169.390433,68.9269551 169.5547,69.0364668 Z" id="Rectangle" fill="#1A1A1A"></path>
+                <rect id="Rectangle" fill="#909099" x="12" y="150" width="328" height="6" rx="3"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" x="12" y="150" width="124" height="6" rx="3"></rect>
+                <rect id="Rectangle" fill="#909099" x="12" y="12" width="48" height="8" rx="4"></rect>
+                <rect id="Rectangle" fill="#909099" x="12" y="24" width="32" height="8" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
