@@ -10,7 +10,6 @@
             .detours-month__list {
                 border-bottom: 1px solid $border-10;
             }
-
         }
     }
 
@@ -46,14 +45,14 @@
             .detours-card__title {
                 margin-bottom: 16px;
             }
-            .detours-card__header{
+            .detours-card__header {
                 order: 1;
                 margin-bottom: 0;
                 margin-top: 16px;
             }
             .detours-card__footer {
-                position: absolute;
                 justify-content: flex-end;
+                position: absolute;
                 right: 8px;
             }
         }
@@ -674,20 +673,20 @@
                 position: relative;
 
                 &:after {
-                    position: absolute;
                     content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                     width: 24px;
                     height: 24px;
-                    top: 0px;
-                    right: 0;
+                    transform: rotate(90deg);
                     background-image: url('../img/icons/icon-arrow-right--dark.svg');
                     background-repeat: no-repeat;
                     background-size: contain;
                     opacity: .5;
-                    transform: rotate(90deg);
                 }
 
-                &.show{
+                &.show {
                     &:after {
                         opacity: 1;
                         transform: rotate(-90deg);
@@ -706,7 +705,7 @@
                 align-items: flex-start;
                 padding-right: 40px;
 
-                &.show{
+                &.show {
                     display: flex;
                 }
             }
