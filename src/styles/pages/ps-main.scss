@@ -1,192 +1,192 @@
 .practices {
-	margin-bottom: 64px;
+    margin-bottom: 64px;
 
-	@media (max-width: $media-lg) {
-		.main-header {
-			h1 {
-				font-size: rem(32);
-				line-height: 1.25;
-			}
-		}
-	}
+    @media (max-width: $media-lg) {
+        .main-header {
+            h1 {
+                font-size: rem(32);
+                line-height: 1.25;
+            }
+        }
+    }
 
-	.video-gallery__slider {
-		margin-bottom: 40px;
-	}
+    .video-gallery__slider {
+        margin-bottom: 40px;
+    }
 
-	.video {
-		margin-bottom: 32px;
-		@media (max-width: $media-lg) {
-			margin-bottom: 24px;
-			width: 100%;
-		}
-	}
+    .video {
+        margin-bottom: 32px;
+        @media (max-width: $media-lg) {
+            margin-bottom: 24px;
+            width: 100%;
+        }
+    }
 }
 
 .main-header--practices {
-	@media (max-width: $media-lg) {
-		margin-bottom: 32px;
-		h1 {
-			font-size: rem(32);
-			line-height: 1.25;
-			margin-bottom: 0;
-		}
-	}
+    @media (max-width: $media-lg) {
+        margin-bottom: 32px;
+        h1 {
+            font-size: rem(32);
+            line-height: 1.25;
+            margin-bottom: 0;
+        }
+    }
 }
 
 
 .ps-links {
-	margin-bottom: 64px;
+    margin-bottom: 64px;
 
-	&__item {
-		display: flex;
-		flex-direction: column;
+    &__item {
+        display: flex;
+        flex-direction: column;
 
-		&:hover {
-			text-decoration: none;
-		}
+        &:hover {
+            text-decoration: none;
+        }
 
-		&-img {
-			display: block;
-			position: relative;
-			width: 100%;
-			overflow: hidden;
-			padding-bottom: percentage(200px/352px);
-			border-radius: 5px 5px 0 0;
+        &-img {
+            display: block;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-bottom: percentage(200px/352px);
+            border-radius: 5px 5px 0 0;
 
-			img {
-				@include object-fit(cover, center);
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
-		}
+            img {
+                @include object-fit(cover, center);
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
 
-		&-name {
-			border: 1px solid $border-10;
-			padding: 17px 20px 20px;
-			border-radius: 0 0 5px 5px;
-			background-color: $white;
-			font-size: rem(20);
-			font-weight: $font-weight-bold;
-			line-height: 1.2;
-			color: $text-black;
-		}
-	}
+        &-name {
+            border: 1px solid $border-10;
+            padding: 17px 20px 20px;
+            border-radius: 0 0 5px 5px;
+            background-color: $white;
+            font-size: rem(20);
+            font-weight: $font-weight-bold;
+            line-height: 1.2;
+            color: $text-black;
+        }
+    }
 }
 
 .psystem {
-	.results-nav {
-		margin-bottom: 32px;
-		@media (max-width: $media-lg) {
-			margin-bottom: 0;
-		}
+    .results-nav {
+        margin-bottom: 32px;
+        @media (max-width: $media-lg) {
+            margin-bottom: 0;
+        }
 
-		&__select {
-			margin-right: 16px;
-			@media (max-width: 520px) {
-				margin-right: auto;
-			}
-		}
+        &__select {
+            margin-right: 16px;
+            @media (max-width: 520px) {
+                margin-right: auto;
+            }
+        }
 
-		&__filters-btn {
-			@media (max-width: $media-lg) {
-				margin-bottom: 32px;
-			}
-		}
-	}
+        &__filters-btn {
+            @media (max-width: $media-lg) {
+                margin-bottom: 32px;
+            }
+        }
+    }
 
-	.main-header {
-		@media (max-width: $media-lg) {
-			margin-bottom: 32px;
-			width: auto;
-		}
+    .main-header {
+        @media (max-width: $media-lg) {
+            margin-bottom: 32px;
+            width: auto;
+        }
 
-		h1 {
-			@media (max-width: $media-lg) {
-				font-size: rem(40);
-				line-height: 1.2;
-				margin-bottom: 0;
-			}
-			@media (max-width: 413px) {
-				font-size: rem(32);
-				line-height: 1.25;
-			}
-		}
+        h1 {
+            @media (max-width: $media-lg) {
+                font-size: rem(40);
+                line-height: 1.2;
+                margin-bottom: 0;
+            }
+            @media (max-width: 413px) {
+                font-size: rem(32);
+                line-height: 1.25;
+            }
+        }
 
-		p {
-			margin-bottom: 8px;
-			@media (max-width: $media-lg) {
-				display: none;
-			}
-		}
-	}
-
-
-	.header-block {
-		margin-bottom: 32px;
-
-		@media (max-width: 1023px) {
-
-			&__btn {
-				display: block;
-
-				.btn {
-					text-transform: capitalize;
-					min-width: auto;
-					@media (max-width: 413px) {
-						font-size: 0;
-						padding: 0;
-					}
-				}
-
-				span {
-					display: none;
-				}
-			}
-			h2 {
-				font-size: rem(28);
-				line-height: 1.29;
-			}
-		}
-
-		h2 {
-			font-size: rem(32);
-			line-height: 1.25;
-		}
-	}
-
-	.detours {
-		margin-bottom: 48px;
-	}
-
-	.practices {
-		margin-bottom: 16px;
-
-		.video-gallery__slider {
-			margin-bottom: 0;
-		}
-	}
+        p {
+            margin-bottom: 8px;
+            @media (max-width: $media-lg) {
+                display: none;
+            }
+        }
+    }
 
 
-	.video-gallery__slider {
-		.swiper-container {
-			@media(max-width: 758px) {
-				padding-left: 16px;
-				margin-left: -16px;
-				margin-right: -16px;
-			}
-		}
+    .header-block {
+        margin-bottom: 32px;
 
-		.swiper-slide {
-			@media(max-width: $media-lg) {
-				width: auto;
-				border-radius: 5px;
-				overflow: hidden;
-			}
-		}
-	}
+        @media (max-width: 1023px) {
+
+            &__btn {
+                display: block;
+
+                .btn {
+                    text-transform: capitalize;
+                    min-width: auto;
+                    @media (max-width: 413px) {
+                        font-size: 0;
+                        padding: 0;
+                    }
+                }
+
+                span {
+                    display: none;
+                }
+            }
+            h2 {
+                font-size: rem(28);
+                line-height: 1.29;
+            }
+        }
+
+        h2 {
+            font-size: rem(32);
+            line-height: 1.25;
+        }
+    }
+
+    .detours {
+        margin-bottom: 48px;
+    }
+
+    .practices {
+        margin-bottom: 16px;
+
+        .video-gallery__slider {
+            margin-bottom: 0;
+        }
+    }
+
+
+    .video-gallery__slider {
+        .swiper-container {
+            @media(max-width: 758px) {
+                padding-left: 16px;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
+        }
+
+        .swiper-slide {
+            @media(max-width: $media-lg) {
+                width: auto;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+        }
+    }
 }
