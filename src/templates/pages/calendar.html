@@ -1,0 +1,71 @@
+{% extends './layout.html' %}
+{% block content %}
+<div class="wrapper">
+    <div class="row">
+        <div class="col-12">
+            {% include 'breadcrumbs/breadcrumbs.html' %}
+        </div>
+    </div>
+    <div class="row main-header">
+        <div class="col-12">
+            <h1>Производственная система</h1>
+        </div>
+    </div>
+    <div class="row news__row">
+        <div class="col-12">
+            <button type="button" class="results-nav__filters-btn js-results-nav__filters-btn">
+                <span class="icon"></span>
+                <span class="text">Фильтры</span>
+                <span class="count">2</span>
+            </button>
+            <div class="results-nav">
+                <form action="" class="sorting-form">
+                    <div class="results-nav__selects js-results-nav__selects">
+                        <div class="top">
+                            <div class="top-header">
+                                <div class="name">Фильтры</div>
+                            </div>
+                            <button type="button" class="top-close js-top-close"></button>
+                        </div>
+
+                        <div class="bottom">
+
+                            <div class="selects">
+                                <div class="results-nav__select js-results-nav__select">
+                                    <div class="mobile-title">Площадка</div>
+                                    <select name="" id="" class="selectpicker sorting-form__select select-js">
+                                        <option value="">Все площадки</option>
+                                        <option value="">Альметьевск</option>
+                                        <option value="">Москва</option>
+                                        <option value="">Челябинск</option>
+                                        <option value="">Уфа</option>
+                                        <option value="">Благовещенск</option>
+                                        <option value="">Чусовой</option>
+                                        <option value="">Выкса</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="buttons">
+                                <button type="submit" class="btn btn--primary">Применить</button>
+                                <a href="" class="btn btn--secondary">Сбросить фильтры</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            {% include 'calendar/calendar.html' %}
+        </div>
+    </div>
+
+
+
+
+
+</div>
+{% endblock %}

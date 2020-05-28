@@ -1,0 +1,228 @@
+.calendar {
+	border: 1px solid $border-10;
+	border-radius: 5px;
+	display: block;
+	min-width: 280px;
+	width: 100%;
+
+	.calendar-nav {
+		align-items: center;
+		background: $white;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		display: flex;
+		justify-content: space-between;
+		font-size: rem(24);
+		font-weight: $font-weight-bold;
+		line-height: 1.33;
+		color: #1a1a1a;
+		padding: 24px;
+
+	}
+
+	.calendar-header,
+	.calendar-body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.calendar-date {
+			flex: 0 0 14.28%; // 7 calendar-items each row
+			max-width: 14.28%;
+		}
+	}
+
+	.calendar-header {
+		background: $white;
+		border-bottom: 1px solid $border-10;
+		font-size: rem(16);
+		line-height: 1.25;
+		color: $text-silver;
+		text-align: center;
+		padding-bottom: 16px;
+	}
+
+	.calendar-body {
+		color: $text-black;
+	}
+
+	.calendar-date {
+		border: 0;
+
+		.date-item {
+			appearance: none;
+			background: 0 0;
+			border: 1px solid transparent;
+			border-radius: 50%;
+			color: $text-black;
+			cursor: pointer;
+			font-size: rem(16);
+			height: 32px;
+			line-height: 1.25;
+			outline: 0;
+			padding: .1rem;
+			position: relative;
+			text-align: center;
+			text-decoration: none;
+			transition: background .2s, border .2s,box-shadow .2s, color .2s;
+			vertical-align: middle;
+			white-space: nowrap;
+			width: 32px;
+
+			&.date-today {
+				border-color: $border-10;
+				color: $text-black;
+			}
+
+			//&:focus {
+			//	border-color: $coral;
+			//	color: $coral;
+			//}
+			////
+			////&:focus,
+			////&:hover {
+			////	background: $secondary-color-light;
+			////	border-color: $secondary-color-dark;
+			////	color: $primary-color;
+			////	text-decoration: none;
+			////}
+			//&:active,
+			//&.active {
+			//	background: $primary-color-dark;
+			//	border-color: darken($primary-color-dark, 5%);
+			//	color: $light-color;
+			//}
+			//
+			//// Calendar badge support
+			//&.badge {
+			//	&::after {
+			//		position: absolute;
+			//		top: 3px;
+			//		right: 3px;
+			//		transform: translate(50%, -50%);
+			//	}
+			//}
+		}
+
+		.date-item,
+		.calendar-event {
+			&:disabled,
+			&.disabled {
+				cursor: default;
+				opacity: .25;
+				pointer-events: none;
+			}
+		}
+
+		&.prev-month,
+		&.next-month {
+			.date-item,
+			.calendar-event {
+				opacity: .25;
+			}
+		}
+	}
+
+	/*.calendar-range {
+		position: relative;
+
+		&::before {
+			background: $secondary-color;
+			content: "";
+			height: $unit-7;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&.range-start {
+			&::before {
+				left: 50%;
+			}
+		}
+		&.range-end {
+			&::before {
+				right: 50%;
+			}
+		}
+
+		&.range-start,
+		&.range-end {
+			.date-item {
+				background: $primary-color-dark;
+				border-color: darken($primary-color-dark, 5%);
+				color: $light-color;
+			}
+		}
+
+		.date-item {
+			color: $primary-color;
+		}
+	}
+
+	// Calendars size
+	&.calendar-lg {
+		.calendar-body {
+			padding: 0;
+
+			.calendar-date {
+				border-bottom: $border-width solid $border-color;
+				border-right: $border-width solid $border-color;
+				display: flex;
+				flex-direction: column;
+				height: 5.5rem;
+				padding: 0;
+
+				&:nth-child(7n) {
+					border-right: 0;
+				}
+				&:nth-last-child(-n+7) {
+					border-bottom: 0;
+				}
+			}
+		}
+
+		.date-item {
+			align-self: flex-end;
+			height: $unit-7;
+			margin-right: $layout-spacing-sm;
+			margin-top: $layout-spacing-sm;
+		}
+
+		.calendar-range {
+			&::before {
+				top: 19px;
+			}
+			&.range-start {
+				&::before {
+					left: auto;
+					width: 19px;
+				}
+			}
+			&.range-end {
+				&::before {
+					right: 19px;
+				}
+			}
+		}
+
+		.calendar-events {
+			flex-grow: 1;
+			line-height: 1;
+			overflow-y: auto;
+			padding: $layout-spacing-sm;
+		}
+
+		.calendar-event {
+			border-radius: $border-radius;
+			font-size: $font-size-sm;
+			display: block;
+			margin: $unit-h auto;
+			overflow: hidden;
+			padding: 3px 4px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}*/
+}

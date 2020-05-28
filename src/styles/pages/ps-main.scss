@@ -57,22 +57,75 @@
 .psystem{
     .results-nav {
         margin-bottom: 32px;
+        @media (max-width: $media-lg){
+            margin-bottom: 0;
+        }
         &__select{
             margin-right: 16px;
+            @media (max-width: 520px){
+                margin-right: auto;
+            }
+        }
+        &__filters-btn{
+            @media (max-width: $media-lg){
+                margin-bottom: 32px;
+            }
         }
     }
 
     .main-header{
+        @media (max-width: $media-lg){
+            margin-bottom: 32px;
+            width: auto;
+        }
+        h1{
+            @media (max-width: $media-lg){
+                font-size: rem(40);
+                line-height: 1.2;
+                margin-bottom: 0;
+            }
+            @media (max-width: 413px){
+                font-size: rem(32);
+                line-height: 1.25;
+            }
+        }
+
         p{
             margin-bottom: 8px;
+            @media (max-width: $media-lg){
+                display: none;
+            }
         }
     }
+
+
 
     .header-block {
         margin-bottom: 32px;
         h2 {
             font-size: rem(32);
             line-height: 1.25;
+        }
+        @media (max-width: 1023px){
+            h2 {
+                font-size: rem(28);
+                line-height: 1.29;
+            }
+
+            &__btn{
+                display: block;
+                .btn{
+                    text-transform: capitalize;
+                    min-width: auto;
+                    @media (max-width: 413px){
+                        font-size: 0;
+                        padding: 0;
+                    }
+                }
+                span{
+                    display: none;
+                }
+            }
         }
     }
 
