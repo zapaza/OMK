@@ -73,9 +73,21 @@ function adsAddMobileHide() {
 }
 
 
+//аккордионы на странице obhod.html на мобилке
+function accordionMobilObhodMonth (){
+    if ($(window).innerWidth() <= 767 ){
+        $('body').on('click', '.detours-month__list .title', function(e){
+            e.preventDefault();
+            $(this).toggleClass('show');
+            $(this).next('ul').stop().toggleClass('show');
+        })
+    }
+}
+
 $(document).ready(() => {
     articleFooterInfoHide();
     adsAddMobileHide();
+    accordionMobilObhodMonth ();
 
     //слайдер на главной стрнице, в низу страници
     if ($('.js-main-page__slider').length > 0) {
@@ -311,6 +323,7 @@ $(window).scroll(function () {
 $(window).on('resize', function () {
     articleFooterInfoHide();
     adsAddMobileHide();
+    accordionMobilObhodMonth ();
 })
 
 $('body').on('click', '.js-media-item--video', function () {

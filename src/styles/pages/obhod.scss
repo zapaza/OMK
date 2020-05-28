@@ -2,10 +2,15 @@
     padding-bottom: 80px;
 
     @media (max-width: $media-md) {
+        padding-bottom: 8px;
         .detours__row div:last-child {
             .detours-card {
                 border-bottom: 0;
             }
+            .detours-month__list {
+                border-bottom: 1px solid $border-10;
+            }
+
         }
     }
 
@@ -23,6 +28,7 @@
             margin-bottom: 24px;
         }
         @media(max-width: $media-md) {
+            position: relative;
             width: auto;
             max-width: none;
             min-height: auto;
@@ -39,6 +45,16 @@
             }
             .detours-card__title {
                 margin-bottom: 16px;
+            }
+            .detours-card__header{
+                order: 1;
+                margin-bottom: 0;
+                margin-top: 16px;
+            }
+            .detours-card__footer {
+                position: absolute;
+                justify-content: flex-end;
+                right: 8px;
             }
         }
     }
@@ -640,6 +656,11 @@
 .detours-month {
     &__list {
         margin-bottom: 48px;
+        @media (max-width: $media-md) {
+            border-top: 1px solid $border-10;
+            margin-bottom: 0;
+            padding-top: 20px;
+        }
         .title {
             margin-bottom: 16px;
             display: block;
@@ -647,24 +668,54 @@
             font-weight: $font-weight-bold;
             line-height: 1.2;
             color: $text-black;
+            @media (max-width: $media-md) {
+                cursor: pointer;
+                margin-bottom: 20px;
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    top: 0px;
+                    right: 0;
+                    background-image: url('../img/icons/icon-arrow-right--dark.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    opacity: .5;
+                    transform: rotate(90deg);
+                }
+
+                &.show{
+                    &:after {
+                        opacity: 1;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
         }
 
         ul {
             margin: 0;
             padding: 0;
             list-style: none;
-            @media (max-width: $media-lg) {
-                display: flex;
+            @media (max-width: $media-md) {
+                display: none;
                 flex-wrap: wrap;
                 align-items: flex-start;
                 padding-right: 40px;
+
+                &.show{
+                    display: flex;
+                }
             }
         }
     }
 
     &__item {
         margin-bottom: 16px;
-        @media (max-width: $media-lg) {
+        @media (max-width: $media-md) {
             margin-right: 4px;
             width: calc(33.3333% - 4px);
         }
