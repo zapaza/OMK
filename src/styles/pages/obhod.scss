@@ -509,7 +509,7 @@
         line-height: 1.5;
         padding-left: 56px;
         max-width: 640px;
-        @media (max-width: $media-xl){
+        @media (max-width: $media-xl) {
             max-width: none;
         }
         p {

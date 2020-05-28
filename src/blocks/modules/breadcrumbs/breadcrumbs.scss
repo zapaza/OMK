@@ -9,15 +9,15 @@
     border-radius: 0;
     list-style: none;
 
-    &--pc{
-        @media (max-width: $media-lg){
+    &--pc {
+        @media (max-width: $media-lg) {
             display: none;
         }
     }
-    &--mob{
+    &--mob {
         display: block;
         padding: 20px 0;
-        @media (min-width: $media-lg--min){
+        @media (min-width: $media-lg--min) {
             display: none;
         }
     }
@@ -57,10 +57,10 @@
         padding-left: 24px;
         position: relative;
         &:before {
-            position: absolute;
             content: '';
-            left: 0;
+            position: absolute;
             top: 0;
+            left: 0;
             width: 24px;
             height: 24px;
             background-image: url(../img/icon--breadcrumb-mob.svg);
