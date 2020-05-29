@@ -67,6 +67,9 @@
 
         .results-nav__select {
             margin-right: 16px;
+            @media (max-width: 520px){
+                margin-right: auto;
+            }
         }
     }
 }
