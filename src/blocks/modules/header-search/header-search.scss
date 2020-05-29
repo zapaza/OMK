@@ -208,6 +208,10 @@
         font-size: rem(24);
         line-height: 1.33;
         color: $text-black;
+        border-radius: 8px;
+        @media (max-width: $media-lg) {
+            border-radius: 0;
+        }
     }
 
     &__preload-inner {
