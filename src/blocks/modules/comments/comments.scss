@@ -41,7 +41,7 @@
             &-input {
                 height: 64px;
                 overflow: hidden;
-                padding: 20px 48px 24px 16px;
+                padding: 19px 48px 23px 16px;
                 resize: none;
             }
             &-buffer {
@@ -52,7 +52,7 @@
                 // Минимальная высота высчитывается как line-height + padding-top + padding-bottom + border-top-width + border-bottom-width
                 min-height: 64px;
                 border: solid 1px $border-10;
-                padding: 20px 48px 24px 16px;
+                padding: 19px 48px 23px 16px;
                 white-space: pre-wrap;
                 word-break: break-word;
                 pointer-events: none;
