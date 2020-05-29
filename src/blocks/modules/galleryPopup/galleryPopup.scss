@@ -144,6 +144,7 @@
                         &::before {
                             border-color: $coral;
                             opacity: 1;
+                            z-index: 4;
                         }
                     }
                 }
@@ -152,8 +153,10 @@
             &__description {
                 position: relative;
                 padding-top: 24px;
+                min-height: 80px;
                 @media (max-width: $media-sm) {
                     padding: 16px 16px 24px;
+                    min-height:auto;
                 }
                 .title {
                     font-size: rem(20);

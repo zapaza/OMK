@@ -1,12 +1,13 @@
 import Swiper from 'swiper/js/swiper';
 
 $(document).ready(function () {
-    if ($('.js-unknown').length > 0) {
-        $('.js-unknown').each(function () {
+    if ($('.js-default-slider').length > 0) {
+
+        $('.js-default-slider').each(function () {
             let slider = $(this),
                 prevEl = slider.parent().find('.swiper-button-prev'),
                 nextEl = slider.parent().find('.swiper-button-next');
-            let unknownSlider = new Swiper(slider, {
+            let defaultSlider = new Swiper(slider, {
                 slidesPerView: 'auto',
                 spaceBetween: 32,
                 freeMode: true,
@@ -31,16 +32,16 @@ $(document).ready(function () {
         });
     }
 });
-var unknownModalSlider,
-    unknownActiveSlide;
-$('body').on('click', '.js-unknown-slide', function (e) {
+var defaultModalSlider,
+    defaultActiveSlide;
+$('body').on('click', '.js-default-slider-slide', function (e) {
     e.preventDefault();
-    $('#unknown_popup').modal('show');
-    // unknownActiveSlide = $(this).closest('.js-unknown')[0].swiper.realIndex;
-    unknownActiveSlide = $(this).parents().index();
-    console.log( unknownActiveSlide);
+    $('#default-slider_popup').modal('show');
+    // default-sliderActiveSlide = $(this).closest('.js-default-slider')[0].swiper.realIndex;
+    defaultActiveSlide = $(this).parents().index();
+    console.log( defaultActiveSlide);
 })
-function stopAllVideos() {
+/*function stopAllVideos() {
     let $this = $('.video'),
         videoLength = $this.length;
     for (i = 0; i < videoLength; i++) {
@@ -65,33 +66,33 @@ function playVidioInSlider(){
         })
 
     }
-}
-$('#unknown_popup').on('shown.bs.modal', function () {
+}*/
+$('#default-slider_popup').on('shown.bs.modal', function () {
     console.log('shown');
-    let paginationSlider = $('.js-unknown-modal-slider').find('.swiper-pagination');
-    unknownModalSlider = new Swiper('.js-unknown-modal-slider', {
+    let paginationSlider = $('.js-default-slider-modal-slider').find('.swiper-pagination');
+    defaultModalSlider = new Swiper('.js-default-slider-modal-slider', {
         slidesPerView: 1,
-        initialSlide: unknownActiveSlide,
+        initialSlide: defaultActiveSlide,
         pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
         },
         navigation: {
-            prevEl: '.js-unknown-modal-prev',
-            nextEl: '.js-unknown-modal-next'
+            prevEl: '.js-default-slider-modal-prev',
+            nextEl: '.js-default-slider-modal-next'
         },
         thumbs: {
             swiper: {
-                el: '.js-unknown-modal-slider-nav',
+                el: '.js-default-slider-modal-slider-nav',
                 slidesPerView: 7,
                 spaceBetween: 8,
-                initialSlide: unknownActiveSlide,
+                initialSlide: defaultActiveSlide,
             }
         }
     });
-    stopAllVideos();
-    playVidioInSlider();
+   /* stopAllVideos();
+    playVidioInSlider();*/
 });
-$('#unknown_popup').on('hidden.bs.modal', function (e) {
-    stopAllVideos();
-});
+// $('#default-slider_popup').on('hidden.bs.modal', function (e) {
+//     // stopAllVideos();
+// });

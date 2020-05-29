@@ -154,7 +154,6 @@ $(document).ready(function () {
     if ($('.thumbs-slider').length > 0) {
         initThumbsSlider();
         setSlidersButtonsPositionTop();
-        playVidioInSlider();
     }
 });
 

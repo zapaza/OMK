@@ -1,4 +1,4 @@
-function timeVideo() {
+/*function timeVideo() {
     let $this = $('.video:not(.no-video)'),
         videoLength = $this.length;
 
@@ -20,7 +20,7 @@ $(document).ready(function () {
         })
     }
 
-});
+});*/
 
 function stopAllVideos() {
     let $this = $('.video'),
