@@ -79,11 +79,13 @@ function accordionMobilObhodMonth (){
         $('body').on('click', '.detours-month__list .title', function(e){
             e.preventDefault();
             $(this).toggleClass('show');
-            $(this).next('ul').stop().toggleClass('show');
+            $(this).next('ul').toggleClass('show');
         })
     }
 }
-
+$(window).resize(function () {
+    accordionMobilObhodMonth ();
+})
 $(document).ready(() => {
     articleFooterInfoHide();
     adsAddMobileHide();
@@ -200,11 +202,11 @@ $(document).ready(() => {
 
                 1024: {
                     slidesPerView: 4,
-                    spaceBetween: 24
+                    spaceBetween: 24,
                 },
                 100: {
                     slidesPerView: 'auto',
-                    spaceBetween: 16
+                    spaceBetween: 16,
                 }
             }
         });
@@ -323,7 +325,6 @@ $(window).scroll(function () {
 $(window).on('resize', function () {
     articleFooterInfoHide();
     adsAddMobileHide();
-    accordionMobilObhodMonth ();
 })
 
 $('body').on('click', '.js-media-item--video', function () {

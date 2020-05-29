@@ -91,8 +91,14 @@
 
         .comments__message {
             display: none;
-
             margin: 24px 0 8px  56px;
+            @media (max-width: $media-md) {
+                width: calc(100% - 56px);
+            }
+
+            &-form {
+                display: block;
+            }
 
             &-form-buffer {
                 width: 100% !important;

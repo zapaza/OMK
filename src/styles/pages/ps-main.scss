@@ -37,10 +37,16 @@
 
 .ps-links {
     margin-bottom: 64px;
+    @media (max-width: $media-lg) {
+        margin-bottom: 48px;
+    }
 
     &__item {
         display: flex;
         flex-direction: column;
+        @media (max-width: $media-lg) {
+            margin-bottom: 16px;
+        }
 
         &:hover {
             text-decoration: none;
@@ -133,6 +139,9 @@
 
             &__btn {
                 display: block;
+                @media (max-width: 413px) {
+                    right: 0;
+                }
 
                 .btn {
                     text-transform: capitalize;
@@ -178,6 +187,7 @@
                 padding-left: 16px;
                 margin-left: -16px;
                 margin-right: -16px;
+                padding-right: 16px;
             }
         }
 

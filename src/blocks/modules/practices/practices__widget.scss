@@ -30,6 +30,10 @@
         @media (max-width: $media-lg) {
             margin-bottom: 16px;
         }
+        @media (max-width: $media-md) {
+            margin-bottom: 0;
+            margin-top: 8px;
+        }
     }
 
     &-header {
