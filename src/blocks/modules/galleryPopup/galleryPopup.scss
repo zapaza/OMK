@@ -155,8 +155,8 @@
                 padding-top: 24px;
                 min-height: 80px;
                 @media (max-width: $media-sm) {
+                    min-height: auto;
                     padding: 16px 16px 24px;
-                    min-height:auto;
                 }
                 .title {
                     font-size: rem(20);
