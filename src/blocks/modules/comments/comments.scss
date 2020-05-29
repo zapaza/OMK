@@ -92,8 +92,8 @@
         .comments__message {
             display: none;
             margin: 24px 0 8px  56px;
-            @media (max-width: $media-md) {
-                width: calc(100% - 56px);
+            @media(max-width: $media-sm) {
+                margin-left: 0;
             }
 
             &-form {
@@ -108,11 +108,17 @@
             display: none;
             margin-left: 56px;
             margin-bottom: 24px;
+            @media(max-width: $media-sm) {
+                margin-left: 16px;
+            }
         }
 
         &-inner {
             display: flex;
             align-items: flex-start;
+            @media (max-width: $media-sm) {
+                position: relative;
+            }
         }
 
         &-avatar {
@@ -121,6 +127,11 @@
             width: 40px;
             height: 40px;
             margin-right: 16px;
+            @media (max-width: $media-sm) {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
 
         &-img {
@@ -146,6 +157,11 @@
             display: flex;
             align-items: center;
             margin-bottom: 8px;
+            @media (max-width: $media-sm) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 56px;
+            }
 
             .name {
                 font-size: rem(16);
@@ -161,6 +177,9 @@
                 font-size: rem(14);
                 line-height: 1.25;
                 color: $text-silver;
+                @media (max-width: $media-sm) {
+                    line-height: 1.43;
+                }
             }
         }
 
@@ -222,6 +241,9 @@
             font-weight: 600;
             line-height: 1.5;
             color: $black;
+            @media (max-width: $media-sm) {
+                margin-left: 0;
+            }
             &:hover {
                 opacity: 0.5;
             }
