@@ -330,6 +330,68 @@ $(window).on('resize', function () {
 $('body').on('click', '.js-media-item--video', function () {
     $('#video_popup').modal('show');
 });
+//открытие модалки на странице security
+function initModalThumbsSliderPractices() {
+    console.log('init');
+
+    let modalSlider = new Swiper('#practices-gallery .js-thumbs-slider__main--modal', {
+        slidesPerView: 1,
+        pagination: {
+            el: '#practices-gallery .js-modal-thumbs-slider .swiper-pagination',
+            type: 'fraction'
+        },
+        navigation: {
+            prevEl: '#practices-gallery .js-modal-thumbs-slider .swiper-button-prev',
+            nextEl: '#practices-gallery .js-modal-thumbs-slider .swiper-button-next'
+        },
+        thumbs: {
+            swiper: {
+                el: '#practices-gallery .js-thumbs-slider__nav--modal',
+                slidesPerView: 7,
+                spaceBetween: 8
+            }
+        },
+        on: {
+            init: function () {
+                console.log('Modal slider init');
+            }
+        }
+    })
+
+}
+function setModalNavSlidersPositionTopPractices() {
+
+    let thisSliderItem = $('#practices-gallery'),
+        thisSlideHeight = thisSliderItem.find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
+        thisNavSliderPositionTop = thisSlideHeight  - 8 + 'px';
+
+
+    thisSliderItem.find('.js-thumbs-slider__nav').css({
+        'top': thisNavSliderPositionTop
+    });
+
+}
+function setSlidersModalButtonsPositionTopPractices(){
+    let sliders = $('#practices-gallery .js-thumbs-slider__main.js-thumbs-slider__main--modal');
+
+    sliders.each(function () {
+        let thisSlideHeight = $(this).find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
+            thisBtnHeight = $(this).parent().find('.swiper-button').eq(0).outerHeight(),
+            thisButtonsPositionTop = thisSlideHeight / 2 - thisBtnHeight / 2 + 'px';
+
+        $(this).parent().find('.swiper-button').css({
+            'top': thisButtonsPositionTop
+        })
+    });
+}
+$('body').on('click', '.js-practices-gallery', function () {
+    $('#practices-gallery').modal('show');
+});
+$('#practices-gallery').on('shown.bs.modal', function (e) {
+    initModalThumbsSliderPractices();
+    setModalNavSlidersPositionTopPractices();
+    setSlidersModalButtonsPositionTopPractices();
+})
 
 $('body').on('click', '.js-results-nav__filters-btn', function () {
     $('.js-results-nav__selects').addClass('mobile-show');
