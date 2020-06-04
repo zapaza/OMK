@@ -1,7 +1,27 @@
 $('body').on('click', '.js-calendar-more', function () {
     $('#events-list').modal('show');
 });
+$('body').on('click', '.js-calendar-mob', function () {
+    if($(window).innerWidth() <= 1022){
+        $('#events-list').modal('show');
+    }
 
+});
+
+$('.calendar-event').hover(function () {
+    if($(window).innerWidth() > 1022) {
+        var posY = $(this).offset().top,
+            posX = $(this).offset().left,
+            dataId = $(this).data('id'),
+            dataIdHeight =  $(dataId).innerHeight();
+        console.log(posY , posX, dataId);
+
+        $(dataId).css({
+            top: posY - dataIdHeight - 12,
+            left: posX
+        }).toggleClass("show");
+    }
+} )
 $(document).ready(function () {
 
     $('#events-list').on('shown.bs.modal', function () {
@@ -64,3 +84,4 @@ $(document).ready(function () {
         }
     });
 });
+
