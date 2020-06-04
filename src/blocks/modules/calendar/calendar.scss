@@ -1,5 +1,7 @@
 .calendar {
     display: block;
+    position: relative;
+    z-index: 12;
     width: 100%;
     min-width: 280px;
     border: 1px solid $border-10;
@@ -262,7 +264,7 @@
         }
 
         &.prev-month, &.next-month {
-            .date-item, .calendar-event {
+            .date-item, .calendar-event__name {
                 opacity: .25;
             }
         }
@@ -316,49 +318,149 @@
     .calendar-event {
         display: block;
         position: relative;
-        overflow: hidden;
-        margin: 0 8px 5px;
-        padding: 1px 6px 3px;
-        border-radius: 5px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        font-size: rem(14);
-        line-height: 1.43;
-        color: $white;
-        cursor: pointer;
 
         &:hover {
             text-decoration: none;
+            @media (min-width:$media-lg--min) {
+                .calendar-event__info {
+                    bottom: calc(100% + 4px);
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+
+        &__name {
+            display: block;
+            overflow: hidden;
+            margin: 0 8px 5px;
+            padding: 1px 6px 3px;
+            border-radius: 5px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: rem(14);
+            line-height: 1.43;
+            color: $white;
+            cursor: pointer;
         }
 
         &__info {
+            @include transition();
+            display: block;
             position: absolute;
-            bottom: calc(100% - 2px);
+            z-index: 3;
+            bottom: 0;
             left: 50%;
+            width: 296px;
+            padding: 20px;
             transform: translateX(-50%);
+            pointer-events: none;
+            opacity: 0;
+            box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            border-radius: 8px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 6px;
+                height: 16px;
+                border: 8px solid transparent;
+                transform: translateX(-50%);
+                border-top-color: #fff;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 12px;
+                background-color: transparent;
+            }
+
+            &-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 8px;
+                .date {
+                    font-size: rem(16);
+                    line-height: 1.25;
+                }
+
+                .time {
+                    min-width: 48px;
+                    padding: 3px 4px 5px;
+                    border-radius: 12px;
+                    font-size: 14px;
+                    line-height: 1.14;
+                    text-align: center;
+                    color: $white;
+                    &--red {
+                        background-color: $coral;
+                    }
+                    &--green {
+                        background-color: $green;
+                    }
+                    &--ctrl {
+                        background-color: $ctrl-black;
+                    }
+                }
+            }
+
+            &-title {
+                margin-bottom: 12px;
+                font-size: rem(20);
+                font-weight: bold;
+                line-height: 1.2;
+            }
+
+            &-desc {
+                margin-bottom: 12px;
+                font-size: rem(16);
+                line-height: 1.25;
+            }
+            &-place {
+                margin-bottom: 8px;
+                font-size: rem(14);
+                line-height: 1.43;
+                color: $text-silver;
+            }
         }
         &--red {
-            background-color: $coral;
-            &:hover {
-                background-color: $coral-dark;
+            .calendar-event__name {
+                background-color: $coral;
+                &:hover {
+                    background-color: $coral-dark;
+                }
             }
         }
         &--green {
-            background-color: $green;
-            &:hover {
-                background-color: $green-dark;
+            .calendar-event__name {
+                background-color: $green;
+
+                &:hover {
+                    background-color: $green-dark;
+                }
             }
         }
         &--ctrl {
-            background-color: $ctrl-black;
-            &:hover {
-                background-color: darken($ctrl-black, 5%);
+            .calendar-event__name {
+                background-color: $ctrl-black;
+
+                &:hover {
+                    background-color: darken($ctrl-black, 5%);
+                }
             }
         }
         &--show-more {
-            color: $text-silver;
-            background-color: $silver-light;
-            text-align: center;
+            .calendar-event__name {
+                color: $text-silver;
+                background-color: $silver-light;
+                text-align: center;
+            }
         }
     }
 }
@@ -376,3 +478,124 @@
     }
 }
 
+
+.events-list {
+
+    .modal-dialog {
+        max-width: 616px;
+        @media (max-width: $media-sm) {
+            margin: 0;
+
+            .modal-gallery__controls {
+                position: fixed;
+                z-index: 999;
+                top: 0;
+                right: 0;
+                left: 0;
+                margin-bottom: 0;
+                padding-top: 16px;
+                padding-right: 16px;
+                pointer-events: all;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding: 32px 80px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        @media (max-width: $media-sm) {
+            position: relative;
+            z-index: -1;
+            padding: 64px 32px 48px;
+            border-radius: 0;
+        }
+
+        .calendar-event__info {
+            display: block;
+            z-index: 3;
+            width: 100%;
+            padding: 20px 0;
+            background-color: #ffffff;
+            border-bottom: 1px solid $border-10;
+            &:last-of-type {
+                border-bottom: 0;
+            }
+
+
+            &-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 8px;
+                .date {
+                    font-size: rem(16);
+                    line-height: 1.25;
+                }
+
+                .time {
+                    min-width: 48px;
+                    padding: 3px 4px 5px;
+                    border-radius: 12px;
+                    font-size: 14px;
+                    line-height: 1.14;
+                    text-align: center;
+                    color: $white;
+                    &--red {
+                        background-color: $coral;
+                    }
+                    &--green {
+                        background-color: $green;
+                    }
+                    &--ctrl {
+                        background-color: $ctrl-black;
+                    }
+                }
+            }
+
+            &-title {
+                margin-bottom: 12px;
+                font-size: rem(20);
+                font-weight: bold;
+                line-height: 1.2;
+            }
+
+            &-desc {
+                margin-bottom: 12px;
+                font-size: rem(16);
+                line-height: 1.25;
+            }
+            &-place {
+                margin-bottom: 8px;
+                font-size: rem(14);
+                line-height: 1.43;
+                color: $text-silver;
+            }
+        }
+    }
+    
+    &__title {
+        @include transition();
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: rem(28);
+        font-weight: $font-weight-bold;
+        line-height: 1.29;
+        @media (min-width: 576px) {
+            position: static !important;
+        }
+        @media (max-width: $media-sm) {
+            &.scroll {
+                z-index: 99;
+                width: 100%;
+                padding: 20px 16px 24px;
+                background-color: $white;
+                font-size: 16px;
+                line-height: 1.25;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+                text-align: left;
+            }
+        }
+    }
+}
