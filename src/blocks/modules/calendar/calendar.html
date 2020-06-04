@@ -1,8 +1,44 @@
-<div class="calendar calendar-lg">
+<div class="calendar">
     <div class="calendar-nav navbar">
-        <button class="btn btn-prev"></button>
-        <div class="navbar-primary">Май 2020</div>
-        <button class="btn btn-next"></button>
+        <button class="btn btn-prev" type="button">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="desktop-calendar-1280" transform="translate(-104.000000, -332.000000)">
+                        <g id="Group" transform="translate(80.000000, 304.000000)">
+                            <g id="icon/M/ctrl/arrow-left/light" transform="translate(24.000000, 28.000000)">
+                                <g id="icon">
+                                    <g id="Group">
+                                        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                                        <polyline id="Path" stroke="#1A1A1A" stroke-width="1.8" points="9 6 3 12 9 18"></polyline>
+                                        <line x1="4" y1="12" x2="21" y2="12" id="Path" stroke="#1A1A1A" stroke-width="2"></line>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div class="navbar-primary">Март 2020 </div>
+        <button class="btn btn-next " type="button">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="desktop-calendar-1280" transform="translate(-1152.000000, -332.000000)">
+                        <g id="Group" transform="translate(80.000000, 304.000000)">
+                            <g id="icon/M/ctrl/arrow-right/Red" transform="translate(1072.000000, 28.000000)">
+                                <g id="icon">
+                                    <g id="Group">
+                                        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                                        <polyline id="Path" stroke="#1A1A1A" stroke-width="1.8" points="14 6 20 12 14 18"></polyline>
+                                        <line x1="2" y1="12" x2="19" y2="12" id="Path" stroke="#1A1A1A" stroke-width="2"></line>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
     </div>
     <div class="calendar-container">
         <div class="calendar-header">
@@ -18,9 +54,22 @@
             <div class="calendar-date prev-month">
                 <button class="date-item">26</button>
             </div>
-            <div class="calendar-date prev-month">
-                <button class="date-item">27</button>
-                <div class="calendar-events"><a class="calendar-event bg-error text-light" href="#calendars">Zhonghe Festival</a></div>
+            <div class="calendar-date prev-month badge">
+                <button class="date-item badge">27</button>
+                <div class="calendar-events">
+                    <div class="calendar-event calendar-event--green">
+                        Совет директоров
+                        <div class="calendar-event__info">
+                            <div class="calendar-event__info-header">
+                                <div class="date">8 мая</div>
+                                <div class="time time--red">12:00</div>
+                            </div>
+                            <div class="calendar-event__info-title">Встреча на тему как лучше себя вести на встречах чтоб тебя все услышали</div>
+                            <div class="calendar-event__info-desc">Валентин Валерьевич Водолазов делится секретами успеха и объясняет как держать их в секрете</div>
+                            <div class="calendar-event__info-place">ВМЗ — Цех №1 — Переговорка «Двутавр»</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="calendar-date prev-month">
                 <button class="date-item">28</button>
@@ -34,7 +83,7 @@
             <div class="calendar-date">
                 <button class="date-item">3</button>
             </div>
-            <div class="calendar-date tooltip" data-tooltip="Today">
+            <div class="calendar-date">
                 <button class="date-item date-today">4</button>
             </div>
             <div class="calendar-date">
@@ -46,9 +95,12 @@
             <div class="calendar-date">
                 <button class="date-item">7</button>
             </div>
-            <div class="calendar-date tooltip" data-tooltip="You have appointments">
-                <button class="date-item badge">8</button>
-                <div class="calendar-events"><a class="calendar-event bg-primary text-light" href="#calendars">Product launch event</a><a class="calendar-event bg-error text-light" href="#calendars">International Women's Day</a></div>
+            <div class="calendar-date">
+                <button class="date-item badge active">8</button>
+                <div class="calendar-events">
+                    <div class="calendar-event calendar-event--green" >Совет директоров</div>
+                    <div class="calendar-event calendar-event--ctrl" >Обход цеха №2</div>
+                </div>
             </div>
             <div class="calendar-date">
                 <button class="date-item">9</button>
@@ -60,8 +112,10 @@
                 <button class="date-item">11</button>
             </div>
             <div class="calendar-date">
-                <button class="date-item">12</button>
-                <div class="calendar-events"><a class="calendar-event bg-error text-light" href="#calendars">Arbor Day</a></div>
+                <button class="date-item badge">12</button>
+                <div class="calendar-events">
+                    <div class="calendar-event calendar-event--green">Обход цеха №2</div>
+                </div>
             </div>
             <div class="calendar-date">
                 <button class="date-item">13</button>
@@ -72,21 +126,25 @@
             <div class="calendar-date">
                 <button class="date-item">15</button>
             </div>
-            <div class="calendar-date calendar-range range-start">
+            <div class="calendar-date"> <!-- calendar-range  range-start-->
                 <button class="date-item">16</button>
             </div>
-            <div class="calendar-date calendar-range">
+            <div class="calendar-date "> <!--calendar-range -->
                 <button class="date-item">17</button>
             </div>
-            <div class="calendar-date calendar-range">
+            <div class="calendar-date "><!--calendar-range -->
                 <button class="date-item">18</button>
             </div>
-            <div class="calendar-date calendar-range">
+            <div class="calendar-date"><!--calendar-range -->
                 <button class="date-item">19</button>
             </div>
-            <div class="calendar-date calendar-range range-end">
-                <button class="date-item">20</button>
-                <div class="calendar-events"><a class="calendar-event bg-success text-light" href="#calendars">Spring Equinox</a></div>
+            <div class="calendar-date  "><!--calendar-range range-end-->
+                <button class="date-item badge">20</button>
+                <div class="calendar-events">
+                    <div class="calendar-event calendar-event--green" >Совет директоров</div>
+                    <div class="calendar-event calendar-event--red">Встреча на тему катетов и синусов</div>
+                    <a class="calendar-event calendar-event--show-more js-calendar-more" href="#">Еще 5 событий</a>
+                </div>
             </div>
             <div class="calendar-date">
                 <button class="date-item">21</button>
@@ -122,8 +180,10 @@
                 <button class="date-item">31</button>
             </div>
             <div class="calendar-date next-month disabled">
-                <button class="date-item">1</button>
-                <div class="calendar-events"><a class="calendar-event bg-error text-light" href="#calendars">April Fools' Day</a></div>
+                <button class="date-item badge">1</button>
+                <div class="calendar-events">
+                    <div class="calendar-event calendar-event--red" >Встреча на тему катетов и синусов</div>
+                </div>
             </div>
         </div>
     </div>

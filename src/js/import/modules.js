@@ -19,3 +19,4 @@ import '%modules%/ads-slider-user/ads-slider-user';
 import '%modules%/ads-modals-add/ads-modals-add';
 import '%modules%/ads-modals-remove/ads-modals-remove';
 import '%modules%/obhod-floating-bar/obhod-floating-bar';
+import '%modules%/calendar/calendar';
