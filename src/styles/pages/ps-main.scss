@@ -21,16 +21,18 @@
             width: 100%;
         }
     }
+
+    .header-block {
+        margin-bottom: 24px;
+    }
 }
 
 .main-header--practices {
-    @media (max-width: $media-lg) {
-        margin-bottom: 32px;
-        h1 {
-            font-size: rem(32);
-            line-height: 1.25;
-            margin-bottom: 0;
-        }
+    margin-bottom: 32px;
+    h1 {
+        font-size: rem(56);
+        line-height: rem(72);
+        margin-bottom: 0;
     }
 }
 

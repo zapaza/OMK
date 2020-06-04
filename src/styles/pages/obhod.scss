@@ -489,7 +489,7 @@
         &__item {
             position: relative;
             margin-bottom: 16px;
-            padding-left: 28px;
+            padding-left: 32px;
             font-size: rem(16);
             line-height: 1.25;
             &:before {
@@ -497,8 +497,8 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 20px;
-                height: 20px;
+                width: 23px;
+                height: 23px;
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -515,6 +515,17 @@
             margin-top: 24px;
             margin-bottom: 48px;
         }
+        @media (max-width: $media-md) {
+            margin-left: -16px;
+            margin-right: -16px;
+        }
+
+        .video__body {
+            @media (max-width: $media-md) {
+                border-radius: 0;
+            }
+        }
+
     }
     .article__footer {
         @media(max-width: $media-md) {
@@ -525,6 +536,12 @@
     .comments {
         @media (max-width: $media-lg) {
             margin-bottom: 8px;
+        }
+
+        .btn {
+            @media (max-width: $media-md) {
+                margin-bottom: 32px;
+            }
         }
     }
 
@@ -549,7 +566,10 @@
         }
 
         .detours-review__item {
-            padding: 0;
+            padding: 0 80px;
+            @media (max-width: $media-lg) {
+                padding: 0;
+            }
             .people {
                 align-items: center;
                 max-width: 288px;
@@ -619,7 +639,9 @@
     }
 }
 
-
+.detours-title-2 {
+    margin-bottom: 24px;
+}
 
 .detours-review {
 
@@ -687,6 +709,7 @@
         }
     }
 }
+
 .detours-month {
     &__list {
         margin-bottom: 48px;
