@@ -598,6 +598,7 @@
     }
 
     &__main {
+        margin-bottom: 48px;
         hr {
             color: $border-10;
             margin-bottom: 32px;
@@ -626,7 +627,7 @@
             }
         }
         .detours-detail__main {
-            margin-bottom: 56px;
+            margin-bottom: 48px;
             @media(max-width: $media-lg) {
                 margin-bottom: 24px;
             }
