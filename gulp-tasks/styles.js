@@ -23,10 +23,11 @@ gulp.task("styles", () => {
         .pipe(plumber())
         .pipe(sass())
         .pipe(groupmedia())
-        .pipe(gulpif(production, autoprefixer({
+        .pipe(autoprefixer({
             cascade: false,
-            grid: true
-        })))
+            grid: true,
+            flex: true
+        }))
         .pipe(gulpif(production, mincss({
             compatibility: "ie8", level: {
                 1: {

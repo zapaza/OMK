@@ -98,7 +98,7 @@
     .card {
         margin-bottom: 48px;
 
-        @media (max-width: $media-lg){
+        @media (max-width: $media-lg) {
             transform: translate(0, 0);
             box-shadow: none;
         }
