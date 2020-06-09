@@ -232,7 +232,7 @@
             width: 100%;
             overflow: hidden;
             padding-bottom: 66.3%;
-            background-color: $text-silver;
+            //background-color: $text-silver;
 
             img {
                 @include object-fit(cover, center);
