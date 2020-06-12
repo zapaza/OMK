@@ -14,7 +14,7 @@ $('.calendar-event').hover(function () {
             posX = $(this).offset().left,
             dataId = $(this).data('id'),
             dataIdHeight =  $(dataId).innerHeight();
-        console.log(posY , posX, dataId);
+        // console.log(posY , posX, dataId);
 
         $(dataId).css({
             top: posY - dataIdHeight - 12,

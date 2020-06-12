@@ -480,7 +480,6 @@
     display: block;
     position: absolute;
     z-index: 3;
-    bottom: 0;
     width: 296px;
     padding: 20px;
     transform: translateX(-25%);
@@ -513,7 +512,6 @@
     &.show {
         @media (min-width:$media-lg--min) {
             z-index: 999;
-            bottom: auto;
             opacity: 1;
             pointer-events: all;
         }
@@ -552,7 +550,7 @@
     &-title {
         margin-bottom: 12px;
         font-size: rem(20);
-        font-weight: bold;
+        font-weight: $font-weight-bold;
         line-height: 1.2;
     }
 

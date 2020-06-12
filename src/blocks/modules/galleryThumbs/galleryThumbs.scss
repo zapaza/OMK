@@ -186,6 +186,7 @@
                     content: '';
                     box-sizing: border-box;
                     position: absolute;
+                    z-index: 3;
                     top: 0;
                     right: 0;
                     bottom: 0;
@@ -194,7 +195,6 @@
                     max-height: 100%;
                     border: solid 2px $white;
                     background: none;
-                    z-index: 3;
                 }
             }
         }
