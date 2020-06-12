@@ -1,0 +1,20 @@
+{% extends './layout.html' %}
+{% block content %}
+<div class="wrapper error-page">
+    <div class="row justify-content-center">
+        <div class="col-md-4 error-page__content">
+            <div class="error-page__header">
+                <h1>Ошибка 404</h1>
+                <h2>Страница не найдена</h2>
+            </div>
+            <div class="error-page__desc">В адресе допущена ошибка или такой страницы не существует</div>
+            <a href="/" class="btn btn--dark">Перейти на главную</a>
+            <a href="" class="small-text small-text--caption">Обратиться в службу поддержки</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
