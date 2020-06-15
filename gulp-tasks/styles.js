@@ -26,7 +26,7 @@ gulp.task("styles", () => {
         .pipe(autoprefixer({
             cascade: false,
             grid: true,
-            flex: true
+            flexbox:'no-2009'
         }))
         .pipe(gulpif(production, mincss({
             compatibility: "ie8", level: {
