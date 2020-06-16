@@ -3,6 +3,9 @@ html {
     flex-direction: column;
     min-height: 100%;
     font-family: $font-family-sans-serif;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        font-family: $font-family-system;
+    }
 }
 
 body {
@@ -21,7 +24,10 @@ body {
     font: {
         size: rem(16);
         weight: 400;
-    };
+    }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        font-family: $font-family-system;
+    }
 }
 
 .off-scroll {
@@ -32,12 +38,12 @@ body {
     outline: none !important;
 }
 
-.col, [class*='col-'] {
+.col,
+[class*='col-'] {
     @media (max-width: $media-xl) {
         padding-left: 12px;
         padding-right: 12px;
     }
-
     @media (max-width: $media-sm) {
         padding-left: 8px;
         padding-right: 8px;
@@ -49,12 +55,10 @@ body {
         margin-left: -12px;
         margin-right: -12px;
     }
-
     @media (max-width: $media-sm) {
         margin-left: -8px;
         margin-right: -8px;
     }
-
     &--long {
         margin-right: -40px;
         margin-left: -40px;
@@ -84,7 +88,6 @@ body {
 .main-header {
     width: 100%;
     margin-bottom: 24px;
-
     h1 {
         margin-bottom: 0;
         line-height: rem(72);
@@ -92,7 +95,6 @@ body {
             line-height: 1.2;
         }
     }
-
     p {
         padding-top: 18px;
         font-size: rem(28);
@@ -112,7 +114,6 @@ body {
     @media(max-width: $media-lg) {
         margin-bottom: 28px;
     }
-
     &__btn {
         position: absolute;
         top: 8px;
@@ -123,7 +124,6 @@ body {
         @media(max-width: $media-lg) {
             display: none;
         }
-
         .btn {
             display: block;
             padding: 8px 0;
@@ -132,7 +132,6 @@ body {
         }
     }
 }
-
 
 .swiper-button {
     @include transition();
@@ -150,11 +149,9 @@ body {
     background-repeat: no-repeat;
     outline: none;
     opacity: 1;
-
     @media (max-width: $media-sm) {
         display: none !important;
     }
-
     &-prev {
         left: -8px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0H24V24H0z'/%3E%3Cpath stroke='%231A1A1A' stroke-width='1.8' d='M9 6L3 12 9 18'/%3E%3Cpath stroke='%231A1A1A' stroke-width='2' d='M4 12L21 12'/%3E%3C/g%3E%3C/svg%3E%0A");
@@ -162,7 +159,6 @@ body {
             left: -12px;
         }
     }
-
     &-next {
         right: -8px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0H24V24H0z'/%3E%3Cpath stroke='%231A1A1A' stroke-width='1.8' d='M14 6L20 12 14 18'/%3E%3Cpath stroke='%231A1A1A' stroke-width='2' d='M2 12L19 12'/%3E%3C/g%3E%3C/svg%3E%0A");
@@ -170,7 +166,6 @@ body {
             right: -12px;
         }
     }
-
     &-disabled {
         opacity: 0;
     }
@@ -189,7 +184,6 @@ body {
     @media(max-width: $media-lg) {
         bottom: 0;
     }
-
     &-bullet {
         @include transition();
         width: 8px;
@@ -201,7 +195,6 @@ body {
         @media(max-width: $media-lg) {
             background-color: $silver;
         }
-
         &.swiper-pagination-bullet-active {
             background-color: $white;
             @media(max-width: $media-lg) {
@@ -216,7 +209,6 @@ body {
     flex: 1 1 auto;
     flex-direction: column;
     min-height: 100%;
-
     &__content {
         display: flex;
         flex: 1 1 auto;
@@ -229,7 +221,9 @@ body {
     align-items: flex-start;
     margin-bottom: 32px;
 }
-@media(min-width: map_get($grid-breakpoints, lg)) {
+
+@media(min-width: map_get($grid-breakpoints,
+lg)) {
     .modal-gallery__controls {
         position: fixed;
         top: 0;
@@ -243,7 +237,6 @@ body {
         margin-top: 124px;
     }
 }
-
 
 .red {
     color: $coral !important;

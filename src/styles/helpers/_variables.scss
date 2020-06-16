@@ -15,59 +15,24 @@ $white: #fff;
 $border-40: #999;
 $border-20: #ccc;
 $border-10: #e6e6e6;
-
 $coral-opacity: rgba(246, 92, 81, 0.3);
-
 $colors: ();
-$colors: map_merge((
-    'text-black': $text-black,
-    'ctrl-black': $ctrl-black,
-    'text-silver': $text-silver,
-    'silver-dark': $silver-dark,
-    'silver': $silver,
-    'silver-light': $silver-light,
-    'coral-dark': $coral-dark,
-    'coral': $coral,
-    'green-dark': $green-dark,
-    'green': $green,
-    'border-40': $border-40,
-    'border-20': $border-20,
-    'border-10': $border-10,
-    'white': $white
-), $colors);
-
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 1023px,
-    xl: 1280px
-);
-
+$colors: map_merge(( 'text-black': $text-black, 'ctrl-black': $ctrl-black, 'text-silver': $text-silver, 'silver-dark': $silver-dark, 'silver': $silver, 'silver-light': $silver-light, 'coral-dark': $coral-dark, 'coral': $coral, 'green-dark': $green-dark, 'green': $green, 'border-40': $border-40, 'border-20': $border-20, 'border-10': $border-10, 'white': $white), $colors);
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 1023px, xl: 1280px);
 $media-sm: 575px;
 $media-md: 767px;
 $media-lg: 1022px;
 $media-xl: 1279px;
-
 $media-sm--min: 576px;
 $media-md--min: 768px;
 $media-lg--min: 1023px;
 $media-xl--min: 1280px;
-
-$container-max-widths: (
-    sm: 576px,
-    md: 720px,
-    lg: 936px,
-    xl: 1120px
-);
-
-$font-family-sans-serif: 'SegoeUI', sans-serif;
-//'SegoeUI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$container-max-widths: ( sm: 576px, md: 720px, lg: 936px, xl: 1120px);
+$font-family-sans-serif: 'SegoeUI',sans-serif;
+$font-family-system: 'SegoeUI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
 $grid-columns: 12;
 $grid-gutter-width: 32px;
-
 $grid-row-columns: 6;
-
 $link-color: $coral;
 $link-decoration: none;
 $link-hover-color: $coral-dark;
