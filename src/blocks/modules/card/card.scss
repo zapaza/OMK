@@ -504,6 +504,7 @@
 
     &__body {
         flex: 1 1 auto;
+        overflow: hidden;
     }
     &__mark {
         width: 96px;
