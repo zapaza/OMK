@@ -175,6 +175,13 @@
 
     .thumbs-slider__main {
         .swiper-slide {
+            @media (max-width: $media-sm) {
+                display: flex;
+                flex-direction: column;
+                .thumbs-slider__description {
+                    border-bottom: 0;
+                }
+            }
             .text {
                 display: flex;
                 flex-wrap: wrap;
@@ -226,9 +233,17 @@
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
                 font-size: rem(14);
-                font-weight: normal;
+                font-weight: $font-weight-normal;
                 line-height: 1.14;
                 color: $white;
+                @media (max-width: $media-sm) {
+                    order: 1;
+                    position: static;
+                    max-width: 100%;
+                    margin: 0 16px;
+                    padding: 12px 12px 12px 36px;
+                    border-radius: 5px;
+                }
                 &:before {
                     content: '';
                     position: absolute;
@@ -240,6 +255,9 @@
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: contain;
+                    @media (max-width: $media-sm) {
+                        left: 12px;
+                    }
                 }
             }
             .status-warning {
@@ -253,9 +271,20 @@
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
                 font-size: rem(14);
-                font-weight: normal;
+                font-weight: $font-weight-normal;
                 line-height: 1.14;
                 color: $white;
+                @media (max-width: $media-sm) {
+                    order: 1;
+                    position: static;
+                    max-width: 100%;
+                    margin: 0 16px;
+                    padding: 12px 12px 12px 36px;
+                    border-radius: 5px;
+                    @media (max-width: $media-sm) {
+                        left: 12px;
+                    }
+                }
                 &:before {
                     content: '';
                     position: absolute;
