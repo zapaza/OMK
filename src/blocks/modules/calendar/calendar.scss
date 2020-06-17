@@ -117,9 +117,9 @@
         text-align: center;
         padding-bottom: 16px;
         @media (max-width: $media-sm) {
+            flex-wrap: nowrap;
             border: none;
             padding-bottom: 12px;
-            flex-wrap: nowrap;
         }
         .calendar-date {
             height: auto;
@@ -142,8 +142,8 @@
             @media (max-width: $media-sm) {
                 max-width: 56px;
                 height: 40px;
-                padding: 0 8px;
                 border: none;
+                padding: 0 8px;
                 margin-bottom: 12px;
                 margin-left: 0;
                 margin-right: 0;
@@ -304,7 +304,7 @@
             left: 0;
             height: 32px;
             background: fade_out($coral, .9);
-            @media (max-width: $media-sm){
+            @media (max-width: $media-sm) {
                 top: 0;
                 bottom: 0;
                 height: auto;
@@ -512,7 +512,7 @@
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
     border-radius: 8px;
-    @media (max-width: $media-lg){
+    @media (max-width: $media-lg) {
         display: none;
     }
     &:after {

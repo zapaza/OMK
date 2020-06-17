@@ -38,8 +38,7 @@ body {
     outline: none !important;
 }
 
-.col,
-[class*='col-'] {
+.col, [class*='col-'] {
     @media (max-width: $media-xl) {
         padding-left: 12px;
         padding-right: 12px;

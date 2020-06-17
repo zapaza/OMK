@@ -49,6 +49,7 @@ function articleFooterInfoHide() {
         });
     }
 }
+
 //скрытие кнопки добавить объяявление при скроле на мобилке
 
 function adsAddMobileHide() {
@@ -74,22 +75,23 @@ function adsAddMobileHide() {
 
 
 //аккордионы на странице obhod.html на мобилке
-function accordionMobilObhodMonth (){
-    if ($(window).innerWidth() <= 767 ){
-        $('body').on('click', '.detours-month__list .title', function(e){
+function accordionMobilObhodMonth() {
+    if ($(window).innerWidth() <= 767) {
+        $('body').on('click', '.detours-month__list .title', function (e) {
             e.preventDefault();
             $(this).toggleClass('show');
             $(this).next('ul').toggleClass('show');
         })
     }
 }
+
 $(window).resize(function () {
-    accordionMobilObhodMonth ();
+    accordionMobilObhodMonth();
 })
 $(document).ready(() => {
     articleFooterInfoHide();
     adsAddMobileHide();
-    accordionMobilObhodMonth ();
+    accordionMobilObhodMonth();
 
     //слайдер на главной стрнице, в низу страници
     if ($('.js-main-page__slider').length > 0) {
@@ -330,6 +332,7 @@ $(window).on('resize', function () {
 $('body').on('click', '.js-media-item--video', function () {
     $('#video_popup').modal('show');
 });
+
 //открытие модалки на странице security
 function initModalThumbsSliderPractices() {
     console.log('init');
@@ -359,19 +362,26 @@ function initModalThumbsSliderPractices() {
     })
 
 }
+
 function setModalNavSlidersPositionTopPractices() {
 
     let thisSliderItem = $('#practices-gallery'),
         thisSlideHeight = thisSliderItem.find('.js-thumbs-slider__main-img').eq(0).outerHeight(),
-        thisNavSliderPositionTop = thisSlideHeight  - 8 + 'px';
+        thisNavSliderPositionTop = thisSlideHeight - 8 + 'px';
 
 
     thisSliderItem.find('.js-thumbs-slider__nav').css({
         'top': thisNavSliderPositionTop
     });
+    var thisStatusSliderHeight = $('.js-status').outerHeight();
+    $('.js-status').css({
+        'top': thisSlideHeight - 24 - thisStatusSliderHeight + 'px'
+    });
+
 
 }
-function setSlidersModalButtonsPositionTopPractices(){
+
+function setSlidersModalButtonsPositionTopPractices() {
     let sliders = $('#practices-gallery .js-thumbs-slider__main.js-thumbs-slider__main--modal');
 
     sliders.each(function () {
@@ -384,6 +394,7 @@ function setSlidersModalButtonsPositionTopPractices(){
         })
     });
 }
+
 $('body').on('click', '.js-practices-gallery', function () {
     $('#practices-gallery').modal('show');
 });
