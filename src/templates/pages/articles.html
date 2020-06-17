@@ -1,0 +1,211 @@
+{% extends './layout.html' %}
+{% block content %}
+<div class="wrapper detours-page">
+    <div class="row">
+        <div class="col-12">
+            {% include 'breadcrumbs/breadcrumbs.html' %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="main-header">
+                <h1>Статьи из прессы</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row news__row">
+        <div class="col-12">
+            <button type="button" class="results-nav__filters-btn js-results-nav__filters-btn">
+                <span class="icon"></span>
+                <span class="text">Фильтры</span>
+                <span class="count">2</span>
+            </button>
+            <div class="results-nav">
+                <form action="" class="sorting-form">
+                    <div class="results-nav__selects js-results-nav__selects">
+                        <div class="top">
+                            <div class="top-header">
+                                <div class="name">Фильтры</div>
+                            </div>
+                            <button type="button" class="top-close js-top-close"></button>
+                        </div>
+
+                        <div class="bottom">
+
+                            <div class="selects">
+                                <div class="results-nav__select js-results-nav__select">
+                                    <div class="mobile-title">Площадка</div>
+                                    <select name="" id="" class="selectpicker sorting-form__select select-js">
+                                        <option value="">Все площадки</option>
+                                        <option value="">Альметьевск</option>
+                                        <option value="">Москва</option>
+                                        <option value="">Челябинск</option>
+                                        <option value="">Уфа</option>
+                                        <option value="">Благовещенск</option>
+                                        <option value="">Чусовой</option>
+                                        <option value="">Выкса</option>
+                                    </select>
+                                </div>
+                                <div class="results-nav__select js-results-nav__select">
+                                    <div class="mobile-title">Дата</div>
+                                    <div class="data-select">
+                                        <button class="data-select__btn btn datapicker-trigger-js" type="button">
+                                            Дата
+                                        </button>
+                                        <div class="data-select__result ">
+                                            <input type="text" hidden readonly
+                                                   class="date-select__input datapicker-result-js">
+                                            <div class="data-select__fake-input datapicker-fake-js"></div>
+                                            <button type="button"
+                                                    class="data-select__clear btn datapicker-clear-js"></button>
+                                        </div>
+                                        <div class="data-select__dropdown">
+                                            <div class="data-select__item datapicker-js"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="buttons">
+                                <button type="submit" class="btn btn--primary">Применить</button>
+                                <a href="" class="btn btn--secondary">Сбросить фильтры</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="articles_list">
+        <div class="row detours__row">
+            <div class="col-lg-3 col-md-4">
+                <a href="#0" class="articles-card">
+                    <div class="articles-card__header">
+                        <div class="card-date">10 фев</div>
+                    </div>
+                    <div class="articles-card__body">
+                        <h5 class="articles-card__title">ОМК получила допуск для поставок
+                            обсадных
+                            сварных труб на газодобывающие объекты Газпрома</h5>
+                    </div>
+                    <span class="articles-card__footer">
+                                    <span class="articles-card__source">ИА «Интерфакс»</span>
+                                </span>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <a href="#0" class="articles-card">
+                    <div class="articles-card__header">
+                        <div class="card-date">10 фев</div>
+                    </div>
+                    <div class="articles-card__body">
+                        <h5 class="articles-card__title">ОМК получила допуск для поставок
+                            обсадных
+                            сварных труб на газодобывающие объекты Газпрома</h5>
+                    </div>
+                    <span class="articles-card__footer">
+                                    <span class="articles-card__source">ИА «Интерфакс»</span>
+                                </span>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <a href="#0" class="articles-card">
+                    <div class="articles-card__header">
+                        <div class="card-date">10 фев</div>
+                    </div>
+                    <div class="articles-card__body">
+                        <h5 class="articles-card__title">ОМК получила допуск для поставок
+                            обсадных
+                            сварных труб на газодобывающие объекты Газпрома</h5>
+                    </div>
+                    <span class="articles-card__footer">
+                                    <span class="articles-card__source">ИА «Интерфакс»</span>
+                                </span>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <a href="#0" class="articles-card">
+                    <div class="articles-card__header">
+                        <div class="card-date">10 фев</div>
+                    </div>
+                    <div class="articles-card__body">
+                        <h5 class="articles-card__title">ОМК получила допуск для поставок
+                            обсадных
+                            сварных труб на газодобывающие объекты Газпрома</h5>
+                    </div>
+                    <span class="articles-card__footer">
+                                    <span class="articles-card__source">ИА «Интерфакс»</span>
+                                </span>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <a href="#0" class="articles-card">
+                    <div class="articles-card__header">
+                        <div class="card-date">10 фев</div>
+                    </div>
+                    <div class="articles-card__body">
+                        <h5 class="articles-card__title">ОМК получила допуск для поставок
+                            обсадных
+                            сварных труб на газодобывающие объекты Газпрома</h5>
+                    </div>
+                    <span class="articles-card__footer">
+                                    <span class="articles-card__source">ИА «Интерфакс»</span>
+                                </span>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <a href="#0" class="articles-card">
+                    <div class="articles-card__header">
+                        <div class="card-date">10 фев</div>
+                    </div>
+                    <div class="articles-card__body">
+                        <h5 class="articles-card__title">ОМК получила допуск для поставок
+                            обсадных
+                            сварных труб на газодобывающие объекты Газпрома</h5>
+                    </div>
+                    <span class="articles-card__footer">
+                                    <span class="articles-card__source">ИА «Интерфакс»</span>
+                                </span>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <a href="#0" class="articles-card">
+                    <div class="articles-card__header">
+                        <div class="card-date">10 фев</div>
+                    </div>
+                    <div class="articles-card__body">
+                        <h5 class="articles-card__title">ОМК получила допуск для поставок
+                            обсадных
+                            сварных труб на газодобывающие объекты Газпрома</h5>
+                    </div>
+                    <span class="articles-card__footer">
+                                    <span class="articles-card__source">ИА «Интерфакс»</span>
+                                </span>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <a href="#0" class="articles-card">
+                    <div class="articles-card__header">
+                        <div class="card-date">10 фев</div>
+                    </div>
+                    <div class="articles-card__body">
+                        <h5 class="articles-card__title">ОМК получила допуск для поставок
+                            обсадных
+                            сварных труб на газодобывающие объекты Газпрома</h5>
+                    </div>
+                    <span class="articles-card__footer">
+                                    <span class="articles-card__source">ИА «Интерфакс»</span>
+                                </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="row news__row">
+        <div class="col-12">
+            <a href="#0" class="btn btn--dark">Показать еще</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

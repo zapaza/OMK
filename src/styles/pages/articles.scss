@@ -1,0 +1,16 @@
+.articles_list {
+    margin-bottom: 17px;
+    .articles-card {
+        min-width: auto;
+        max-width: none;
+        height: auto;
+        margin-bottom: 32px;
+        @media (max-width: $media-lg) {
+            width: auto;
+        }
+
+        &__body {
+            overflow: hidden;
+        }
+    }
+}
