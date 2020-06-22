@@ -239,7 +239,9 @@
                 color: $white;
                 @media (max-width: $media-sm) {
                     order: 1;
-                    position: static;
+                    position: relative;
+                    left: 0;
+                    top: inherit !important;
                     max-width: 100%;
                     margin: 0 16px 24px;
                     padding: 12px 12px 12px 36px;
@@ -277,7 +279,9 @@
                 color: $white;
                 @media (max-width: $media-sm) {
                     order: 1;
-                    position: static;
+                    position: relative;
+                    left: 0;
+                    top: inherit !important;
                     max-width: 100%;
                     margin: 0 16px 24px;
                     padding: 12px 12px 12px 36px;
